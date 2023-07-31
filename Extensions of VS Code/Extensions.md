@@ -1,5 +1,40 @@
 # EXTENSIONS
 
+## HTML
 
-Postman: to create calls to api.
+- Auto Close Tag: close tags of HTML automatically.
+- Auto Rename Tag: rename tags.
+- HTML CSS Support: intelligense for HTML.
+
+## JavaScirpt
+
+- JavaScript (ES6) code snippets: code snippets for JavaScript in ES6.
+- ESLInt: check your JavaScript for common problems, such as syntax errors, formatting, ...
+
+## Styles
+
+- Material Icon Theme: icons of Material Design.
+
+## Angular
+
+- Angular Language Service: editor services for angular templates.
+- Angular Snippets (Version 16): angular snippets.
+- Angular2-Switcher: easily navigate to typescript (.ts), style (.sccss/.sass/.less/.css)
+
+## Yaml (.yml)
+
+- YAML: suppor by red hat to yaml language.
+
+## GIT
+
+- GitHub Pull request and Issues: allowss to review and manage the pull requests for GitHub.
+- GitLens: tool of making GIT in the project.
+
+## Others
+
+- Postman: to create calls to api.
+- Live Server: launcha a local server with the page selected.
+- Microsoft Edge Tools for VS Code: lie analysis, console and application tool, breakpoint support, ...
+- JSON to TS: extension to convert JSON object to typescript interface.
+
 
