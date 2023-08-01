@@ -21,6 +21,11 @@
 - Angular Snippets (Version 16): angular snippets.
 - Angular2-Switcher: easily navigate to typescript (.ts), style (.sccss/.sass/.less/.css)
 
+## C#
+
+- C#: base language support.
+- C# Dev Kit: helps managed your code and tests.
+
 ## Yaml (.yml)
 
 - YAML: suppor by red hat to yaml language.
