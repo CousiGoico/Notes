@@ -118,3 +118,65 @@ Configuran los recursos para un proyecto y administran permisos en el nivel de p
 
 
 ## Rol administrador de colección de proyectos y administrador de colecciones de proyectos
+
+Configuran recursos para todos los proyectos definidos para una organización o colección. Realizan todas las tareas para agregar proyectos, administrar proyectos yadministrar permisos para la colección, un proyecto, un equipo o un objeto.
+
+#### Trabajo que realiza el administrador de colección de proyectos
+
++ Características en versión preliminar
+    + Administración y habilitación de características en versión preliminar.
++ Información general
+    + Agregar y administrar la información de la organización.
+    + Configuración de la facturación.
++ Proyectos
+    + Agregar y administrar proyectos.
+    + Adición de usuarios a proyectos.
+    + Guardar datos del proyecto.
++ Usuarios
+    + Adición y administración de usuarios.
+    + Adición de usuarios externos.
+    + Quitar usuarios.
++ Facturación (toda la facturación se administra a través de Azure)
+    + Configuración de la facturación.
+    + Probar Azure Test Plans gratis.
+    + Pago por usuario (básico).
+    + Comprar trabajos paralelos.
+    + Agregar un usuario para realizar compras.
++ Auditoria
+    + Acceso, exportación y filtrado de registros de auditoria.
+    + Crear flujo de auditoria.
++ Noticaciones globales
+    + Administración de notificaciones de nivel de recopilación
++ Uso
+    + Supervisión de uso
++ Extensiones
+    + Instalación y administración de extensiones de Marketplace.
+    + Aprobar extensiones.
+    + Concesión de permisos para administrar extensiones.
+    + Desinstalar o deshabilitar extensiones.
++ Seguridad: directivas
+    + Administración de directivas de acceso a aplicaciones.
+    + Adición de usuarios externos.
+    + Deshabilitación de la directiva de solicitud de acceso.
+    + Restricción de que los usuarios creen nuevas organizaciones con la directiva deAzure Active Directory.
+    + Impedir que los administradores de equipos y proyectos inviten a nuevos usuarios.
+    + Habilitar el acceso condicional o Multi-Factor Authentication.
++ Seguridad: permisos
+    + Búsqueda del propietario de la organización.
+    + Búsqueda de un administrador de colecciones de proyectos.
+    + Agregar administradores, establecer permisos de nivel de organización.
+    + Adición de grupos de Azure Active Directory.
+    + Conectarse a Azure Active Directory.
+    + Establecimiento de permisos para administrar extensiones.
+    + Administrar el acceso condicional.
++ Paneles: proceso
+    + Personalizar un proyecto.
+    + Adición y administración de procesos.
++ Canalizaciones: Compilación y versión
+    + Establecer directivas de retención.
+    + Establecimiento de límites de recursos para canalizaciones.
+    + Adición y administración de grupos de agentes.
+    + Adición y administración de grupos de implementación.
++ Almacenamiento de artefactos
+    + Eliminación y recuperación de paquetes en Azure Artifacts.
+    + Consumo de almacenamiento de artefactos.
