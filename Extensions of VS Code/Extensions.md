@@ -43,5 +43,5 @@
 + Microsoft Edge Tools for VS Code: lie analysis, console and application tool, breakpoint support, ...
 + JSON to TS: extension to convert JSON object to typescript interface.
 + Image preview: preview of image by url.
-
++ Todo Tree: to search \\ TODO.
 
