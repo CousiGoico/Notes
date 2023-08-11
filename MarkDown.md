@@ -204,3 +204,7 @@ CUSTOM CONTAINERS (IN YELLOW)
   D-->>A: Respond to REST API
   A-->>U: Relay REST API response
  :::
+
+> **_NOTE:_**  The note content.
+
+
