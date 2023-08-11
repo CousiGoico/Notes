@@ -80,12 +80,71 @@ programática. Envuelve un árbol de componentes en un `<Profiler` para medir su
 
 Muestra un sustituto mientras los componentes hijos se están cargando.
 
+#### __Props__
+
++ children: interfaz que realmente se pretende renderizar. Si `children` se suspende mientras se renderiza, la barrera de Suspense pasará a renderizar `fallback`.
++ fallback: interfaz alternativa a renderizar en lugar de la interfaz real. Se acepta cualquier nodo de React, auqnue suele ser una vista ligera de relleno (spinner de carga). Suspense cambiará automáticamentea `fallback` cuando `children` se suspenda y volverá a `children` cuando los datos estén listos. Si `fallback` se suspende mientras se renderiza, activará la barrera de Suspense padre más cercana.
+
+#### __Advertencias__
+
++ No preserva ningún estado para los renderizados que  suspendieron antes de que pudiera montarse por primera vez. Cuando el componente se haya cargado, React volverá a intentar renderizar el árbol suspendido desde cero.
++ Si la suspensión estaba mostrando contenido para el árbol, pero luego se volvió a suspender, el fallback se mostrará de nuevo a menos que la actualización que lo causó fuese causada por `startTransition` o `useDeferredValue`.
++ Si React necesita ocultar el contenido ya visible porque se suspendió de nuevo, limpiará los Efectos de layout en el árbol de contenido. Cuando el contenido esté listo para mostrarse de nuevo, React disparará los Efectos de layout de nuevo. Esto le permite asegurarse de que los Efectos que miden el diseño del DOM no intentan hacerlo mientras el contenido está oculto.
++ React incluye optimizaciones internas como Renderizado en el servidor con Streaming e Hidratación selectiva que se integran con Suspense. Puedes leer una visión general de la arquitectura y ver esta charla técnica para conocer más.
+
 #### __Ejemplo__
+
+        import { Suspense } from 'react';
+        import Albums from './Albums.js';
+        import Biography from './Biography.js';
+        import Panel from './Panel.js';
+
+        export default function ArtistPage({ artist }) {
+        return (
+            <>
+                <h1>{artist.name}</h1>
+                <Suspense fallback={<Loading />}>
+                    <Biography artistId={artist.id} />
+                    <Panel>
+                        <Albums artistId={artist.id} />
+                    </Panel>
+                </Suspense>
+            </>
+            );
+        }
+
+        function Loading() {
+            return <h2>🌀 Loading...</h2>;
+        }
 
 ## `<ScriptMode>`
 
 #### __Referencia__
 
-Permite controles adicionales solo para el desarrollo que te ayudan a encontrar errores anticipadamente. 
+Permite controles adicionales solo para el desarrollo que te ayudan a encontrar errores anticipadamente. Usa `StrictMode` para habilitar comportamientos de compilación y advertencias adicionales (Modo Estricto) dentro del árbol de componentes
+
+El Modo Estricto habilita los siguientes comportamientos solo en desarrollo:
+
++ Los componentes se volverán a renderizar una vez más para encontrar errores causados por renderizaciones impuras.
++ Tus componentes volverán a ejecutar los Efectos una vez más para encontrar errores causadas por la ausencia de la fase de limpieza de estos.
++ Se comprobará el uso en tus componentes de APIs obsoletas.
+
+#### __Props__
+
++ `StringMode`, no acepta props.
+
+#### __Advertencias__
+
++ No hay forma de excluirse del Modo Estricto dentro de un árbol envuelto en `<StrictMode>`. Esto te asegura de que se comprueban todos los componentes dentro de `<StrictMode>`. Si dos equipos que trabajan en un producto no están de acuerdo sobre si le resultan valiosas estas comprobaciones, necesitarían o bien llegar a un consenso o bien mover `<StrictMode>` abajo en el árbol.
 
 #### __Ejemplo__
+
+        import { StrictMode } from 'react';
+        import { createRoot } from 'react-dom/client';
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(
+        <StrictMode>
+            <App />
+        </StrictMode>
+        );
