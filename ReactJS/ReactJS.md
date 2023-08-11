@@ -42,3 +42,15 @@ Es una biblioteca de JavaScript para construir interfaces de usuario, creada por
         root.render(div);
 
 ### JSX
+
+Es una extensión de EcmaScript basada en XML que nos va a permitir crear nuestros elementos de una manera más declarativa.
+
+        <React.Fragmment>
+            <button data-id="123">Button 1</button>
+            <button data-id="456">Button 2</button>
+            <button data-id="789">Button 3</button>
+        </React.Fragment>
+
+### Babel
+
+Es un transpilador de JavaScript
