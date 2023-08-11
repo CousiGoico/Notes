@@ -54,3 +54,15 @@ Es una extensión de EcmaScript basada en XML que nos va a permitir crear nuestr
 ### Babel
 
 Es un transpilador de JavaScript
+
+### Componentes
+
+Función que permite renderizar un elemento y que también permite reutilizarlo. 
+
+        const Button = ({text}) => { return <button>{text}}</button> };
+
+> **_NOTE:_**  El nombre siempre debe ir en PascalCase.
+
+Para visualizarlo: 
+
+         <Button text="Botón 1"></Button>
