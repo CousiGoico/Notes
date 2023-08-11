@@ -39,9 +39,12 @@
 
 + Postman: to create calls to api.
 + RapidAPI Client: to create calls to api.
++ Thunder Client: to create calls to api.
 + Live Server: launcha a local server with the page selected.
 + Microsoft Edge Tools for VS Code: lie analysis, console and application tool, breakpoint support, ...
 + JSON to TS: extension to convert JSON object to typescript interface.
 + Image preview: preview of image by url.
 + Todo Tree: to search \\ TODO.
-
++ Draw.io integration: to create diagrams.
++ Mintlify document: generate document of code.
++ Kanban: to create and manage kanbans.
