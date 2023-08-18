@@ -6,6 +6,10 @@
 + Auto Rename Tag: rename tags.
 + HTML CSS Support: intelligense for HTML.
 
+## CSS
+
++ SCSS Formatter: support formatting scss.
+
 ## JavaScirpt
 
 + JavaScript (ES6) code snippets: code snippets for JavaScript in ES6.
@@ -20,6 +24,7 @@
 + Angular Language Service: editor services for angular templates.
 + Angular Snippets (Version 16): angular snippets.
 + Angular2+Switcher: easily navigate to typescript (.ts), style (.sccss/.sass/.less/.css)
++ JavaScript and TypeScript Nighly: support of typescript.
 
 ## C#
 
