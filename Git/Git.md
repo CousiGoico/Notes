@@ -21,6 +21,3 @@ git checkout -b $newBranchName;
 
 git push --set-upstream origin $newBranchName;
 git push;
-
-# Create and push a pull request
-
