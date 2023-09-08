@@ -208,3 +208,8 @@ CUSTOM CONTAINERS (IN YELLOW)
 > **_NOTE:_**  The note content.
 
 
+COMMENTS
+
+[comment]: <> (This is also a comment.)
+[//]: <> (This is also a comment.)
+[//]: # (This is also a comment.)

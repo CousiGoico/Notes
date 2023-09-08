@@ -12,8 +12,15 @@ git push --set-upstream {ProjectName}Remote main;
 
 # Create a new branch
 
+[//]: <> (Option 1)
 git branch $newBranchName;
 git checkout $newBranchName;
+
+[//]: <> (Option 2)
+git checkout -b $newBranchName;
+
 git push --set-upstream origin $newBranchName;
 git push;
+
+# Create and push a pull request
 
