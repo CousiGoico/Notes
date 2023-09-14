@@ -29,6 +29,10 @@ Para instalarlo mediante WinGet, hay que usar el siguiente comando:
             sudo port selfupdate && sudo port upgrade gh
 
 
+## Autenticación
+
+            gh auth login
+
 
 ## Referencias
 
