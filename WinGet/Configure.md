@@ -8,11 +8,11 @@ Configura un fichero WinGet para configurar la máquina en un entorno de desarro
 
 ## Alias
 
-configuration
++ configuration
 
 ## Uso
 
-winget configure -f <C:/Users/<username>/winget-configs/config-file-name.dsc.yaml>
+            winget configure -f <C:/Users/<username>/winget-configs/config-file-name.dsc.yaml>
 
 ## Argumentos u opciones
 

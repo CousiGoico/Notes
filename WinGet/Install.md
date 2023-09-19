@@ -4,6 +4,12 @@
 
 Instala la herramienta especificada. Tiene el alias __add__.
 
+## Alias
+
++ add
+
+## Uso
+
             winget install [[-q] \<query>] [\<options>]
 
 ## Argumentos u opciones
