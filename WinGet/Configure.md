@@ -6,6 +6,14 @@ Configura un fichero WinGet para configurar la máquina en un entorno de desarro
 
 > **_NOTE:_** PREVIEW
 
+## Alias
+
+configuration
+
+## Uso
+
+winget configure -f <C:/Users/<username>/winget-configs/config-file-name.dsc.yaml>
+
 ## Argumentos u opciones
 
 -f, --file: ruta del fichero de configuración
