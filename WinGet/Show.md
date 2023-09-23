@@ -4,8 +4,6 @@
 
 Muestra detalles de una especifica aplicaicon, incluyendo detalles de su fuente. Muestra los metadatos que fueron enviados con la aplicación.
 
-> **_NOTE:_** PREVIEW
-
 ## Alias
 
 + view
@@ -83,4 +81,4 @@ Muestra detalles de una especifica aplicaicon, incluyendo detalles de su fuente.
 
 ## Referencias
 
-[Microsoft Learn](https://learn.microsoft.com/en-us/windows/package-manager/winget/show)
+[Microsoft Learn](https://learn.microsoft.com/en-us/windows/package-manager/winget/show )
