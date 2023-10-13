@@ -39,6 +39,7 @@
 
 + GitHub Pull request and Issues: allowss to review and manage the pull requests for GitHub.
 + GitLens: tool of making GIT in the project.
++ Git History: tool to see the history of Git repository.
 
 ## Others
 
