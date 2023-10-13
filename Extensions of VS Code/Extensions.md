@@ -53,3 +53,4 @@
 + Draw.io integration: to create diagrams.
 + Mintlify document: generate document of code.
 + Kanban: to create and manage kanbans.
++ Draw.io Integration: to create graphics and schemes.
