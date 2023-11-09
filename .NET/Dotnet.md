@@ -20,6 +20,14 @@
 
         dotnet new console
 
+## dotnet packages
+
+### Add new package
+
+        dotnet add package {package_name} --version {package_version}
+
+## dotnet table
+
 |Templates|Short name|Language|Tags|Introduced|
 |---------|----------|--------|----|----------|
 |Console application	|console|	[C#], F#, VB|	Common/Console|	1.0|
