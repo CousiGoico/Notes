@@ -76,3 +76,9 @@ Añade los ficheros modificados a un stash. Equivalente a git stash sin aargumen
 Elimina todos los stash
 
     git stash clear
+
+# Git reset
+
+Resetea el indice actual a un estado especifico.
+
+    git reset
