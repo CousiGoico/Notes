@@ -213,3 +213,23 @@ COMMENTS
 [comment]: <> (This is also a comment.)
 [//]: <> (This is also a comment.)
 [//]: # (This is also a comment.)
+
+
+## Relationships
+
+entity user{
+    * email
+    * username
+    * birthdate
+}
+
+entity car {
+    * brandname
+    * model
+}
+
+user ||--o{ Car}
+
+
+
+[GitHub Markdown](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
