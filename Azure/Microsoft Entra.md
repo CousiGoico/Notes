@@ -23,4 +23,4 @@ Las entidades de servicio pueden ser de dos tipos:
 
 ## Graphics
 
-![](../Graphics/Images/MicrosoftEntra.png)
+![](../Images/MicrosoftEntra.png)
