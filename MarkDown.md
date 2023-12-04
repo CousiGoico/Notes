@@ -233,3 +233,22 @@ user ||--o{ Car}
 
 
 [GitHub Markdown](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+
+> **_NOTE:_**  Only for GitHub.
+
+> [!NOTE]
+> Esto es una nota
+
+> [!TIP]
+> Esto es una nota
+
+> [!IMPORTANT]
+> Esto es una nota
+
+> [!WARNING]
+> Esto es una nota
+
+> [!CAUTION]
+> Esto es una nota
+
