@@ -86,3 +86,22 @@ Puedes hacer uso de un fichero JSON que contiene los parámetors especificandolo
 Cada parámetro de fichero es un objeto JSON con las propiedades requeridas **$schema** y **contentVersion**. La tercera propiedad **parameters** es usada para especificar uno o más parámetros, especificando nombre como clave y objeto como valor. 
 
 Esta solución no es últil para secretos. 
+
+![Figure8.1](Figure8.1.png)
+
+Keys passwords, and other secrets should not be stored as paintext in source control in a paramter file.
+
+            {
+                "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+                "contentVersion": "1.0.0.0",
+                "parameters": {
+                    "exampleSecretParameter": {
+                        "reference": {
+                            "keyvault": {
+                                "id": "/subscriptions/.../Microsoft.KeVault/vaults/<vaultname>"
+                            },
+                            "secretName": "myKeyVaultSecretName"
+                        }
+                    }
+                }
+            }
