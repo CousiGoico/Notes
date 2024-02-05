@@ -183,3 +183,34 @@ Los recursos son la parte principal de la plantilla, donde todos los recursos pa
 * El nombre para el recurso: cada tipo de recurso tiene sus reglas para determinar un nombre válido.
 * Requiere una localización, debes especificar uno para cada recurso. La localización debe ser una región de Azure.
 
+### Recursos dependientes
+
+Un tipo especial de recursos es el recurso dependiente. Para un tipo de recurso anidado, el tipo y nombre reflejan este anidameniento.
+
+            {
+                "apiVersion": "2021-11-01",
+                "name": "myNamespaceName/myTopicName",
+                "type": "Microsoft.Servicebus/namespaces/topics",
+                "dependsOn": ["Microsoft.ServiceBus/namespaces/myNamespaceName]
+            }
+
+La propiedad extra, *dependsOn*, es requerida para especificar el recurso aninado que solo puede ser creado después del recurso contendor existente. La propiedad *location* no es necesario.
+
+Cuando la propiedad *dependson* es utilizada, una dependencia explicita de despliegue entre el recurso hijo y el recurso padre es establecido automátcamente. El recurso hijo será desplegado después del padre. La función *resourceID* retorna el identificador único del recurso.
+
+            {
+                "type": "Microsoft.Sql/Servers",
+                "apiVersion": "2020-02-02-preview",
+                "name": "[parameteres('serverName')]",
+                "location": "[parameters('location')]",
+                "resources": [
+                    {
+                        "type": "databases",
+                        "name": "[parameters('sqlDBName')]",
+                        "location": "[parameters('location')]",
+                        "dependsOn": [
+                            "[resourceId('Microsoft.Sql/servers', concat(parameters('serverName')))]
+                        ]
+                    }
+                ]
+            }
