@@ -128,3 +128,32 @@ Son usadas para permitir la dinámica evaluación de propiedades en las plantill
 
 Ello puede ser usado para manipular textos, recuperar detalles sobre la subscripción actual, grupo de recursos, o tenant de Azure Active Directory (AAD), u obtener detalles de los recursos.
 
+Las funcionaes pueden ser también usadas para recuperar claves u otros secretos.Inserta claves directamente desde el servicio que expone la clave para los ajustes de la aplicación o key vault.
+
+### Comments and metadata
+
+Una plantilla ARM puede contener secciones, comentarios y metadatos.
+
+#### Comentarios
+
+// es usado para comentar un línea, /* */ es usado para comentar un bloque.
+
+            {
+                "appServiceName": {
+                    // this is a single line comment
+                    "type": "string",
+                    /*
+                        This is a multi-line comment
+                    */
+                    "metadata": {
+                        "description": "The name of the web app that you wish to create.",
+                        "author": author Name"
+                    },
+                    "location": "[
+                        parameters('location')
+                    ]" // defaults to resource group location
+                }                
+            }
+
+> [!TIP]
+> Para desplegar plantillas con textos multilinea y comentar, usa Azure PowerShell o Azure CLI. Para CLI usa la versión 2.3.0 or posterior, y especifica el formato --handle-exteded-json.
