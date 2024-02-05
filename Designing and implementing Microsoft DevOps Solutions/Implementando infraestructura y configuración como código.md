@@ -157,3 +157,29 @@ Una plantilla ARM puede contener secciones, comentarios y metadatos.
 
 > [!TIP]
 > Para desplegar plantillas con textos multilinea y comentar, usa Azure PowerShell o Azure CLI. Para CLI usa la versión 2.3.0 or posterior, y especifica el formato --handle-exteded-json.
+
+#### Metadata
+
+El texto que añades a la descripción metadata es automaticamente usada como consejo para ese parámetro.ARM ignorará el objeto metadata, y esto puede ser usado en cualquier lugar de la plantilla.
+
+### Resources
+
+Los recursos son la parte principal de la plantilla, donde todos los recursos para ser creados son especificados.
+
+            {
+                "type": "Microsoft.Sql/servers",
+                "apiVersion": "2021-02-01-preview",
+                "name": "mySqlServer",
+                "location": "West Europe",
+                "properties": {
+                    "administratorLogin": "myUsername",
+                    "administratorLoginPassword": "myPassword",
+                    "version": "12.0"
+                }
+            }
+
+* El tipo de recurso para ser creado o modificado necesita ser especificado. *resourceProvider* y el nombre del tipo de recurso que pertenece.
+* La versión del REST API para usar este recurso. [](https://docs.microsoft.com/en-us/azure/templates/microsoft.resources/allversions)
+* El nombre para el recurso: cada tipo de recurso tiene sus reglas para determinar un nombre válido.
+* Requiere una localización, debes especificar uno para cada recurso. La localización debe ser una región de Azure.
+
