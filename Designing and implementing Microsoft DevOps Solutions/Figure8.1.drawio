@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e">
+    <diagram id="d-Iua7Vr_gN4rluUyEFs" name="Page-1">
+        <mxGraphModel dx="1116" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="azure key vault" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Key_Vaults.svg;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="165" width="67.2" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="parameter&lt;br&gt;file" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Files.svg;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="160" width="73.14" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="template" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/File.svg;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="150" width="56.00000000000001" height="69" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=classic;html=1;exitX=1.071;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="5" target="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="430" as="sourcePoint"/>
+                        <mxPoint x="450" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=classic;html=1;entryX=-0.045;entryY=0.486;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="430" as="sourcePoint"/>
+                        <mxPoint x="450" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="passes&lt;br&gt;secret" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="225" y="160" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="references&lt;br&gt;secret" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="160" width="80" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

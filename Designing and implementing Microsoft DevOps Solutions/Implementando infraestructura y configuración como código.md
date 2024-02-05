@@ -105,3 +105,26 @@ Keys passwords, and other secrets should not be stored as paintext in source con
                     }
                 }
             }
+
+Cuando desplieguas la plantilla, este secreto es tomado desde el key vault y usado en el despliegue. Esto es permitido solo is el usuario o servicio inicia el despliegue tiene role de propietario o contribuidor en relación al key vault, y el key vault esta habilitado para el despliegue de plantillas.
+
+> [!TIP]
+> Algún rol que incluya permisos *Microsoft.KeyVault/vaults/deploy/action* podrá trabajarlo. Puedes crear roles personalizados que incluya esta acción.
+
+### Variables
+
+La sección variables es usada para especificar uno o más valores que serán usados mediante la plantilla. El nombre del párametro es *environmentName*. Las variables son usadas para especificar que no pueden ser especificadas desde fuera de la template pero deben ser reconocidas como configurables. 
+
+            "Variables": {
+                "appServicePlanType": "B1",
+                "appServiceName": "[concat('myAppService-', parameteres('environmentName'))]
+            }
+
+### Functions
+
+Son usadas para permitir la dinámica evaluación de propiedades en las plantillas ARM. Pueden retornar valores como texto o numérico, o como array de objetos. Alguna propiedad puede ser accedida usando la notación *.propertyName*.
+
+            "myVariable": "[concat('myAppServices-', parameters('environmentName'))]"
+
+Ello puede ser usado para manipular textos, recuperar detalles sobre la subscripción actual, grupo de recursos, o tenant de Azure Active Directory (AAD), u obtener detalles de los recursos.
+
