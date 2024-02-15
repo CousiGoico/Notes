@@ -254,3 +254,33 @@ El principal uso de esto es prevenir harcodear nombres y otros valores dinámico
 
 Las funciones son usadas para recuperar valores desde parámetros, variables o otros recursos creados. 
 
+            "outputs": {
+                "SqlServerURL": {
+                    "type": "string",
+                    "value": "[reference (parameters('serverName')).fullyQualifiedDomainName]"
+                }
+            }
+
+Resultado:
+
+            sqlServerURL String serverName,database.windows.net
+
+## Desplegando plantillas ARM
+
+Hay cmdlet en PowerSHell y comandos de Azure CLI disponible para aplicar una plantilla ARM desde el entorno de scripting. Azure Pipelines puede ser usado para desplegar no sólo código, también plantillas ARM. Otras alternativas son Azure portal, Azure CLI, REST API, y Azure Cloud Shell o specificaciones de las plantillas ARM.
+
+Tienes el modo de despliegue: *Incremental* o *Complete*. En el modo incremental, todos los recursos especificados en la plantilla serán creados en Azure o sus propiedades serán modificadas si el recuroso ya existe. En el modo completo, los recursos no definidos en la plantilla ARM serán eliminados. 
+
+El modo por defecto es el *Incremental*.
+
+### PowerShell
+
+Para el entorno local y testear plantillas ARM en una máquina local, PowerShell tiene un comando rápido para aplicar una plantilla ARM:
+
+            New-AzResourceGroupDeployment -ResourceGroupName myResourceGRoup -TemplateFile "c:\my\template.json" -TemplateParameterFile "c:\my\parameters.json"
+
+El comando desplegará y aplicará el fichero de parémtros en el grupo de recursos indicado. Este comando asume que la sesión actual ya está logueada en Azure.
+
+* El parámetro -Mode indica si es *Complete* o *Incremental*.
+* Si no especificas el parámetro fichero y la plantilla requiere parámetros, el cmdlet preguntará por esos valores en la línea de comandos.
+* Las opciones *-TemplateUri* y *-TemplateParametersUri* pueden ser usados para especificar la localización de la plantilla y parámetros para ser recuperados de otra localización.
