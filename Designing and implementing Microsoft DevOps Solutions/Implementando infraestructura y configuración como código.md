@@ -332,3 +332,11 @@ Dos enfoques son disponiblesp ara generar plantillas ARM:
 #### Usando Export template
 
 Generará una plantilla ARM del estado actual del grupo de recursos. No todos los servicios actualmente soporta ingeniería inversa, si esto ocurriera serás avisado en la parte superiro de la pantalla. La opción *Export template* creará una plantilla ARM reusable.
+
+#### Usando Resource Explorer
+
+Para recueprar el JSON de un recurso, puedes usar Resource Explorer. La opción Resource Explorer tiene dos paneles, uno a la izquierda en el que puedes navegar por las subscripciones, grupos de recursos y por sus recursos. Por cada recurso seleccionado, el JSON aparecerá a la derecha. Este JSON puede ser usado en el array de recursos de na plantilla ARM exceptuando el elemento ID.  
+
+> [!Important]
+> La salida JSON y la plantilla del recurso pueden variar.
+
