@@ -299,3 +299,20 @@ Su uso es para desplegar la infraestructura y confirgurar una aplicación.
 > [Herramienta para testear plantillas ARM](https://github.com/azure/arm-tkk)
 
 El primer despliegue que crearás para crear toda la infraestructura que necesita la nueva versión de la aplicación. El segundo despliegue, eliminará esos elementos después de que la el código sea desplegado. 
+
+## ARM REST API
+
+ARM provee una API REST para desplegar y gestionar infraestructura para Azure.
+
+        GET https://management.azure.com/subscriptions/{subscriptionId}/resources?api-version-2021-04-01
+
+Puedes usar ARMClient, una línea de comandos para enviar llamadas HTTP a la nueva REST API:
+
+        armclient GET /subscriptions/{subscriptionId}/resources?api-version=2021-04-01
+
+El comando precedido obtiene una lista de recursos de la suscripción. ARM client no es una herramienta oficial de Microsoft. Es un proyecto OOSS que es mantenido en GitHub.
+
+Puedes usar el comando az rest para eejcutar esos comandos.
+
+        az rest --method get --ur /subscriptions/{subscriptionId}/resources?api-version=2021-04-01
+
