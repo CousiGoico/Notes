@@ -340,3 +340,23 @@ Para recueprar el JSON de un recurso, puedes usar Resource Explorer. La opción 
 > [!Important]
 > La salida JSON y la plantilla del recurso pueden variar.
 
+#### Plantillas a nivel suscripción
+
+Una plantilla describe uno o más recursos que son desplegados en un grupo de recursos. Estos también están a nivel de suscripción.
+
+            {
+                "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+                "contentVersion": "1.0.0.1",
+                "parameters": {},
+                "variables": {},
+                "resources": [{
+                    "type": "Microsoft.REsources/resourceGroups",
+                    "apiVersion": "2021-04-01",
+                    "location": "West Europe",
+                    "name": "MyResourceGroup",
+                    "properties": {}
+                }],
+                "ouptputs": {}                
+            }
+
+El formato para una plantilla de suscripción es la misma que para un grupo de recursos. LA diferencia es *$schema*, que indica la localización del esquema y los tipos de recursos que son soportados. No soporta la creación de recursos directamente y soporta sólo la creación de grupos de recursos, la inicialización de despliegues, creando y asignando politicas de Azure y la creación de asignaciones de roles. 
