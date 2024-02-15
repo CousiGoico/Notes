@@ -214,3 +214,43 @@ Cuando la propiedad *dependson* es utilizada, una dependencia explicita de despl
                     }
                 ]
             }
+
+> [!IMPORTANT]
+> Una dependencia circular es un problema con el orden de dependencia, resultando en el despliegue un bucle que le impide completar el despliee. ARM identifica las dependencias circulares durante la validación de la plantilla.
+
+### Plantillas anidadas
+
+Otro tipo especial de recurso son las plantillas anidadas, que pueden lanzar el despliegue de otra plantilla.
+
+            {
+                "ype": "Microsoft.Resources/deployments",
+                "apiVersion": "2021-04-01",
+                "name": "linkedTemplate",
+                "properties": {
+                    "mode": "Incremental",
+                    "templateLink": {
+                        "uri": "https://.../myLinkedTemplate.json"
+                    },
+                    "parametersLink": {
+                        "uri": "httsp://.../myParameters.json"
+                    }
+                }
+            }
+
+La localización de las plantillas y ficheros de parámetros son HTTP y HTTPS con un **Identificador uniforme de recursos - Uniform Resource Identifier (URI)**, pero tienen que ser localizaciones publicas. La plantilla URI necesita ser accedida externamente. Para ganar acceso durante el despliegue, añade token SAS a la plantilla como alternativa, una propiedad de plantilla puede ser especificada. No puedes usar ambos, parámetros en linea y un vínculo de un fichero de parámetros.
+
+### Salidas
+
+Las claves son retornadas al llamante de la plantilla. El llamante puede usar esos valores para iniciar otra tarea o script y usar una o más de los valores creados o usarlos por la plantilla. 
+
+El principal uso de esto es prevenir harcodear nombres y otros valores dinámicos, especialmente IP's en una automatización. La sección de salida es un objeto JSON.
+
+            {
+                "outputName": {
+                    "type": "string",
+                    "value": "myValue"
+                }
+            }
+
+Las funciones son usadas para recuperar valores desde parámetros, variables o otros recursos creados. 
+
