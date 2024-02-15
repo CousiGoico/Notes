@@ -300,7 +300,7 @@ Su uso es para desplegar la infraestructura y confirgurar una aplicación.
 
 El primer despliegue que crearás para crear toda la infraestructura que necesita la nueva versión de la aplicación. El segundo despliegue, eliminará esos elementos después de que la el código sea desplegado. 
 
-## ARM REST API
+### ARM REST API
 
 ARM provee una API REST para desplegar y gestionar infraestructura para Azure.
 
@@ -316,3 +316,19 @@ Puedes usar el comando az rest para eejcutar esos comandos.
 
         az rest --method get --ur /subscriptions/{subscriptionId}/resources?api-version=2021-04-01
 
+### Azure Cloud Shell
+
+Azure Cloud Shell provee un Bash y PowerShell experiencia para gestionar y desplegar recursos de Azure.
+
+        az deployment group create --resource-group testrg --name rollout01 --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
+
+### Ingenieria inversa de una plantilla
+
+Dos enfoques son disponiblesp ara generar plantillas ARM:
+
+* Usar **Export template**
+* Usar **Resource Explorer**
+
+#### Usando Export template
+
+Generará una plantilla ARM del estado actual del grupo de recursos. No todos los servicios actualmente soporta ingeniería inversa, si esto ocurriera serás avisado en la parte superiro de la pantalla. La opción *Export template* creará una plantilla ARM reusable.
