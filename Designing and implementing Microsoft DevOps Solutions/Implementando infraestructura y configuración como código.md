@@ -360,3 +360,12 @@ Una plantilla describe uno o más recursos que son desplegados en un grupo de re
             }
 
 El formato para una plantilla de suscripción es la misma que para un grupo de recursos. LA diferencia es *$schema*, que indica la localización del esquema y los tipos de recursos que son soportados. No soporta la creación de recursos directamente y soporta sólo la creación de grupos de recursos, la inicialización de despliegues, creando y asignando politicas de Azure y la creación de asignaciones de roles. 
+
+#### Azure Bluprints
+
+Pueden ser usados para describir el estado de una suscripción de Azure y apliar aquello que existe ne una suscripción. Sólo soporta los siguientes constructores:
+
+* Asignación politicas
+* Asignación de roles (RBAC)
+* Creación de grupos de recursos
+* Plantillas ARM anidadas a la suscripción o a nivel de grupo de recursos
