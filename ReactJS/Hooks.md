@@ -20,7 +20,7 @@ Permite almacenar la información de la entrada de un usuario en memoria. Un cas
 
 Permite compartir información a los componentes hijos sin la necesidad de pasar dicha información como props. Un ejemplo de uso de este hook sería compartir el tema de la aplicación o la configuración del usuario entre los diferentes componentes hijos.
 
-+ __useContext__: lee y se subscribe a un contexto.
++ __useContext__: lee y se suscribe a un contexto.
 
         function Button() {
             const theme = useContext(ThemeContext);
