@@ -277,10 +277,25 @@ El modo por defecto es el *Incremental*.
 
 Para el entorno local y testear plantillas ARM en una máquina local, PowerShell tiene un comando rápido para aplicar una plantilla ARM:
 
-            New-AzResourceGroupDeployment -ResourceGroupName myResourceGRoup -TemplateFile "c:\my\template.json" -TemplateParameterFile "c:\my\parameters.json"
+            New-AzResourceGroupDeployment -ResourceGroupName myResourceGrRoup -TemplateFile "c:\my\template.json" -TemplateParameterFile "c:\my\parameters.json"
 
 El comando desplegará y aplicará el fichero de parémtros en el grupo de recursos indicado. Este comando asume que la sesión actual ya está logueada en Azure.
 
 * El parámetro -Mode indica si es *Complete* o *Incremental*.
 * Si no especificas el parámetro fichero y la plantilla requiere parámetros, el cmdlet preguntará por esos valores en la línea de comandos.
 * Las opciones *-TemplateUri* y *-TemplateParametersUri* pueden ser usados para especificar la localización de la plantilla y parámetros para ser recuperados de otra localización.
+
+### Azure CLI
+
+El beneficio de CLI es que es para todas las plataformas y corre en Windows, macOS y Linux.
+
+            az group deployment create -resource-group myResourceGroup -template-file "c:\my\template.json" -parameters "c:\my\parameters.json"
+
+### Azure Pipelines
+
+Su uso es para desplegar la infraestructura y confirgurar una aplicación. 
+
+> [!TIP]
+> [Herramienta para testear plantillas ARM](https://github.com/azure/arm-tkk)
+
+El primer despliegue que crearás para crear toda la infraestructura que necesita la nueva versión de la aplicación. El segundo despliegue, eliminará esos elementos después de que la el código sea desplegado. 
