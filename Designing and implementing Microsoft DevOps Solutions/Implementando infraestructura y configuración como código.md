@@ -426,3 +426,11 @@ Puede ser actualizada:
             Set-AutomationVariable -name 'ExampleVar' -value 'ExampleValue'
 
 Puede tener consecuencias no esperadas. Si una variable que es usada en multiples manuales oes actualizada por uno de ellos, esto puede romper otros manuales.
+
+##### Credenciales
+
+Un tipo especial de variable es la credencial. Las credenciales contienen un nombre de usuario y una constraseña. Son tratados como secretos. Esto significa que ellos no aparecerán en logs y que tienen que ser recuperados usando una sintaxis específica de PowerShell. 
+
+            $myCredential = Get-AutomationPSCredential -Name 'MyCredential'
+
+El objecto *myCredencial* puede ser usado para recueperar ambos el nombre de usuario y la contraseña.
