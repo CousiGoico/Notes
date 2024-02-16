@@ -412,3 +412,17 @@ Una manera común de automatizar flujos de trabajo es programandolos para ejecut
 Los manuales son escritos en PowerSHell o Pythno. PowerShell tiene modulos con funcioanlidades predefinidas que pueden ser usadas. Sólo los módulos que tienen que ser subidos a la sección de módulosp ara ser usados. Fijar la versión del módulo a usar garantiza mantener trabajando y no romper en caso de actualizacaciones.
 
 Los módulos de PowerShell interactuan con Azure siendo por defecto installado en cada cuenta de automatización. Más módulos puedes ser añadidos, y módulos existentes pueden ser mejorados o eliminados por el administador.
+
+##### Variables
+
+Algunas variales podrían entrar en juego: los nombres de los grupos de recursos, máquinas virtuales, tiempos de inicio y apagado, ... Harcodeando esos valores denrto de un script no es una buena práctica. Es posible almacenar variables a nivel de la cuenta de automatización, donde podrán ser reusadas mediante cada manual que es ejecutado en la cuenta.
+
+Acceder desde manual:
+
+            $exampleVar = Get-AutomationVariable -NAme 'ExampleVar'
+
+Puede ser actualizada:
+
+            Set-AutomationVariable -name 'ExampleVar' -value 'ExampleValue'
+
+Puede tener consecuencias no esperadas. Si una variable que es usada en multiples manuales oes actualizada por uno de ellos, esto puede romper otros manuales.
