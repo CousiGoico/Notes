@@ -392,3 +392,13 @@ Bicep es una abastracción transparente sobre las plantillas ARM en JSON y sopor
 #### Azure automatización
 
 Es un servicio en Azure para ayudar a usuarios a crear, manejar, desplegar y mantener sus recursos de Azure. Permite para la formulación de workflows en el formulario de manuales. Puede ser ejecutado contra recursos de Azure en beneficio del usuario.
+
+#### Recursos de cuenta de automatización
+
+Esos recursos son compartidos a nivel de la cuenta de automatización y por ello puede ser reusado con múltiples manuales.
+
+##### Ejecutar como cuenta
+
+La primera construcción es ejecutar como cuenta (Run As account). Esta cuenta es un servicio principal que será creada en AAD que la suscripción de Azure contiene la cuenta de automatización asociada. Las credenciales para autenticarse como este servicio principal son almacenadas de forma segura con la cuenta de automatización. Manuales pueden ahora ser configuradas para ejecutar usando esta cuenta. Puede ser automaticamente creada cuando creas la cuenta de automatización.
+
+Ejecutar como cuenta se mantiene para la actual y nuevas cuentas de Automatización. Ha sido reemplazado con identidades gestionadas. Las identidades gestionadas es una manera de autenticación recomendada en tus manuales y la autenticación por defecto para tu cuenta de automatización. Las credenciales no son salvadas, la identidad gestionada es más segura y fácil de usar. Debes chambiarlo para usar para usar identidades gestionadas.
