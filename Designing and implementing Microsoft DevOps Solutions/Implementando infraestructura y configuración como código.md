@@ -402,3 +402,7 @@ Esos recursos son compartidos a nivel de la cuenta de automatización y por ello
 La primera construcción es ejecutar como cuenta (Run As account). Esta cuenta es un servicio principal que será creada en AAD que la suscripción de Azure contiene la cuenta de automatización asociada. Las credenciales para autenticarse como este servicio principal son almacenadas de forma segura con la cuenta de automatización. Manuales pueden ahora ser configuradas para ejecutar usando esta cuenta. Puede ser automaticamente creada cuando creas la cuenta de automatización.
 
 Ejecutar como cuenta se mantiene para la actual y nuevas cuentas de Automatización. Ha sido reemplazado con identidades gestionadas. Las identidades gestionadas es una manera de autenticación recomendada en tus manuales y la autenticación por defecto para tu cuenta de automatización. Las credenciales no son salvadas, la identidad gestionada es más segura y fácil de usar. Debes chambiarlo para usar para usar identidades gestionadas.
+
+##### Horarios
+
+Una manera común de automatizar flujos de trabajo es programandolos para ejecutarse en una fecha y hora especifica o en un intervalo fijo. Para crear un nuevo horario, primero, abre el listado de todos los horarios. Un nuevo horario puede ser añadido. Tiene nombre y descripción. La fecha y hora pueden ser configurados a lo largo coun intervalo recurrente opcional, y si se especifico el intervalo, una fecha y hora de expiración.
