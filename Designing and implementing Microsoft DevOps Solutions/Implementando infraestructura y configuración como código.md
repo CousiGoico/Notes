@@ -434,3 +434,11 @@ Un tipo especial de variable es la credencial. Las credenciales contienen un nom
             $myCredential = Get-AutomationPSCredential -Name 'MyCredential'
 
 El objecto *myCredencial* puede ser usado para recueperar ambos el nombre de usuario y la contraseña.
+
+##### Conexiones
+
+Para conectar con uno o más servicios externos desde un manual. Las cuentas de automatización permiten la creación de ntemano de uno o más conexiones.
+
+> [!Tip]
+> No es necesario crear conexiones manualmente como son proveistos con ejecutar como cuenta (Run As account).
+
