@@ -389,3 +389,6 @@ Bicep es una abastracción transparente sobre las plantillas ARM en JSON y sopor
 
             az bicep decompile --file deployment.json
 
+#### Azure automatización
+
+Es un servicio en Azure para ayudar a usuarios a crear, manejar, desplegar y mantener sus recursos de Azure. Permite para la formulación de workflows en el formulario de manuales. Puede ser ejecutado contra recursos de Azure en beneficio del usuario.
