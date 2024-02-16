@@ -442,3 +442,9 @@ Para conectar con uno o más servicios externos desde un manual. Las cuentas de 
 > [!Tip]
 > No es necesario crear conexiones manualmente como son proveistos con ejecutar como cuenta (Run As account).
 
+##### Manuales
+
+Azure automatización soporte un nnumero de tipos de manuales: PowerShell, Python 2 y gráfico. Manaules gráficos permiten componer un manual desde todos los módulos de PowerShell subidos, activos, y manuales existentes usando arrastrar y soltar.
+
+El flujo de trabajo de PowerShell y el flujo de trabajo de gráfico son tipos disponibles. La diferencia entre manuales y manuales de flujos de trabajo es que estos últimos soportan paralelismo. Los flujos de trabajo de PowerShell soporta el uso de puntos de control.
+
