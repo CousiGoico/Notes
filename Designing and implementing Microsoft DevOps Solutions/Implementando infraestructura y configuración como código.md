@@ -379,3 +379,13 @@ Claves diferentes entre Blueprints y plantilla ARM:
 
 USando blueprints puedes instalar roles RBAC, plantillas ARM, y politicas de azure todo como uno y asignado para un cierto ámbito. Eliminando la asignación eliminas o remueves los recursos, de este modo esto se convierte en tedioso, y Azure DevOps no tiene tareas o automatización para gestionar blueprints en escala.
 
+#### Bicep
+
+Es un lenguaje específico de dominio **(DSL - Domain-Specic Language)** que permite el despliegue declarativo de recursos de Azure.
+
+Bicep provee todos los tipos de recursos y versiones de API. Provee una mejor experiencia de autoridad, soporttipos seguros y sintaxis simple declaraitiva. Los ficheros Bicep son idempotentes, y un fichero representa el estado deseado. Usa ese fichero para repetidamente desplegar tu infraestructura de una manera constante.
+
+Bicep es una abastracción transparente sobre las plantillas ARM en JSON y soporte capcidadees de las plantillas JSON. El CLI de Bicep convierte a los ficheros Bicep en plantillas ARM. [https://aka.ms/bicepdemo](https://aka.ms/bicepdemo)
+
+            az bicep decompile --file deployment.json
+
