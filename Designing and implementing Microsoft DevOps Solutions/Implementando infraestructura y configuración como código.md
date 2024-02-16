@@ -369,3 +369,13 @@ Pueden ser usados para describir el estado de una suscripción de Azure y apliar
 * Asignación de roles (RBAC)
 * Creación de grupos de recursos
 * Plantillas ARM anidadas a la suscripción o a nivel de grupo de recursos
+
+Claves diferentes entre Blueprints y plantilla ARM:
+
+* Un bluerint es un recurso que puede crear y navegaor en el portal. La experiencia de autoria es la del portal, no ficheros de texto en un pc local.
+* La relación entre suscripción y blueprint que se usó para crearlo permanece, despues incluso de los despliegues completados.
+* Es posible marcar la asignación como bloqueada. Todos los recursos deslegados mediante blueprint no puede ser eliminado o editado a lo largo que el blueprint es aplicado.
+* HAy alguna construcción en blueprints disponible que puede ser usado para implementar controles desde el conoceimiento como ISO, NIST o HIPAA.
+
+USando blueprints puedes instalar roles RBAC, plantillas ARM, y politicas de azure todo como uno y asignado para un cierto ámbito. Eliminando la asignación eliminas o remueves los recursos, de este modo esto se convierte en tedioso, y Azure DevOps no tiene tareas o automatización para gestionar blueprints en escala.
+
