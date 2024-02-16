@@ -406,3 +406,9 @@ Ejecutar como cuenta se mantiene para la actual y nuevas cuentas de Automatizaci
 ##### Horarios
 
 Una manera común de automatizar flujos de trabajo es programandolos para ejecutarse en una fecha y hora especifica o en un intervalo fijo. Para crear un nuevo horario, primero, abre el listado de todos los horarios. Un nuevo horario puede ser añadido. Tiene nombre y descripción. La fecha y hora pueden ser configurados a lo largo coun intervalo recurrente opcional, y si se especifico el intervalo, una fecha y hora de expiración.
+
+##### Módulos
+
+Los manuales son escritos en PowerSHell o Pythno. PowerShell tiene modulos con funcioanlidades predefinidas que pueden ser usadas. Sólo los módulos que tienen que ser subidos a la sección de módulosp ara ser usados. Fijar la versión del módulo a usar garantiza mantener trabajando y no romper en caso de actualizacaciones.
+
+Los módulos de PowerShell interactuan con Azure siendo por defecto installado en cada cuenta de automatización. Más módulos puedes ser añadidos, y módulos existentes pueden ser mejorados o eliminados por el administador.
