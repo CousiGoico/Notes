@@ -553,3 +553,54 @@ El uso de la fucnión *listKeys* es especialmente usado en estos escenarios. Est
 La configuración especifica en la plantilla ARM corresponde para la configuración e un appservice. Sobreescriben los ajustes de los ficheros *appserttings.json* o *appsettings.config*. Actualizando automáticamente la configuración recargas la aplicación. 
 
 Algún usuario con acceso de lectura al app service puede recuperar todos los secretos de esta manera.
+
+##### Cargando ajustes en tiempo de ejecución desde un key vault
+
+La localización para almacenar los ajustes es en Azure key vault, donde la aplicación los carga en tiempo de ejecución. 
+
+La aplicación primero tiene habilitado la autencicación mediante AAD. Esto puede ser echo registrando el servicio principal manualmente, pero esto deberá retornar un uusario y contraseña que deberá ser almacenado en algún lugar. Los nombres de usuario y contraseñas son secretos pero no son almacenados en el key vault desde que ellos son necesarios para acceder. Este problema puede ser resuelto con la **identidad gestionada**.
+
+> [!Important]
+> El problema de securizar secretos almacenados pero obteniendo otros secretos en retorno para acceder a aellos es a menudo referidos como el problma de las *turtles all the way down*.
+
+Con las identidades gestionadas de azure habilitadas en el app service, Azure automaticamente genera un servicio principal con un nombre de usuario y contraseña quno son recuperables. Sólo en tiempo de ejecución, usando un código especifico, puede una aplicación autenticarse como principal. Azure asegurara que esto sólo trabajará para el código que estas ejecutando con el app service que gestiona la identidad gestionada.
+
+Esa identidad tiene el acceos garantizado al key vault. Esto puede ser echo en la descripción key vault en una plantilla ARM.
+
+            {
+                "type": "Microsoft.KeyVault/vaults",
+                "name": "[parameters('keyVaultNa')]",
+                "apiVersion": " 2021-11-01-preview",
+                "location": "[resourceGroup().location]",
+                "dependsOn": [
+                    "[resourceId('Microsoft.Web/sites/', parameters('appServiceName'))]"
+                ],
+                "properties": {
+                    "enabledForTemplateDeployment": false,
+                    "tenantId": "[subscription().tenantId]",
+                    "accessPolicies": [
+                        {
+                            "tenantId": "[subscription().tenantId]",
+                            "objectId": [reference(concat(resourceId('Microsoft.web/sites', parameters('appServiceName')), '/providers/Microsoft.ManagedIdentity/Identities/default'), '2021-11-01-preview').principalId]", 
+                            "permissions": { "secrets": ["get", "list"] }
+                        }
+                    ],
+                    "sky": {
+                        "name": "standard",
+                        "family": "A"
+                    }
+                }
+            }
+
+La función *reference()* es usada para recuperar la información de la identidad gestionada y usa esto para crear una politica de acceso en el key vault.
+
+Con el key vault y acceso establecidos, la aplicación puede recuperar el contenido en tiempo de inicio. Los constructores de configuración pueden ser dusados en la clase *StartUp*.
+
+            var tokenProvider = new AzureServiceTokenProvider();
+            var kvClient = new KeyVaultClient((autohoritiy, resource, scope) => tokenProvider.KeyVaultTokenCallback(authoritiy, resource, scope));
+
+            var configurationBuilder = new ConfigurationBuilder().AddAzureKeyVault($"https://{Configuration["keyVaultName"]}.vault.azure.net/", kvClient, new DefaultKeyVaultSecretManager());
+            Cofniguration = configurationBuilder.Build();
+
+> [!Trp]
+> Ejemplos de código en el paquete nuget *Microsoft.Configuration.ConfigurationBuilders.Azure*.
