@@ -448,3 +448,57 @@ Azure automatización soporte un nnumero de tipos de manuales: PowerShell, Pytho
 
 El flujo de trabajo de PowerShell y el flujo de trabajo de gráfico son tipos disponibles. La diferencia entre manuales y manuales de flujos de trabajo es que estos últimos soportan paralelismo. Los flujos de trabajo de PowerShell soporta el uso de puntos de control.
 
+###### Ejecución de manuales
+
+* **Manualmente**: los manuales pueden ser ejecutados abriendolos desde el portal de Azure y presionando Inicio. También esta disponibel usando PowerShell o Azure CLI.
+
+* **Adjuntando a webhook**: una vez el manual haya es publicado, uno o más manuales pueden ser generados para ejecutar el manual. Puede ser hablitado o deshabilitado o obteniendo una fecha de expiración. Permiten a un nuevo webhook ser generado para cada usuario. En el futuro, el acceso debe no ser acordado por un usuario particular.
+
+* **En un horario**: puede ser adjuntado para uno o más de los compartidos horarios. 
+
+Cuando ejecutas un manual desde un webhook o en un horario, la opción para ejecutarlo manualmente estará disponible.
+
+##### Jobs 
+
+Un manual es ejecutado, una nueva entrada es creada en los Jobs logs. No importa como la ejecución es inicializada. Cada entreada contendrá la fecha y hora de la ejecución fue iniciada, si occurrió algún error y un log completo de ejecución.
+
+##### Galería de manuales
+
+Manuales son una gran manera de automatizar tareas comunes. Hay tareas que sólo son para especificos clientes, pero hay otras que son aplicables a todos los clientes de Azure.
+
+En la galeria, cientos de manuales pueden ser buscados y explorados. Puede ser importados directamente en una cuenta de manuales.
+
+Antes que ejecutes un nuevo manual que has creado o importado, debes publicarlo primero. Tienes un *Borrador* y un edición *Publicado*. Sólo la versión *Publicado* puede ejecutarse, y la versión *Borrador* puede ser modificado. Cuando la versión *Borrador* esta lista, puedes publicarlo, reemplazando la existente versión *Publicado* con la versión *Borrador*.
+
+#### PowerShell DSC
+
+Es una noción para espeicificar la configuración de los servidores. Esta configuración es almacenada en un servidor externo, donde puede ser accedido por uno o más máquinas virtuales. Esas máquinas virtuales son conifguradas para comprobar ese servidor en un intervalo especifico para la última configuración DSC y actualizar ellos mismos para completar con su configuración.
+
+PowerShell DSC es una extensión de la especificación del lenguaje PowerShell que es usada para escribir los estados deseados de configuraciones. Habilita los estados deseados en uno o más nodos para ser espeficiados. Un nodo especificado con servidor, o conjunto de servidores es para ser configurado. La configuración para un nodo es escrito en el formulario para uno o más recursos.
+
+            configuration serverFarmConfig {
+                Node FrontEndServer {
+                    WindowsFeature IIS {
+                        Ensure = 'Present'
+                        Name = 'Web-Server'
+                        IncludeAllSubFeature = $true
+                    }
+                    FileLogDirectory {
+                        Type = 'Directory'
+                        DestinationPath = 'C:\logs'
+                        Ensure = "Present"
+                    }
+                }
+            }
+
+La primera, del tipo *WindowsFeature*, con el nombre **Internet Inofrmation Services (IIS)**, asegura que IIS es instalado conjuntamente con todas sus subcarácteristicas. El segundo recurso, de tipo *File*, asegura que el directorio *c:\logs* existe. El tipo de recurso de *IIS* y *File* and alguno más son construidos dentro de la especificación PowerShell DSC.
+
+##### Compilando y aplicando PowerShell DSC
+
+Los ficheros PowerShell DSC son guardados en texto plano, a menudo en ficheros *.ps1*. Pueden ser compilados dentro de ficheros **Managed Object Format (MOF)**. Pueden ser puestos para uno o más servidores para modificar el estado del servidor para el estado descrito en el fichero MOF. Esto es llamado **push mode**.
+
+Otra manera de desplegar ficheros MOF es almacenandolos en un servidor central, con el que es llamado **pull server**. El pull server tiene un registro completo de todas las configuraciones y definiciones de nodos con esas configuraciones. 
+
+Una vez que el pull server es levantado y ejecutado, servidores individuale son configurados para su configuración DSC y fijado el intervalo y aplicada su configuración. Esto puede ser realizado sin hacer nada, si el estado actual actualmente tiene el estado deseado, o ejecutando comandos para lograr el estado actual. En este proceso será revertido si es necesario.
+
+
