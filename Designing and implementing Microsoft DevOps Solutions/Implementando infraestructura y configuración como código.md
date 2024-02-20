@@ -519,6 +519,15 @@ Para iniciar usando la compilación de las capacidades, sube uno o más ifcheros
 
 Azure automatización hablita usuarios para gestionar las máquinas virtuales. Cuando trabajas con ofertas PaaS, esto no puede ser hecho usando tecnicas como PowerShell DSC; otras técnicas deben de usarse para gestionar los ajustes de la aplicación.
 
+#### Gestionando los ajustes de la aplicación
 
+Otra parte de la infraestructura es la configuración de la aplicación. Un número de enfoques para almacenar y cargar la configuración de la aplicación para un Azure App Service. 
 
+* Almacenando la configuración en un App Settings.
+
+* Usando una combinación de identidades gestionadas y key vault.
+
+* Usando el servicio Azure App Configuration.
+
+La desventaja del primer enfoque es que la configuración de la aplicaciónp uede ser leída poralgún usuario quien tiene acceso administrativo (lectura) para el App service que es configurado.
 
