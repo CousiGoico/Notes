@@ -531,3 +531,25 @@ Otra parte de la infraestructura es la configuración de la aplicación. Un núm
 
 La desventaja del primer enfoque es que la configuración de la aplicaciónp uede ser leída poralgún usuario quien tiene acceso administrativo (lectura) para el App service que es configurado.
 
+#### Ajustes Azure App Service desde una plantilla ARM
+
+Los adjustes son un recurso dentro de la plantilla ARM. Esto debe ser especificado como un recurso anidado. 
+
+            {
+                "name": "[concat(variables('websiteName'), '/appSettings')]",
+                "type": "config",
+                "apiVersion": "2021-03-01",
+                "dependsOn": [
+                    "[concat('Microsoft.Web/sites/', variables('webSiteName'))]"
+                ],
+                "properties": {
+                    "key1": " [listKeys(parameters('storagename'), 2021-03-01').keys[0].value]",
+                    "key2": "value2"
+                } 
+            }
+
+El uso de la fucnión *listKeys* es especialmente usado en estos escenarios. Esto permite directamente copiar los secretos desde un servicio soportado a los ajustes de la aplicación sin almacenarlos en una solución intermedia. Para secretos que no vuelven desde fuentes Azure, los parámetros de la plantilla deben ser usados. 
+
+La configuración especifica en la plantilla ARM corresponde para la configuración e un appservice. Sobreescriben los ajustes de los ficheros *appserttings.json* o *appsettings.config*. Actualizando automáticamente la configuración recargas la aplicación. 
+
+Algún usuario con acceso de lectura al app service puede recuperar todos los secretos de esta manera.
