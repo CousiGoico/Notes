@@ -501,4 +501,24 @@ Otra manera de desplegar ficheros MOF es almacenandolos en un servidor central, 
 
 Una vez que el pull server es levantado y ejecutado, servidores individuale son configurados para su configuración DSC y fijado el intervalo y aplicada su configuración. Esto puede ser realizado sin hacer nada, si el estado actual actualmente tiene el estado deseado, o ejecutando comandos para lograr el estado actual. En este proceso será revertido si es necesario.
 
+##### Usando PowerShell DSC con Azure Automatización
+
+Azure automatización tiene capacidades compilar para PowerShell DSC y puede rellenar el role del pull server para una o más máquinas virtuales.
+
+Para iniciar usando la compilación de las capacidades, sube uno o más ifcheros de configuración a al cuenta de automatización. 
+
+1. Are haciendo clicen la opción de la izquierda.
+2. Selecciona **Configuraciones** en la pestaña de arriba.
+3. Nuevas configuraciones pueden ser añadidas usando el botón **Añadir**. Puede seleccionar un fichero, y será añadido a la lista. Algúna configuración valida en el listado puede ser clicada y compilada en el sitio. 
+4. La configuración podrá ser mostrada en la pestaña con configuraciones compiladas y puede ser aplicada a una o más máquinas virtuales.
+5. La pestaña **Nodos** puede ser usada para añadir una o más máquinas virtuales desde una suscripción  para un nodo de configuración.
+6. Clicando el botón **Añadir**, lo añadirás.
+7. Una máquina virtual puede ser seleccionada para seleccionar la configuración a aplicar.
+8. La configuración local gestionada en esa máquina será configurada para refrescar la configuración de intervalos fijados.
+9. Cuando sea la configuración es refrescada, será reaplicada al servidor.
+
+Azure automatización hablita usuarios para gestionar las máquinas virtuales. Cuando trabajas con ofertas PaaS, esto no puede ser hecho usando tecnicas como PowerShell DSC; otras técnicas deben de usarse para gestionar los ajustes de la aplicación.
+
+
+
 
