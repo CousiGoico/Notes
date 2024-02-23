@@ -658,3 +658,11 @@ El bloque base de construcción se llama **resource**, que es definido especific
 Puede ser instalado en máquinas virtuales de Linux o Windows en Azure.  También existen imágenes precargadas en el Azure Marketplace.
 
 Chef, PowerShell DSC y Puppet tienen un modelo comparable para describir el estado deseado y sirven al mismo propósito. 
+
+##### Ansible
+
+Es la herramienta de gestión de configuración más usado en Linux pero también soporta Windows.  No tiene un servidor centralizado para todos los hosts, y tampoco trabaja con agentes. Todos los compandos ejecutados por Ansible son ejecutados usando SSH u otros protocolos HTTP(S), WinRM u otros.
+
+Algún servidor puede iniciar el despleigue de un *playbook* contra uno o más *items* en un *inventory*. Un inventario contiene todos los servidores gestionados, yse puede agrupar en uno o más grupos. CAda servidor individual y cada grupo es un elemento de inventario. El estado es descrito en playbooks, que es una serie de tareas o roles que necesita para ser ejecutado en el servidor objetivo.  Un role es un grupo de tareas, que son entendidas para ser reusadas en más de una plabook y debe ser suficientemente general para ser usada en multiples situaciones. Los roles son idempotentes. Esto significa que las tareas en el role deben asegurar que la devolución de la ejecución de un playbook es el mismo, sin tener encuenta el número de veces ejecutado.
+
+Los scripts de Ansible pueden ser ejecutados usando herramientas de línea de comandos o una extensión de Azure DevOps que envuelve esta herramienta. Ansible Tower provee a una interfaz gráfica en el top de las capacidades de herramientas de líneas de comandos de Ansible. 
