@@ -602,5 +602,23 @@ Con el key vault y acceso establecidos, la aplicación puede recuperar el conten
             var configurationBuilder = new ConfigurationBuilder().AddAzureKeyVault($"https://{Configuration["keyVaultName"]}.vault.azure.net/", kvClient, new DefaultKeyVaultSecretManager());
             Cofniguration = configurationBuilder.Build();
 
-> [!Trp]
+> [!Trip]
 > Ejemplos de código en el paquete nuget *Microsoft.Configuration.ConfigurationBuilders.Azure*.
+
+#### Azure App Configuration
+
+Permite la creación central de parejas clave-valor que pueden ser usadas como configuración como un registrador, pero para multiples aplicaciones. El componente principal es el **Explorador de configuración**.
+
+La sección claves para recuperar las claves de acceso que la aplicación puede usar para leer la configuración. Hay opciones para ver los cambios recientes y restaurar una versión anterior y para importar o exportar configuraciones.
+
+Despues de haber creado un App Configuration y añadir las claves, puede ser recuperado desde la aplicación mediane un método de la interfaz **IConfiguration**.
+
+            config.AddAzureAppCnfiguration(settings["ConnectionStrings: AppConfig"])
+
+> [!Trip]
+> *Nuget Mcrosoft.Azure.AppConfiguratn.AspNetCore package*.
+
+Comparando para almacenar ajustes en Azure Key Vault, AppConfiguration hay dos puntos:
+
+* La aplicación necesita para ser conifgurada una connection string para Azure App Configuration, almacenada al menos en un secreto en los ajustes de la aplicación.
+* App onfiguration no tiene opciones de acceso tan rigidas como Key Vault. Podría tener sentido distribuir la configuración entre ambos, dependiendo del tipo de configuración.
