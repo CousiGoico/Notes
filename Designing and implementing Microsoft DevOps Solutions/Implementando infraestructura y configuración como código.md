@@ -649,3 +649,12 @@ La interacción con *Chef server* es usando una herraienta de línea de ocmandos
 
 Hay conceptos paralelos entre PowerShell DSC y chef.
 
+##### Puppet
+
+Es una herramienta de despliegues y gestión de configuración que opera usando el modelo servidor-cliente. Esta centralizado en un servidor llamado **Puppet master** que es el responsable de tomarlo todo y compilarlo en un catalogo interno que mantiene el estado deseado para cada servidor gestionado. En los servidores locales se instalan un agente que conecta con el servidor. El servidor gestionado se llama **node**.
+
+El bloque base de construcción se llama **resource**, que es definido especificnado el tipo y una serie de atributos. Son agrupados en una o más *classes*.
+
+Puede ser instalado en máquinas virtuales de Linux o Windows en Azure.  También existen imágenes precargadas en el Azure Marketplace.
+
+Chef, PowerShell DSC y Puppet tienen un modelo comparable para describir el estado deseado y sirven al mismo propósito. 
