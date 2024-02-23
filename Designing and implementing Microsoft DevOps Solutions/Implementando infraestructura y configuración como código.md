@@ -622,3 +622,19 @@ Comparando para almacenar ajustes en Azure Key Vault, AppConfiguration hay dos p
 
 * La aplicación necesita para ser conifgurada una connection string para Azure App Configuration, almacenada al menos en un secreto en los ajustes de la aplicación.
 * App onfiguration no tiene opciones de acceso tan rigidas como Key Vault. Podría tener sentido distribuir la configuración entre ambos, dependiendo del tipo de configuración.
+
+#### Otras herrramientas
+
+Otras herramientas disponibles para gestionar la infraestructura y la configuración mediante código.
+
+##### CloudFormation
+
+Es un lenguage IaC para la nube AWS. Las plantillas son escritas en JSON o YAML. 
+
+            Resources:
+                HelloBucket:
+                Type: AWS::S3::Bucket
+                Properties:
+                AccessControl: PublicRead
+
+Existe una extensión disponible que permite la ejecución de CloudFormation en AWS desde Azuer DevOps para crear, modificar o eliminar recursos en AWS.
