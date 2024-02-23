@@ -638,3 +638,14 @@ Es un lenguage IaC para la nube AWS. Las plantillas son escritas en JSON o YAML.
                 AccessControl: PublicRead
 
 Existe una extensión disponible que permite la ejecución de CloudFormation en AWS desde Azuer DevOps para crear, modificar o eliminar recursos en AWS.
+
+##### Chef
+
+Es una herramienta para CaC, con soporte para describir la configuración de los servidores. El **Chef server** es donde la confiugración del servidor es guardada. El **Check cliente** es un agente que ejecuta en el nodo la configuración especifica.
+
+Definiendo el estado deseado para un servidor es echo usando un número de constructores. El nivel más bajo es la *receta*, que puede contener uno o más recursos. Una o más recetas son combinadas en *libros de cocina*, que describe la capacidad que es asignada a un nodo. La asignación de uno o más libros de cocina para un nodo se hace ejecutando una lista. La ejecución de la llista contiene todos los libros de cocicna que pueden ser aplicados al nodo.
+
+La interacción con *Chef server* es usando una herraienta de línea de ocmandos llamada *knife*.
+
+Hay conceptos paralelos entre PowerShell DSC y chef.
+
