@@ -256,11 +256,11 @@ user ||--o{ Car}
 
 ## Table of contents
 
-1. [Introduction](###Introduction)
-2. [Characteristics](###Characteristics)
-3. [Definition](###Definition)
-4. [Process](###Process)
-5. [Results](###Results)
+1. [Introduction](#Introduction)
+2. [Characteristics](#Characteristics)
+3. [Definition](#Definition)
+4. [Process](#Process)
+5. [Results](#Results)
 
 ### Introduction <a id="introduction" href="#introduction" class="anchor"></a>
 
