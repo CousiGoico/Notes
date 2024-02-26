@@ -23,3 +23,9 @@ Nuestra profesión nos exige, más aún que otros, aprender y dejar atrás const
 Puede parecer agotador, pero en realidad consiste en un trabajo continuo y mantener una actitud eterna de principiante, con ganas de aprender. También debes tener la costumbre de leer algún artículo aquí y allá, leer las newsletters que recibes de tus suscripciones para estar al día de los temas que te interesan, leer un buen libro de vez en cuando, etc.
 
 ### Conoce y usa la estructura de datos y algoritmos correctamente <a id="" href="#KnowAndUseCorrectly" class="anchor"></a>
+
+La programación, en esencia, consiste en manipular datos de una forma u otra: datos que se almacenan en una base de datos o cualquier otro tipo de repositorio, que se analizan y manipulan para obtener un resultado (lógica de negocios), que se estructuran de manera que agreguen algún valor determinado, etc. 
+
+Asimismo, los algoritmos de búsqueda lineal o binaria, ordenación como (mergesort, quicksort, etc) búsqueda en profundidad (o DFS), coincidencia de patrones de cadenas, map/reduce y muchos otros, son algoritmos que no existen como un simple capricho académico, sino que más bien ayuda a resolver algunos problemas informáticos típicos, puedes estar desarrollando un ERP, un sitio web, un juego o cualquier otra cosa que puedas imaginar.
+
+Es cierto que muchas aplicaciones consisten en un simple CRUD (creación, lectura, actualización y eliminación de datos): interfaz de usuario, algo de lógica empresarial y una base de datos para insertar, eliminar o extraer información; pero en muchos otros puedes resolver mejor las cosas aplicando las estructuras de datos y algoritmos correctos. Pero, por favor, no invente sus propias ordenaciones, búsquedas, validaciones de cadenas, métodos de cifrado. Conozca las bases de esta industria y simplemente proponga algo nuevo cuando tenga algo en sus manos que sea realmente particular.
