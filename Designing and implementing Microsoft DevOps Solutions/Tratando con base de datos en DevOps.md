@@ -40,3 +40,18 @@ Las migraciones creadas en diferentes ramas que son mergeadas juntas sólo la ú
 
 Una ventaja de este enfoque es que cada individual esquema puede ser desplegado contra la base de datos en la misma manera. Ello ejecutará aún una por una en un predecible orden y en la misma manera en el que ellos corrieron contra el entorno de etests, incluso si ellos son aplicados uno por uno.
 
+### Estado final
+
+A diferencia del enfoque de gestionar cambios del esquema, este no mantiene la traza de los cambios individuales, sólo almacena la última versión del esquema en el control de versiones. Herramientas externas como Microsoft VIsual Studio y Redgate's SQL Data Compare son usadas para comparar el actual esquema en el control de versiones con el actual esquema de base de datos, generando scrips de migración y aplicandolos cuando se ejecuta. Los scripts de migración no estan almacenados y son de un único uso.
+
+A diferencia de escribir migraciones, no es factible eejcutar tareas a mano. Mientras tracenando la nueva versión del esquema a mano en el control de versiones puede ser gestionado, el mismo no es factible por el enfoque estado final. Generando scripts de migración mientras se compara lel esquema existente y el nuevo esquema y aplicando las migraciones solo puede ser hecho usando herramientas, tales como Redgate SQL Source Control y SQL Server Data Tools.
+
+![Figure9.2](Figure9.2.png)
+
+El esquema de la base de datos actual y la descripción de la base de datos deseada son comparadas para generar una mejora y directamente aplicar un script para hacer los camos necesarios para que el esquema actual sea el mismo que el esquema deseado.
+
+Una ventaja de este enfoque es que no genera una serie de scripts que deben ser ejecutados en un orden especifico. Este enfoque combina fácilmente con ramas de esquemas donde los cambios son integrados más lentamente cada vez. También remueve la necesidada de escribir migraciones a mano para escenarios simples, tales como añadir o eliminar una columna, tabla o indice. 
+
+La desventaja de este enfoque es que hace difícil gestionar los cambios que necesita las operaciones de datos. Desde las herramientas solo haces cumplir el nuevo esquema, esto dirige los datos perdidos y no hay intervención.
+
+Una posible manaera de intervenir para evitar estar añadiendo scripts pre-despliegue y post-despliegue en el paquete de esquema, es que en el script de pre-despliegue se guadarse los datos en una tabla temporal. Después de aplicar el nuevo esquema los datos son compiados desde la tabla temporal a su nueva localización en el script post-despliegue.
