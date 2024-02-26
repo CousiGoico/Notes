@@ -14,7 +14,7 @@ El primer enfoque es basado en mantener un ordenado conjunto de cambios que tien
 
 Las herramientas pueden automaticamente generar el script de la migración basada en la comparación del actual esquema y del nuevo esquema en el control de versiones. A esto se le llama **scaffolding**. Los scripts generdos por las herramientas no siempre son perfectos, y ellos tiene que ser mejorados aplicando el cónocimiento que el programador tiene.
 
-![Figure9.1](Figure9.1.png){width="800" height="600" style="display: block; margin: 0 auto"}
+![Figure9.1](Figure9.1.png)
 
 Las etiquetas **m1** a la **m4** describen los cambios incrementales. Para modificar la base de datos a la última versión, la última migración aplicada es determinante y todas las migraciones posteriores que son añadadidas una después de otra.
 
@@ -27,4 +27,16 @@ Cuando edistas las migaciones a mano debes mantener en mente:
 * Indices extra y restricciones deben ser aplicadas no sólo en la base de producción. Asegurar que los indices y las restricciones son aplicadas en el mismo orden y no pueden bloquear migraciones existiendo sólo en proudcción.
 
 * La migración debe ser realizada idempotente. El retorno de la última migración es una gran manera de asegurarse que está totalmente aplicada.
+
+Una desventaja de este enfoque es el estricto orden requerido que es impuesto en la generación y aplicación de migraciones generadas. Esto hace duro la integración de este enfoque en el dessarrollo del workflow que dependende duramente del uso de ramas.
+
+Las migraciones creadas en diferentes ramas que son mergeadas juntas sólo la última debe romper el orden de las migraciones o, peor aún mergear una separación en la ruta de la migración. La única manera de que el error pueda ser corregido es realizarlo en varias etapas:
+
+1. Eliminar todas las migracaciones a partir de la nueva.
+
+2. Aplicar todas las otras migraciones a labase de datos que no tiene nuevas migraciones aplicadas.
+
+3. Generar nueva migración para las otras migraciones.
+
+Una ventaja de este enfoque es que cada individual esquema puede ser desplegado contra la base de datos en la misma manera. Ello ejecutará aún una por una en un predecible orden y en la misma manera en el que ellos corrieron contra el entorno de etests, incluso si ellos son aplicados uno por uno.
 
