@@ -68,3 +68,18 @@ Puede ser realizado usando un script personalizado en PowerShell o otro lenguaje
 
 Otra variación es separar entre las fases de la aplicación compilación y la liberación (release). Los scripts migración son exportados como un artefacto compilado separado, desde el código fuente o después de ejecutar una herramienta que genera el script SQL necesario. Este arttefacto es entonces descargado contra la fase de la libración (release) dde es aplicado para la baes de datos usando una tarea de Azure Pipelines para ejecutar SQL.
 
+### Mejorando como parte del código de la aplicación
+
+En cambio aplicando los cambios de esquema desde la pipeline de liberación (release), puede también ser aplicada por la aplicación propia. Algunos de los ORMs, con migraciones soportan la construcción, teniendo la capacidad automática de detectar si el esquema de la bse de datos coincide con la última migración. Si no, automáticamente migra el esquema a la última versión. 
+
+La versión del framework no soporta migraciones automáticas. En Entity Framework Core, con una simple linea del código de la aplicación puede ser usada para iniciar una mejora en el tiempo que es conveniente desde la perspectiva de la aplicación.
+
+        using (var context = new MyContext(...))
+        {
+            context.Database.Migrate();
+        }
+
+La ventaja de este enfoque es que es muy simple para habilitarlo. La desventaja es que más ORMs que soportan esto forzaran el bloqueo en la base de datos, parando todas las transacciones mientras las migraciones se ejecuten. 
+
+Este enfoque es normalmente usado paramigraciones basadas en enfoques. El enfoque que usaun enfoque end-state requiere una herramienta externa de tercera parte que es usada para generar el script de migración necesario y aplicarlo. Esto es normalmente realizado por la pipeline de libración (release) y no envuelve la propia aplicación.
+
