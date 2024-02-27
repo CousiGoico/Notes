@@ -55,3 +55,8 @@ Una ventaja de este enfoque es que no genera una serie de scripts que deben ser 
 La desventaja de este enfoque es que hace difícil gestionar los cambios que necesita las operaciones de datos. Desde las herramientas solo haces cumplir el nuevo esquema, esto dirige los datos perdidos y no hay intervención.
 
 Una posible manaera de intervenir para evitar estar añadiendo scripts pre-despliegue y post-despliegue en el paquete de esquema, es que en el script de pre-despliegue se guadarse los datos en una tabla temporal. Después de aplicar el nuevo esquema los datos son compiados desde la tabla temporal a su nueva localización en el script post-despliegue.
+
+## Aplicando cambios en el esquema de la base de datos
+
+Cuando aplicas cambios al esquema de la base de datos, existen dos métodos para hacerlo. Cambios que pueden ser aplicados prioritariamente para desplegar en la nueva versión de la aplicación, o por el código proprio de la aplicación.
+
