@@ -83,3 +83,42 @@ La ventaja de este enfoque es que es muy simple para habilitarlo. La desventaja 
 
 Este enfoque es normalmente usado paramigraciones basadas en enfoques. El enfoque que usaun enfoque end-state requiere una herramienta externa de tercera parte que es usada para generar el script de migración necesario y aplicarlo. Esto es normalmente realizado por la pipeline de libración (release) y no envuelve la propia aplicación.
 
+### Añadiendo un proceso
+
+Es importante pensar sobre como y caundo los cambios de esquema en la base de datos o la aplicación que usa el esquema son aplicados. Como el despliegue del esquema y el código despliega son programados, siempre será un periodo donde uno de los siguientes es verdadero:
+
+* El código de lan ueva aplicación esta lista de ejecutarse mientras el esquema no es aplicado todavía o está en le proceso de ser aplicado.
+
+* El código de la aplicación antigua esta actualmente ejecutandose, mientras el esquema esta actualmente aplicado o esta en el proceso de ser aplicado.
+
+* El código de la aplicación no esta ejecutandose, mientras el esquema esta siendo aplicado.
+
+La tercera situación es altamente indeseable. Esto es verdadero en general, pero espeicialmente cuando practicas DevOps. Si los cambios son enviados a menudo y durante el horario laboral, no es aceptable deshabilitar la aplcación para cada cambio de esquema.
+
+Para prevenir teniendo que deshabilitar la aplicación mientras el esquema es aplicado, uno de los siguientes requerimientos debe reunirse:
+
+* El esquema es retro-compatible de tal manera que la vieja versión de la aplicación puede ejecutar sin errores contra la base de datos donde el esquema tiene los cambios aplicados o seran aplicados.
+
+* La nueva aplicacón es retro-compatible de tal manera que si puede ejecutarse contra ambas la vieja y la nueva versión el esquema. 
+
+Reuniendo el primero de esas condiciones aseguras qeu la vieja aplicacón puede continuar ejecutando mientras el esquema es siendo aplicado. Reuniendo el segundo de las condiciones aseguras que la nueva versión puede ser desplegada primero y una vez que este completada, la base de datos puede ser actaulizada con el código ejecutandose. La razón es que el esquema a menudos soporta los cambios de código. 
+
+Esto significa quel siguiente es un proceso seguro para desplegar cambios de esquema sin deshabilitar la aplicación:
+
+1. Creas una nueva base de datos.
+2. Aplicas los cambios de la base de datos.
+3. Verificas que los cambios han sido aplicados o abortas la pipeline de despliegue.
+4. Desplieguas la nueva aplicación.
+
+Esto es imporante para realizar que este proceso asuma los fallos para adelante. Esto significa que si se produce una incidnecia con el despliegue del esquema, serán reueltos antes de continuar con el despliegue. 
+
+La condición de retro-compatiblidad para un cambio de esquema puede en algunos momentos ser imposible. El cambio puede a menudo ser dividido en dos cambios que juntos tienen el mismo resultado finl, mientras ambos reunen la condición de retro-compatiblidad.
+
+1. Genera una migración que añade una nueva columna a la tabla de base de datos, almacenado la distancia en metros.
+2. Añade el código de la aplicación que lee de la antigua columna pero es que escribe en ambas columnas.
+3. Despliega esos cambios en producción.
+4. Añade una nueva migración que migra los datos de la vieja columna a la nueva para todos los caso donde la nueva columna no esta aún rellan, pero la columna antigua si.
+5. Modifica el código de la aplicación para que lea de la nueva columna.
+6. Despliega los cambios de la aplicación en producción.
+7. Añade uan nueva migración que elimina la columna antigua.
+
