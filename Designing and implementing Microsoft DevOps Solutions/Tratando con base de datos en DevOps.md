@@ -128,3 +128,46 @@ Completamente diferente enfoque para la gestión del esquema de base de datos es
 
 Pueden almacenar documentos con un esuqema diferente en la misma colección, cambios de esquema existentes desde un punto de vista de base de datos. Para ver como gestionar esto, la mejor manera de diferenciar es entre almacenar objetos en la base de datos y leerlos de vuelta.
 
+### Escribiendo objetos en la base de datos
+
+Los documentos son almacenados en una base de datos sin esuqema que son a menudos serliazados en objetos en la aplicación. Cuando estas trabajando con una base de datos de documentos, esos objetos son a menudo serializados y almacenados en la base de datos. La serialización es el proceso de convertir un objeto en un flujo de bytes para que pueda ser guardado o enviado fácilmente a través del procesos. La deserialización es el proceso inverso de construcción a una estructura de datos o objeto desde un flujo de bytes. Esto significa que un cambio en la definición del objeto puede resultar una diferencia en la estructura del documento aguardar. 
+
+Este código esta usando el atributo *JsonConstructor* para indicar que el constructor de la clase debe ser usada para crear una instancia de la clase durante la deserialización.
+
+        public class Person
+        {
+            [JsonConstructor] private Person() {}
+            public Person (string name) {
+                Name = name ? throw new ArgumentNullException();
+            }
+        }
+
+El siguiente código muestra una representación JSON de una instancia de Persona después de serializar el documento de la base de datos:
+
+        {
+            "Name": "Mark Anderson"
+        }
+
+Despues de que este código haya sido ejecutado en un entorno de proudcción por un momento, y miles de personas hayan sido guadadas, un nuevo requerimiento es necesario. Después del nombre del a persona, la ciudad donde ellos viven debe ser registrada. Por este motivo, la clase *Person* debe extenderse para incluir otra propiedad. Despues de realizar este cambio y delpegar el nuevo código, cuando sea una pesona es guardada, el siguiente código se usó:
+
+        public class Person
+        {
+            [JsonConstructor] private Person() {}
+            public Person (string name, string city) {
+                Name = name ? throw new ArgumentNullException();
+                City = city ? throw new ArgumentNullException();
+            }
+            [JsonProperty]
+            public string Name { get; private set; }
+            [JsonProperty]
+            public string City { get; private set; }
+        }
+
+La definición de la clase *Persona* ha sido cambiada; el correspondiente JSON representa la nueva instancia en el siguiente ejemplo. Ambas variaciones pueden ser usadas en la misma colección:
+
+        {
+            "Name": "Mark Anderson",
+            "City": "Amsterdam"
+        }
+
+Esto muestra que desde el punto de vista de escriibr información de la base de datos, el enfoque sin esquema es muy conveniente desde desarroladores no tienen que pensar en la gestión de cambios del esquema. 
