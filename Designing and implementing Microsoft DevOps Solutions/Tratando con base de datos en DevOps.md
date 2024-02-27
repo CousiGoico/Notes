@@ -60,3 +60,11 @@ Una posible manaera de intervenir para evitar estar añadiendo scripts pre-despl
 
 Cuando aplicas cambios al esquema de la base de datos, existen dos métodos para hacerlo. Cambios que pueden ser aplicados prioritariamente para desplegar en la nueva versión de la aplicación, o por el código proprio de la aplicación.
 
+### Mejorando como parte de la release
+
+El primer enfoque para aplicar cambios en la base de datos como parte de una release. Cuando esto es el caso, la herramienta que es la responsable de leer y ejecutar el script de migracion es invocada usando una tarea en la pipeline. 
+
+Puede ser realizado usando un script personalizado en PowerShell o otro lenguaje de scripting. Esto es propenso a generar errores, y con cada cambio de la herramienta es un riesgo que los scripts necesiten ser modificados. La mayoría de las herramientas basadas en migraciones, como las tareas de Azure Pipelines que están disponibles para iniciar la migración desde la liberación (release).
+
+Otra variación es separar entre las fases de la aplicación compilación y la liberación (release). Los scripts migración son exportados como un artefacto compilado separado, desde el código fuente o después de ejecutar una herramienta que genera el script SQL necesario. Este arttefacto es entonces descargado contra la fase de la libración (release) dde es aplicado para la baes de datos usando una tarea de Azure Pipelines para ejecutar SQL.
+
