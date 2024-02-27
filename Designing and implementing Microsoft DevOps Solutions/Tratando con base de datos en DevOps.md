@@ -122,3 +122,9 @@ La condición de retro-compatiblidad para un cambio de esquema puede en algunos 
 6. Despliega los cambios de la aplicación en producción.
 7. Añade uan nueva migración que elimina la columna antigua.
 
+## Sin esquema
+
+Completamente diferente enfoque para la gestión del esquema de base de datos es dejar de tener esquema de base de datos. Esto puede ser hechousando una base de datos sin esuqema o de documentos. La base de datos más conocida de este tipo es **Azure Cosmos DB**. Esas bases de datos pueden almacenar documentos de diferentes formas. Estas bases de datos no usan el termino *table*, pero en estas bases de datos se conocen como contenedores o colecciones.
+
+Pueden almacenar documentos con un esuqema diferente en la misma colección, cambios de esquema existentes desde un punto de vista de base de datos. Para ver como gestionar esto, la mejor manera de diferenciar es entre almacenar objetos en la base de datos y leerlos de vuelta.
+
