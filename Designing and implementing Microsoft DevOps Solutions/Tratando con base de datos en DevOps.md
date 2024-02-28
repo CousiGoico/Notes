@@ -237,3 +237,23 @@ La primera etapa en tratar con bases de datos puede ser reducir el cambio que un
 
 Un simple enfoque para esto es justamente reducir procedimientos almacenados que permita más fácilmente lado por lado cambiar usando características alternas.
 
+### Implementación completa en paralelo
+
+Cuando trabajas en un entorno de alto riesgo, o con base de datos frágil, es otro enfoque para que puedan ser tomados cambios en la base de datos. Este enfoque es basado en aplicar características alternas y el despliegue blue-green y va como sigue:
+
+1. Cambia el código de la aplicación en tal a una manera que escribes alguna modificación a no sólo una sino a dos bases de datos.
+
+2. En el entorno de producción, crea una una copia completa de la base de datos existente y configura la aplicación para escribir todos los cambios para ambas bases de datos. Esas bases de datos serán llamadas *old* and *new*.
+
+3. Introduce los cambios requeridos a la nueva bse de datos y la aplicación sólo en la ruta que escribe en la nueva base de datos.
+
+4. Introduce los cambios necesarios en todo el código y lee de ambas bases de datos.
+
+5. Modifica la aplicón para detectar diferencias en los resultados de las consultas entre la nueva y vieja base de datos y loga un error cuando encuentras discrepancias.
+
+6. Si los cambios son ejecutados sin incidencias, elimina la base de datos *old*, y reescribe los accesos desde el código de la aplicación.
+
+7. Si los cambios se ejecutan con errores, corrigelos. Entonces , reinicia restaurando la copia de seguridad por la base de datos *new* y vuelve al punto 5.
+
+La ventaja de este enfoque es que es muy ligero. La desventaja es qeu es muy invovlvente, toma algo de trabajo, y es más caro. También la base de datos extra cuesta y hay que tener en cuenta el tiempo de backup y restauración.
+
