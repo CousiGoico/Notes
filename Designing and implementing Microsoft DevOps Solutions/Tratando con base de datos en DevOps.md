@@ -257,3 +257,8 @@ Cuando trabajas en un entorno de alto riesgo, o con base de datos frágil, es ot
 
 La ventaja de este enfoque es que es muy ligero. La desventaja es qeu es muy invovlvente, toma algo de trabajo, y es más caro. También la base de datos extra cuesta y hay que tener en cuenta el tiempo de backup y restauración.
 
+### Testeando cambios de base de datos
+
+Tal como el código de la aplicación, las perspectivas de la calidad de los cambios de la base de datos pueden se testeados. 
+
+Para cubrir los riesgos introducidos por los cambios de la base de datos, el sistema de testeo es necesario que ejecute contra un completo despliegue de la aplicación. Este tipo de tests puede cubrir más riesgos que de venir de esquemas defectuoso, invalidando procedimientos almacenados y desajustes entre bases de datos y aplicaciones.
