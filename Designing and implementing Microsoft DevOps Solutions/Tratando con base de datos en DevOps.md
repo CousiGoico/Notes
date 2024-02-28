@@ -228,3 +228,12 @@ Añadiendo código a obetos para gestionar esas situaciones incrementa el tamañ
 5. Una vez el proceso ha procesado las entidades existnetes, elimina el código que es responsable de copiar con el cambio de esquema durante la deserialización desde el código base, junto con cualquier propiedad no usada.
 
 Usando este enfoque, todos los cambios son propagados para almacenar todas las versiones del objeto en el periodo de tiempo. La desventaja de este enfoque es que el cambio del objeto es propagar sobre tods cambios que deben ser desplegados separadamente. Desplegando el segundo cambio debe eseperar hasta que todos los objetos en la base de datos hayan sido convertidos.
+
+## Otros enfoques y preocupaciones
+
+### Minimizzando la influencia de la base de datos
+
+La primera etapa en tratar con bases de datos puede ser reducir el cambio que una base de datos tiene para ser hecha. Es posible escribir procedimientos almacenado. Mientras los procedimientos almacenados vienen con algunos beneficios, cambiandolos puede también contar como cambio del esquema de base de datos, o por último, resultar cambios que pueden ser dificiles de testear. 
+
+Un simple enfoque para esto es justamente reducir procedimientos almacenados que permita más fácilmente lado por lado cambiar usando características alternas.
+
