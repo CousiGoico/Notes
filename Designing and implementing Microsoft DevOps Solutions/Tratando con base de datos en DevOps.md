@@ -171,3 +171,60 @@ La definición de la clase *Persona* ha sido cambiada; el correspondiente JSON r
         }
 
 Esto muestra que desde el punto de vista de escriibr información de la base de datos, el enfoque sin esquema es muy conveniente desde desarroladores no tienen que pensar en la gestión de cambios del esquema. 
+
+### Leyendo objetos de la base de datos
+
+Mientras las bases de datos hacen extremadamente fácil escribir documentos de diferentes formas en la misma colección, sto puede dar problemas cuando lees documentos de la misma colección y lo deserializas. El problema de la gestión del esquema no es removido pero lo aplaza a un momento posterior en el tiempo.
+
+Continuando con el ejemplo desde la sección previa, resultará un valor null para la propiedad city. Esto puede ser inesperado, desde C# garantiza que la persona sin city nunca puede ser construida. 
+
+El asunto puede ser eludido modificando la clase *Person*:
+
+        public class Person
+        {
+            [JsonConstructor]
+            private Person() {}
+
+            public Person (string name, string city){
+                Name = name ?? throw new ArgumentNullException();
+                City = city ?? throw new ArgumentNUllException();
+            }
+
+            [JsonProperty]
+            public string Name {get; private set;}
+
+            [JsonIgnore]
+            private string _city;
+
+            [JsonProperty]
+            public string City {
+                get { return _city; }
+                private set { _city = value ?? _city = string.empty }
+            }
+        }
+
+Aparte de los escenarios, donde una propiedad es añadida, hay variosotros escenarios que requiere C# para ser adaptado en orden para gestionar la deserialización de los escenarios. 
+
+* Añadiendo una propiedad de un tipo primitivo.
+
+* Añadiendo una propidad compleja, otro objeto o un array.
+
+* Renombrando una propiedad.
+
+* Reemplazando una porpiedad de tipo primitivo con una propiedad compleja.
+
+* Haciendo nulable propiedades no nulables.
+
+Añadiendo código a obetos para gestionar esas situaciones incrementa el tamaño y la complejidad del código bsae y contamina el código primario con la capacidad de copiar con situaciones pasadas. Esto puede leaderar complicaciones no deseadas en el código base. Una posible solución es pasar procesos donde el esquema de un objeto cambia:
+
+1. Cambia el esquema del objeto, asegurando que ahí solo hay propiedades añadidas. Cuando el objetivo es remover una propiedad, en este momento, sólo una propiedad con el nuevo nombre es añadido.
+
+2. Implementa logica en el objeto para hacer frencte con la deserialización de la vieja versión del objeto.
+
+3. Despliegue de la nueva versión del objeto.
+
+4. Iniciar un proceso que carga los objetos del tipo desde la base d datos uno por uno y los guarda en la base de datos.
+
+5. Una vez el proceso ha procesado las entidades existnetes, elimina el código que es responsable de copiar con el cambio de esquema durante la deserialización desde el código base, junto con cualquier propiedad no usada.
+
+Usando este enfoque, todos los cambios son propagados para almacenar todas las versiones del objeto en el periodo de tiempo. La desventaja de este enfoque es que el cambio del objeto es propagar sobre tods cambios que deben ser desplegados separadamente. Desplegando el segundo cambio debe eseperar hasta que todos los objetos en la base de datos hayan sido convertidos.
