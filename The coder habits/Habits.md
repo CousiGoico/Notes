@@ -5,6 +5,7 @@
 1. [Aplica la regla 50/50](#550/50Rule)
 2. [Aprende algo nuevo cada semana](#LearnEachWekk)
 3. [Conoce y usa la estructura de datos y algoritmos correctamente](#KnowAndUseCorrectly)
+4. [No cometas el mismo error dos veces](#DontMakeTheSameMistakeTwice)
 
 ## Hábitos
 
@@ -29,3 +30,9 @@ La programación, en esencia, consiste en manipular datos de una forma u otra: d
 Asimismo, los algoritmos de búsqueda lineal o binaria, ordenación como (mergesort, quicksort, etc) búsqueda en profundidad (o DFS), coincidencia de patrones de cadenas, map/reduce y muchos otros, son algoritmos que no existen como un simple capricho académico, sino que más bien ayuda a resolver algunos problemas informáticos típicos, puedes estar desarrollando un ERP, un sitio web, un juego o cualquier otra cosa que puedas imaginar.
 
 Es cierto que muchas aplicaciones consisten en un simple CRUD (creación, lectura, actualización y eliminación de datos): interfaz de usuario, algo de lógica empresarial y una base de datos para insertar, eliminar o extraer información; pero en muchos otros puedes resolver mejor las cosas aplicando las estructuras de datos y algoritmos correctos. Pero, por favor, no invente sus propias ordenaciones, búsquedas, validaciones de cadenas, métodos de cifrado. Conozca las bases de esta industria y simplemente proponga algo nuevo cuando tenga algo en sus manos que sea realmente particular.
+
+### No cometas el mismo error dos veces <a id="" href="#DontMakeTheSameMistakeTwice" class="anchor"></a>
+
+Lo que puede diferenciar a unos de otros es cometer el mismo error una y otra vez y aprender activamente de sus errores, problemas y obstáculos.
+
+¿Qué pasó? ¿Qué pudo hacer para evitar que vuelva a ocurrir?
