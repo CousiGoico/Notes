@@ -40,3 +40,7 @@ Lo que puede diferenciar a unos de otros es cometer el mismo error una y otra ve
 ### Escribe código leíble
 
 Escribir código es resolver problemas. La habilitada consiste en resolver problemas en una manera simple y por supuesto, leíble, es decir, fácil de comprender por cualquiera quien tome esa pieza de código más adelante.
+
+### Empiza por lo difícil (o las cosas que más pareza te hacen sentir)
+
+Si quieres mejorar tu productividad and concentración, empieza finalizando aquello que menos te gusta.
