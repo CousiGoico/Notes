@@ -36,3 +36,7 @@ Es cierto que muchas aplicaciones consisten en un simple CRUD (creación, lectur
 Lo que puede diferenciar a unos de otros es cometer el mismo error una y otra vez y aprender activamente de sus errores, problemas y obstáculos.
 
 ¿Qué pasó? ¿Qué pudo hacer para evitar que vuelva a ocurrir?
+
+### Escribe código leíble
+
+Escribir código es resolver problemas. La habilitada consiste en resolver problemas en una manera simple y por supuesto, leíble, es decir, fácil de comprender por cualquiera quien tome esa pieza de código más adelante.
