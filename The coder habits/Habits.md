@@ -48,3 +48,9 @@ Si quieres mejorar tu productividad and concentración, empieza finalizando aque
 ### Escribe fuidamente
 
 Debes aprender a usar el teclado con todos lo dedos y con las dos manos para escribir de una manera más ágil y rápida, ya que es una de las cosas que harás todos los días.
+
+### Finaliza todo lo que empieces
+
+Nuestra mente piensa en cosas lindas y no en los problemas, complicaciones o dificultades que podemos encontrar a la hora de emprender un proyecto o una tarea. Si llegamos hasta el final conseguimos más aprendizaje, tenacidad y conocimiento técnico; mientras que si no lo finalizamos recibimos fustración y perdemos autoestima. No dejes nada sin hacer, olvida o ignora las palabras problema y error y cambialas por una situación en la que puedas resolver creativamente.
+
+Debes de saber que todo gran reto, devuelve un gran resultado. Sal de la zona de confort.
