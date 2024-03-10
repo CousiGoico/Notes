@@ -44,3 +44,7 @@ Escribir código es resolver problemas. La habilitada consiste en resolver probl
 ### Empiza por lo difícil (o las cosas que más pareza te hacen sentir)
 
 Si quieres mejorar tu productividad and concentración, empieza finalizando aquello que menos te gusta.
+
+### Escribe fuidamente
+
+Debes aprender a usar el teclado con todos lo dedos y con las dos manos para escribir de una manera más ágil y rápida, ya que es una de las cosas que harás todos los días.
