@@ -77,3 +77,4 @@ Para hacer esto, se reconoce una amplia selección de diferentes tipos de prueba
 * **Pruebas funcionales**: son usadas para probar si la funcionalidad deseada es actualmente realizada por la aplicación.
 
 * **Pruebas no funcionales**: son usadas para verificar si otras propiedades deseadas de la aplicación se realizan y que las propiedades no deseadas no están presentes. 
+
