@@ -262,3 +262,7 @@ La ventaja de este enfoque es que es muy ligero. La desventaja es qeu es muy inv
 Tal como el código de la aplicación, las perspectivas de la calidad de los cambios de la base de datos pueden se testeados. 
 
 Para cubrir los riesgos introducidos por los cambios de la base de datos, el sistema de testeo es necesario que ejecute contra un completo despliegue de la aplicación. Este tipo de tests puede cubrir más riesgos que de venir de esquemas defectuoso, invalidando procedimientos almacenados y desajustes entre bases de datos y aplicaciones.
+
+<p align="center">
+    <img src="Figure10.2.png">
+<p/>
