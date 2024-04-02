@@ -35,3 +35,34 @@ Es dificil medir objetivamente la calidad del código escrito. Los desarrollador
 **El conjunto de deuda técnica:** es un termino usado para describir las consecuencias de sacrificar la calidad del software, en pocas palabras, entregar código rápido.
 
 Testear es una actividad qeu es realizada para encontrar y reportar en la calidad del software. Los resultados de los tests pueden ser usados para permitir o cancelar un cambio progresivo de la siguiente etapa del despliegue.
+
+### Deuda técnica
+
+La deuda técnica es un termino que describe el coste futuro de sacrificar la calidad del código for algo diferente. El término deuda implica que se debe algo (tiempo, calidad, atención o trabajo) a la solución. Mientas la deuda no sea saldada, tienes que pagar en la forma de que todos los trabajos se relanticen un poco.
+
+La deuda técnica puede tomar varias formas:
+
+* Código que no esta cubierto por algún tests unitario donde los cambios para la implementación de dicho código no puede sr verificado usando tests originales que son usados para crearlos. 
+
+* Código que no está escrito que se explique por si mismo usando variables y nombres de métodos significiativos.
+
+* Código que no adhiere los principios de código como **KISS**, **YAGNI**, **DRY** y/o **SOLID**.
+
+* Clases que son demasiado complejas por que tienen demasiadas variables y métodos.
+
+* Métodos que son demasiado complejos porque tienen demasiados elementos.
+
+* Clases o nombres de espacios que tienen dependencias circulares en diferentes partes de la aplicación.
+
+* Clases que no adhieren el diseño arquitectónico de la aplicación.
+
+Son varias formas de deuda te´cnica, y puede ser un desafio a supervisar. Existen algunas herramientas disponibles que pueden medir la deuda técnia en el código automaticamente e informarlo.
+
+Mientas la deuda ténica es a menudo considerada cosa mala, hay buenas razones para crear deuda técnica a proposito. Es importante, gestionar la altura de la deuda y asegurar que se puede pagar los interses y que la deuda quede saldada.
+
+Mientas la primera versión es usada para validar las proposiciones del negocio y atraer fondos, los desarrolladores pueden saldar la deuda reimplementando o refactorizando la aplicación.
+
+Otra razón debe ser la oportunidad de mercado o un importante evento de negocio que ha sido planificado meses en anterioridad. Tomando algo de deuda técnica para llegar a los objetivos y entregar en tiempo puede valer la pena.
+
+Sin embargo, nunca pagando la deuda y sólo tomando más deuda, incrementará la deuda en el tiempo que un desarrollador necesita para hacer un cambio. Si esto empieza a ocurrir es inevitable que en algún punto los cambios no valgan la pena realizarlos, debido a que el coste siempre superará los beneficios. 
+
