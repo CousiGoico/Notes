@@ -66,3 +66,14 @@ Otra razón debe ser la oportunidad de mercado o un importante evento de negocio
 
 Sin embargo, nunca pagando la deuda y sólo tomando más deuda, incrementará la deuda en el tiempo que un desarrollador necesita para hacer un cambio. Si esto empieza a ocurrir es inevitable que en algún punto los cambios no valgan la pena realizarlos, debido a que el coste siempre superará los beneficios. 
 
+## Entendiendo los tipos de tests
+
+En el desarrollo tradicional de software, los tests son a menudo ejecutados cuando el desarrollo fue completado, la aplicación fue declarada *dev-done*, las carácteristicas fueron congeladas o en situaciones similares. Después de declarar el desarrollo está realizado, el testeo fue realizado y a menudo un largo periodo de ir y venir entre el testeo y la corrección de incidencias, se realiza el desplieuge. El resultado fue que a menudo algunas incidencias fueron encontradas después del despliegue.
+
+*Shifting left* es un principio de pruebas que establece que las pruebas automatizadas deben realizarse en una etapa más temprana del proceso de desarollo. Si todas las actividades envueltas con el desarrollo son dibujadas en una línea desde el comienzo hasta la liberación, entonces *shifting left* indica acercar las actividades de prueba automatizadas al comienzo.
+
+Para hacer esto, se reconoce una amplia selección de diferentes tipos de pruebas.
+
+* **Pruebas funcionales**: son usadas para probar si la funcionalidad deseada es actualmente realizada por la aplicación.
+
+* **Pruebas no funcionales**: son usadas para verificar si otras propiedades deseadas de la aplicación se realizan y que las propiedades no deseadas no están presentes. 
