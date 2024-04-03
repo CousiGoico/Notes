@@ -263,6 +263,4 @@ Tal como el código de la aplicación, las perspectivas de la calidad de los cam
 
 Para cubrir los riesgos introducidos por los cambios de la base de datos, el sistema de testeo es necesario que ejecute contra un completo despliegue de la aplicación. Este tipo de tests puede cubrir más riesgos que de venir de esquemas defectuoso, invalidando procedimientos almacenados y desajustes entre bases de datos y aplicaciones.
 
-<p align="center">
-    <img src="Figure10.2.png">
-<p/>
+

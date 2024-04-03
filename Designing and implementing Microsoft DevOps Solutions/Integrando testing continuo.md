@@ -78,3 +78,6 @@ Para hacer esto, se reconoce una amplia selección de diferentes tipos de prueba
 
 * **Pruebas no funcionales**: son usadas para verificar si otras propiedades deseadas de la aplicación se realizan y que las propiedades no deseadas no están presentes. 
 
+<p align="center">
+    <img src="Figure10.2.png">
+<p/>
