@@ -92,3 +92,6 @@ Esos tipos de tests pueden ser comparados a lo largo de varios ejes: el tiempo t
 
 * Tests de sistema: prueba un ensamblado completo o una aplicación.A menudo sueles ser API tests o tests automatizados de UI. Toman un rato crearlos ya que dependen de un despliegue para ejecutarse y a menudo requiere los ajustes iniciales en la base de datos o en otro almacen permanente. Pueden durar minutos su ejecución. El mínimo cambioen la interface puede causar que un conjunto de tests fallen. Pueden detectarse errores que tanto los tests unitarios y de integración no detectaría, ya que ellos ejecutan los tests del sistema ejecutandose.
 
+> [!IMPORTANT]
+> Teniendo un largo ámbito de tests tiene sus ventajas e incovenintes. Las ventajas es que detecta más errores. La desventaja es que un tests fallido con muy largo ámbito provee sólo una idea acotada de que fue mal. Requerirá más investigación que el fallo de un test con un ámbito pequeño.
+
