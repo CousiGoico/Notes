@@ -95,3 +95,12 @@ Esos tipos de tests pueden ser comparados a lo largo de varios ejes: el tiempo t
 > [!IMPORTANT]
 > Teniendo un largo ámbito de tests tiene sus ventajas e incovenintes. Las ventajas es que detecta más errores. La desventaja es que un tests fallido con muy largo ámbito provee sólo una idea acotada de que fue mal. Requerirá más investigación que el fallo de un test con un ámbito pequeño.
 
+### Test unitario
+
+Son usados para probar una unidad aislada. Para tener una covertura llena de pruebas, las clases de los tests tendrán uno o más tests por cada método público de la clase de aplicación correspondiente. 
+
+Deben ejecutarse extremadamente rápidos. Para hacer esto posible, cada clase es instanciada sin dependencias. Las dependencias serán reemplazadas por clases que las imitan (mock classes). A la izquirda se muestra la configuración en ejecución, a la derecha la configuración durante los tests:
+
+<p align="center">
+    <img src="Figure10.3.png">
+<p/>
