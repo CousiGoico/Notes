@@ -81,3 +81,14 @@ Para hacer esto, se reconoce una amplia selección de diferentes tipos de prueba
 <p align="center">
     <img src="Figure10.2.png">
 <p/>
+
+### Tipos de tests funcionales automatizados
+
+Esos tipos de tests pueden ser comparados a lo largo de varios ejes: el tiempo toma crear el tests, el tiempo que toma ejecutar el test y el ámbito o alcance de esos tests.
+
+* Tests unitarios: son rápidos de escribir, y son ejecutados muy rápidos, a menudo en menos de un milisegundo. Testean el ámbito o alcance más pequeño en una aplicación, a menudo una clase o un método. Nunca es necesario cambiarlo.
+
+* Tests de integración: toma más tiempo para escribirlos ya que se ocupan de múltiples unidades que deben configurarse para trabajar juntas. La ejecución de esos tests debe mantenerse rápido, durando desde milisegundos hasta decenas de segundos, lo que significa que, cubrirán una gran parte del código y detectará defectos que son intorducidos con un cambio.
+
+* Tests de sistema: prueba un ensamblado completo o una aplicación.A menudo sueles ser API tests o tests automatizados de UI. Toman un rato crearlos ya que dependen de un despliegue para ejecutarse y a menudo requiere los ajustes iniciales en la base de datos o en otro almacen permanente. Pueden durar minutos su ejecución. El mínimo cambioen la interface puede causar que un conjunto de tests fallen. Pueden detectarse errores que tanto los tests unitarios y de integración no detectaría, ya que ellos ejecutan los tests del sistema ejecutandose.
+
