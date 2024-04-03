@@ -104,3 +104,49 @@ Deben ejecutarse extremadamente rápidos. Para hacer esto posible, cada clase es
 <p align="center">
     <img src="Figure10.3.png">
 <p/>
+
+Una clase imitada (mock) implementa la misma interface pero no tiene el comportamiento por defecto asociado. Los mocks pueden ser usados para verificar que operaciones concretas o funciones en una dependencia son llamados. 
+
+        public class WorkDivider
+        {
+            private readonly IMessageSender _messageSender;
+
+            public WorkDivider (IMessageSender messageSender)
+            {
+                _messageSender = messageSender;
+            }
+
+            public void DivideWork(IEnumerable<WorkOrder> workOrders)
+            {
+                foreach (var workOrder in workOrders)
+                {
+                    _messageSender.SendMessage(workOrder.GetMessage());
+                }
+            }
+        }
+
+Para instanciar esta clase en un test automatizado, la implementación de la inteface IMessageSneder es necesario. Para trabajar con la dependencia un framework de Mocks como [Moq](https://github.com/devlooped/moq) puede ser usado para tstear *WorkDiver*. En los eemplos [NUnit](https://nunit.org/) es usado como framework de testing.
+
+        [TestFixture]
+        public class WorkDividerTest
+        {
+            private Mock<IMessageSender> _messageSender;
+            private WorkDivider _subject;
+
+            [SetUp]
+            Public void SetUp() 
+            {
+                _messageSender = new Mock<IMessageSender>();
+                _subject = new WorkDivider(_messageSender.Object);
+            }
+
+            [Test]
+            public void WhenSendingAnEnumerableOfWorkingOrders_EverOrderIsSendToTheMessageSender()
+            {
+                var workOrder = new WorkOrder();
+                
+                _subject.DivideWork(new [] {workOder });
+
+                _messageSender.Verify(x => x.SendMessage(workOrder), Times.Once);
+            }
+        }
