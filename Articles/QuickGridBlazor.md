@@ -2,7 +2,7 @@
 
 ## Introducción
 
-QuickGrid es un nuevo componente Razor con el que podremos visualizar una grid de manera rápida. Este componente esta oficialmente soportado para la versión 8 de .NET. 
+QuickGrid es un componente Razor con el que podremos visualizar una grid de manera rápida. Este componente esta oficialmente soportado para la versión 8 de .NET. 
 
 ## Instalación
 
@@ -18,36 +18,45 @@ Para instalarlo en nuestro proyecto será necesario instalar el paquete nuget **
 
 Para utilizar el componente, una vez instalado, será necesario usar el siguiente código de ejemplo:
 
-        <QuickGrid Items="@cars">
-            <PropertyColumn Property="@(p => p.Id)" Sortable="true" />
-            <PropertyColumn Property="@(p => p.Brand)" Sortable="true" />
-            <PropertyColumn Property="@(p => p.Model)" Sortable="true" />
-            <PropertyColumn Property="@(p => p.Year)" Sortable="true" />
-            <PropertyColumn Property="@(p => p.RegistrationDate)" Format="yyyy-MM-dd" Sortable="true" />
-            <PropertyColumn Property="@(p => p.Colour)" Sortable="true" />
+        <QuickGrid Items="@people">
+            <PropertyColumn Property="@(p => p.PersonId)" Sortable="true" />
+            <PropertyColumn Property="@(p => p.Name)" Sortable="true" />
+            <PropertyColumn Property="@(p => p.BirthDate)" Format="yyyy-MM-dd" Sortable="true" />
         </QuickGrid>
 
         @code {
-            record Car(int Id, string Brand, string Model, int Year, DateOnly RegistrationDate, string Colour);
+            record Person(int PersonId, string Name, DateOnly BirthDate);
 
-            IQueryable<Car> cars = new[]
+            IQueryable<Person> people = new[]
             {
-                new Car(1, "Mazda", "2", 2018, new DateOnly(1985, 3, 16), "Rojo"),
-                new Car(2, "Mazda", "3", 2018, new DateOnly(1985, 3, 16), "Azul"),
-                new Car(3, "Mazda", "5", 2017, new DateOnly(1985, 3, 16), "Blanco"),
-                new Car(4, "Mazda", "6", 2016, new DateOnly(1985, 3, 16), "Negro"),
-                new Car(5, "Mazda", "MX30", 2021, new DateOnly(1985, 3, 16), "Morado"),
-                new Car(6, "Mazda", "CX3", 2019, new DateOnly(1985, 3, 16), "Verde"),
-                new Car(7, "Mazda", "CX5", 2018, new DateOnly(1985, 3, 16), "Amarillo"),
-                new Car(8, "Mazda", "CX30", 2020, new DateOnly(1985, 3, 16), "Marron"),
-                new Car(9, "Mazda", "CX60", 2023, new DateOnly(1985, 3, 16), "Azul marino"),
-                new Car(10, "Mazda", "MX5", 2019, new DateOnly(1985, 3, 16), "Gris"),
+                new Person(10895, "Jean Martin", new DateOnly(1985, 3, 16)),
+                new Person(10944, "António Langa", new DateOnly(1991, 12, 1)),
+                new Person(11203, "Julie Smith", new DateOnly(1958, 10, 10)),
+                new Person(11205, "Nur Sari", new DateOnly(1922, 4, 27)),
+                new Person(11898, "Jose Hernandez", new DateOnly(2011, 5, 3)),
+                new Person(12130, "Kenji Sato", new DateOnly(2004, 1, 9)),
             }.AsQueryable();
         }
 
-## Ejemplo
+### Parámetros de las columnas
 
-    
+* **Title**: título de la columna.
+
+* **Class**: clase de CSS para esa columna.
+
+* **Align**: alineamiento de la columna (left/center/right).
+
+* **HeaderTemplate**: plantilla para la cabecera.
+
+* **ColumnOptions**: fragmento de Razor como ventana emergente al pulsar sobre las opciones de la columna.
+
+* **Sortable**: indicar si la columna será ordenable.
+
+* **IsDefaultSortColumn**: indica si esta será la columna ordenada por defecto.
+
+* **InitialSortDirection**: indica la dirección de ordenación inicial.
+
+* **PlaceholderTemplate**: fragmento de Razor que aparecerá cuando se esté cargando la grid. 
 
 ## Referencias
 
