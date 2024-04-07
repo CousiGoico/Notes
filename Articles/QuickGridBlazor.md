@@ -56,7 +56,7 @@ Para utilizar el componente, una vez instalado, será necesario usar el siguient
 
 * **InitialSortDirection**: indica la dirección de ordenación inicial.
 
-* **PlaceholderTemplate**: fragmento de Razor que aparecerá cuando se esté cargando la grid. 
+* **PlaceholderTemplate**git : fragmento de Razor que aparecerá cuando se esté cargando la grid. 
 
 ## Referencias
 
