@@ -220,3 +220,9 @@ Estos tests necesitarán configuración e instalación antes de ser ejecutados. 
 Cuando estan ejecutandose tests de sistema como parte de una pipeline, a menudo se ejecutan después que el código haya sido desplegado en el último entorno. Esto implica que los tests de sistema son la ruta crítica desde que el código fuente se despliegue en producción. Si esta ruta tarda demasiado, ellos pueden ser ejecutados fuera de la pipeline. Ellos deben ejecutarse en una programación de tiempo. Esto dará velocidad a tu pipeline, pero eliminará la oportunidad de usar tests de sistemas como calidad.
 
 Tests de sistemas y UI tests en particular, son a menudo frágiles y pueden parar de trabajar inesperadamente después de un cambio mínimo. Es una advertencia que mantengas su númeor lo más bajo posible. Puede capturar errores particulares, como una desconfiguración o otros errores de ejecución, datos no relacionados en la base de daots, o series de operaciones que crean estados de error.
+
+### Flaky tests
+
+Son tests que fallan con un cambio no evidente en el código o en la configuración, o el código trabaja en una máquina local pero falla en la integración continua. 
+
+Son desconfiables y tienen un impacto negativo en la calidad. Una solución para erradicar los problemas de flaky tests es silenciar esos tests si la integración continua y la libración no falla y el desconfiable resultado de los tests son exluidos desde tu repositorio de tests automatizados. 
