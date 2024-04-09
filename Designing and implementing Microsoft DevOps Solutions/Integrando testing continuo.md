@@ -150,3 +150,79 @@ Para instanciar esta clase en un test automatizado, la implementación de la int
                 _messageSender.Verify(x => x.SendMessage(workOrder), Times.Once);
             }
         }
+
+Esto significa que no es posible escribir tests unitarios para clases que interactuan con otros sistemas, como bases de datos, caches o colas de mensajes. Es común practicar para aislar la integración con otros sistemas en clases separadas. Esas clases contienen la interación con el sistema remoto, pero no logica de negocio y con el menor código posible. Entonces, se aceptan que esas clases no son convertidas por tests unitarios. El patrón de diseño típico usado para hacer esto es **Facade**, **Adapter** y **Repository patterns**. 
+
+Los tests unitarios eben estar listos para correr en el ordenador de cada desrrollador que clona el código base de una aplicación. No requiere alguna configuración o instalación especial. Todas las personas que trabajan con el código base puede ejecutar los tests en su ordenador local. Una buena practica para los desarrolladores es ejecutar todos los tests unitarios en sus computadores antes de subir los cambios al repositorio.
+
+Los tests unitarios deben también ser parte de la integración continua.
+
+### Tests de integración
+
+Los tests de integración son usados para testear si un grupo de componentes trabaja juntos correctamente. 
+
+* Incrementando la cobertura de tests para aquellas partes de la aplicación que no este cubierto por tests unitarios, como clases que interactuan con otros sistemas.
+
+* Direccionando riesgos que no son direccionados en tests unitarios y mitigando riesgos donde los componentes individuales estan interactuando con otros sistemas para verificar los resultados deseados.
+
+Puede ser duro comprender que riesgos de integración pueden existir. Partes individuales o componentes están trabajando como por sus especificiaciones, la solución completa debe ser propiedad de función. 
+
+Los test de integración, especialmente aquellos que interactuan con otros sistemas no sólo tomará más tiempo para ejecutarse que los tests unitarios sino que a menudo requiere más instalación o configuración para ejecutarse. Esto debe incluir secretos como nombres de usuarios, contraseñas o certificados. Para gestionar la configiuración como esto, un fichero de settings puede ser creado junto a los tests cuya configuración es cargada anteriormente para ser ejecutados. Cada desarrollador puede crear su copia del fichero y ejeecutar los tests usando su propia configuración.
+
+La clase **MessageSender** que implementa el interfaz **IMessageSender** necesita una cadena de conexión para hacer su trabajo.
+
+        [TextFixture]
+        public class MessageSenderText
+        {
+            private MessagSender _messageSender;
+
+            [SetUp]
+            public void SetUp()
+            {
+                var connectionString = TEstContext.Parameters["MessageSenderConnectionString"];
+                _messageSender = new MessageSender(connectionString);
+            }
+        }
+
+La clase *MessageSender* necesita un *connectionString* para construirse y es recibido desde el objeto *Parameters* en *TextContext*. Esto usa el enfoque **NUnit** para hacer settings desde el fichero *.runsettings* disponible.
+
+        <?xml version="1.0" encodign="utf-8"?>
+            <RunSettings>
+                <TestRunParameters>
+                    <Parameter name="MessageSenderConnectionString" value="secret-value" />
+                </TestRunParameters>
+            </RunSettings>
+        </xml>
+
+Moviendo los ajustes en un fichero separado asegura que los secretos no son comprobados por la fuente de control. En la ejecución de tests in una sección de la pipeline, aprenderás homo compilar un fichero *.runsettings* para eejcutar tests en una pipeline.  
+
+Esto es porque los tests de integración deben también ser parte de la integración continua si es posible. Hay un riesgo y es que se realice demasiado lento.
+
+* Los tests de integración son ejecutados en una compilación separada que es lanzada en paralelo para la integración continua. La duración es corta mientras los tests de integración están también ejecutandose.
+
+* Los tests de integración son ejecutados después en la pipeline, junto a la liberación del software, antes o después del despliegue al entorno de testing.
+
+La desventaja del primer enfoque es que los tests ya no funcionarán como puerta de calidad antes de que el código sea mergeado en la rama master. Esto significa que mientras que los errores pueden ser mergeados, ellos serán detectados e informados por la compilación.
+
+El segundo enforque no debe tener este riesgo. Sin embargo, la ejecución debe ser diferido en un momento posterior, como la última parte de la pipeline de liberación. Esos defectos podrían hacerse visibles más tarde, extendiendo el tiempo entre la detección y la corrección de un error.
+
+En cada enfoque, falla la integración de tests que no bloquearán los merges de los cambios y por eso, hay que encontrar otra manera de asegurar que los desarrolladores tomarán la responsabilidad de corregir los defectos que causaron el fallo en los tests.
+
+### Tests de sistema
+
+Estos tests son para ejecutarlos contra una aplicacón ensamblada y en ejecución. Tiene dos nombres, API tests o UI tests. Puede tomar un largo tiempo ejecutarlos.
+
+> [!TIP]
+> Podrías encontrar algo llamado **coded UI Tests**, actualmente deprecado. [https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019](https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019)
+
+Estos tests necesitarán configuración e instalación antes de ser ejecutados. La aplicacion necesita er ejecutada en un entorno controlado y todas las integraciones con almacenamientos de datos necesitan estar totalmente operativos. Integraciones con otros sistemas necesitan estar levantados y ejecutandose.
+
+Cuando estan ejecutandose tests de sistema como parte de una pipeline, a menudo se ejecutan después que el código haya sido desplegado en el último entorno. Esto implica que los tests de sistema son la ruta crítica desde que el código fuente se despliegue en producción. Si esta ruta tarda demasiado, ellos pueden ser ejecutados fuera de la pipeline. Ellos deben ejecutarse en una programación de tiempo. Esto dará velocidad a tu pipeline, pero eliminará la oportunidad de usar tests de sistemas como calidad.
+
+Tests de sistemas y UI tests en particular, son a menudo frágiles y pueden parar de trabajar inesperadamente después de un cambio mínimo. Es una advertencia que mantengas su númeor lo más bajo posible. Puede capturar errores particulares, como una desconfiguración o otros errores de ejecución, datos no relacionados en la base de daots, o series de operaciones que crean estados de error.
+
+### Flaky tests
+
+Son tests que fallan con un cambio no evidente en el código o en la configuración, o el código trabaja en una máquina local pero falla en la integración continua. 
+
+Son desconfiables y tienen un impacto negativo en la calidad. Una solución para erradicar los problemas de flaky tests es silenciar esos tests si la integración continua y la libración no falla y el desconfiable resultado de los tests son exluidos desde tu repositorio de tests automatizados. 
