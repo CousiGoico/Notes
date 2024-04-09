@@ -207,3 +207,16 @@ La desventaja del primer enfoque es que los tests ya no funcionarán como puerta
 El segundo enforque no debe tener este riesgo. Sin embargo, la ejecución debe ser diferido en un momento posterior, como la última parte de la pipeline de liberación. Esos defectos podrían hacerse visibles más tarde, extendiendo el tiempo entre la detección y la corrección de un error.
 
 En cada enfoque, falla la integración de tests que no bloquearán los merges de los cambios y por eso, hay que encontrar otra manera de asegurar que los desarrolladores tomarán la responsabilidad de corregir los defectos que causaron el fallo en los tests.
+
+### Tests de sistema
+
+Estos tests son para ejecutarlos contra una aplicacón ensamblada y en ejecución. Tiene dos nombres, API tests o UI tests. Puede tomar un largo tiempo ejecutarlos.
+
+> [!TIP]
+> Podrías encontrar algo llamado **coded UI Tests**, actualmente deprecado. [https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019](https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019)
+
+Estos tests necesitarán configuración e instalación antes de ser ejecutados. La aplicacion necesita er ejecutada en un entorno controlado y todas las integraciones con almacenamientos de datos necesitan estar totalmente operativos. Integraciones con otros sistemas necesitan estar levantados y ejecutandose.
+
+Cuando estan ejecutandose tests de sistema como parte de una pipeline, a menudo se ejecutan después que el código haya sido desplegado en el último entorno. Esto implica que los tests de sistema son la ruta crítica desde que el código fuente se despliegue en producción. Si esta ruta tarda demasiado, ellos pueden ser ejecutados fuera de la pipeline. Ellos deben ejecutarse en una programación de tiempo. Esto dará velocidad a tu pipeline, pero eliminará la oportunidad de usar tests de sistemas como calidad.
+
+Tests de sistemas y UI tests en particular, son a menudo frágiles y pueden parar de trabajar inesperadamente después de un cambio mínimo. Es una advertencia que mantengas su númeor lo más bajo posible. Puede capturar errores particulares, como una desconfiguración o otros errores de ejecución, datos no relacionados en la base de daots, o series de operaciones que crean estados de error.
