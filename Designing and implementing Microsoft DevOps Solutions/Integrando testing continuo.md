@@ -150,3 +150,11 @@ Para instanciar esta clase en un test automatizado, la implementación de la int
                 _messageSender.Verify(x => x.SendMessage(workOrder), Times.Once);
             }
         }
+
+Esto significa que no es posible escribir tests unitarios para clases que interactuan con otros sistemas, como bases de datos, caches o colas de mensajes. Es común practicar para aislar la integración con otros sistemas en clases separadas. Esas clases contienen la interación con el sistema remoto, pero no logica de negocio y con el menor código posible. Entonces, se aceptan que esas clases no son convertidas por tests unitarios. El patrón de diseño típico usado para hacer esto es **Facade**, **Adapter** y **Repository patterns**. 
+
+Los tests unitarios eben estar listos para correr en el ordenador de cada desrrollador que clona el código base de una aplicación. No requiere alguna configuración o instalación especial. Todas las personas que trabajan con el código base puede ejecutar los tests en su ordenador local. Una buena practica para los desarrolladores es ejecutar todos los tests unitarios en sus computadores antes de subir los cambios al repositorio.
+
+Los tests unitarios deben también ser parte de la integración continua.
+
+
