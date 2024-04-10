@@ -316,3 +316,14 @@ Un beneficio de tener el detalle escrito es que el mismo tests puede ser realizd
 > [!TIP]
 > Es posible ejecutar la misma prueba varias veces, pero para diferente configuración. Esto es a menudo hecho para probar con diferentes navegadores. [https://docs.microsoft.com/en-us/azure/devops/test/mtm/test-configurations-specifying-test-platforms?view=azure-devops](https://docs.microsoft.com/en-us/azure/devops/test/mtm/test-configurations-specifying-test-platforms?view=azure-devops)
 
+#### Pruebas exploratorias
+
+Una vez que las pruebas sean automatizadas, ellas caerán en la categoria de pruebas de sistema, y pruebas automatizadas UI en particular. 
+
+Ahí estarán cosas que el ojo humano podrá captar y que una computadora no, como interfaces que no son amigables, elementos no alineados, lineas de testo o imagenes que no estan totalmente mostrados siendo ocultados por otros elementos.
+
+Para capturar esos errores mientras no gastas una gran cantidad de tiempo escribiendo tests, las pruebas exploratorias puede ser la solución. En este enfoque, un probador abre la aplicación e inicia la investigación de esas partes de la aplicación que piensan que contienen más riesgo con respecto al siguiente despliegue. El probado también mantendrá una traza de los nuevos riesgos identificando aquellos casos que no hayan sido realizados. Una vez las pruebas exploratosias sean ejecutadas, el probado puede informar en las aras de la aplicación y los casos que han sido cubiertos, cuales no y que riesgos siguen sin explorarse del todo.
+
+Las pruebas exploratorias significan que el probador verifica si la aplicación está trabajando correctamente.
+
+Las pruebas exploratorias es una gran herramientas cuando el tiempo es limitado o el tiempo disponible para probar no se sabe de antemano.
