@@ -239,3 +239,80 @@ Tipos de tests manuales:
 
 * EXploratory tests
 
+#### Pruebas escritas
+
+Pruebas escritas (scripted testing) es una tecnica que es usada para minimizar el conjunto de tiempo gastado en la ejecución de tests mientras aseguras una cobertura total de todos los casos relevantes. Esto esta hecho diviendo los tests in dos fases: preparación y ejecución. La preparación esta hecha en paralelo para el desarrollo de la caracteristica que esta para probar o antes de que se inicie el desarrollo. Durante la preparación, la caracteristica es analizada y son identificados los casos a probar.
+
+Una vez que el tests debe ser ejecutado es identificado, las pruebas de scripts manuales son escritas que describen cada paso que deben ser tomados durante la fase de ejecución posterior. Mientras esto toma más tiempo en preparar, todo esto asegura que la ejecución del tiempo gasta poco tiempo.
+
+Mientras eres responsable de la creación de casos, Azure DevOps te apoya en esto. Usando la herramienta Test Plans, puedes crear y registra los casos para una rápida ejecución posteriormente.
+
+1. Abre el menu **Azure Test Plans**
+
+<p align="center">
+    <img src="Figure10.4.png" style="width:500px">
+<p/>
+
+2. Clica en **Test plans**. Se te presentará descripción general de todos los planes que tengas actualmente.
+
+3. Clica el botón **New Test Plan** para iniciar a crear un nuevo plan. Esto te abrirá un nuevo dialogo.
+
+<p align="center">
+    <img src="Figure10.5.png" style="width:500px">
+<p/>
+
+4. Escribe el nombre del plan.
+
+5. Vincula el plan con el correcto area.
+
+6. Selecciona la iteracción, o sprint, que esta prueba relaciona.
+
+7. Clica en **Create** para finalizar el plan.
+
+Un plan puede ser dividido en diferentes conjuntos de pruebas, con lo que ser subdividido en diferentes conjuntos de prueba a la vez. Los conjuntos de pruebas pueden ser manejados haciendo click en el botón elipsis que aparece sobre el conjunto de tests.
+
+Después de crear un plan, es hora para añadir uno o más conjuntos de tests al plan. Para hacer esto, asegurate que la pestaña **Define** esta abierta para el conjunto de tests y clica el botón **New Tests Case**. Una nueva ventana aparecerá.
+
+<p align="center">
+    <img src="Figure10.7.png" style="width:500px">
+<p/>
+
+1. Introduce un titulo para el tests case.
+
+2. Introduce una o más acciones y los resultados esperados que describen el caso en detalle.
+
+3. Clica en el botón **Save & Close**.
+
+Una vez la preparación está hecha y una característica está lista para ser testeada, todos los tests son ejecutados. Ya que todas las pruebas están escritas, esto puede ser hecho rápidamente y efectivamente. Podría haber desarrolladores, analistas de negocio o otras personas de la compañía ayudando a la ejecución de tests. Esto significa que el test de ejecución será muy rápido.
+
+1. Navega a la pestaña **Execute**.
+
+<p align="center">
+    <img src="Figure10.8.png" style="width:500px">
+<p/>
+
+2. Selecciona uno o más casos.
+
+3. Selcciona uno de las opciones a ejecutar en la esquina superior derecha.
+
+Cuando eliges ejecutar la prueba contra una aplicación web, un nnuevo navegador con la prueba se abrirá. Esta prueba puede ser usada para ir mediante el caso y para cada caso mediante todos los pasos, manteniendo una traza de todos los pasos correctos y erroneos. 
+
+<p align="center">
+    <img src="Figure10.9.png" style="width:500px">
+<p/>
+
+La marca de verificación o error después de casa paso puede ser usada para trazar los resultados. Si el paso es marcado como incorrecto, un comentario debe ser añadido. Para marcar el caso como pasado o marcado, debe usarse el menu lista azul situado en la esquina superior derecha. Una vez todos las pruebas sean realizadas, el reultado puede ser guardado usando el botón **Save and close** situado en la esquina superior izquierda.
+
+Para ver el resultado de las pruebas, navega a **Test Plan** y luego **Runs** para obtener la siguiente panel:
+
+<p align="center">
+    <img src="Figure10.10.png" style="width:500px">
+<p/>
+
+Puedes seleccionar el ejecutador que quieres ver los resultados para obtener rápidamente una descripción general de los resultados. En la pestaña **Test results** es posible ver una lista de todos los casos  y si han pasado o no.
+
+Un beneficio de tener el detalle escrito es que el mismo tests puede ser realizdo más de una vez reduciendo el coste por ejecución. Si el plan es ejecutado varias veces, el historico es mantenido y puede ser accedido usando la vista en la imagen anterior. Como parte de las pruebas de regresión puedes automatizar las pruebas usando pruebas del sistema.
+
+> [!TIP]
+> Es posible ejecutar la misma prueba varias veces, pero para diferente configuración. Esto es a menudo hecho para probar con diferentes navegadores. [https://docs.microsoft.com/en-us/azure/devops/test/mtm/test-configurations-specifying-test-platforms?view=azure-devops](https://docs.microsoft.com/en-us/azure/devops/test/mtm/test-configurations-specifying-test-platforms?view=azure-devops)
+
