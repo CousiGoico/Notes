@@ -95,7 +95,7 @@ Esos tipos de tests pueden ser comparados a lo largo de varios ejes: el tiempo t
 > [!IMPORTANT]
 > Teniendo un largo ámbito de tests tiene sus ventajas e incovenintes. Las ventajas es que detecta más errores. La desventaja es que un tests fallido con muy largo ámbito provee sólo una idea acotada de que fue mal. Requerirá más investigación que el fallo de un test con un ámbito pequeño.
 
-### Test unitario
+#### Test unitario
 
 Son usados para probar una unidad aislada. Para tener una covertura llena de pruebas, las clases de los tests tendrán uno o más tests por cada método público de la clase de aplicación correspondiente. 
 
@@ -157,7 +157,7 @@ Los tests unitarios eben estar listos para correr en el ordenador de cada desrro
 
 Los tests unitarios deben también ser parte de la integración continua.
 
-### Tests de integración
+#### Tests de integración
 
 Los tests de integración son usados para testear si un grupo de componentes trabaja juntos correctamente. 
 
@@ -208,7 +208,7 @@ El segundo enforque no debe tener este riesgo. Sin embargo, la ejecución debe s
 
 En cada enfoque, falla la integración de tests que no bloquearán los merges de los cambios y por eso, hay que encontrar otra manera de asegurar que los desarrolladores tomarán la responsabilidad de corregir los defectos que causaron el fallo en los tests.
 
-### Tests de sistema
+#### Tests de sistema
 
 Estos tests son para ejecutarlos contra una aplicacón ensamblada y en ejecución. Tiene dos nombres, API tests o UI tests. Puede tomar un largo tiempo ejecutarlos.
 
@@ -221,8 +221,21 @@ Cuando estan ejecutandose tests de sistema como parte de una pipeline, a menudo 
 
 Tests de sistemas y UI tests en particular, son a menudo frágiles y pueden parar de trabajar inesperadamente después de un cambio mínimo. Es una advertencia que mantengas su númeor lo más bajo posible. Puede capturar errores particulares, como una desconfiguración o otros errores de ejecución, datos no relacionados en la base de daots, o series de operaciones que crean estados de error.
 
-### Flaky tests
+#### Flaky tests
 
 Son tests que fallan con un cambio no evidente en el código o en la configuración, o el código trabaja en una máquina local pero falla en la integración continua. 
 
 Son desconfiables y tienen un impacto negativo en la calidad. Una solución para erradicar los problemas de flaky tests es silenciar esos tests si la integración continua y la libración no falla y el desconfiable resultado de los tests son exluidos desde tu repositorio de tests automatizados. 
+
+### Tipos de test funcionales manuales
+
+Mientras automatizas tests es una gran herramienta recibir feedback y a menudo, hay cosas que deben ser testeadas manualmente. 
+
+El beneficio de esto es que toda esa actividad automaitzada añadida que podemos tener en la versión de la aplicación que esta siendo testeada, incrementa los cambios que la versión también será testeada manualmente. Cuando se inicia las pruebas manuales, debe ser muy diferente que algún nuevo error será descubierto. 
+
+Tipos de tests manuales:
+
+* Scripted tests
+
+* EXploratory tests
+
