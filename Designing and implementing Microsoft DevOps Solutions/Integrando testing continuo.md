@@ -327,3 +327,14 @@ Para capturar esos errores mientras no gastas una gran cantidad de tiempo escrib
 Las pruebas exploratorias significan que el probador verifica si la aplicación está trabajando correctamente.
 
 Las pruebas exploratorias es una gran herramientas cuando el tiempo es limitado o el tiempo disponible para probar no se sabe de antemano.
+
+#### Informan los resultados de pruebas manuales
+
+El informe indicaalgún defecto o otra incidencia encontrada. Debes intentar y reproducir la incidencia una vez más, intentando recordar como se ha generado el error, y escribir todos los pasos. Entonces, tnatos los resultados deseados como los no deseados deben ser descritos, pantallazos deben ser tomados y todo tiene que ser insertado en la traza de errores o en la herramienta de gestión de trabajo, como Azure DevOps.
+
+La extensión **Test & Feedback** de Azure DevOps te ayuda a hacer esto fácilmente. Esta simple extensión provee botones para grabar pantallazos o videos y anotar en ellos testos y dibujos. Una vez un error ha sido encontrado y documentado por una grabación, será automaticamente guardado en Azure Boards.
+
+> [!IMPORTANT]
+> Puede ser usado cuando las pruebas sean escritas y realizar pruebas de exploramiento a la vez.
+
+
