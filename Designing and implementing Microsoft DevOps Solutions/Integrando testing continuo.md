@@ -95,7 +95,7 @@ Esos tipos de tests pueden ser comparados a lo largo de varios ejes: el tiempo t
 > [!IMPORTANT]
 > Teniendo un largo ámbito de tests tiene sus ventajas e incovenintes. Las ventajas es que detecta más errores. La desventaja es que un tests fallido con muy largo ámbito provee sólo una idea acotada de que fue mal. Requerirá más investigación que el fallo de un test con un ámbito pequeño.
 
-### Test unitario
+#### Test unitario
 
 Son usados para probar una unidad aislada. Para tener una covertura llena de pruebas, las clases de los tests tendrán uno o más tests por cada método público de la clase de aplicación correspondiente. 
 
@@ -157,7 +157,7 @@ Los tests unitarios eben estar listos para correr en el ordenador de cada desrro
 
 Los tests unitarios deben también ser parte de la integración continua.
 
-### Tests de integración
+#### Tests de integración
 
 Los tests de integración son usados para testear si un grupo de componentes trabaja juntos correctamente. 
 
@@ -208,7 +208,7 @@ El segundo enforque no debe tener este riesgo. Sin embargo, la ejecución debe s
 
 En cada enfoque, falla la integración de tests que no bloquearán los merges de los cambios y por eso, hay que encontrar otra manera de asegurar que los desarrolladores tomarán la responsabilidad de corregir los defectos que causaron el fallo en los tests.
 
-### Tests de sistema
+#### Tests de sistema
 
 Estos tests son para ejecutarlos contra una aplicacón ensamblada y en ejecución. Tiene dos nombres, API tests o UI tests. Puede tomar un largo tiempo ejecutarlos.
 
@@ -221,8 +221,120 @@ Cuando estan ejecutandose tests de sistema como parte de una pipeline, a menudo 
 
 Tests de sistemas y UI tests en particular, son a menudo frágiles y pueden parar de trabajar inesperadamente después de un cambio mínimo. Es una advertencia que mantengas su númeor lo más bajo posible. Puede capturar errores particulares, como una desconfiguración o otros errores de ejecución, datos no relacionados en la base de daots, o series de operaciones que crean estados de error.
 
-### Flaky tests
+#### Flaky tests
 
 Son tests que fallan con un cambio no evidente en el código o en la configuración, o el código trabaja en una máquina local pero falla en la integración continua. 
 
 Son desconfiables y tienen un impacto negativo en la calidad. Una solución para erradicar los problemas de flaky tests es silenciar esos tests si la integración continua y la libración no falla y el desconfiable resultado de los tests son exluidos desde tu repositorio de tests automatizados. 
+
+### Tipos de test funcionales manuales
+
+Mientras automatizas tests es una gran herramienta recibir feedback y a menudo, hay cosas que deben ser testeadas manualmente. 
+
+El beneficio de esto es que toda esa actividad automaitzada añadida que podemos tener en la versión de la aplicación que esta siendo testeada, incrementa los cambios que la versión también será testeada manualmente. Cuando se inicia las pruebas manuales, debe ser muy diferente que algún nuevo error será descubierto. 
+
+Tipos de tests manuales:
+
+* Scripted tests
+
+* EXploratory tests
+
+#### Pruebas escritas
+
+Pruebas escritas (scripted testing) es una tecnica que es usada para minimizar el conjunto de tiempo gastado en la ejecución de tests mientras aseguras una cobertura total de todos los casos relevantes. Esto esta hecho diviendo los tests in dos fases: preparación y ejecución. La preparación esta hecha en paralelo para el desarrollo de la caracteristica que esta para probar o antes de que se inicie el desarrollo. Durante la preparación, la caracteristica es analizada y son identificados los casos a probar.
+
+Una vez que el tests debe ser ejecutado es identificado, las pruebas de scripts manuales son escritas que describen cada paso que deben ser tomados durante la fase de ejecución posterior. Mientras esto toma más tiempo en preparar, todo esto asegura que la ejecución del tiempo gasta poco tiempo.
+
+Mientras eres responsable de la creación de casos, Azure DevOps te apoya en esto. Usando la herramienta Test Plans, puedes crear y registra los casos para una rápida ejecución posteriormente.
+
+1. Abre el menu **Azure Test Plans**
+
+<p align="center">
+    <img src="Figure10.4.png" style="width:500px">
+<p/>
+
+2. Clica en **Test plans**. Se te presentará descripción general de todos los planes que tengas actualmente.
+
+3. Clica el botón **New Test Plan** para iniciar a crear un nuevo plan. Esto te abrirá un nuevo dialogo.
+
+<p align="center">
+    <img src="Figure10.5.png" style="width:500px">
+<p/>
+
+4. Escribe el nombre del plan.
+
+5. Vincula el plan con el correcto area.
+
+6. Selecciona la iteracción, o sprint, que esta prueba relaciona.
+
+7. Clica en **Create** para finalizar el plan.
+
+Un plan puede ser dividido en diferentes conjuntos de pruebas, con lo que ser subdividido en diferentes conjuntos de prueba a la vez. Los conjuntos de pruebas pueden ser manejados haciendo click en el botón elipsis que aparece sobre el conjunto de tests.
+
+Después de crear un plan, es hora para añadir uno o más conjuntos de tests al plan. Para hacer esto, asegurate que la pestaña **Define** esta abierta para el conjunto de tests y clica el botón **New Tests Case**. Una nueva ventana aparecerá.
+
+<p align="center">
+    <img src="Figure10.7.png" style="width:500px">
+<p/>
+
+1. Introduce un titulo para el tests case.
+
+2. Introduce una o más acciones y los resultados esperados que describen el caso en detalle.
+
+3. Clica en el botón **Save & Close**.
+
+Una vez la preparación está hecha y una característica está lista para ser testeada, todos los tests son ejecutados. Ya que todas las pruebas están escritas, esto puede ser hecho rápidamente y efectivamente. Podría haber desarrolladores, analistas de negocio o otras personas de la compañía ayudando a la ejecución de tests. Esto significa que el test de ejecución será muy rápido.
+
+1. Navega a la pestaña **Execute**.
+
+<p align="center">
+    <img src="Figure10.8.png" style="width:500px">
+<p/>
+
+2. Selecciona uno o más casos.
+
+3. Selcciona uno de las opciones a ejecutar en la esquina superior derecha.
+
+Cuando eliges ejecutar la prueba contra una aplicación web, un nnuevo navegador con la prueba se abrirá. Esta prueba puede ser usada para ir mediante el caso y para cada caso mediante todos los pasos, manteniendo una traza de todos los pasos correctos y erroneos. 
+
+<p align="center">
+    <img src="Figure10.9.png" style="width:500px">
+<p/>
+
+La marca de verificación o error después de casa paso puede ser usada para trazar los resultados. Si el paso es marcado como incorrecto, un comentario debe ser añadido. Para marcar el caso como pasado o marcado, debe usarse el menu lista azul situado en la esquina superior derecha. Una vez todos las pruebas sean realizadas, el reultado puede ser guardado usando el botón **Save and close** situado en la esquina superior izquierda.
+
+Para ver el resultado de las pruebas, navega a **Test Plan** y luego **Runs** para obtener la siguiente panel:
+
+<p align="center">
+    <img src="Figure10.10.png" style="width:500px">
+<p/>
+
+Puedes seleccionar el ejecutador que quieres ver los resultados para obtener rápidamente una descripción general de los resultados. En la pestaña **Test results** es posible ver una lista de todos los casos  y si han pasado o no.
+
+Un beneficio de tener el detalle escrito es que el mismo tests puede ser realizdo más de una vez reduciendo el coste por ejecución. Si el plan es ejecutado varias veces, el historico es mantenido y puede ser accedido usando la vista en la imagen anterior. Como parte de las pruebas de regresión puedes automatizar las pruebas usando pruebas del sistema.
+
+> [!TIP]
+> Es posible ejecutar la misma prueba varias veces, pero para diferente configuración. Esto es a menudo hecho para probar con diferentes navegadores. [https://docs.microsoft.com/en-us/azure/devops/test/mtm/test-configurations-specifying-test-platforms?view=azure-devops](https://docs.microsoft.com/en-us/azure/devops/test/mtm/test-configurations-specifying-test-platforms?view=azure-devops)
+
+#### Pruebas exploratorias
+
+Una vez que las pruebas sean automatizadas, ellas caerán en la categoria de pruebas de sistema, y pruebas automatizadas UI en particular. 
+
+Ahí estarán cosas que el ojo humano podrá captar y que una computadora no, como interfaces que no son amigables, elementos no alineados, lineas de testo o imagenes que no estan totalmente mostrados siendo ocultados por otros elementos.
+
+Para capturar esos errores mientras no gastas una gran cantidad de tiempo escribiendo tests, las pruebas exploratorias puede ser la solución. En este enfoque, un probador abre la aplicación e inicia la investigación de esas partes de la aplicación que piensan que contienen más riesgo con respecto al siguiente despliegue. El probado también mantendrá una traza de los nuevos riesgos identificando aquellos casos que no hayan sido realizados. Una vez las pruebas exploratosias sean ejecutadas, el probado puede informar en las aras de la aplicación y los casos que han sido cubiertos, cuales no y que riesgos siguen sin explorarse del todo.
+
+Las pruebas exploratorias significan que el probador verifica si la aplicación está trabajando correctamente.
+
+Las pruebas exploratorias es una gran herramientas cuando el tiempo es limitado o el tiempo disponible para probar no se sabe de antemano.
+
+#### Informan los resultados de pruebas manuales
+
+El informe indicaalgún defecto o otra incidencia encontrada. Debes intentar y reproducir la incidencia una vez más, intentando recordar como se ha generado el error, y escribir todos los pasos. Entonces, tnatos los resultados deseados como los no deseados deben ser descritos, pantallazos deben ser tomados y todo tiene que ser insertado en la traza de errores o en la herramienta de gestión de trabajo, como Azure DevOps.
+
+La extensión **Test & Feedback** de Azure DevOps te ayuda a hacer esto fácilmente. Esta simple extensión provee botones para grabar pantallazos o videos y anotar en ellos testos y dibujos. Una vez un error ha sido encontrado y documentado por una grabación, será automaticamente guardado en Azure Boards.
+
+> [!IMPORTANT]
+> Puede ser usado cuando las pruebas sean escritas y realizar pruebas de exploramiento a la vez.
+
+
