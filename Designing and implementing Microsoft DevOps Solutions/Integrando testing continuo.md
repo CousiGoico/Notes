@@ -337,4 +337,12 @@ La extensión **Test & Feedback** de Azure DevOps te ayuda a hacer esto fácilme
 > [!IMPORTANT]
 > Puede ser usado cuando las pruebas sean escritas y realizar pruebas de exploramiento a la vez.
 
+### Estrategias para decidir que tipo de test funcional necesitas
 
+El siguiente diagrama muestra la relación entre el tiempo que toman los diferentes tipos de tests para ejecutarse y la confianza en la calidad del software que provee. Tests manuales tienen la alta probabilidad de identificar algún defecto. Los tests automatizados pueden llevarse a cabo limitandose a unos pocos minutos.
+
+<p align="center">
+    <img src="Figure10.11.png" style="width:500px">
+<p/>
+
+A menudo tiene sentido por que los tests unitios son preferidos sobre loos tests de integración, integración sobre sistemas y tests manuales sobre los tests automatizados.
