@@ -11,6 +11,7 @@
 7. [Escribe fluidamentes](#TypeFluid)
 8. [Finaliza todo lo que empieces](#FinishEverythingYouStart)
 9. [Aplica principios de diseño y patrones](#ApplyDesignPrincipalesAndPatterns)
+10. [No desarrolles carácteristicas no solicitadas](#DontDevelopedCharacteristicsUnsolicited)
 
 ## Hábitos
 
@@ -63,3 +64,7 @@ Debes de saber que todo gran reto, devuelve un gran resultado. Sal de la zona de
 ### Aplica principios de diseño y patrones <a id="" href="#ApplyDesignPrincipalesAndPatterns" class="anchor"></a>
 
 Los principios de diseño son un salvavidas para el código que estas escribiendo siendo más estructurado, entendible, fácil y más flexible a los cambios. S.O.L.I.D., KISS, inyección de dependencias y otros principios como Singleton, Facade, etc. son buenos patrones que debes tener en tu DNA de programador.
+
+### No desarrolles carácteristicas no solicitadas <a id="" href="#DontDevelopedCharacteristicsUnsolicited" class="anchor"></a>
+
+Tomar requerimientos es una tarea complicada que consiste en entender las necesidades del cliente y traducirlo a un documento que los programadores comprendan. Este paso debe ser realizado por alguien que entienda el contexto del cliente, domine el lenguaje usado por ellos y los requerimientos que necesita. Muchas veces vamos más alla y desarrollamos procesos que pensamos que serán útiles y no se nos han pedido. Lo que ocurre es que a veces, estas carácteristicas añadidas no son necesarias, o se pueden obtener de otra manera sin haber dedicado tiempo o dinero en programarlas.
