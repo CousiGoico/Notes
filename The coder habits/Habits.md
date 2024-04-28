@@ -12,6 +12,7 @@
 8. [Finaliza todo lo que empieces](#FinishEverythingYouStart)
 9. [Aplica principios de diseño y patrones](#ApplyDesignPrincipalesAndPatterns)
 10. [No desarrolles carácteristicas no solicitadas](#DontDevelopedCharacteristicsUnsolicited)
+11. [Desarrolla código modular y flexiblev](#DevelopModularAndFlexibleCode)
 
 ## Hábitos
 
@@ -68,3 +69,7 @@ Los principios de diseño son un salvavidas para el código que estas escribiend
 ### No desarrolles carácteristicas no solicitadas <a id="" href="#DontDevelopedCharacteristicsUnsolicited" class="anchor"></a>
 
 Tomar requerimientos es una tarea complicada que consiste en entender las necesidades del cliente y traducirlo a un documento que los programadores comprendan. Este paso debe ser realizado por alguien que entienda el contexto del cliente, domine el lenguaje usado por ellos y los requerimientos que necesita. Muchas veces vamos más alla y desarrollamos procesos que pensamos que serán útiles y no se nos han pedido. Lo que ocurre es que a veces, estas carácteristicas añadidas no son necesarias, o se pueden obtener de otra manera sin haber dedicado tiempo o dinero en programarlas.
+
+### Desarrolla código modular y flexiblev <a id="" href="#DevelopModularAndFlexibleCode" class="anchor"></a>
+
+Una aplicación se puede reducir a un conjunto de partes (módulos, librerías, componentes, etc.) que relaciona uno con otro para ofrecer alguna funcionalidad. Lo deseable es que esas partes sean lo más pequeñas y aisladas posibles. Tu aplicación es muy acomplada cuando realizas algún cambio y automaticamente aparecen errores inesperadamente. Una aplicación con un alto nivel de desacoplamiento permite trabajar en un módulo sin afectar al resto, facilitando las pruebas y pudiendo ser sustituido por una versión diferente. Un ejemplo típico es cuando usamos una base de datos y es imposible cambiarlo por otra. 
