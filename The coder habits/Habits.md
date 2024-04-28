@@ -13,6 +13,7 @@
 9. [Aplica principios de diseño y patrones](#ApplyDesignPrincipalesAndPatterns)
 10. [No desarrolles carácteristicas no solicitadas](#DontDevelopedCharacteristicsUnsolicited)
 11. [Desarrolla código modular y flexiblev](#DevelopModularAndFlexibleCode)
+12. [Hablidades blandas del desarrollador](#DevelopSoftSkills)
 
 ## Hábitos
 
@@ -73,3 +74,7 @@ Tomar requerimientos es una tarea complicada que consiste en entender las necesi
 ### Desarrolla código modular y flexiblev <a id="" href="#DevelopModularAndFlexibleCode" class="anchor"></a>
 
 Una aplicación se puede reducir a un conjunto de partes (módulos, librerías, componentes, etc.) que relaciona uno con otro para ofrecer alguna funcionalidad. Lo deseable es que esas partes sean lo más pequeñas y aisladas posibles. Tu aplicación es muy acomplada cuando realizas algún cambio y automaticamente aparecen errores inesperadamente. Una aplicación con un alto nivel de desacoplamiento permite trabajar en un módulo sin afectar al resto, facilitando las pruebas y pudiendo ser sustituido por una versión diferente. Un ejemplo típico es cuando usamos una base de datos y es imposible cambiarlo por otra. 
+
+### Habilidades blandas del desarrollador <a id="" href="#DevelopSoftSkills" class="anchor"></a>
+
+Un buen programador no es sólo aquel que sabe como programar, sino aquel que sabe comunicarse, trabajar en equipo, ayudar al que lo necesite, ... Por norma general, los programadores suelen trabajar en equipo. Es mejor tener un equipo que se ayude conjuntamente, que tener un grupo de "gurus" (con amplios conocimientos) y que no sepan trabajar en equipo o comunicarse.
