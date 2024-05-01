@@ -15,7 +15,7 @@
 11. [Desarrolla código modular y flexiblev](#DevelopModularAndFlexibleCode)
 12. [Desarrolla soft-skills](#DevelopSoftSkills)
 13. [Comenta lo esencial](#CommentTheEssential)
-14. 
+14. [Toma un exhaustivo control sobre tus versiones](#TakeExhaustiveControlOfYoursVersions)
 
 ## Hábitos
 
@@ -85,3 +85,6 @@ Como buen programador, también hay que desarrollar soft-skills o habilidades bl
 
 Si el código necesita excesivos comentarios, significa que es difícil de entender el código. El código debe ser poco comentado ya que debe ser autoentendible con sólo leerlo. Si se escribe comentarios es porque existe una pieza de código que puede ser difícil de entender o dudoso de entender su objetivo.
 
+### Toma exhaustivo control sobre tus versiones <a id="" href="TakeExhaustiveControlOfYoursVersions" class="anchor"></a>
+
+El cambio de versiones puede suponer cambios importantes en tus aplicaciones, desde corrección de errores, nuevas funcionalidades o dependencias de servicios de terceros. Si no se toma un gran control sobre las diferentes versiones de las diferentes aplicaciones a desplegar, puedes provocar un gran caos y un gran dolor de cabeza. Por ello, es de suma importancia que se tenga control sobre cada una de las versiones de tus aplicaciones. 
