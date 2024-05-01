@@ -14,6 +14,8 @@
 10. [No desarrolles carácteristicas no solicitadas](#DontDevelopedCharacteristicsUnsolicited)
 11. [Desarrolla código modular y flexiblev](#DevelopModularAndFlexibleCode)
 12. [Hablidades blandas del desarrollador](#DevelopSoftSkills)
+13. [Comenta lo esencial](#CommentTheEssential)
+14. [Toma un exhaustivo control sobre tus versiones](#TakeExhaustiveControlOfYoursVersions)
 
 ## Hábitos
 
@@ -78,3 +80,11 @@ Una aplicación se puede reducir a un conjunto de partes (módulos, librerías, 
 ### Habilidades blandas del desarrollador <a id="" href="#DevelopSoftSkills" class="anchor"></a>
 
 Un buen programador no es sólo aquel que sabe como programar, sino aquel que sabe comunicarse, trabajar en equipo, ayudar al que lo necesite, ... Por norma general, los programadores suelen trabajar en equipo. Es mejor tener un equipo que se ayude conjuntamente, que tener un grupo de "gurus" (con amplios conocimientos) y que no sepan trabajar en equipo o comunicarse.
+
+### Comenta lo esencial <a id="" href="#CommentTheEssential" class="anchor"></a>
+
+Si el código necesita excesivos comentarios, significa que es difícil de entender el código. El código debe ser poco comentado ya que debe ser autoentendible con sólo leerlo. Si se escribe comentarios es porque existe una pieza de código que puede ser difícil de entender o dudoso de entender su objetivo.
+
+### Toma exhaustivo control sobre tus versiones <a id="" href="TakeExhaustiveControlOfYoursVersions" class="anchor"></a>
+
+El cambio de versiones puede suponer cambios importantes en tus aplicaciones, desde corrección de errores, nuevas funcionalidades o dependencias de servicios de terceros. Si no se toma un gran control sobre las diferentes versiones de las diferentes aplicaciones a desplegar, puedes provocar un gran caos y un gran dolor de cabeza. Por ello, es de suma importancia que se tenga control sobre cada una de las versiones de tus aplicaciones. 
