@@ -13,6 +13,7 @@
 9. [Aplica principios de diseño y patrones](#ApplyDesignPrincipalesAndPatterns)
 10. [No desarrolles carácteristicas no solicitadas](#DontDevelopedCharacteristicsUnsolicited)
 11. [Desarrolla código modular y flexiblev](#DevelopModularAndFlexibleCode)
+12. [Comenta lo esencial](#CommentTheEssential)
 
 ## Hábitos
 
@@ -73,3 +74,8 @@ Tomar requerimientos es una tarea complicada que consiste en entender las necesi
 ### Desarrolla código modular y flexiblev <a id="" href="#DevelopModularAndFlexibleCode" class="anchor"></a>
 
 Una aplicación se puede reducir a un conjunto de partes (módulos, librerías, componentes, etc.) que relaciona uno con otro para ofrecer alguna funcionalidad. Lo deseable es que esas partes sean lo más pequeñas y aisladas posibles. Tu aplicación es muy acomplada cuando realizas algún cambio y automaticamente aparecen errores inesperadamente. Una aplicación con un alto nivel de desacoplamiento permite trabajar en un módulo sin afectar al resto, facilitando las pruebas y pudiendo ser sustituido por una versión diferente. Un ejemplo típico es cuando usamos una base de datos y es imposible cambiarlo por otra. 
+
+### Comenta lo esencial <a id="" href="#CommentTheEssential" class="anchor"></a>
+
+Si el código necesita excesivos comentarios, significa que es difícil de entender el código. El código debe ser poco comentado ya que debe ser autoentendible con sólo leerlo. Si se escribe comentarios es porque existe una pieza de código que puede ser difícil de entender o dudoso de entender su objetivo.
+
