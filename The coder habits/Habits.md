@@ -16,6 +16,7 @@
 12. [Hablidades blandas del desarrollador](#DevelopSoftSkills)
 13. [Comenta lo esencial](#CommentTheEssential)
 14. [Toma un exhaustivo control sobre tus versiones](#TakeExhaustiveControlOfYoursVersions)
+15. [Con cada nuevo proyecto, haz alguna pregunta](#WithEachNewProjectMakeSomeQuestions)
 
 ## Hábitos
 
@@ -88,3 +89,7 @@ Si el código necesita excesivos comentarios, significa que es difícil de enten
 ### Toma exhaustivo control sobre tus versiones <a id="" href="TakeExhaustiveControlOfYoursVersions" class="anchor"></a>
 
 El cambio de versiones puede suponer cambios importantes en tus aplicaciones, desde corrección de errores, nuevas funcionalidades o dependencias de servicios de terceros. Si no se toma un gran control sobre las diferentes versiones de las diferentes aplicaciones a desplegar, puedes provocar un gran caos y un gran dolor de cabeza. Por ello, es de suma importancia que se tenga control sobre cada una de las versiones de tus aplicaciones. 
+
+### Con cada nuevo proyecto, haz alguna pregunta <a id="" href="WithEachNewProjectMakeSomeQuestions" class="anchor"></a>
+
+Por muy parecidos que sean los proyectos, habrá ciertas cosas que los diferencien, como puede ser la arquitectura, la tecnología, las librerías a usar, ... Por ello, es necesario hacerse preguntas antes de comenzar a programar. Principalmente nos hacemos las preguntas del tipo ¿es la mejor arquitectura para este proyecto? ¿las librerías de terceros nos permitirán hacer todo lo que tenemos que el cliente nos pide realizar?... En muchas empresas y programadores aprovechan la experiencia ganada para reusarla en forma de librerías o servicios, de tal manera, que cualquier funcionalidad ya realizada en otro proyecto pueda ser reutilizada en proyectos nuevos. Con esta metodología no se suele empezar un proyecto desde cero, ya que cuentan con la experiencia aprendida en el resto de proyectos realizados en el pasado.
