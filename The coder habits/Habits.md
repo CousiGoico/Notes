@@ -17,6 +17,7 @@
 13. [Comenta lo esencial](#CommentTheEssential)
 14. [Toma un exhaustivo control sobre tus versiones](#TakeExhaustiveControlOfYoursVersions)
 15. [Con cada nuevo proyecto, haz alguna pregunta](#WithEachNewProjectMakeSomeQuestions)
+16. [Usa el IDE productivamente](#UseTheIDEProductively)
 
 ## Hábitos
 
@@ -93,3 +94,5 @@ El cambio de versiones puede suponer cambios importantes en tus aplicaciones, de
 ### Con cada nuevo proyecto, haz alguna pregunta <a id="" href="WithEachNewProjectMakeSomeQuestions" class="anchor"></a>
 
 Por muy parecidos que sean los proyectos, habrá ciertas cosas que los diferencien, como puede ser la arquitectura, la tecnología, las librerías a usar, ... Por ello, es necesario hacerse preguntas antes de comenzar a programar. Principalmente nos hacemos las preguntas del tipo ¿es la mejor arquitectura para este proyecto? ¿las librerías de terceros nos permitirán hacer todo lo que tenemos que el cliente nos pide realizar?... En muchas empresas y programadores aprovechan la experiencia ganada para reusarla en forma de librerías o servicios, de tal manera, que cualquier funcionalidad ya realizada en otro proyecto pueda ser reutilizada en proyectos nuevos. Con esta metodología no se suele empezar un proyecto desde cero, ya que cuentan con la experiencia aprendida en el resto de proyectos realizados en el pasado.
+
+### Usa el IDE productivamente <a id="" href="UseTheIDEProductively" class="anchor"></a>
