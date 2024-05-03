@@ -19,6 +19,7 @@
 15. [Con cada nuevo proyecto, haz alguna pregunta](#WithEachNewProjectMakeSomeQuestions)
 16. [Usa el IDE productivamente](#UseTheIDEProductively)
 17. [Trabaja productivamente](#WorkProductively)
+18. [Evita sobrediseñar](#AvoidOverdesigning)
 
 ## Hábitos
 
@@ -103,3 +104,9 @@ Un programador gasta una gran cantidad de horas de su trabajo con el IDE. La pre
 ### Trabaja productivamente <a id="" href="WorkProductively" class="anchor"></a>
 
 La idea es mejorar y conseguir trabajar lo más productivamente posible, para ello, una simple tarea tendrás que cronometrarla para ver el tiempo que tardas e irla mejorando tanto en tiempo como en valor. Muchas empresas usan técnicas de mejora e incluso tests de actuación entre sus empleados. Una de las técnicas más conocidas es **"Pomodoro"** en el que se indica que se debe organizar intervalos de tiempo (por ejemplo, 1 hora) y realizar una tarea y sólo una, concentrandote al máximo en esa tarea. 
+
+### Evita sobrediseñar <a id="" href="AvoidOverdesigning" class="anchor"></a>
+
+Programamos para solucionar problemas, pero debemos realizarlo de una manera sencilla y simple, ya que, en el futuro habrá que mantenerlo o ampliarlo, y cuánto más sencillo y simple sea, más rápido se podrá trabajar.
+
+Cuando programamos, no sólo escribimos líneas de código, sino que diseñamos la arquitectura de la aplicación.s
