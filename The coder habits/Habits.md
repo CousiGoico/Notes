@@ -16,6 +16,10 @@
 12. [Hablidades blandas del desarrollador](#DevelopSoftSkills)
 13. [Comenta lo esencial](#CommentTheEssential)
 14. [Toma un exhaustivo control sobre tus versiones](#TakeExhaustiveControlOfYoursVersions)
+15. [Con cada nuevo proyecto, haz alguna pregunta](#WithEachNewProjectMakeSomeQuestions)
+16. [Usa el IDE productivamente](#UseTheIDEProductively)
+17. [Trabaja productivamente](#WorkProductively)
+18. [Evita sobrediseñar](#AvoidOverdesigning)
 
 ## Hábitos
 
@@ -88,3 +92,21 @@ Si el código necesita excesivos comentarios, significa que es difícil de enten
 ### Toma exhaustivo control sobre tus versiones <a id="" href="TakeExhaustiveControlOfYoursVersions" class="anchor"></a>
 
 El cambio de versiones puede suponer cambios importantes en tus aplicaciones, desde corrección de errores, nuevas funcionalidades o dependencias de servicios de terceros. Si no se toma un gran control sobre las diferentes versiones de las diferentes aplicaciones a desplegar, puedes provocar un gran caos y un gran dolor de cabeza. Por ello, es de suma importancia que se tenga control sobre cada una de las versiones de tus aplicaciones. 
+
+### Con cada nuevo proyecto, haz alguna pregunta <a id="" href="WithEachNewProjectMakeSomeQuestions" class="anchor"></a>
+
+Por muy parecidos que sean los proyectos, habrá ciertas cosas que los diferencien, como puede ser la arquitectura, la tecnología, las librerías a usar, ... Por ello, es necesario hacerse preguntas antes de comenzar a programar. Principalmente nos hacemos las preguntas del tipo ¿es la mejor arquitectura para este proyecto? ¿las librerías de terceros nos permitirán hacer todo lo que tenemos que el cliente nos pide realizar?... En muchas empresas y programadores aprovechan la experiencia ganada para reusarla en forma de librerías o servicios, de tal manera, que cualquier funcionalidad ya realizada en otro proyecto pueda ser reutilizada en proyectos nuevos. Con esta metodología no se suele empezar un proyecto desde cero, ya que cuentan con la experiencia aprendida en el resto de proyectos realizados en el pasado.
+
+### Usa el IDE productivamente <a id="" href="UseTheIDEProductively" class="anchor"></a>
+
+Un programador gasta una gran cantidad de horas de su trabajo con el IDE. La pregunta es, ¿sabemos trabajar con el IDE lo más productivamente posible? ¿conocemos todo sobre el IDE que usamos (VS, VSCode, Sublime, Notepadd++, VIM, ...)? La mejor manera de manejar tu IDE de manera productiva es conocer aquellos atajos de teclado que uses habitualmente (guardar, abrir, cerrar, ...).
+
+### Trabaja productivamente <a id="" href="WorkProductively" class="anchor"></a>
+
+La idea es mejorar y conseguir trabajar lo más productivamente posible, para ello, una simple tarea tendrás que cronometrarla para ver el tiempo que tardas e irla mejorando tanto en tiempo como en valor. Muchas empresas usan técnicas de mejora e incluso tests de actuación entre sus empleados. Una de las técnicas más conocidas es **"Pomodoro"** en el que se indica que se debe organizar intervalos de tiempo (por ejemplo, 1 hora) y realizar una tarea y sólo una, concentrandote al máximo en esa tarea. 
+
+### Evita sobrediseñar <a id="" href="AvoidOverdesigning" class="anchor"></a>
+
+Programamos para solucionar problemas, pero debemos realizarlo de una manera sencilla y simple, ya que, en el futuro habrá que mantenerlo o ampliarlo, y cuánto más sencillo y simple sea, más rápido se podrá trabajar.
+
+Cuando programamos, no sólo escribimos líneas de código, sino que diseñamos la arquitectura de la aplicación.s
