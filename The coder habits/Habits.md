@@ -21,6 +21,7 @@
 17. [Trabaja productivamente](#WorkProductively)
 18. [Evita sobrediseñar](#AvoidOverdesigning)
 19. [Productivizar](#Productivize)
+20. [Escribe código trazeable](#WriteCodeTrazable)
 
 ## Hábitos
 
@@ -115,3 +116,7 @@ Cuando programamos, no sólo escribimos líneas de código, sino que diseñamos 
 ### Productivizar <a id="" href="Productivize" class="anchor"></a>
 
 Cuando realizas un proyecto, no se trata sólo de programar una aplicación que solucione un problema al cliente. También tienes que pensar en como se puede reutilizar aquello en lo que has trabajado. Para ello puedes parar a pensar en que es mejor crear algo que pueda ser utilizado en diferentes proyectos, algo en lo que la gente pueda aprovechar en sus proyectos. De esta manera, algo que has utilizado en un proyecto se pueda reutilizar en otro ahorrandote tiempo y esfuerzo en volverlo a crear. De esta manera serás un programador más productivo.
+
+### Escribe código trazeable <a id="" href="WriteCodeTrazable" class="anchor"></a>
+
+Un problema común como programadores, es tener que detectar y resolver errores en el código. Durante el ciclo de vida del proyecto es normal que aparezcan errores, incluso en producción, pero ahí es donde te das cuenta que el proyecto no esta preparado para detectar dónde y cuándo han sucedido. En estos casos es muy conveniente tener un buen tester o QA que nos ayude con esta tarea de encontrar las incidencias (bugs). También es conveniente contar con una buena estrategias de logs que se almacenen para saber la ruta por donde el usuario ha pasado y reunir toda la información posible para corregir el error lo antes posible. 
