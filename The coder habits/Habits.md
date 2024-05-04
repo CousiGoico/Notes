@@ -20,6 +20,7 @@
 16. [Usa el IDE productivamente](#UseTheIDEProductively)
 17. [Trabaja productivamente](#WorkProductively)
 18. [Evita sobrediseñar](#AvoidOverdesigning)
+19. [Productivizar](#Productivize)
 
 ## Hábitos
 
@@ -110,3 +111,7 @@ La idea es mejorar y conseguir trabajar lo más productivamente posible, para el
 Programamos para solucionar problemas, pero debemos realizarlo de una manera sencilla y simple, ya que, en el futuro habrá que mantenerlo o ampliarlo, y cuánto más sencillo y simple sea, más rápido se podrá trabajar.
 
 Cuando programamos, no sólo escribimos líneas de código, sino que diseñamos la arquitectura de la aplicación.s
+
+### Productivizar <a id="" href="Productivize" class="anchor"></a>
+
+Cuando realizas un proyecto, no se trata sólo de programar una aplicación que solucione un problema al cliente. También tienes que pensar en como se puede reutilizar aquello en lo que has trabajado. Para ello puedes parar a pensar en que es mejor crear algo que pueda ser utilizado en diferentes proyectos, algo en lo que la gente pueda aprovechar en sus proyectos. De esta manera, algo que has utilizado en un proyecto se pueda reutilizar en otro ahorrandote tiempo y esfuerzo en volverlo a crear. De esta manera serás un programador más productivo.
