@@ -22,6 +22,7 @@
 18. [Evita sobrediseñar](#AvoidOverdesigning)
 19. [Productivizar](#Productivize)
 20. [Escribe código trazeable](#WriteCodeTrazable)
+21. [Evita un entorno de trabajo caotico](#AvoidChaoticWorkEnvironment)
 
 ## Hábitos
 
@@ -120,3 +121,12 @@ Cuando realizas un proyecto, no se trata sólo de programar una aplicación que 
 ### Escribe código trazeable <a id="" href="WriteCodeTrazable" class="anchor"></a>
 
 Un problema común como programadores, es tener que detectar y resolver errores en el código. Durante el ciclo de vida del proyecto es normal que aparezcan errores, incluso en producción, pero ahí es donde te das cuenta que el proyecto no esta preparado para detectar dónde y cuándo han sucedido. En estos casos es muy conveniente tener un buen tester o QA que nos ayude con esta tarea de encontrar las incidencias (bugs). También es conveniente contar con una buena estrategias de logs que se almacenen para saber la ruta por donde el usuario ha pasado y reunir toda la información posible para corregir el error lo antes posible. 
+
+
+### Evita un entorno de trabajo caotico <a id="" href="AvoidChaoticWorkEnvironment" class="anchor"></a>
+
+Eres el responsable del entorno de trabajo en el que te rodeas. Muchas de las empresas más reconocidas tienen un fuerte enfoque empresarial para tener al empleado motivado, tales como Microsoft, Google, Virgin, Nextflix, ... En todas ellas, los trabajadores son autenticos fans de la propia empresa. 
+
+Si trabajas en un lugar donde los sprints son elegidos por una persona no técnica, dónde el teléfono no para de sonar, donde se te reune sin decir nada, ... ese es un entorno de trabajo caotico del cual debe huir.
+
+Tú no trabajas únicamente para dar un servicio a terceros, diariamente trabajas para ser mejor programador.
