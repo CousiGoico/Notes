@@ -23,6 +23,7 @@
 19. [Productivizar](#Productivize)
 20. [Escribe código trazeable](#WriteCodeTrazable)
 21. [Evita un entorno de trabajo caotico](#AvoidChaoticWorkEnvironment)
+22. [Sé un experto de prácticas de como limpiar código y refactorizar](#BeExpertCleanCePracticesAndRefactorings)
 
 ## Hábitos
 
@@ -130,3 +131,7 @@ Eres el responsable del entorno de trabajo en el que te rodeas. Muchas de las em
 Si trabajas en un lugar donde los sprints son elegidos por una persona no técnica, dónde el teléfono no para de sonar, donde se te reune sin decir nada, ... ese es un entorno de trabajo caotico del cual debe huir.
 
 Tú no trabajas únicamente para dar un servicio a terceros, diariamente trabajas para ser mejor programador.
+
+### Sé un experto de prácticas de como limpiar código y refactorizar <a id="" href="BeExpertCleanCePracticesAndRefactorings" class="anchor"></a>
+
+Utilizar el mismo tipo de nombres de variables, el uso de una normativa, que las clases sean sencillas y un largo etcetera hacen que el código sea más leíble, más entendible y que sea un código limpio, ya que en el futuro habrá otro programador que lo usará, lo reutilizará o lo mejorará. Un buen programador aplica diariamente técnicas y se esfuerza para mejorar el código y su diseño.
