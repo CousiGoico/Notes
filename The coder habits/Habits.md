@@ -24,6 +24,7 @@
 20. [Escribe código trazeable](#WriteCodeTrazable)
 21. [Evita un entorno de trabajo caotico](#AvoidChaoticWorkEnvironment)
 22. [Sé un experto de prácticas de como limpiar código y refactorizar](#BeExpertCleanCePracticesAndRefactorings)
+23. [Reusa parte de tus propios proyectos](#ReusePartOfYourOwnProjects)
 
 ## Hábitos
 
@@ -135,3 +136,9 @@ Tú no trabajas únicamente para dar un servicio a terceros, diariamente trabaja
 ### Sé un experto de prácticas de como limpiar código y refactorizar <a id="" href="BeExpertCleanCePracticesAndRefactorings" class="anchor"></a>
 
 Utilizar el mismo tipo de nombres de variables, el uso de una normativa, que las clases sean sencillas y un largo etcetera hacen que el código sea más leíble, más entendible y que sea un código limpio, ya que en el futuro habrá otro programador que lo usará, lo reutilizará o lo mejorará. Un buen programador aplica diariamente técnicas y se esfuerza para mejorar el código y su diseño.
+
+### Reusa parte de tus propios proyectos <a id="" href="ReusePartOfYourOwnProjects" class="anchor"></a>
+
+Seguramente hayas realizado alguna implementación igual o similar a algo que has tenido que realizar en otro proyecto anteriormente. La implementación de un algoritmo, el tipo de validación, clases para usar el contexto de una base de datos, etc. son algunos de los ejemplos que más repetimos. Debes ser inteligente y no repetir el trabajo. Prefiero pensar que no nos pagan para repetir trabajo sino para ser más productivos. 
+
+Trata de aislar la funcionalidad (librerías, módulos, frameworks, ...) para poderlo trabajar en otros proyectos. **Reusar es la clave**.
