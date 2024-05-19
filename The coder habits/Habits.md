@@ -25,6 +25,7 @@
 21. [Evita un entorno de trabajo caotico](#AvoidChaoticWorkEnvironment)
 22. [Sé un experto de prácticas de como limpiar código y refactorizar](#BeExpertCleanCePracticesAndRefactorings)
 23. [Reusa parte de tus propios proyectos](#ReusePartOfYourOwnProjects)
+24. [Escribe código homogeneo](#WriteHomogeneousCode)
 
 ## Hábitos
 
@@ -142,3 +143,7 @@ Utilizar el mismo tipo de nombres de variables, el uso de una normativa, que las
 Seguramente hayas realizado alguna implementación igual o similar a algo que has tenido que realizar en otro proyecto anteriormente. La implementación de un algoritmo, el tipo de validación, clases para usar el contexto de una base de datos, etc. son algunos de los ejemplos que más repetimos. Debes ser inteligente y no repetir el trabajo. Prefiero pensar que no nos pagan para repetir trabajo sino para ser más productivos. 
 
 Trata de aislar la funcionalidad (librerías, módulos, frameworks, ...) para poderlo trabajar en otros proyectos. **Reusar es la clave**.
+
+### Escribe código homogeneo <a id="" href="WriteHomogeneousCode" class="anchor"></a>
+
+Imagina que estas leyendo una novela y cada capitulo se escribe con una letra diferente, un estilo diferente y un enfoque diferente, te volverías loco al leerlo. Por ello, es muy importante tener un código homogeneo en el que en todas las clases las variables se escriban de la misma manera, los nombres de las funciones siguan un estilo, el código esté organizado con un orden, ... De esta manera, el programador que coja tu código sabrá donde se encuentra cierta funcionalidad, variable o método. 
