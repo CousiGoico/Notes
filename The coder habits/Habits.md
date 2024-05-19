@@ -22,6 +22,10 @@
 18. [Evita sobrediseñar](#AvoidOverdesigning)
 19. [Productivizar](#Productivize)
 20. [Escribe código trazeable](#WriteCodeTrazable)
+21. [Evita un entorno de trabajo caotico](#AvoidChaoticWorkEnvironment)
+22. [Sé un experto de prácticas de como limpiar código y refactorizar](#BeExpertCleanCePracticesAndRefactorings)
+23. [Reusa parte de tus propios proyectos](#ReusePartOfYourOwnProjects)
+24. [Escribe código homogeneo](#WriteHomogeneousCode)
 
 ## Hábitos
 
@@ -120,3 +124,26 @@ Cuando realizas un proyecto, no se trata sólo de programar una aplicación que 
 ### Escribe código trazeable <a id="" href="WriteCodeTrazable" class="anchor"></a>
 
 Un problema común como programadores, es tener que detectar y resolver errores en el código. Durante el ciclo de vida del proyecto es normal que aparezcan errores, incluso en producción, pero ahí es donde te das cuenta que el proyecto no esta preparado para detectar dónde y cuándo han sucedido. En estos casos es muy conveniente tener un buen tester o QA que nos ayude con esta tarea de encontrar las incidencias (bugs). También es conveniente contar con una buena estrategias de logs que se almacenen para saber la ruta por donde el usuario ha pasado y reunir toda la información posible para corregir el error lo antes posible. 
+
+
+### Evita un entorno de trabajo caotico <a id="" href="AvoidChaoticWorkEnvironment" class="anchor"></a>
+
+Eres el responsable del entorno de trabajo en el que te rodeas. Muchas de las empresas más reconocidas tienen un fuerte enfoque empresarial para tener al empleado motivado, tales como Microsoft, Google, Virgin, Nextflix, ... En todas ellas, los trabajadores son autenticos fans de la propia empresa. 
+
+Si trabajas en un lugar donde los sprints son elegidos por una persona no técnica, dónde el teléfono no para de sonar, donde se te reune sin decir nada, ... ese es un entorno de trabajo caotico del cual debe huir.
+
+Tú no trabajas únicamente para dar un servicio a terceros, diariamente trabajas para ser mejor programador.
+
+### Sé un experto de prácticas de como limpiar código y refactorizar <a id="" href="BeExpertCleanCePracticesAndRefactorings" class="anchor"></a>
+
+Utilizar el mismo tipo de nombres de variables, el uso de una normativa, que las clases sean sencillas y un largo etcetera hacen que el código sea más leíble, más entendible y que sea un código limpio, ya que en el futuro habrá otro programador que lo usará, lo reutilizará o lo mejorará. Un buen programador aplica diariamente técnicas y se esfuerza para mejorar el código y su diseño.
+
+### Reusa parte de tus propios proyectos <a id="" href="ReusePartOfYourOwnProjects" class="anchor"></a>
+
+Seguramente hayas realizado alguna implementación igual o similar a algo que has tenido que realizar en otro proyecto anteriormente. La implementación de un algoritmo, el tipo de validación, clases para usar el contexto de una base de datos, etc. son algunos de los ejemplos que más repetimos. Debes ser inteligente y no repetir el trabajo. Prefiero pensar que no nos pagan para repetir trabajo sino para ser más productivos. 
+
+Trata de aislar la funcionalidad (librerías, módulos, frameworks, ...) para poderlo trabajar en otros proyectos. **Reusar es la clave**.
+
+### Escribe código homogeneo <a id="" href="WriteHomogeneousCode" class="anchor"></a>
+
+Imagina que estas leyendo una novela y cada capitulo se escribe con una letra diferente, un estilo diferente y un enfoque diferente, te volverías loco al leerlo. Por ello, es muy importante tener un código homogeneo en el que en todas las clases las variables se escriban de la misma manera, los nombres de las funciones siguan un estilo, el código esté organizado con un orden, ... De esta manera, el programador que coja tu código sabrá donde se encuentra cierta funcionalidad, variable o método. 
