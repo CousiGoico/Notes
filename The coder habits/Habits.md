@@ -27,6 +27,7 @@
 23. [Reusa parte de tus propios proyectos](#ReusePartOfYourOwnProjects)
 24. [Escribe código homogeneo](#WriteHomogeneousCode)
 25. [Trabaja enfcado](#WorkFocused)
+26. [Identifica los "bad smells"](#IdentifyBadSmells)
 
 ## Hábitos
 
@@ -152,3 +153,7 @@ Imagina que estas leyendo una novela y cada capitulo se escribe con una letra di
 ### Trabaja enfcado <a id="" href="WorkFocused" class="anchor"></a>
 
 Necesitamos trabajar productivamente, para ello hay que dedicarle tiempo para hacer el mejor trabajo y obtener los mayores resultados. Aquellas actividades en las que fluyes (momento en el que realizando una tarea, pierdes la noción del tiempo), serás tu pasión y vocación. Cuando más enfocado estés en tu tarea, más productivo serás, y por el contrario, cuanto más tiempo distraido estes o te distraigan, menos productivo serás. La clave para realizar mejor un trabajo es estar enfocado, no hacer más horas.
+
+### Identifica los "bad smells" <a id="" href="IdentifyBadSmells" class="anchor"></a>
+
+También conocidos como "code smells" son aquellos errores que hacen que tu código sea dificil de leer haciendo que sea muy costoso de mantener. Clases con muchas líneas, funciones con muchas sentencias, ... son prácticas de programación que son dificiles de mantener cuando se requiere añadir o modificar parte del mismo. Es por ello, que se debe tener en cuenta cuando se programa que este tipo de "code smells" se eviten siempre que se pueda.
