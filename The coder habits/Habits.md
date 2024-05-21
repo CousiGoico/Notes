@@ -26,6 +26,7 @@
 22. [Sé un experto de prácticas de como limpiar código y refactorizar](#BeExpertCleanCePracticesAndRefactorings)
 23. [Reusa parte de tus propios proyectos](#ReusePartOfYourOwnProjects)
 24. [Escribe código homogeneo](#WriteHomogeneousCode)
+25. [Trabaja enfcado](#WorkFocused)
 
 ## Hábitos
 
@@ -147,3 +148,7 @@ Trata de aislar la funcionalidad (librerías, módulos, frameworks, ...) para po
 ### Escribe código homogeneo <a id="" href="WriteHomogeneousCode" class="anchor"></a>
 
 Imagina que estas leyendo una novela y cada capitulo se escribe con una letra diferente, un estilo diferente y un enfoque diferente, te volverías loco al leerlo. Por ello, es muy importante tener un código homogeneo en el que en todas las clases las variables se escriban de la misma manera, los nombres de las funciones siguan un estilo, el código esté organizado con un orden, ... De esta manera, el programador que coja tu código sabrá donde se encuentra cierta funcionalidad, variable o método. 
+
+### Trabaja enfcado <a id="" href="WorkFocused" class="anchor"></a>
+
+Necesitamos trabajar productivamente, para ello hay que dedicarle tiempo para hacer el mejor trabajo y obtener los mayores resultados. Aquellas actividades en las que fluyes (momento en el que realizando una tarea, pierdes la noción del tiempo), serás tu pasión y vocación. Cuando más enfocado estés en tu tarea, más productivo serás, y por el contrario, cuanto más tiempo distraido estes o te distraigan, menos productivo serás. La clave para realizar mejor un trabajo es estar enfocado, no hacer más horas.
