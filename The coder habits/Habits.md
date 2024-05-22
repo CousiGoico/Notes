@@ -28,6 +28,8 @@
 24. [Escribe código homogeneo](#WriteHomogeneousCode)
 25. [Trabaja enfcado](#WorkFocused)
 26. [Identifica los "bad smells"](#IdentifyBadSmells)
+27. [Trabaja en proyectos personales](#WorkInPersonalProjects)
+28. [Prueba hasta que obtengas suficiente](#TestUntilGetEnough)
 
 ## Hábitos
 
@@ -157,3 +159,11 @@ Necesitamos trabajar productivamente, para ello hay que dedicarle tiempo para ha
 ### Identifica los "bad smells" <a id="" href="IdentifyBadSmells" class="anchor"></a>
 
 También conocidos como "code smells" son aquellos errores que hacen que tu código sea dificil de leer haciendo que sea muy costoso de mantener. Clases con muchas líneas, funciones con muchas sentencias, ... son prácticas de programación que son dificiles de mantener cuando se requiere añadir o modificar parte del mismo. Es por ello, que se debe tener en cuenta cuando se programa que este tipo de "code smells" se eviten siempre que se pueda.
+
+### Trabaja en proyectos personales <a id="" href="WorkInPersonalProjects" class="anchor"></a>
+
+Si trabajas en proyectos personales, irás compartiendo lo que vayas aprendiendo. Por regla general, cuando trabajas para una empresa se suelen realizar los mismos tipos de proyectos o con la misma tecnología. Es por ello, que si dedicas unas horas de tu tiempo libre a aprender cosas nuevas mediante blogs, libros, ... necesitas practicarlo haciendo proyectos personales que te permitan ganar esa experiencia extra en cosas que normalmente no sueles realizar en tu día a día. Por otro lado, si publicas proyectos personales para que la gente pueda verlo, estarás demostrando tu conocimiento y añadiendo más valor a lo que haces.
+
+### Prueba hasta que obtengas suficiente <a id="" href="TestUntilGetEnough" class="anchor"></a>
+
+Como programador, hay que evitar el "happy path" al probar el código que hemos realizado, para ello, hay que ir más allá y testear aquello en lo que no hayamos pensado, hasta la última posibilidad que pudiera suceder. Normalmente, el programador es quién realiza las pruebas de su propio código, por ende, no va a ir más de lo que ha pensado como pruebas. Una buena idea, es tener un compañero con el que compartir nuestro código, de tal manera, que nuestro compañero también hará pruebas a nuestro código y nosotros a su código. De esta manera, se obtiene la objetividad necesaria para verificar el buen trabajo realizado.
