@@ -30,6 +30,8 @@
 26. [Identifica los "bad smells"](#IdentifyBadSmells)
 27. [Trabaja en proyectos personales](#WorkInPersonalProjects)
 28. [Prueba hasta que obtengas suficiente](#TestUntilGetEnough)
+29. [Se experto solo en ciertas áreas](#BeExpertJustFromSomeCertainAreas)
+30. [Lee continuamente](#ReadContinuously)
 
 ## Hábitos
 
@@ -167,3 +169,11 @@ Si trabajas en proyectos personales, irás compartiendo lo que vayas aprendiendo
 ### Prueba hasta que obtengas suficiente <a id="" href="TestUntilGetEnough" class="anchor"></a>
 
 Como programador, hay que evitar el "happy path" al probar el código que hemos realizado, para ello, hay que ir más allá y testear aquello en lo que no hayamos pensado, hasta la última posibilidad que pudiera suceder. Normalmente, el programador es quién realiza las pruebas de su propio código, por ende, no va a ir más de lo que ha pensado como pruebas. Una buena idea, es tener un compañero con el que compartir nuestro código, de tal manera, que nuestro compañero también hará pruebas a nuestro código y nosotros a su código. De esta manera, se obtiene la objetividad necesaria para verificar el buen trabajo realizado.
+
+### Se experto solo en ciertas áreas <a id="" href="BeExpertJustFromSomeCertainAreas" class="anchor"></a>
+
+No se puede saber todo sobre la programación, por lo que hay que optar por ser el mejor en un área. Para ello práctica, estudia y esfuerzate en ser un 5% mejor que el resto en ese área.
+
+### Lee continuamente <a id="" href="ReadContinuously" class="anchor"></a>
+
+Mantenernos en aprendizaje continuo es parte de nuestro trabajo. Lo que estamos estudiando hoy puede estar obsoleto mañana, por ello es necesario ser constante. Una buena lectura de un libro que nos informe sobre aquello que queremos aprender es vital a la hora de continuar aprendieendo. 
