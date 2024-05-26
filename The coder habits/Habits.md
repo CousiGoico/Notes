@@ -31,6 +31,7 @@
 27. [Trabaja en proyectos personales](#WorkInPersonalProjects)
 28. [Prueba hasta que obtengas suficiente](#TestUntilGetEnough)
 29. [Se experto solo en ciertas áreas](#BeExpertJustFromSomeCertainAreas)
+30. [Lee continuamente](#ReadContinuously)
 
 ## Hábitos
 
@@ -172,3 +173,7 @@ Como programador, hay que evitar el "happy path" al probar el código que hemos 
 ### Se experto solo en ciertas áreas <a id="" href="BeExpertJustFromSomeCertainAreas" class="anchor"></a>
 
 No se puede saber todo sobre la programación, por lo que hay que optar por ser el mejor en un área. Para ello práctica, estudia y esfuerzate en ser un 5% mejor que el resto en ese área.
+
+### Lee continuamente <a id="" href="ReadContinuously" class="anchor"></a>
+
+Mantenernos en aprendizaje continuo es parte de nuestro trabajo. Lo que estamos estudiando hoy puede estar obsoleto mañana, por ello es necesario ser constante. Una buena lectura de un libro que nos informe sobre aquello que queremos aprender es vital a la hora de continuar aprendieendo. 
