@@ -32,6 +32,7 @@
 28. [Prueba hasta que obtengas suficiente](#TestUntilGetEnough)
 29. [Se experto solo en ciertas áreas](#BeExpertJustFromSomeCertainAreas)
 30. [Lee continuamente](#ReadContinuously)
+31. [Inicia con las cosas que añaden valor](#StartTheThingsThatAddValue)
 
 ## Hábitos
 
@@ -177,3 +178,7 @@ No se puede saber todo sobre la programación, por lo que hay que optar por ser 
 ### Lee continuamente <a id="" href="ReadContinuously" class="anchor"></a>
 
 Mantenernos en aprendizaje continuo es parte de nuestro trabajo. Lo que estamos estudiando hoy puede estar obsoleto mañana, por ello es necesario ser constante. Una buena lectura de un libro que nos informe sobre aquello que queremos aprender es vital a la hora de continuar aprendieendo. 
+
+### Inicia con las cosas que añaden valor <a id="" href="StartTheThingsThatAddValue" class="anchor"></a>
+
+Un programador crea una solución para resolver el problema de un cliente, o lo que es lo mismo, le añade valor. Cuando empezamos un proyecto se pierde el punto de vista en el que el programador añade valor al cliente y nos enfocamos en programar esta característica o en aquella otra. Sin embargo, hay que saber que dará más valor al cliente e iniciar por ahí.
