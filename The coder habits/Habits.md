@@ -33,6 +33,7 @@
 29. [Se experto solo en ciertas áreas](#BeExpertJustFromSomeCertainAreas)
 30. [Lee continuamente](#ReadContinuously)
 31. [Inicia con las cosas que añaden valor](#StartTheThingsThatAddValue)
+32. [No fomentes islas de conocimiento](#DoNotEncourageKnowledgeIslands)
 
 ## Hábitos
 
@@ -182,3 +183,8 @@ Mantenernos en aprendizaje continuo es parte de nuestro trabajo. Lo que estamos 
 ### Inicia con las cosas que añaden valor <a id="" href="StartTheThingsThatAddValue" class="anchor"></a>
 
 Un programador crea una solución para resolver el problema de un cliente, o lo que es lo mismo, le añade valor. Cuando empezamos un proyecto se pierde el punto de vista en el que el programador añade valor al cliente y nos enfocamos en programar esta característica o en aquella otra. Sin embargo, hay que saber que dará más valor al cliente e iniciar por ahí.
+
+### No fomentes islas de conocimiento <a id="" href="DoNotEncourageKnowledgeIslands" class="anchor"></a>
+
+Las islas de conocimiento se conoce a aquellas personas que dentro de un proyecto o de una compañía saben hacer algo que el resto desconoce. Es por ello, que es recomendable que formes al resto de compañeros con el conocimiento que el resto no tiene. De esta manera, varios compañeros podrán realizar el mismo tipo de trabajo, ya que dispondrán del mismo conocimeinto en esa área o materia.
+
