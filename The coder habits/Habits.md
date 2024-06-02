@@ -34,6 +34,7 @@
 30. [Lee continuamente](#ReadContinuously)
 31. [Inicia con las cosas que añaden valor](#StartTheThingsThatAddValue)
 32. [No fomentes islas de conocimiento](#DoNotEncourageKnowledgeIslands)
+33. [Lee proyectos hechos por otros](#ReadProjectsMadeByOthers)
 
 ## Hábitos
 
@@ -188,3 +189,6 @@ Un programador crea una solución para resolver el problema de un cliente, o lo 
 
 Las islas de conocimiento se conoce a aquellas personas que dentro de un proyecto o de una compañía saben hacer algo que el resto desconoce. Es por ello, que es recomendable que formes al resto de compañeros con el conocimiento que el resto no tiene. De esta manera, varios compañeros podrán realizar el mismo tipo de trabajo, ya que dispondrán del mismo conocimeinto en esa área o materia.
 
+### Lee proyectos hechos por otros <a id="" href="ReadProjectsMadeByOthers" class="anchor"></a>
+
+Leer articulos sobre un tema que te interesa, comprando un libro y leyendolo, viendo vídeos explicativos, ... es muy bueno para aprender y es necesario. Pero es mejor ver como otros han implementado sus proyectos mediante repositorios públicos como GitHub. Cuando ves los proyectos de los demás, verás como aplican las buenas prácticas, como han solucionado problemas que a tí también te sucedieron, ... y de ahí se aprende viendo como lo hacen los demás. También puedes hacerlo a la inversa, es decir, creas un proyecto público y recibirás cambios de otras personas o incidencias que te pedirán que corrijas ya que estarán usando tu proyecto, y aprenderás de ello.
