@@ -36,6 +36,7 @@
 32. [No fomentes islas de conocimiento](#DoNotEncourageKnowledgeIslands)
 33. [Lee proyectos hechos por otros](#ReadProjectsMadeByOthers)
 34. [Siempre trabaja con tareas planeadas](#AlwaysWorkWithPlannedTasks)
+35. [Trabaja y piensa por el cliente](#WorkAndThinkForClient)
 
 ## Hábitos
 
@@ -197,3 +198,7 @@ Leer articulos sobre un tema que te interesa, comprando un libro y leyendolo, vi
 ### Siempre trabaja con tareas planeadas <a id="" href="AlwaysWorkWithPlannedTasks" class="anchor"></a>
 
 La planificación es saber que es prioritario, que es lo que tienes que realizar en el día actual y que es irrelevante, y por tanto, se puede posponer. Sin planificación sólo puede existir un escenario, el caos. Es por ello, que debes planificar tu día y avanzar siempre y cuando sea posible.
+
+### Trabaja y piensa por el cliente <a id="" href="WorkAndThinkForClient" class="anchor"></a>
+
+En muchos casos nos tenemos que poner en los zapatos de nuestro cliente y entender lo que necesita, no lo que pide que se haga. En ese caso, hay que pensar más allá de los técnico, entender el negocio y dar solución al problema que tiene en su negocio. En algunas situaciones, el cliente nos especificará que es lo que hay que hacer y nosotros tendremos que entender cual es el problema y la necesidad de realizar ese desarrollo. Es por ello, que tenemos que conocer tanto el negocio como la parte técnica.
