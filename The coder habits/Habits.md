@@ -40,6 +40,7 @@
 36. [Invertir en tu formación](#InvestInYourFormation)
 37. [Aplica continuas mejoras](#ApplyContinuousImprovements)
 38. [Ten cuidado con los detalles](#TakeCareOfTheDetails)
+39. [Aprende a ser criticado](#LearnHowToBeCriticized)
 
 ## Hábitos
 
@@ -217,3 +218,7 @@ Si tú no mejoras, algo estás haciendo mal. Hay que tener una actitud de contin
 ### Ten cuidado con los detalles <a id="" href="TakeCareOfTheDetails" class="anchor"></a>
 
 Como tú haces las cosas, tú haces todo. Esta frase indica que normalmente, sueles hacer de la misma manera las cosas tanto profesionales como personales. Es por ello, que cuando te encuentres en una posicición de competencia serán los pequeños detalles (como esté documentado un proyecto, como estén realizadas las pruebas, ...) que definirán tu profesionalidad.
+
+### Aprende a ser criticado <a id="" href="LearnHowToBeCriticized" class="anchor"></a>
+
+Debes entender que mucha gente le gusta criticar por criticar. Es por ello, que cuando tu veas las opiniones sobre tus repositorios o trabajos realizados, sepas diferenciar una buena crítica en la que se explique los motivos de la critica y como podrías mejorar y aquellas críticas que sean vacias y sin sentido. No obstante, en todos los aspectos de la vida podrás ser críticado por tus actos. Aprende de las buenas críticas y mejora en esos aspectos. 
