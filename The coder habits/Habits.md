@@ -37,6 +37,7 @@
 33. [Lee proyectos hechos por otros](#ReadProjectsMadeByOthers)
 34. [Siempre trabaja con tareas planeadas](#AlwaysWorkWithPlannedTasks)
 35. [Trabaja y piensa por el cliente](#WorkAndThinkForClient)
+36. [Invertir en tu formación](#InvestInYourFormation)
 
 ## Hábitos
 
@@ -202,3 +203,7 @@ La planificación es saber que es prioritario, que es lo que tienes que realizar
 ### Trabaja y piensa por el cliente <a id="" href="WorkAndThinkForClient" class="anchor"></a>
 
 En muchos casos nos tenemos que poner en los zapatos de nuestro cliente y entender lo que necesita, no lo que pide que se haga. En ese caso, hay que pensar más allá de los técnico, entender el negocio y dar solución al problema que tiene en su negocio. En algunas situaciones, el cliente nos especificará que es lo que hay que hacer y nosotros tendremos que entender cual es el problema y la necesidad de realizar ese desarrollo. Es por ello, que tenemos que conocer tanto el negocio como la parte técnica.
+
+### Invertir en tu formación <a id="" href="InvestInYourFormation" class="anchor"></a>
+
+Tu formación puede venir de diferentes fuentes, tales como videos, audios, libros, cursos, ... Es por ello, que es recomendable que establezcas un presupuesto anual a tu formación de los temas que te gustan. De esta manera, te mantendas formado e informado.
