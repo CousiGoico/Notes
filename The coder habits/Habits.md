@@ -39,6 +39,7 @@
 35. [Trabaja y piensa por el cliente](#WorkAndThinkForClient)
 36. [Invertir en tu formación](#InvestInYourFormation)
 37. [Aplica continuas mejoras](#ApplyContinuousImprovements)
+38. [Ten cuidado con los detalles](#TakeCareOfTheDetails)
 
 ## Hábitos
 
@@ -212,3 +213,7 @@ Tu formación puede venir de diferentes fuentes, tales como videos, audios, libr
 ### Aplica continuas mejoras <a id="" href="ApplyContinuousImprovements" class="anchor"></a>
 
 Si tú no mejoras, algo estás haciendo mal. Hay que tener una actitud de continua mejora, aunque sea poco a poco. Cada uno pone su ritmo de mejora pero cada día debes ser un poco mejor que ayer. Esto vale tanto en lo profesional como en lo personal. Hay que organizarse el día y dedicarle un tiempo a hacer proyectos personales, leer temas de interes o leer libros técnicos para ir mejorando en nuestro conocimiento.
+
+### Ten cuidado con los detalles <a id="" href="TakeCareOfTheDetails" class="anchor"></a>
+
+Como tú haces las cosas, tú haces todo. Esta frase indica que normalmente, sueles hacer de la misma manera las cosas tanto profesionales como personales. Es por ello, que cuando te encuentres en una posicición de competencia serán los pequeños detalles (como esté documentado un proyecto, como estén realizadas las pruebas, ...) que definirán tu profesionalidad.
