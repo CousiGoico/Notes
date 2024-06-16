@@ -38,6 +38,7 @@
 34. [Siempre trabaja con tareas planeadas](#AlwaysWorkWithPlannedTasks)
 35. [Trabaja y piensa por el cliente](#WorkAndThinkForClient)
 36. [Invertir en tu formación](#InvestInYourFormation)
+37. [Aplica continuas mejoras](#ApplyContinuousImprovements)
 
 ## Hábitos
 
@@ -207,3 +208,7 @@ En muchos casos nos tenemos que poner en los zapatos de nuestro cliente y entend
 ### Invertir en tu formación <a id="" href="InvestInYourFormation" class="anchor"></a>
 
 Tu formación puede venir de diferentes fuentes, tales como videos, audios, libros, cursos, ... Es por ello, que es recomendable que establezcas un presupuesto anual a tu formación de los temas que te gustan. De esta manera, te mantendas formado e informado.
+
+### Aplica continuas mejoras <a id="" href="ApplyContinuousImprovements" class="anchor"></a>
+
+Si tú no mejoras, algo estás haciendo mal. Hay que tener una actitud de continua mejora, aunque sea poco a poco. Cada uno pone su ritmo de mejora pero cada día debes ser un poco mejor que ayer. Esto vale tanto en lo profesional como en lo personal. Hay que organizarse el día y dedicarle un tiempo a hacer proyectos personales, leer temas de interes o leer libros técnicos para ir mejorando en nuestro conocimiento.
