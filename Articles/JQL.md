@@ -4,7 +4,7 @@
 
 1. [Introducción](#Introduction)
 2. [Estructura](#Structure)
-3. [JQL Functions](#JQL Functions)
+3. [JQL Functions](#JQL-Functions)
     1. [approved()](#approved())
     2. [approver()](#approver())
     3. [breached()()](#breached())
