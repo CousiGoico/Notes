@@ -4,18 +4,18 @@
 
 1. [Introducción](#Introduction)
 2. [Estructura](#Structure)
-3. [JQL Functions](#JQLFunctions)
+3. [JQL Functions](#JQL Functions)
     1. [approved()](#approved())
     2. [approver()](#approver())
     3. [breached()()](#breached())
     1. [approved()](#approved())
-4. [Referencias](#References)
+4. [Referencias](#Referencias)
 
-### Introducción <a id="" href="Introduction" class="anchor"></a>
+### Introducción
 
 JQL (Jira Query Language) es la forma más potente y flexible de realizar busquedas en el sistema JIRA.
 
-### Estructura <a id="" href="Structure" class="anchor"></a>
+### Estructura
 
 - **Campo**: propiedades del propio JIRA, tales como, tipo de tarjeta, código de tarjeta, fecha de creación, ...
 
@@ -25,9 +25,9 @@ JQL (Jira Query Language) es la forma más potente y flexible de realizar busque
 
 - **Palabra clave**: palabras reservadas, tales como, Empty, And, Or, ...
 
-### JQL Functions <a id="" href="JQLFunctions" class="anchor"></a>
+### JQL Functions
 
-#### approved() <a id="" href="approved()" class="anchor"></a>
+#### approved()
 
 Busca en las solicitudes que requieren aprobación y están aprobadas. 
 
@@ -40,7 +40,7 @@ Busca en las solicitudes que requieren aprobación y están aprobadas.
 
 
 
-#### approver() <a id="" href="approver()" class="anchor"></a>
+#### approver()
 
 Busca aquellas solicitudes que necesitan ser aprobadas por un usuario. 
 
@@ -52,10 +52,10 @@ Busca aquellas solicitudes que necesitan ser aprobadas por un usuario.
 |approver(user,user)|Campos personalizados del tipo Approval|=|~ , != , !~ , > , >= , < , <=  IS , IS NOT , IN , NOT IN , WAS, WAS IN, WAS NOT, WAS NOT IN , CHANGED|approvals = approved() `(Encuentra todas las solicitudes que han sido aprobadas)`|
 
 
-#### breached() <a id="" href="breached()" class="anchor"></a>
+#### breached()
 
 
-### Referencias <a id="" href="References" class="anchor"></a>
+### Referencias
 
 [Excentia](https://www.excentia.es/jql-la-forma-de-buscar-en-jira#:~:text=JQL%20son%20las%20siglas%20de,proyectos%20%C3%A1giles%20y%20usuarios%20empresariales.)
 
