@@ -49,10 +49,50 @@ Busca aquellas solicitudes que necesitan ser aprobadas por un usuario.
 
 |Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
 |--------|-----------------|---------------------|------------------------|--------|
-|approver(user,user)|Campos personalizados del tipo Approval|=|~ , != , !~ , > , >= , < , <=  IS , IS NOT , IN , NOT IN , WAS, WAS IN, WAS NOT, WAS NOT IN , CHANGED|approvals = approved() `(Encuentra todas las solicitudes que han sido aprobadas)`|
+|approver(user,user)|Campos personalizados del tipo Approval|=|~ , != , !~ , > , >= , < , <=  IS , IS NOT , IN , NOT IN , WAS, WAS IN, WAS NOT, WAS NOT IN , CHANGED|approvals = approved(user) `(Encuentra todas las solicitudes que han sido aprobadas por user)`|
 
 
 #### breached()
+
+Devuelve aqeullas incidencias cuyo SLA no se ha cumplido.
+
+> [!IMPORTANT]
+> Sólo aplicable a sitios con suscripción Jira Service Management
+
+|Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
+|--------|-----------------|---------------------|------------------------|--------|
+|breached()|SLA|= , !=|~ , !~ , > , >= , < , <= IS , IS NOT , WAS , WAS IN , WAS NOT , WAS NOT IN , CHANGED|"Time to First Response" = breached() `(Encuentra todas las incidencias donde Time to First Response fue incumplido)`|
+
+
+#### cascadeOption()
+
+Devuelve aqeullas incidencias con valores seleccionados en un campo de selección en cascada. El parámetro parentOption coincide con el primer nivel de opciones en el campo de selección en cascada. El parámetro childOption coincide con el segundo nivel de opciones en el campo de selección en cascada y es opcional. La palabra clave "ninguno" se puede utilizar para buscar problemas en los que una o ambas opciones no tienen valor.
+
+
+|Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
+|--------|-----------------|---------------------|------------------------|--------|
+|cascadeOption(parentOption) / cascadeOption(parentOption,childOption)|Campos personalizados de tipo selección en cascada|IN , NOT IN|= , != , ~ , !~ , > , >= , < , <= IS , IS NOT, WAS , WAS IN , WAS NOT , WAS NOT IN , CHANGED|location in cascadeOption("USA","New York") `(Encuentra todas las incidencias donde Location es USA para el primer nivel y New York para el segundo nivel)`|
+
+
+#### choiceOption()
+
+Proporciona el ID de una opción en un campo personalizado desplegable o de opción múltiple. Requiere al menos un argumento. Para múltiples argumentos, devuelve el ID de cada uno. Los argumentos deben ser valores de opción válidos.
+
+|Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
+|--------|-----------------|---------------------|------------------------|--------|
+|choiceOption(ValueOption) / choiceOption(ValueOption1,ValueOption2,ValueOption3)|Campos personalizado desplegable o de opción múltiple|IN , NOT IN|= , != , ~ , !~ , > , >= , < , <= IS , IS NOT, WAS , WAS IN , WAS NOT , WAS NOT IN , CHANGED|"productVersion[Select List (multiple choices)]" in choiceOption(123) `(Busqueda valores de opción numérica)`|
+
+
+#### closedSprints()
+
+Busca incidencias que están en sprints completados.
+
+> [!NOTE]
+> Es posible que una incidencia pertenezca tanto a un Sprint completado como a un Sprint incompleto. Véase también openSprints().
+
+|Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
+|--------|-----------------|---------------------|------------------------|--------|
+|closedSprints()|Sprint|IN , NOT IN|= , != , ~ , !~ , > , >= , < , <= IS , IS NOT, WAS , WAS IN , WAS NOT , WAS NOT IN , CHANGED|sprint in closedSprints() `(Busqueda todas las incidencias que están asignadas a sprints completados)`|
 
 
 ### Referencias
