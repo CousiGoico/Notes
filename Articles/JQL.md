@@ -16,13 +16,14 @@
     9. [componentsLeadByUser()](#componentsLeadByUser())
     10. [componentsLeadByUser()](#componentsLeadByUser())
     11. [currentLogin()](#currentLogin())
+    12. [currentUser()](#currentUser())
 4. [Referencias](#Referencias)
 
-### Introducción
+## Introducción
 
 JQL (Jira Query Language) es la forma más potente y flexible de realizar busquedas en el sistema JIRA.
 
-### Estructura
+## Estructura
 
 - **Campo**: propiedades del propio JIRA, tales como, tipo de tarjeta, código de tarjeta, fecha de creación, ...
 
@@ -133,8 +134,20 @@ Realiza busquedas basadas en el tiempo que el usuario inicio sesión.
 |--------|-----------------|---------------------|------------------------|--------|
 |currentLogin()|Created, Due, Resolved, Updated, custom fields of type Date/Time|= , != , > , >= , < , <= WAS* , WAS IN* , WAS NOT* , WAS NOT IN* , CHANGED* * Only in predicate|~ , !~ IS , IS NOT , IN , NOT IN|created > currentLogin() `(Busca incidencias que han sido creados durante la sesión actual)`|
 
+### currentUser()
 
-### Referencias
+Realiza busquedas basadas en el usuario logado.
+
+> [!NOTE]
+> Sólo puede ser usado cuando estas logado.
+
+|Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
+|--------|-----------------|---------------------|------------------------|--------|
+|currentUser()|Assignee, Reporter, Voter, Watcher, Creator, custom fields of type User|= , !=|~ , !~ , > , >= , < , <= IS , IS NOT , IN , NOT IN , WAS , WAS IN , WAS NOT , WAS NOT IN , CHANGED|reporter = currentUser() AND (assignee != currentUser() OR assignee is EMPTY) `(Busca incidencias que han sido reportados por el usuario actual y que el asignado sera diferente que el usuario actual o vacío)`|
+
+
+
+## Referencias
 
 [Excentia](https://www.excentia.es/jql-la-forma-de-buscar-en-jira#:~:text=JQL%20son%20las%20siglas%20de,proyectos%20%C3%A1giles%20y%20usuarios%20empresariales.)
 
