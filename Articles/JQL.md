@@ -8,7 +8,14 @@
     1. [approved()](#approved())
     2. [approver()](#approver())
     3. [breached()()](#breached())
-    1. [approved()](#approved())
+    4. [cascadeOption()](#cascadeOption())
+    5. [cascadeOption()](#cascadeOption())
+    6. [choiceOption()](#choiceOption())
+    7. [closedSprints()](#closedSprints())
+    8. [completed()](#completed())
+    9. [componentsLeadByUser()](#componentsLeadByUser())
+    10. [componentsLeadByUser()](#componentsLeadByUser())
+    11. [currentLogin()](#currentLogin())
 4. [Referencias](#Referencias)
 
 ### Introducción
@@ -93,6 +100,38 @@ Busca incidencias que están en sprints completados.
 |Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
 |--------|-----------------|---------------------|------------------------|--------|
 |closedSprints()|Sprint|IN , NOT IN|= , != , ~ , !~ , > , >= , < , <= IS , IS NOT, WAS , WAS IN , WAS NOT , WAS NOT IN , CHANGED|sprint in closedSprints() `(Busqueda todas las incidencias que están asignadas a sprints completados)`|
+
+
+#### completed()
+
+Busca incidencias que están en sprints completados con SLA.
+
+> [!IMPORTANT]
+> Sólo aplicable a sitios con suscripción Jira Service Management
+
+|Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
+|--------|-----------------|---------------------|------------------------|--------|
+|completed()|SLA|=, !=|~ , !~ , > , >= , < , <= IS , IS NOT , WAS , WAS IN , WAS NOT , WAS NOT IN , CHANGED|"Time to First Response" = completed() `(Busqueda todas las incidencias que Time to first Reponse ha sido completado)`|
+
+
+#### componentsLeadByUser()
+
+Busca componentes dirigidos por el usuario.
+
+> [!NOTE]
+> Si no estas logado en Jira, un usuario debe ser especificado.
+
+|Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
+|--------|-----------------|---------------------|------------------------|--------|
+|componentsLeadByUser() / componentsLeadByUser(username)|Component|IN , NOT IN|= , != , ~ , !~ , > , >= , < , <= IS , IS NOT, WAS , WAS IN , WAS NOT , WAS NOT IN , CHANGED|component in componentsLeadByUser() AND status = Open `(Busqueda todas los componentes que están liderados por el usuario y estén abiertos)`|
+
+#### currentLogin()
+
+Realiza busquedas basadas en el tiempo que el usuario inicio sesión.
+
+|Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
+|--------|-----------------|---------------------|------------------------|--------|
+|currentLogin()|Created, Due, Resolved, Updated, custom fields of type Date/Time|= , != , > , >= , < , <= WAS* , WAS IN* , WAS NOT* , WAS NOT IN* , CHANGED* * Only in predicate|~ , !~ IS , IS NOT , IN , NOT IN|created > currentLogin() `(Busca incidencias que han sido creados durante la sesión actual)`|
 
 
 ### Referencias
