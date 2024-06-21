@@ -16,7 +16,7 @@
     9. [componentsLeadByUser()](#componentsLeadByUser())
     10. [componentsLeadByUser()](#componentsLeadByUser())
     11. [currentLogin()](#currentLogin())
-    12. [currentUser()](#currentUser())
+    12. [currentUser()](###currentUser())
 4. [Referencias](#Referencias)
 
 ## Introducción
