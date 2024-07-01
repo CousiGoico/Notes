@@ -146,6 +146,18 @@ Realiza busquedas basadas en el usuario logado.
 |currentUser()|Assignee, Reporter, Voter, Watcher, Creator, custom fields of type User|= , !=|~ , !~ , > , >= , < , <= IS , IS NOT , IN , NOT IN , WAS , WAS IN , WAS NOT , WAS NOT IN , CHANGED|reporter = currentUser() AND (assignee != currentUser() OR assignee is EMPTY) `(Busca incidencias que han sido reportados por el usuario actual y que el asignado sera diferente que el usuario actual o vacío)`|
 
 
+### customerDetail()
+
+Realiza busquedas basadas en los clientes.
+
+> [!NOTE]
+> Sólo aplicable a sitios con suscripción Jira Service Management
+
+|Sintaxis|Campos soportados|Operadores soportados|Operadores no soportados|Ejemplos|
+|--------|-----------------|---------------------|------------------------|--------|
+|customerDetail()|Assignee, Reporter, Voter, Watcher, custom fields of type User|IN , NOT IN|= , != , ~ , !~ , > , >= , < , <= IS , IS NOT , WAS , WAS IN , WAS NOT IN, WAS NOT , CHANGED|reporter in customerDetail("Region", "APAC") `(Busca incidencias reportadas por clientes en la región APAC)`|
+
+
 
 ## Referencias
 
