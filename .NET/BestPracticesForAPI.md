@@ -16,7 +16,7 @@
 12. [Documentación](#Documentation)
 13. [Referencias](#References)
 
-## Injección de dependencias<a id="" href="#DependencyInjection" class="anchor"></a>
+## Injección de dependencias<a id="DependencyInjection" href="#DependencyInjection" class="anchor"></a>
 
 Reduce el acomplamiento entre componentes.
 
@@ -25,7 +25,7 @@ Reduce el acomplamiento entre componentes.
             servics.AddScoped<IService, Service>();
         }
 
-## Principios RESTFul<a id="" href="#RESTFul" class="anchor"></a>
+## Principios RESTFul<a id="RESTFul" href="#RESTFul" class="anchor"></a>
 
 Usa los códigos de estado HTTP y los verbos de manera correcta.
 
@@ -36,7 +36,7 @@ Usa los códigos de estado HTTP y los verbos de manera correcta.
             return user == null ? NotFound() : Ok(user);
         }
 
-## Seguridad, autenticación y autorización<a id="" href="#Security" class="anchor"></a>
+## Seguridad, autenticación y autorización<a id="Security" href="#Security" class="anchor"></a>
 
 Usa siempre el protocolo seguro HTTPS para encriptar las comunicaciones. Implementa JWT (JSON Web Token) para la autenticación y autorización.
 
@@ -47,7 +47,7 @@ Usa siempre el protocolo seguro HTTPS para encriptar las comunicaciones. Impleme
             return Ok("This data is secured!");
         }
 
-## Errores<a id="" href="#Errors" class="anchor"></a>
+## Errores<a id="Errors" href="#Errors" class="anchor"></a>
 
 Usa un middleware para administrar los errores no controlados.
 
@@ -72,7 +72,7 @@ Usa un middleware para administrar los errores no controlados.
             }
         }
 
-## Data Transfer Object<a id="" href="#DTOs" class="anchor"></a>
+## Data Transfer Object<a id="DTOs" href="#DTOs" class="anchor"></a>
 
 Usa DTO's (Data Transfer Object) para transferir la información a procesar.
 
@@ -83,7 +83,7 @@ Usa DTO's (Data Transfer Object) para transferir la información a procesar.
             public string Surname { get; set; }
         }
 
-## Versionado<a id="" href="#Versioning" class="anchor"></a>
+## Versionado<a id="Versioning" href="#Versioning" class="anchor"></a>
 
 Versiona las API para mantener retrocompatibilidad y de esta manera, asegurar que no rompas sistemas que esten usando versiones anteriores.
 
@@ -95,7 +95,7 @@ Versiona las API para mantener retrocompatibilidad y de esta manera, asegurar qu
             public IActionResult GetV1() => Ok("Version 1");
         }
 
-## Cache<a id="" href="#Cache" class="anchor"></a>
+## Cache<a id="Cache" href="#Cache" class="anchor"></a>
 
 Usa la cache para evitar que el servidor se sobrecargue realizando la misma tarea.
 
@@ -107,7 +107,7 @@ Usa la cache para evitar que el servidor se sobrecargue realizando la misma tare
             return Ok(user);
         }
 
-## Log <a id="" href="#Log" class="anchor"></a>
+## Log <a id="Log" href="#Log" class="anchor"></a>
 
 Es muy importante saber que es lo que entra y lo que sale de tu API, por lo que necesitarás registrar en un log dicha informaicón. Puedes usar librerias como **[Seriolog](https://serilog.net/)** o **[NLog](https://nlog-project.org/)**.
 
@@ -126,7 +126,7 @@ Es muy importante saber que es lo que entra y lo que sale de tu API, por lo que 
             }
         }
 
-## Validación de datos<a id="" href="#DataValidation" class="anchor"></a>
+## Validación de datos<a id="DataValidation" href="#DataValidation" class="anchor"></a>
 
 Para validar la información que te llega a la API puedes usar herramientas como **Data Annotations** o **Fluent Validation**.
 
@@ -140,7 +140,7 @@ Para validar la información que te llega a la API puedes usar herramientas como
             public string Email { get; set; }
         }
 
-## Paginación y filtrado<a id="" href="#PaginationAndFilter" class="anchor"></a>
+## Paginación y filtrado<a id="PaginationAndFilter" href="#PaginationAndFilter" class="anchor"></a>
 
 Si tienes que realizar una consulta muy grande, tu servidor fallará o te dará un Timeout. Para evitar esto tendrás que paginar la consulta y/o filtrarla. 
 
@@ -151,7 +151,7 @@ Si tienes que realizar una consulta muy grande, tu servidor fallará o te dará 
             return Ok(users);
         }
 
-## Métodos asíncronos<a id="" href="#AsyncMethods" class="anchor"></a>
+## Métodos asíncronos<a id="AsyncMethods" href="#AsyncMethods" class="anchor"></a>
 
 Para mejorar la escalabilidad y la respuesta usa métodos asíncronos.
 
@@ -161,7 +161,7 @@ Para mejorar la escalabilidad y la respuesta usa métodos asíncronos.
             return Ok(user);
         }
 
-## Documentación<a id="" href="#Documentation" class="anchor"></a>
+## Documentación<a id="Documentation" href="#Documentation" class="anchor"></a>
 
 Es muy importante documentar la API para que el usuario que vaya a usarla entienda como debe realizar las llamadas a los métodos de la misma. Para ello puedes usar herramientas como **[Swagger](https://swagger.io/)** que te proveen de una página web con los métodos, verbos, parámetros, ...
 
@@ -182,6 +182,6 @@ Es muy importante documentar la API para que el usuario que vaya a usarla entien
             });
         }
 
-### Referencias
+### Referencias<a id="References" href="#References" class="anchor"></a>
 
 [Dev.io](https://dev.to/luqman_bolajoko/best-practices-for-building-net-core-web-apis-5hc1)
