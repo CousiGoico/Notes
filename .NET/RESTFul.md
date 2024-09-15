@@ -9,7 +9,11 @@ Usa correctamente cada uno de los verbos HTTP.
 - POST: creación de nuevos recursos.
 - PUT: actualización de recursos en su totalidad.
 - PATCH: actualiza parcialmente un recurso.
-- DELETE: Elimina un recurso.
+- DELETE: elimina un recurso.
+- HEAD: consulta los metadatos de un recurso.
+- CONNECT: consulta la conectividad.
+- OPTIONS: consulta las opciones de una URL.
+- TRACE: realize un tests de conexión con el recurso.
 
 ## Códigos HTTP
 
@@ -88,3 +92,6 @@ Las buenas prácticas indican que tanto para el filtrado como para la paginació
 ## Referencias
 
 [Medium](https://medium.com/@diego.coder/introducci%C3%B3n-a-las-apis-rest-6b3ad900acc9)
+[CodingNetworks](https://codingnetworks.blog/es/que-es-un-api-rest-fundamentos-para-ingenieros-de-redes/)
+[Medium](https://medium.com/codenx/understanding-the-lesser-known-http-methods-head-options-trace-and-connect-af4311e63781)
+[MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
