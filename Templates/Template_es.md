@@ -1,4 +1,4 @@
-# Kusto Query Language
+# Titulo
 
 ## Indice
 
@@ -7,14 +7,14 @@
 
 ### Primer tema <a id="FirstTopic" href="#FirstTopic" class="anchor"></a>
 
-#### Category title
+#### Titulo categoria
 
-##### Subcategory title
+##### Titulo subcategoria
 
 ### Segundo tema <a id="SecondTopic" href="#SecondTopic" class="anchor"></a>
 
-#### Category title
+#### Titulo categoria
 
-##### Subcategory title
+##### Titulo subcategoria
 
-## References
+## Referencias
