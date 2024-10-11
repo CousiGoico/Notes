@@ -25,7 +25,7 @@ Una consulta de Kusto es una solicitud de solo lectura para procesar datos y dev
 Esta instrucción suele aparecer en último lugar en la lista de instrucciones, y tanto su entrada como su salida constan de tablas o conjuntos de datos tabulares. Dos instrucciones cualesquiera deben estar separadas por un punto y coma.
 
 - Sintaxis: 
-    Source `|` Operator1 `|` Operator2 `|` RenderInstruction
+    Source **|** Operator1 **|** Operator2 **|** RenderInstruction
 
 - Parámetros: 
 
@@ -45,8 +45,8 @@ Esta instrucción suele aparecer en último lugar en la lista de instrucciones, 
 Una instrucción [let](https://learn.microsoft.com/es-es/kusto/query/let-statement?view=microsoft-fabric) define un enlace entre un nombre y una expresión. 
 
 - Sintaxis: 
-    `let` Name `=` Expression
-    `let` Name `=` [view]([Parameters]) { FunctionBody }
+    **let** Name **=** Expression
+    **let** Name **=** [view]([Parameters]) { FunctionBody }
 
 - Parámetros: 
 
@@ -67,7 +67,7 @@ Una instrucción [let](https://learn.microsoft.com/es-es/kusto/query/let-stateme
 Una instrucción [set](https://learn.microsoft.com/es-es/kusto/query/set-statement?view=microsoft-fabric) se utiliza para establecer una [propiedad de solicitud](https://learn.microsoft.com/es-es/kusto/api/rest/request-properties?view=microsoft-fabric) durante la duración de la consulta. En una consulta puede haber más de una instrucción set. 
 
 - Sintaxis: 
-    `set` OptionName [`=` OptionValue]
+    **set** OptionName [**=** OptionValue]
 
 - Parámetros: 
 
@@ -85,7 +85,7 @@ Una instrucción [set](https://learn.microsoft.com/es-es/kusto/query/set-stateme
 Se usa para encontrar el número de registros en la tabla.
 
 - Sintaxis: 
-    | `count`
+    | **count**
 
 - Ejemplos:
 
@@ -97,7 +97,7 @@ Se usa para encontrar el número de registros en la tabla.
 Se usa para obtener un número determinado de registros.
 
 - Sintaxis: 
-    | `take` num
+    | **take** num
 
 - Parámetros:
 
@@ -113,7 +113,7 @@ Se usa para obtener un número determinado de registros.
 Se usa para seleccionar un subconjunto específico de columnas.
 
 - Sintaxis: 
-    | `project` [column_name]
+    | **project** [column_name]
 
 - Parámetros:
 
@@ -131,7 +131,7 @@ Se usa para seleccionar un subconjunto específico de columnas.
 Se usa para obtener los diferentes valores de una columna.
 
 - Sintaxis: 
-    | `distinct` column_name
+    | **distinct** column_name
 
 - Parámetros:
 
@@ -147,7 +147,7 @@ Se usa para obtener los diferentes valores de una columna.
 Se usa para realizar filtros en la consulta.
 
 - Sintaxis: 
-    | `where` filter
+    | **where** filter
 
 - Parámetros:
 
@@ -163,7 +163,7 @@ Se usa para realizar filtros en la consulta.
 Se usa para ordenar los datos por una lista de columnas.
 
 - Sintaxis: 
-    | `sort by` [column_name {asc|desc}]
+    | **sort by** [column_name {asc|desc}]
 
 - Parámetros:
 
@@ -181,7 +181,7 @@ Se usa para ordenar los datos por una lista de columnas.
 Se usa para obtener las primeras n filas ordenadas por la columna indicada.
 
 - Sintaxis: 
-    | `top` num_reg `by` column_name {asc|desc}
+    | **top** num_reg **by** column_name {asc|desc}
 
 - Parámetros:
 
@@ -198,10 +198,10 @@ Se usa para obtener las primeras n filas ordenadas por la columna indicada.
 
 #### columnas calculadas
 
-Los operadores `project`y `extend` pueden crear columnas calculadas.
+Los operadores **project**y **extend** pueden crear columnas calculadas.
 
 - Sintaxis: 
-    | `project` column_name = expression
+    | **project** column_name = expression
 
 - Parámetros:
 
@@ -219,10 +219,10 @@ Los operadores `project`y `extend` pueden crear columnas calculadas.
 
 #### summarize
 
-El operador `summarize` realiza agrupaciones de las filas en función de la clausula. Similar a un group by en SQL.
+El operador **summarize** realiza agrupaciones de las filas en función de la clausula. Similar a un group by en SQL.
 
 - Sintaxis: 
-    | `summarize` common_operator `by` column_name
+    | **summarize** common_operator **by** column_name
 
 - Parámetros:
 
@@ -236,10 +236,10 @@ El operador `summarize` realiza agrupaciones de las filas en función de la clau
 
 #### render
 
-El operador `render` permite renderizar el resultado en un gráfico o diagrama.
+El operador **render** permite renderizar el resultado en un gráfico o diagrama.
 
 - Sintaxis: 
-    | `render` graphic_type
+    | **render** graphic_type
 
 - Parámetros:
 
@@ -253,10 +253,10 @@ El operador `render` permite renderizar el resultado en un gráfico o diagrama.
 
 #### countif
 
-El operador `countif()` permite contar las filas en función de una condición específica.
+El operador **countif()** permite contar las filas en función de una condición específica.
 
 - Sintaxis: 
-    | `countif(expression)` 
+    | **countif(expression)** 
 
 - Parámetros:
 
@@ -270,10 +270,10 @@ El operador `countif()` permite contar las filas en función de una condición e
 
 #### bin
 
-El operador `bin()` permite agregar valores númericos o de tiempo y utilizarlos como un intervalo.
+El operador **bin()** permite agregar valores númericos o de tiempo y utilizarlos como un intervalo.
 
 - Sintaxis: 
-    | `bin(column_name, format)` 
+    | **bin(column_name, format)** 
 
 - Parámetros:
 
@@ -289,12 +289,12 @@ El operador `bin()` permite agregar valores númericos o de tiempo y utilizarlos
 
 #### max, min, average
 
-Los operadores `min()`, `max()` y `averga()` permite calcular el valor mínimo, máximo y media de una columna.
+Los operadores **min()**, **max()** y **averga()** permite calcular el valor mínimo, máximo y media de una columna.
 
 - Sintaxis: 
-    | `min(column_name)` 
-    | `max(column_name)` 
-    | `averge(column_name)` 
+    | **min(column_name)** 
+    | **max(column_name)** 
+    | **averge(column_name)** 
 
 - Parámetros:
 
@@ -313,10 +313,10 @@ Los operadores `min()`, `max()` y `averga()` permite calcular el valor mínimo, 
 
 #### sum
 
-El operador `sum()` permite calcular la suma de los valores de una columna.
+El operador **sum()** permite calcular la suma de los valores de una columna.
 
 - Sintaxis: 
-    | `sum(column_name)` 
+    | **sum(column_name)** 
     
 - Parámetros:
 
@@ -332,10 +332,10 @@ El operador `sum()` permite calcular la suma de los valores de una columna.
 
 #### round
 
-El operador `round()` permite redondear un valor numérico.
+El operador **round()** permite redondear un valor numérico.
 
 - Sintaxis: 
-    | `round(column_name, num_decimals)` 
+    | **round(column_name, num_decimals)** 
     
 - Parámetros:
 
@@ -360,10 +360,10 @@ El operador `round()` permite redondear un valor numérico.
 
 #### iff
 
-El operador `iff()` permite establecer una condición para una columna calculada.
+El operador **iff()** permite establecer una condición para una columna calculada.
 
 - Sintaxis: 
-    | `if(condition, value_if_true, value_if_false)` 
+    | **if(condition, value_if_true, value_if_false)** 
     
 - Parámetros:
 
@@ -388,10 +388,10 @@ El operador `iff()` permite establecer una condición para una columna calculada
 
 #### case
 
-El operador `case()` permite devolver la expresión de resultado correspondiente al primer predicado satisfecho.
+El operador **case()** permite devolver la expresión de resultado correspondiente al primer predicado satisfecho.
 
 - Sintaxis: 
-    | `case([predicate1, value_if_true], case_else)` 
+    | **case([predicate1, value_if_true], case_else)** 
     
 - Parámetros:
 
@@ -421,10 +421,10 @@ El operador `case()` permite devolver la expresión de resultado correspondiente
 
 #### join
 
-El operador `join` permite realizar consultas uniendo varias tablas.
+El operador **join** permite realizar consultas uniendo varias tablas.
 
 - Sintaxis: 
-    | `join` kind={innerunique|inner|leftouter|rightouter|fullouter|leftsemi|leftanti|anti|leftantisemi|rightsemi|rightanti|rightantisemi} column_name on table_name
+    | **join** kind={innerunique|inner|leftouter|rightouter|fullouter|leftsemi|leftanti|anti|leftantisemi|rightsemi|rightanti|rightantisemi} column_name on table_name
     
 - Parámetros:
 
@@ -442,10 +442,10 @@ El operador `join` permite realizar consultas uniendo varias tablas.
 
 #### lookup
 
-El operador `lookup` optimiza el rendimiento de las consultas en las que una tabla de hechos se enriquece con datos de una tabla de dimensiones. Para obtener el mejor rendimiento, el sistema asume de forma predeterminada que la tabla de la izquierda es la tabla de hechos más grande y la tabla de la derecha es la tabla de dimensiones más pequeñas. Es lo contrario de la suposición que usa el operador `join`.
+El operador **lookup** optimiza el rendimiento de las consultas en las que una tabla de hechos se enriquece con datos de una tabla de dimensiones. Para obtener el mejor rendimiento, el sistema asume de forma predeterminada que la tabla de la izquierda es la tabla de hechos más grande y la tabla de la derecha es la tabla de dimensiones más pequeñas. Es lo contrario de la suposición que usa el operador **join**.
 
 - Sintaxis: 
-    | `lookup` left_table on right_table
+    | **lookup** left_table on right_table
     
 - Parámetros:
 
@@ -464,7 +464,7 @@ El operador `lookup` optimiza el rendimiento de las consultas en las que una tab
 Las combinaciones también se pueden realizar en función de los resultados de la consulta de la misma tabla.
 
 - Sintaxis: 
-    | `join` kind={innerunique|inner|leftouter|rightouter|fullouter|leftsemi|leftanti|anti|leftantisemi|rightsemi|rightanti|rightantisemi} (subquery)
+    | **join** kind={innerunique|inner|leftouter|rightouter|fullouter|leftsemi|leftanti|anti|leftantisemi|rightsemi|rightanti|rightantisemi} (subquery)
     
 - Parámetros:
 
