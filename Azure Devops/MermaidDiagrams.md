@@ -101,8 +101,8 @@ gantt
     Task 2          :after t1 , 5d
     section Section B
 
-    Task 3          :t2, 2022-03-07, 7d
-    Task 4          :after t2 , 5d
+    Task 3          :t2, 2022-03-05, 3d
+    Task 4          :t3, 2022-03-08, 5d
 ```
 
         ::: mermaid
