@@ -110,10 +110,14 @@ gantt
             title A Gantt chart
             dateFormat YYYY-MM-DD
             excludes 2022-03-16,2022-03-18,2022-03-19
-            section Section
+            section Section A
 
-            A task          :a1, 2022-03-07, 7d
-            Another task    :after a1 , 5d
+            Task 1          :t1, 2022-03-07, 7d
+            Task 2          :after t1 , 5d
+            section Section B
+        
+            Task 3          :t2, 2022-03-05, 3d
+            Task 4          :t3, 2022-03-08, 5d
         :::
 
 ### Diagrama de requerimientos
