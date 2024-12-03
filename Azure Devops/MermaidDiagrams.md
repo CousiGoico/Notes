@@ -133,7 +133,7 @@ requirementDiagram
     element test_suite {
     type: manual test
     }
-    test_suite --> development_req
+    test_suite -> development_req
 ```
 
         :::mermaid
