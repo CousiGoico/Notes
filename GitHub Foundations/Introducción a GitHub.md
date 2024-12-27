@@ -65,3 +65,26 @@ Cada gist es un repositorio Git, que puede bifurcar y clonar y que puede ser pú
 ### ¿Qué son las wikis?
 
 Cada repositorio incluye una sección para hospedar documentación, denominada wiki. Aunque un archivo LÉAME indica rápidamente lo que puede hacer el proyecto, puede usar una wiki para proporcionar documentación adicional.
+
+## Componentes del flujo de GitHub
+
+### Qué son las ramas
+
+Las ramas son una parte esencial porque en ellas es donde podemos realizar cambios sin que afecten a todo el proyecto en el que estamos trabajando.
+
+La rama es un lugar seguro para experimentar con nuevas características o correcciones. Si comete un error, puede revertir sus cambios o insertar más cambios para subsanarlo. Los cambios no se actualizarán en la rama predeterminada hasta que combine la rama.
+
+### ¿Qué son las confirmaciones o commits?
+
+Una confirmación es un cambio en uno o varios archivos de una rama. Cada vez que se crea una confirmación, se le asigna un identificador único y se realiza un seguimiento de ella, junto con la hora y el colaborador. Las confirmaciones proporcionan un registro de auditoría claro para todas las personas que revisen el historial de un archivo o un elemento vinculado, como una incidencia o una solicitud de incorporación de cambios.
+
+Los estados principales de un archivo en un repositorio Git son Sin seguimiento y Con seguimiento.
+
+- Sin seguimiento: estado inicial de un archivo cuando aún no forma parte del repositorio de Git. Git desconoce su existencia.
+
+- Con seguimiento: un archivo con seguimiento es aquel que Git supervisa activamente. Puede estar en uno de los siguientes subestados:
+
+    - Sin modificar: se realiza un seguimiento del archivo, pero no se ha modificado desde la última confirmación.
+    - Modificado: el archivo se ha cambiado desde la última confirmación, pero estos cambios aún no están almacenados provisionalmente para la siguiente confirmación.
+    - Almacenado provisionalmente: el archivo se ha modificado y los cambios se han agregado al área de almacenamiento provisional (también conocida como índice). Estos cambios están listos para confirmarse.
+    - Confirmado: el archivo se encuentra en la base de datos del repositorio. Representa la versión confirmada más reciente del archivo.
