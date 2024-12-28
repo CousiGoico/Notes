@@ -88,3 +88,77 @@ Los estados principales de un archivo en un repositorio Git son Sin seguimiento 
     - Modificado: el archivo se ha cambiado desde la última confirmación, pero estos cambios aún no están almacenados provisionalmente para la siguiente confirmación.
     - Almacenado provisionalmente: el archivo se ha modificado y los cambios se han agregado al área de almacenamiento provisional (también conocida como índice). Estos cambios están listos para confirmarse.
     - Confirmado: el archivo se encuentra en la base de datos del repositorio. Representa la versión confirmada más reciente del archivo.
+
+### ¿Qué son las solicitudes de incorporación de cambios o pull requests?
+
+Es un mecanismo que sirve para indicar que las confirmaciones de una rama están listas para combinarse en otra. 
+
+El miembro del equipo que envía la solicitud de cambios normalmente pide a uno o varios revisores que comprueben el código y aprueben la combinación. Estos revisores podrán comentar los cambios, agregar otros o usar la solicitud de incorporación de cambios para realizar un análisis más exhaustivo. 
+
+Una vez que los cambios se han aprobado, la rama de origen de la solicitud de incorporación de cambios se combina con la rama base.
+
+### El flujo de GitHub
+
+![](../Images/GitHubFlow.png)
+
+El flujo de GitHub se puede definir como un flujo de trabajo ligero que permite experimentar de forma segura. 
+
+1. Comience por crear una rama para que los cambios, características y correcciones que cree no afecten a la rama principal.
+2. Realice los cambios. Se recomienda implementar cambios en la rama de características antes de combinarlos en la rama principal. 
+3. Cree una solicitud de cambios para pedir comentarios a los colaboradores. La revisión de solicitude sde cambios es tan valiosa que algunos repositorios requieren una revisión aprobatoria antes de que estas se puedan fusionar.
+4. Revise e implemente los comentarios de sus colaboradores.
+5. Una vez que esten bien los cambios, es el momento de aprobar la solicitud de cambios y combinarla en la rama principal.
+6. Puede eliminar la rama. Al eliminar la rama se indica que el trabajo en la rama se ha completado y se evita que usted u otros usuarios empleen accidentalmente ramas antiguas.
+
+## GitHub es una plataforma colaborativa
+
+### Issues
+
+Las Incidencias de GitHub se crearon para realizar un seguimiento de ideas, comentarios, tareas o errores para trabajar en GitHub. Las incidencias se pueden crear de varias maneras, por lo que puede elegir el método más conveniente para su flujo de trabajo. Maneras de crear una incidencia: 
+
+* Un elemento de una lista de tareas.
+* Una nota en un proyecto.
+* Un comentario en una incidencia o una solicitud de incorporación de cambios.
+* Una línea de código específica.
+* Una consulta de dirección URL.
+
+#### Crear una propuesta desde un repositorio
+
+1. Vaya a la página principal del repositorio.
+2. Debajo del nombre del repositorio, seleccione Incidencias.
+3. Seleccione Nueva incidencia.
+4. Si el repositorio usa plantillas de incidencias, junto al tipo de incidencia que desee abrir, seleccione Comenzar. Si el tipo de incidencia que desea abrir no están incluida en las opciones disponibles, seleccione Abrir una incidencia en blanco.
+5. En el campo Agregar título, escriba el título de la incidencia.
+6. En el campo Agregar descripción, describa la incidencia.
+7. Si es un mantenedor de proyectos, puede asignar la incidencia a alguien, agregarla a un panel de proyecto, asociarla a un hito o aplicar una etiqueta.
+8. Cuando haya terminado, seleccione Enviar nueva incidencia.
+
+### Debates
+
+Los debates son para conversaciones que deben ser accesibles para todos los usuarios y que no están relacionadas con el código. Los debates habilitan las conversaciones abiertas y fluídas en un foro público.
+
+#### Hablitación de un debate en el repositorio
+
+Los propietarios de repositorios y los usuarios con acceso de escritura pueden habilitar los Debates de GitHub para una comunidad en sus repositorios públicos y privados. La visibilidad de un debate se hereda del repositorio en el que se crea el debate.
+
+1. Ir a la página principal del repositorio.
+2. En el nombre del repositorio, seleccione Configuración.
+3. Desplácese hacia abajo hasta la sección Características y, en Discusiones, seleccione Discusiones de configuración.
+4. En Iniciar una nueva discusión, edite la plantilla para alinearse con los recursos y el tono que desea establecer para la comunidad.
+5. Seleccione Iniciar discusión.
+
+#### Creación de un nuevo debate
+
+Cualquier usuario autenticado que pueda ver un repositorio puede crear un debate en dicho repositorio.
+
+1. Ir a la página principal del repositorio o la organización donde desea iniciar un debate.
+2. En el nombre del repositorio u organización, seleccione Discusiones.
+3. Seleccione Discusión nueva.
+4. Seleccione una categoría de discusión seleccionando Comenzar. Todos los debates deben crearse en una categoría. En el caso de los debates del repositorio, las personas con permisos de mantenedor o administrador en el repositorio definen las categorías de los debates de dicho repositorio.
+
+Cada categoría debe tener un nombre único, un emparejamiento de emojis y una descripción detallada que indique su propósito.
+
+![](../Images/CategoriasEmojiDiscusionGitHub.png)
+
+1. En Título de la discusión escriba un título para la discusión y, en Escribir, escriba el cuerpo de la discusión.
+2. Seleccione Iniciar discusión.
