@@ -162,3 +162,22 @@ Cada categoría debe tener un nombre único, un emparejamiento de emojis y una d
 
 1. En Título de la discusión escriba un título para la discusión y, en Escribir, escriba el cuerpo de la discusión.
 2. Seleccione Iniciar discusión.
+
+## Administración de la plataforma de GitHub
+
+### Administración de las notificaciones y suscripciones
+
+Puede optar por recibir actualizaciones continuas sobre actividades específicas en GitHub.com a través de una suscripción. Las notificaciones son las actualizaciones que se reciben sobre la actividad específica a la que el usuario se ha suscrito.
+
+#### Opciones de suscripción
+
+* Una conversación sobre un informe de problemas, solicitud de extracción o gist específico.
+* Actividades de CI, tales como el estado de los flujos de trabajo en los repositorios configurados con Acciones de GitHub.
+* Problemas del repositorio, solicitudes de incorporación de cambios, versiones, alertas de seguridad o discusiones (si están habilitados).
+* Toda la actividad de un repositorio.
+
+### Qué son las págians de GitHub
+
+Puede usar páginas de GitHub para publicitar y hospedar un sitio web sobre usted, su organización o su proyecto directamente desde un repositorio de GitHub.com.
+
+GitHub Pages es un servicio de hospedaje de sitios estáticos que toma archivos HTML, CSS y JavaScript directamente desde un repositorio de GitHub. Opcionalmente, puede ejecutar los archivos a través de un proceso de compilación y publicar un sitio web. Edite e introduzca los cambios y ya está, su proyecto estará disponible para el público de una manera visualmente organizada.
