@@ -124,3 +124,52 @@ GitHub Enterprise Server se integra con servicios de LDAP populares, como:
 * Oracle Directory Server Enterprise Edition.
 * OpenLDAP.
 * Open Directory.
+
+## ¿Cómo funcionan los permisos y la organización de GitHub?
+
+### Niveles de permisos de repositorio
+
+* Lectura: Se recomienda para colaboradores que no trabajan en el código, pero que quieren ver el proyecto o hablar sobre él. Esto es bueno para cualquier persona que necesite ver el contenido dentro del repositorio, pero que realmente no necesite realizar contribuciones ni cambios.
+* Evaluación de prioridades: Se recomienda para colaboradores que necesitan administrar de forma proactiva incidencias y solicitudes de incorporación de cambios sin acceso de escritura. Este nivel podría ser bueno para algunos administradores de proyectos que administran problemas de seguimiento, pero no realizan ningún cambio.
+* Escritura: Se recomienda para los colaboradores que insertan cambios activamente en el proyecto. El permiso de escritura es el permiso estándar para la mayoría de los desarrolladores.
+* Mantenimiento: Recomendado para gestores de proyectos que necesitan gestionar el repositorio sin acceso a acciones sensibles o destructivas.
+* Administrador: Se recomienda para usuarios que necesitan acceso total al proyecto, incluidas acciones confidenciales y destructivas, como administrar la seguridad o eliminar un repositorio. Se trata de propietarios y administradores del repositorio.
+
+#### Crear una plantilla de un repositorio
+
+Después de crear un repositorio con los permisos correctos, puede convertirlo en una plantilla para que cualquier persona que tenga acceso al repositorio pueda generar un nuevo repositorio que tenga la misma estructura de directorios y archivos que la rama predeterminada.
+
+1. Ir a la página principal del repositorio.
+2. En el nombre del repositorio, seleccione **Configuración**. Si no puede ver la pestaña Configuración, abra el menú desplegable y seleccione **Configuración**.
+3. Seleccione **Template repository**.
+
+### Niveles de permisos de equipo
+
+Los equipos proporcionan una manera sencilla de asignar permisos de repositorio a varios usuarios relacionados al mismo tiempo. Los miembros de un equipo secundario heredan la configuración de permisos del equipo principal, lo que ofrece una manera sencilla de conceder permisos en cascada basados en la estructura natural de la empresa.
+
+<table style="border:1px solid white">
+    <tr>
+        <th>Nivel de permiso</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>Miembro</td>
+        <td>Los miembros del equipo tienen el mismo conjunto de capacidades que los miembros de la organización</td>
+    </tr>
+    <tr>
+        <td>Respnsable de mantenimiento</td>
+        <td>Los responsables de mantenimiento del equipo pueden hacer lo mismo que los miembros del equipo, además de lo siguiente:<br />
+            - Cambiar el nombre, la descripción y la visibilidad del equipo.<br />
+            - Solicitar que el equipo cambie los equipos principales y secundarios.<br />
+            - Configurar la imagen de perfil de su equipo.<br />
+            - Editar y eliminar debates del equipo.<br />
+            - Agregar miembros de la organización al equipo y quitarlos.<br />
+            - Promover a miembros del equipo para que tengan también el permiso de responsable de mantenimiento del equipo.<br />
+            - Quitar el acceso del equipo a los repositorios.<br />
+            - Administrar la asignación de revisión de código para el equipo.<br />
+            - Administrar avisos programados para solicitudes de incorporación de cambios.
+        </td>
+    </tr>
+</table>
+
+El propietario de una organización también puede promover a cualquier miembro de la organización a responsable de mantenimiento del equipo. Para auditar el acceso a un repositorio que administra, puede ver una lista combinada de equipos y usuarios con acceso al repositorio en la configuración.
