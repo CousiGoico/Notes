@@ -63,3 +63,64 @@ En el nivel de empresa, los miembros de una empresa con el permiso propietario p
 * Configurar directivas de administración de repositorios, directivas del panel de proyecto, directivas de equipo y otras opciones de seguridad que se aplican a todas las organizaciones, repositorios y miembros de la empresa.
 * Extraiga varios tipos de información sobre las organizaciones mediante el uso de scripts personalizados.
 * Aplique cambios en toda la empresa, como las migraciones, mediante el uso de scripts personalizados.
+
+## ¿Cómo funciona la autenticación de GitHub?
+
+### Opciones de autenticación de GitHub
+
+#### Nombre de usuario y contraseña
+
+Los administradores pueden permitir a los usuarios seguir usando el método predeterminado de autenticación con nombre de usuario y contraseña, lo que a veces se conoce como esquema de autenticación HTTP "básico". Se recomienda encarecidamente usar una (o varias) de las otras opciones.
+
+#### Tokens de acceso personal (PAT)
+
+Los tokens de acceso personal (PAT) son una alternativa al uso de contraseñas para la autenticación en GitHub cuando se usa la API de GitHub o la línea de comandos. Los usuarios generan un token a través de la opción de configuración de GitHub y vinculan los permisos de token a un repositorio u organización. Cuando los usuarios interactúan con GitHub mediante la herramienta de línea de comandos de Git, pueden escribir la información del token cuando se les pida su nombre de usuario y contraseña.
+
+#### Claves SSH
+
+Como alternativa al uso de tokens de acceso personal, los usuarios pueden conectarse y autenticarse en servidores y servicios remotos mediante SSH con la ayuda de claves SSH. Las claves SSH eliminan la necesidad de que los usuarios proporcionen su nombre de usuario y su token de acceso personal con cada interacción.
+
+Al configurar SSH, los usuarios generarán una clave SSH, la agregarán al agente de SSH y, después, la agregarán a su cuenta de GitHub. La adición de la clave SSH al agente de SSH garantiza que la clave SSH tenga un nivel de seguridad adicional mediante el uso de una frase de contraseña. Los usuarios pueden configurar la copia local de Git de modo que proporcione la frase de contraseña automáticamente, o bien pueden proporcionarla de forma manual cada vez que usen la herramienta de línea de comandos de Git para interactuar con GitHub.
+
+Se puede incluso usar las claves SSH con un repositorio que sea propiedad de una organización que use el inicio de sesión único (SSO) de SAML. Si la organización proporciona certificados SSH, los usuarios también pueden usarlos para acceder a los repositorios de la organización sin agregar el certificado a su cuenta de GitHub.
+
+#### Claves de implementación
+
+Las claves de implementación son otro tipo de clave SSH en GitHub que conceden a un usuario acceso a un único repositorio. GitHub adjunta la parte pública de la clave directamente al repositorio en lugar de a una cuenta de usuario personal, y la parte privada de la clave permanece en el servidor del usuario. Las claves de implementación son de solo lectura de forma predeterminada, pero puede darles acceso de escritura al agregarlas a un repositorio.
+
+### Opciones de seguridad agregadas de GitHub
+
+#### Autenticación en dos fases
+
+La autenticación en dos fases (2FA), también conocida como autenticación multifactor (MFA), es un nivel de seguridad adicional que se usa al iniciar sesión en sitios web o aplicaciones. Con 2FA, los usuarios deben iniciar sesión con su nombre de usuario y contraseña y proporcionar otra forma de autenticación a la que solo ellos tengan acceso.
+
+En GitHub, la segunda forma de autenticación es un código generado por una aplicación en el dispositivo móvil de un usuario o enviado como mensaje de texto (SMS). Una vez que un usuario haya habilitado 2FA, GitHub generará un código de autenticación cada vez que alguien intente iniciar sesión en su cuenta de GitHub. Los usuarios solo pueden iniciar sesión en su cuenta si conocen su contraseña y tienen acceso al código de autenticación en su teléfono.
+
+Los propietarios de la organización pueden requerir que los miembros de la organización, los colaboradores externos y los administradores de facturación habiliten 2FA para sus cuentas personales. Esta acción dificulta que los actores malintencionados accedan a los repositorios y la configuración de una organización.
+
+#### SSO de SAML
+
+Si administra centralmente las identidades y aplicaciones de los usuarios con un proveedor de identidades, puede configurar el inicio de sesión único de SAML para proteger los recursos de la organización en GitHub.
+
+Este tipo de autenticación proporciona a los propietarios de la organización y de la empresa en GitHub una manera de controlar y proteger el acceso a los recursos de la organización, como repositorios, incidencias y solicitudes de incorporación de cambios. Los propietarios de la organización pueden invitar a los usuarios de GitHub a unirse a la organización que usa el inicio de sesión único de SAML. De este modo, los usuarios pueden contribuir a la organización y conservar su identidad y sus contribuciones existentes en GitHub.
+
+Cuando los usuarios accedan a los recursos de una organización que usa el inicio de sesión único de SAML, GitHub los redirigirá al proveedor de identidades de SAML de la organización para que se autentiquen. Una vez que se hayan autenticado correctamente con su cuenta en el proveedor de identidades, este los redirigirá a GitHub para que puedan acceder a los recursos de la organización.
+
+GitHub ofrece compatibilidad limitada con todos los proveedores de identidades que implementan el estándar SAML 2.0, con soporte técnico oficial para varios proveedores de identidades populares, entre los que se incluyen:
+
+* Servicios de federación de Active Directory (AD FS).
+* Microsoft Entra ID.
+* Okta.
+* OneLogin.
+* PingOne.
+
+#### LDAP
+
+El protocolo ligero de acceso a directorios (LDAP) es un protocolo de aplicación popular para acceder a los servicios de información de directorios y mantenerlos. LDAP le permite autenticar GitHub Enterprise Server en sus cuentas existentes y administrar de forma centralizada el acceso al repositorio. Es uno de los protocolos más comunes utilizados para integrar software de terceros con directorios empresariales de usuarios de gran tamaño.
+
+GitHub Enterprise Server se integra con servicios de LDAP populares, como:
+
+* Active Directory.
+* Oracle Directory Server Enterprise Edition.
+* OpenLDAP.
+* Open Directory.
