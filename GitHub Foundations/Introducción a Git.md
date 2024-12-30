@@ -36,4 +36,24 @@ Git es un sistema distribuido, lo que significa que el historial completo de un 
  
 * **Comandos, subcomandos y opciones**: las operaciones de Git se realizan mediante comandos como git push y git pull. git es el comando, mientras que push o pull es el subcomando. El subcomando especifica la operación que quiere que Git realice. Los comandos suelen ir acompañados de opciones, que usan guiones (-) o guiones dobles (--). Por ejemplo, git reset --hard.
 
+## Comandos básicos de Git
 
+### Git status
+
+Muestra el estado del árbol de trabajo (y del área de almacenamiento provisional, de la que pronto hablaremos más). Permite ver los cambios que Git está siguiendo en ese momento para poder decidir si quiere pedir a Git que tome otra instantánea.
+
+### Git add
+
+Se usa para indicar a Git que empiece a realizar un seguimiento de los cambios en determinados archivos. El término técnico es almacenamiento provisional de estos cambios. Va a usar **git add** para almacenar provisionalmente los cambios a fin de prepararse para una confirmación. Todos los cambios en los archivos que se han agregado pero que aún no se han confirmado se almacenan en el área de almacenamiento provisional.
+
+### Git commit
+
+Guardar el trabajo en una instantánea. Como verbo, la confirmación de cambios significa que se coloca una copia (del archivo, el directorio u otra "cosa") en el repositorio como una nueva versión. Como sustantivo, una confirmación es el pequeño fragmento de datos que asigna una identidad única a los cambios que se confirman. Los datos que se guardan en una confirmación incluyen el nombre del autor y la dirección de correo electrónico, la fecha, los comentarios sobre lo que se ha hecho (y por qué), una firma digital opcional y el identificador único de la confirmación anterior.
+
+### Git log
+
+Permite ver información sobre las confirmaciones anteriores. Cada confirmación tiene un mensaje adjunto (un mensaje de confirmación), y el comando **git log** permite imprimir información sobre las confirmaciones más recientes, como su marca de tiempo, el autor y un mensaje de confirmación. Este comando ayuda a realizar un seguimiento de lo que ha estado haciendo y de los cambios que se han guardado.
+
+### Git help
+
+Use este comando para obtener información fácilmente sobre todos los comandos que conoce hasta ahora y más. Escriba **git <command> --help** para obtener la ayuda del comando indicado.
