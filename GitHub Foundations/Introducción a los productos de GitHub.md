@@ -164,3 +164,10 @@ Es una aplicación de software independiente de código abierto que le permite s
 * Añada cocreadores rápidamente en su confirmación.
 * Consulte las ramas con solicitudes de extracción y vea los estados de CI.
 * Comparar las imágenes que han cambiado.
+
+## Facturación de GitHub
+
+Factura cada cuenta por separado. Recibirá una factura independiente para su cuenta personal y para cada cuenta de organización o de empresa que posea. La factura de cada cuenta es una combinación de los cargos de las suscripciones y facturación basada en el uso.
+
+* Las suscripciones incluyen el plan de la cuenta, como GitHub Pro o GitHub Team, y los productos de pago que tienen un costo mensual coherente, como GitHub Copilot y aplicaciones de GitHub Marketplace.
+* La facturación basada en el uso se aplica cuando el costo de un producto de pago depende de cuánto se use. Por ejemplo, el costo de Acciones de GitHub depende del número de minutos que los trabajos dedican a ejecutarse y de cuánto almacenamiento usan los artefactos.
