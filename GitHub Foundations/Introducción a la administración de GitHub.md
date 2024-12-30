@@ -173,3 +173,98 @@ Los equipos proporcionan una manera sencilla de asignar permisos de repositorio 
 </table>
 
 El propietario de una organización también puede promover a cualquier miembro de la organización a responsable de mantenimiento del equipo. Para auditar el acceso a un repositorio que administra, puede ver una lista combinada de equipos y usuarios con acceso al repositorio en la configuración.
+
+### Niveles de permisos de organización
+
+<table style="border:1px solid white">
+    <tr>
+        <th>Nivel de permiso</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>Propietario</td>
+        <td>Pueden hacer lo mismo que los miembros de la organización y pueden agregar o quitar otros usuarios de la organización. Este rol debe limitarse a no menos de dos personas de su organización.</td>
+    </tr>
+    <tr>
+        <td>Miembro</td>
+        <td>Pueden crear y administrar repositorios y equipos de la organización.</td>
+    </tr>
+    <tr>
+        <td>Moderador</td>
+        <td>Pueden bloquear y desbloquear colaboradores que no son miembros, establecer límites de interacción y ocultar comentarios en repositorios públicos que posee la organización.</td>
+    </tr>
+    <tr>
+        <td>Administrador de facturación</td>
+        <td>Pueden ver y editar la información de facturación.</td>
+    </tr>
+    <tr>
+        <td>Administradores de seguridad</td>
+        <td>Pueden administrar alertas y configuraciones de seguridad en toda la organización. También pueden leer permisos para todos los repositorios de la organización.</td>
+    </tr>
+    <tr>
+        <td>Colaborador externo(consultor o un empleado temporal)</td>
+        <td>Pueden acceder a uno o varios repositorios de la organización. No son miembros explícitos de la organización.</td>
+    </tr>
+</table>
+
+Para mejorar la administración y la seguridad, también puede considerar la posibilidad de conceder permisos de lectura predeterminados a todos los miembros de la organización y ajustar su acceso a los repositorios caso por caso. Si confía en todos los usuarios con la inserción de cambios en cualquier repositorio, es posible que prefiera conceder permisos de escritura de forma predeterminada a todos los miembros.
+
+### Niveles de permisos de empresa
+
+<table style="border:1px solid white">
+    <tr>
+        <th>Nivel de permiso</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>Propietario</td>
+        <td>Los propietarios de empresas tienen control total sobre la empresa y pueden realizar todas las acciones, entre las que se incluyen: <br />
+            - Gestionar administradores.<br />
+            - Agregar y eliminar organizaciones hacia y desde la empresa.<br />
+            - Administrar parámetros de la empresa.<br />
+            - Aplicar directivas entre organizaciones.<br />
+            - Administrar parámetros de facturación.
+        </td>
+    </tr>
+        <tr>
+        <td>Miembro</td>
+        <td>Tienen el mismo conjunto de capacidades que los miembros de la organización.</td>
+    </tr>
+        <tr>
+        <td>Adminsitrador de facturación</td>
+        <td>Solo pueden ver y editar la información de facturación de la empresa y agregar o quitar otros administradores de facturación.</td>
+    </tr>
+</table>
+
+### Seguridad y administración de repositorios
+
+#### Creación de un grupo de protección
+
+Para administrar los cambios en el contenido del repositorio, puede crear [**reglas de protección de ramas**](https://docs.github.com/es/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule) para aplicar determinados flujos de trabajo para una o varias ramas.
+
+* Requerir una solicitud de incorporación de cambios antes de combinar.
+* Requerir comprobaciones de estado para pasar antes de combinar.
+* Requerir resolución de conversación antes de la combinación.
+* Requerir confirmaciones firmadas.
+* Requerir historial lineal.
+* Requerir cola de mezcla.
+* Requerir que las implementaciones se realicen correctamente antes de combinarse.
+* Bloquee la rama haciendo que sea de solo lectura.
+* Restrinja quién puede insertar en ramas coincidentes.
+
+#### Adición de un archivo CODEOWNERS
+
+Al agregar un archivo [**CODEOWNERS**](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners#codeowners-syntax) al repositorio, puede asignar miembros del equipo o equipos completos como propietarios de código responsables del código en el repositorio. Cuando alguien abre una solicitud de incorporación de cambios que modifica el código que pertenece a un propietario de código, el propietario del código se solicita automáticamente como revisor.
+
+Puede crear el archivo CODEOWNERS en la raíz del repositorio o en la carpeta _docs_ o _.github_.
+
+#### Visualización del tráfico mediante Insights
+
+Cualquier persona que tenga acceso de inserción a un repositorio puede ver su [**tráfico**](https://docs.github.com/es/repositories/viewing-activity-and-data-for-your-repository/viewing-traffic-to-a-repository).
+
+Para acceder al gráfico de tráfico:
+
+1. Ir a la página principal del repositorio.
+2. En el nombre del repositorio, seleccione **Información**.
+3. A la izquierda, seleccione **Tráfico**.
+4. (Opcional) Puede seleccionar Clones o Vistas para ver el gráfico de tráfico de clones o vistas.
