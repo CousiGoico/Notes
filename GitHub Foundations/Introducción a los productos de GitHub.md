@@ -139,3 +139,28 @@ Estas son las características adicionales de GitHub Enterprise Cloud:
 * Un contrato de nivel de servicio para un tiempo de actividad mensual del 99,9 %
 * Una cuenta de empresa permite a los propietarios administrar de forma centralizada las directivas y la facturación de varias organizaciones de GitHub.com.
 * Los usuarios administrados por la empresa permiten aprovisionar y administrar las cuentas de usuario para los desarrolladores.
+
+## GitHub Mobile y GitHub Desktop
+
+### GitHub Móvil
+
+Le ofrece una manera de realizar trabajos de alto impacto en GitHub rápidamente y desde cualquier lugar. Es una forma segura de acceder a sus datos de GitHub a través de una aplicación cliente propia y confiable.
+
+* Administrar, evaluar prioridades y borrar notificaciones de github.com.
+* Leer, revisar y colaborar en informes de problemas y solicitudes de extracción.
+* Editar archivos en solicitudes de incorporación de cambios.
+* Buscar, navegar e interactuar con usuarios, repositorios y organizaciones.
+* Reciba una notificación de inserción cuando alguien mencione su nombre de usuario.
+* Programar notificaciones de inserción para horas personalizadas específicas.
+* Proteja la cuenta de GitHub.com con autenticación en dos fases.
+* Verifique sus intentos de inicio de sesión en dispositivos no reconocidos.
+
+### GitHub Desktop
+
+Es una aplicación de software independiente de código abierto que le permite ser más productivo. Facilita la colaboración entre usted y su equipo y el intercambio de los procedimientos recomendados de Git y GitHub dentro de su equipo.
+
+* Agregar y clonar repositorios.
+* Añada cambios a su confirmación de forma interactiva.
+* Añada cocreadores rápidamente en su confirmación.
+* Consulte las ramas con solicitudes de extracción y vea los estados de CI.
+* Comparar las imágenes que han cambiado.
