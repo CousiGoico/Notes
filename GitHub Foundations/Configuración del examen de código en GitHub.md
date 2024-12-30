@@ -186,3 +186,74 @@ Si genera el archivo SARIF de terceros como parte de un flujo de trabajo de inte
                 // Path to SARIF file relative to the root of the repository
                 sarif_file: results.sarif
         ```
+
+## Configuración del examen de código
+
+Puede configurar cómo examina GitHub el código del proyecto en busca de vulnerabilidades y errores. Al elegir su propia configuración, ahorra tiempo y decide la mejor frecuencia de examen de código para el proyecto. En esta unidad, aprenderá los conceptos básicos de la configuración del examen de código. También aprenderá a configurar la frecuencia de los análisis y a programarlos para que se adapten mejor a sus necesidades relativas al desarrollo y a los repositorios.
+
+ Al seleccionar la opción Configuración avanzada en GitHub, se genera un archivo de flujo de trabajo personalizable que puede confirmar directamente en el repositorio. Normalmente no es necesario editar este flujo de trabajo. Sin embargo, si es necesario, puede personalizar parte de la configuración.
+
+ ### Cambio de configuración de análisis de código predeterminado a avanzado
+
+ Si ya tiene un repositorio configurado para utilizar el análisis de código utilizando el método de configuración predeterminado, puede cambiar a utilizar la configuración avanzada en el apartado de configuración. Vaya a la sección **Análisis de código en Configuración > Seguridad y análisis del código**, a continuación seleccione el icono de desbordamiento de tres puntos (...). En la lista desplegable, seleccione **Cambiar a avanzadas** y, a continuación, siga las indicaciones para deshabilitar CodeQL y volver a habilitarlo con el archivo de flujo de trabajo generado por la configuración avanzada.
+
+ ### Edición del flujo de trabajo de examen de código
+
+ GitHub guarda los archivos del flujo de trabajo en el directorio .github/workflows del repositorio. Para encontrar un flujo de trabajo que haya agregado, busque su nombre de archivo.
+
+ Siga estos pasos para editar un archivo de flujo de trabajo:
+
+ 1. Para abrir el editor de flujos de trabajo, seleccione el icono **Editar** en la esquina superior derecha de la vista de archivo.
+ 2. Realice las modificaciones.
+ 3. Después de editar el archivo, seleccione **Confirmar cambios** y complete el formulario Confirmar cambios. Puede elegir entre confirmar directamente en la rama actual o crear una rama e iniciar una solicitud de incorporación de cambios.
+
+ ### Configuración de la frecuencia
+
+ Puede configurar el flujo de trabajo de análisis de CodeQL para examinar el código según una programación o cuando se producen eventos específicos en un repositorio. También puede editar el archivo de flujo de trabajo para examinar el código cuando alguien envía un cambio y cada vez que se crea una solicitud de incorporación de cambios. Ajustar esta frecuencia evita que los desarrolladores introduzcan nuevas vulnerabilidades y errores en el código. El examen del código según una programación le informa sobre las vulnerabilidades y errores más recientes que detectan GitHub, los investigadores de seguridad y la comunidad. Incluso cuando los desarrolladores no mantienen activamente el repositorio.
+
+ #### Examen al enviar cambios
+
+ De forma predeterminada, el flujo de trabajo de análisis de CodeQL usa el evento *on:push* para desencadenar un examen de código en cada envío de cambios en la rama predeterminada del repositorio y en cualquier rama protegida. Para que el examen de código se desencadene en una rama especificada, el flujo de trabajo debe existir en esa rama. Si examina la inserción, los resultados aparecen en la pestaña **Seguridad** del repositorio.
+
+Además, cuando un examen *on:push* devuelve un resultado que se puede asignar a una solicitud de incorporación de cambios abierta, estas alertas aparecen automáticamente en una solicitud de incorporación de cambios en el mismo lugar que otras alertas de solicitud de incorporación de cambios. Las alertas se identifican comparando el análisis existente del encabezado de la rama con el análisis de la rama de destino.
+
+#### Examen al solicitar incorporación de cambios
+
+El flujo de trabajo de análisis de CodeQL predeterminado usa el evento *pull_request* para desencadenar un examen de código al solicitar incorporaciones de cambios en la rama predeterminada. Si una solicitud de incorporación de cambios procede de una bifurcación privada, el evento *pull_request* solo se desencadena si ha seleccionado la opción "Ejecutar flujos de trabajo desde solicitudes de incorporación de cambios de bifurcación" en la configuración del repositorio. Si examina las solicitudes de incorporación de cambios, los resultados aparecen como alertas en una comprobación de solicitudes de incorporación de cambios.
+
+Si usa el desencadenador *pull_request*, configurado para examinar la confirmación de combinación de la solicitud de incorporación de cambios en lugar de la confirmación principal, genera resultados más eficaces y precisos que examinar el encabezado de rama en cada inserción. Sin embargo, si usa un sistema de CI/CD que no se puede configurar para que se desencadene en las solicitudes de incorporación de cambios, todavía puede usar el desencadenador *on:push* para que el examen de código asigne los resultados para abrir las solicitudes de incorporación de cambios en la rama y agregar las alertas como anotaciones en la solicitud de incorporación de cambios.
+
+### Definición de los niveles de gravedad que provoca un error de comprobación de solicitud de incorporación de cambios
+
+De forma predeterminada, solo las alertas con el nivel de gravedad **Error** o el nivel de gravedad de seguridad **Critical** o **High** provocan un error de comprobación de solicitud de incorporación de cambios. Los errores de solicitud de incorporación de cambios no detienen un examen de código, sino que representan un bloqueador al intentar combinar el código. Puede encontrar la lista de errores de solicitud de incorporación de cambios en la pestaña Alertas de examen de código en la Seguridad del repositorio. En la configuración del repositorio, puede cambiar los niveles de gravedad de las alertas y de gravedad de seguridad que provocan un error de comprobación de solicitud de incorporación de cambios.
+
+1. Ir a la página principal del repositorio. En el nombre del repositorio, seleccione **Configuración**.
+2. En la barra lateral izquierda, seleccione **Seguridad y análisis de código**.
+3. En la sección **Examen de código bajo Normas de protección**, use el menú desplegable para seleccionar el nivel de gravedad con el que le gustaría desencadenar un error de comprobación de una solicitud de incorporación de cambios.
+
+### Evitar exámenes innecesarios de solicitudes de incorporación de cambios
+
+Es posible que quiera evitar que se desencadene un examen de código en solicitudes de incorporación de cambios específicas destinadas a la rama predeterminada, independientemente de los archivos que se hayan cambiado. Para realizar esta configuración, especifique *on:pull_request:paths-ignore* o *on:pull_request:paths* en el flujo de trabajo de examen de código. Por ejemplo, si los únicos cambios en una solicitud de incorporación de cambios se realizan en archivos con las extensiones *.md* o *.txt*, puede usar la matriz *paths-ignore* siguiente.
+
+        on:
+        push:
+            branches: [main, protected]
+        pull_request:
+            branches: [main]
+            paths-ignore:
+                - '**/*.md'
+                - '**/*.txt'
+
+### Ajuste de la programación del examen
+
+Si usa el flujo de trabajo de análisis de CodeQL predeterminado, el flujo de trabajo analiza el código del repositorio una vez a la semana en un día y hora generados aleatoriamente, además de los exámenes desencadenados por eventos. Para ajustar esta programación, edite el valor *cron* en el flujo de trabajo.
+
+En el ejemplo siguiente se muestra un flujo de trabajo de análisis de CodeQL para un repositorio con una rama predeterminada denominada *main* y una rama protegida denominada *protected*:
+
+        on:
+        push:
+            branches: [main, protected]
+        pull_request:
+            branches: [main]
+        schedule:
+            - cron: '20 14 * * 1'
