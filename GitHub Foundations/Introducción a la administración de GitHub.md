@@ -129,11 +129,33 @@ GitHub Enterprise Server se integra con servicios de LDAP populares, como:
 
 ### Niveles de permisos de repositorio
 
-* Lectura: Se recomienda para colaboradores que no trabajan en el código, pero que quieren ver el proyecto o hablar sobre él. Esto es bueno para cualquier persona que necesite ver el contenido dentro del repositorio, pero que realmente no necesite realizar contribuciones ni cambios.
-* Evaluación de prioridades: Se recomienda para colaboradores que necesitan administrar de forma proactiva incidencias y solicitudes de incorporación de cambios sin acceso de escritura. Este nivel podría ser bueno para algunos administradores de proyectos que administran problemas de seguimiento, pero no realizan ningún cambio.
-* Escritura: Se recomienda para los colaboradores que insertan cambios activamente en el proyecto. El permiso de escritura es el permiso estándar para la mayoría de los desarrolladores.
-* Mantenimiento: Recomendado para gestores de proyectos que necesitan gestionar el repositorio sin acceso a acciones sensibles o destructivas.
-* Administrador: Se recomienda para usuarios que necesitan acceso total al proyecto, incluidas acciones confidenciales y destructivas, como administrar la seguridad o eliminar un repositorio. Se trata de propietarios y administradores del repositorio.
+
+<table style="border:1px solid white">
+    <tr>
+        <th>Nivel de permiso</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>Lectura</td>
+        <td>Se recomienda para colaboradores que no trabajan en el código, pero que quieren ver el proyecto o hablar sobre él. Esto es bueno para cualquier persona que necesite ver el contenido dentro del repositorio, pero que realmente no necesite realizar contribuciones ni cambios.</td>
+    </tr>
+    <tr>
+        <td>Evaluación de prioridades</td>
+        <td>Se recomienda para colaboradores que necesitan administrar de forma proactiva incidencias y solicitudes de incorporación de cambios sin acceso de escritura. Este nivel podría ser bueno para algunos administradores de proyectos que administran problemas de seguimiento, pero no realizan ningún cambio.</td>
+    </tr>
+    <tr>
+        <td>Escritura</td>
+        <td>Se recomienda para los colaboradores que insertan cambios activamente en el proyecto. El permiso de escritura es el permiso estándar para la mayoría de los desarrolladores.</td>
+    </tr>
+    <tr>
+        <td>Mantenimiento</td>
+        <td>Recomendado para gestores de proyectos que necesitan gestionar el repositorio sin acceso a acciones sensibles o destructivas.</td>
+    </tr>
+    <tr>
+        <td>Administrador</td>
+        <td>Se recomienda para usuarios que necesitan acceso total al proyecto, incluidas acciones confidenciales y destructivas, como administrar la seguridad o eliminar un repositorio. Se trata de propietarios y administradores del repositorio.</td>
+    </tr>
+</table>
 
 #### Crear una plantilla de un repositorio
 
