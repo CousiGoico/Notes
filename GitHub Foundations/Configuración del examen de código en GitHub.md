@@ -257,3 +257,4 @@ En el ejemplo siguiente se muestra un flujo de trabajo de análisis de CodeQL pa
             branches: [main]
         schedule:
             - cron: '20 14 * * 1'
+
