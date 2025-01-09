@@ -44,3 +44,32 @@ Un modelo de Machine Learning bien entrenado puede ser preciso, pero ningún mod
 Es importante tener en cuenta el impacto de su software en los usuarios y en la sociedad en general, incluyendo consideraciones éticas sobre su uso. Cuando la aplicación está imbuida de inteligencia artificial, estas consideraciones son especialmente importantes debido a la naturaleza del funcionamiento de los sistemas de inteligencia artificial y de cómo informan sobre las decisiones; a menudo se basan en modelos probabilísticos, que a su vez dependen de los datos con los que se entrenaron.
 
 La posibilidad de daños a individuos o grupos a través de predicciones incorrectas o un uso incorrecto de las funcionalidades de inteligencia artificial es una problema importante, y los ingenieros de software que compilan soluciones habilitadas para inteligencia artificial deben aplicar la consideración adecuada para mitigar los riesgos y garantizar la equidad, la confiabilidad y la protección adecuada frente a daños o discriminación.
+
+## Comprender las consideraciones para una IA responsable
+
+### Imparcialidad
+
+Los sistemas de IA deberían tratar a todas las personas de manera equitativa. La equidad de los sistemas de aprendizaje automático es un área muy activa de investigación en curso y existen algunas soluciones de software para evaluar, cuantificar y mitigar la parcialidad en los modelos de Machine Learning.  Tenga en cuenta la equidad desde el principio del proceso de desarrollo de aplicaciones, revisando cuidadosamente los datos de entrenamiento para asegurarse de que sean representativos de todas las personas a las que afecten potencialmente y evaluando el rendimiento predictivo de las subsecciones de la población de usuarios a lo largo del ciclo de vida de desarrollo.
+
+### Confiabilidad y seguridad
+
+Los sistemas de inteligencia artificial deben funcionar de manera confiable y segura. El desarrollo de aplicaciones de software basadas en inteligencia artificial debe someterse a rigurosos procesos de prueba y administración de implementaciones para garantizar que funcionen de la forma esperada antes de su lanzamiento. Los ingenieros de software deben tener en cuenta la naturaleza probabilística de los modelos de Machine Learning y aplicar los umbrales adecuados al evaluar las puntuaciones de confianza de las predicciones.
+
+### Privacidad y seguridad
+
+Los sistemas de inteligencia artificial deben ser seguros y respetar la privacidad. Los modelos de Machine Learning en los que se basan los sistemas de inteligencia artificial dependen de grandes volúmenes de datos, que pueden contener datos personales que deben mantenerse privados. Incluso después de entrenar los modelos y de que el sistema pase a producción, usan nuevos datos para hacer predicciones o tomar medidas relacionadas con preocupaciones relativas a la privacidad o la seguridad, por lo que se deberán aplicar las salvaguardias necesarias para proteger los datos y el contenido de los clientes.
+
+### Inclusión
+
+Los sistemas de inteligencia artificial deben empoderar a todos e involucrar a las personas. La inteligencia artificial debería aportar beneficios a todos los sectores de la sociedad, independientemente de su capacidad física, género, orientación sexual, origen étnico u otros factores.
+
+### Transparencia
+
+Los sistemas de inteligencia artificial deben ser comprensibles. Los usuarios deben ser plenamente conscientes del propósito del sistema, su funcionamiento y las limitaciones que se pueden esperar.
+
+Cuando una aplicación de inteligencia artificial se basa en datos personales, como un sistema de reconocimiento facial que toma imágenes de personas para reconocerlas, debe dejar claro al usuario cómo se usan y conservan sus datos, y quién tiene acceso a ellos.
+
+### Responsabilidad
+
+Las personas deberían ser responsables de los sistemas de inteligencia artificial. Aunque muchos sistemas de inteligencia artificial parecen funcionar de forma autónoma, en última instancia, es responsabilidad de los desarrolladores que entrenaron y validaron los modelos que usan, y definieron la lógica que basa las decisiones en predicciones del modelo con el fin de garantizar que el sistema global cumpla los requisitos sobre responsabilidad. Para ayudar a cumplir este objetivo, los diseñadores y desarrolladores de soluciones basadas en IA deben trabajar dentro de un marco de gobernanza y principios de organización que garanticen que la solución cumpla con los estándares éticos y legales claramente definidos.
+
