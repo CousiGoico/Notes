@@ -121,3 +121,12 @@ Azure OpenAI Service es un servicio de Azure AI para implementar, usar y ajustar
 
 Los ingenieros de IA pueden desarrollar aplicaciones que usen los potentes modelos de inteligencia artificial generativa en Azure OpenAI para usar aún más esta tecnología. Los SDK de REST y como los específicos del lenguaje están disponibles al desarrollar aplicaciones.
 
+## Descripción de las funcionalidades de Búsqueda de Azure AI
+
+La búsqueda de información es un requisito habitual en muchas aplicaciones, desde sitios web de motores de búsqueda dedicados a aplicaciones móviles que pueden encontrar información apropiada para el contexto en función de dónde se encuentra y qué desea lograr.
+
+**Búsqueda de Azure AI** es un servicio de Applied AI Services que permite ingerir e indexar datos de diversos orígenes, y buscar el índice para encontrar, filtrar y ordenar información extraída de los datos de origen.
+
+Permite definir una canalización de enriquecimiento que usa aptitudes de inteligencia artificial para mejorar el índice con información derivada de los datos de origen.
+
+Este enriquecimiento con IA no solo genera una experiencia de búsqueda más útil, sino que la información que ha extraído su canalización de enriquecimiento se puede conservar en un *almacén de conocimiento* para su posterior análisis o integración en una canalización de datos para una solución de inteligencia empresarial.
