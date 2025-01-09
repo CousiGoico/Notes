@@ -112,3 +112,12 @@ Servicios de Azure AI son servicios basados en la nube que encapsulan funcionali
 |Clasificación de texto personalizada||Reconocimiento óptico de caracters|||
 |Voz||Video Indexer de Azure AI|||
 |Speech translation|||||
+
+## Descripción de las funcionalidades de Azure OpenAI Service
+
+La IA generativa es un campo de la IA relativamente nuevo y en rápido progreso que se centra en modelos de IA que generan contenidos. El contenido que generan estos modelos puede ser en forma de texto, imágenes, código o más, y de una manera que casi parece interactuar con una persona real en una conversación real. Los modelos de IA generativa dependen de modelos de lenguaje grandes (LLM) basados en la arquitectura de transformadores que evolucionaron a partir de años de progreso del aprendizaje automático. Los modelos de IA generativa a menudo se consultan con indicaciones en lenguaje natural y devuelven una respuesta impresionantemente precisa cuando se les solicita correctamente.
+
+Azure OpenAI Service es un servicio de Azure AI para implementar, usar y ajustar modelos desarrollado por OpenAI. OpenAI, la empresa que creó ChatGPT, es una de las aplicaciones más populares que la mayoría de la gente ha visto, y los modelos detrás de ChatGPT están disponibles a través del servicio Azure OpenAI. Puede desarrollar aplicaciones que usen los potentes modelos de inteligencia artificial generativa en Azure OpenAI para usar aún más esta tecnología.
+
+Los ingenieros de IA pueden desarrollar aplicaciones que usen los potentes modelos de inteligencia artificial generativa en Azure OpenAI para usar aún más esta tecnología. Los SDK de REST y como los específicos del lenguaje están disponibles al desarrollar aplicaciones.
+
