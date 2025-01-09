@@ -98,3 +98,17 @@ Los ingenieros de software pueden interactuar con Azure Machine Learning de las 
 * Colaboración con científicos de datos para implementar modelos basados en marcos comunes como Scikit-Learn, PyTorch y TensorFlow como servicios web y consumirlos en aplicaciones.
 * Usando SDK de Azure Machine Learning o scripts de interfaz de la línea de comandos (CLI) para orquestar procesos DevOps que administran el control de versiones, la implementación y pruebas de modelos de Machine Learning como parte de una solución de entrega de aplicaciones general.
 
+## Descripción de las funcionalidades de Servicios de Azure AI
+
+Servicios de Azure AI son servicios basados en la nube que encapsulan funcionalidades de inteligencia artificial. Conjunto de servicios individuales que puede usar como bloques de creación para crear aplicaciones sofisticadas e inteligentes.
+
+|Procesamiento de lenguaje natural|Mineria de conocimiento e inteligencia de documentos|Visión informática|Ayuda a la decisión|Inteligencia artificial generativa|
+|---------------------------------|----------------------------------------------------|------------------|-------------------|----------------------------------|
+|Análisis de texto|AI Search|Análisis de imágenes|Seguridad del contenido|Azure OpenAI Service|
+|Respuesta a preguntas|Inteligencia de documentos|Análisis de vídeo|Moderación de contenido|Generación de imágenes DALL-E|
+|Compresión del lenguaje|Inteligencia de documentos personalizada|Clasificación de imágenes|||
+|Traducción|Aptitudes personalizadas|Detección de objetos|||
+|Reconocimiento de entidades con nombre||Análisis facial|||
+|Clasificación de texto personalizada||Reconocimiento óptico de caracters|||
+|Voz||Video Indexer de Azure AI|||
+|Speech translation|||||
