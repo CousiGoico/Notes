@@ -73,3 +73,28 @@ Cuando una aplicación de inteligencia artificial se basa en datos personales, c
 
 Las personas deberían ser responsables de los sistemas de inteligencia artificial. Aunque muchos sistemas de inteligencia artificial parecen funcionar de forma autónoma, en última instancia, es responsabilidad de los desarrolladores que entrenaron y validaron los modelos que usan, y definieron la lógica que basa las decisiones en predicciones del modelo con el fin de garantizar que el sistema global cumpla los requisitos sobre responsabilidad. Para ayudar a cumplir este objetivo, los diseñadores y desarrolladores de soluciones basadas en IA deben trabajar dentro de un marco de gobernanza y principios de organización que garanticen que la solución cumpla con los estándares éticos y legales claramente definidos.
 
+## Comprender las funcionalidades de Azure Machine Learning
+
+Microsoft Azure proporciona el servicio Azure Machine Learning: una plataforma basada en la nube para ejecutar experimentos a gran escala para entrenar modelos predictivos a partir de datos y publicar los modelos entrenados como servicios.
+
+Azure Machine Learning proporciona las siguientes características y funcionalidades:
+
+|Característica|Funcionalidad|
+|--------------|-------------|
+|ML automatizado|Esta característica permite a los no expertos crear con rapidez un modelo de Machine Learning efectivo a partir de datos.|
+|Diseñador de Azure Machine Learning|Una interfaz gráfica que permite el desarrollo sin código de soluciones de aprendizaje automático.|
+|Administración de datos y procesos|Almacenamiento de datos basado en la nube y recursos de procesos que los científicos de datos profesionales pueden usar para ejecutar código de experimentos de datos a escala.|
+|Canalizaciones|Los científicos de datos, ingenieros de software y profesionales de operaciones de TI pueden definir canalizaciones para organizar las tareas de entrenamiento, implementación y administración de modelos.|
+
+Los científicos de datos pueden usar Azure Machine Learning a lo largo de todo el ciclo de vida de aprendizaje automático para:
+
+* Ingerir y preparar los datos.
+* Ejecutar experimentos para explorar datos y entrenar modelos predictivos.
+* Implementar y administrar modelos entrenados como servicios web.
+
+Los ingenieros de software pueden interactuar con Azure Machine Learning de las siguientes maneras:
+
+* Usando el diseñador de Azure Machine Learning o ML automatizado para entrenar modelos de Machine Learning e implementarlos como servicios que se pueden integrar en aplicaciones habilitadas para inteligencia artificial.
+* Colaboración con científicos de datos para implementar modelos basados en marcos comunes como Scikit-Learn, PyTorch y TensorFlow como servicios web y consumirlos en aplicaciones.
+* Usando SDK de Azure Machine Learning o scripts de interfaz de la línea de comandos (CLI) para orquestar procesos DevOps que administran el control de versiones, la implementación y pruebas de modelos de Machine Learning como parte de una solución de entrega de aplicaciones general.
+
