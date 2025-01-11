@@ -188,3 +188,65 @@ La eliminación de un proyecto lo elimina permanentemente de la plataforma junto
 3. Desplácese hacia abajo hasta la sección Zona de peligro y seleccione Cerrar proyecto o Eliminar proyecto.
     * Al seleccionar Eliminar proyecto se le pide que lea las advertencias y, a continuación, escriba el nombre del proyecto en el cuadro de texto.
 
+## Insight y automatización con Projects
+
+### Insights y cómo pueden ser útiles
+
+Insights con los proyectos le permite ver, crear y personalizar gráficos que utilizan elementos agregados a su Project como datos de origen. Al crear un gráfico, se establecen los filtros, el tipo de gráfico y la información mostrada. El gráfico está disponible para cualquiera que pueda ver el proyecto. Puede generar dos tipos de gráficos: gráficos actuales y gráficos históricos.
+
+#### Gráficos actuales
+
+Puede crear gráficos actuales para visualizar los elementos del proyecto. Puede crear gráficos para mostrar el número de elementos asignados a cada persona, o el número de problemas asignados a cada iteración próxima.
+
+Puede utilizar filtros para manipular los datos utilizados para crear el gráfico. Puede crear un gráfico en el que se muestre la cantidad de trabajo pendiente, pero limitar esos resultados a etiquetas o usuarios asignados concretos.
+
+#### Gráficos históricos
+
+Los gráficos históricos están disponibles con GitHub Team y GitHub Enterprise Cloud para organizaciones. Los gráficos históricos son gráficos basados en el tiempo que permiten ver las tendencias y el progreso del proyecto. Puede ver el número de artículos a lo largo del tiempo agrupados por estado y otros campos. El gráfico Burn up por defecto muestra el estado de los artículos a lo largo del tiempo, lo que le permite visualizar el progreso y detectar patrones.
+
+### Crear y personalizar gráficos
+
+Crear el gráfico:
+
+1. Vaya al proyecto.
+2. En la parte superior derecha, seleccione el botón del gráfico de líneas. Al pasar el ratón por encima del botón, aparece la etiqueta Insights.
+3. En el menú de la izquierda, seleccione Nuevo gráfico.
+4. Filtre por palabra clave o campo para cambiar los datos utilizados para crear el gráfico.
+5. A la derecha del cuadro de texto del filtro, seleccione Guardar.
+
+Personalizar el gráfico:
+
+1. En el menú de la izquierda, seleccione el gráfico que desea configurar.
+2. En la parte derecha de la página, seleccione Configurar, y se abrirá un panel.
+3. Seleccione el menú desplegable Diseño para cambiar el tipo de gráfico que desea utilizar.
+4. Seleccione el menú desplegable del eje X y elija el campo que desea utilizar.
+5. Opcionalmente, seleccione Agrupar por para agrupar elementos en su eje X. Elija el campo que desea utilizar o Ninguno para deshabilitar la agrupación.
+
+### Automatización con Projects
+
+* Flujos de trabajo automatizados integrados
+* GraphQL API
+* Acciones de GitHub con flujos de trabajo
+
+La forma más sencilla de automatizar su proyecto son los flujos de trabajo integrados. GraphQL y Acciones dan más control sobre la personalización de la automatización. 
+
+#### Configurar flujos de trabajo integrados
+
+Su proyecto toma las incidencias o solicitudes de incorporación de cambios recién creadas y las coloca automáticamente en su proyecto con el estado Todo. 
+
+1. En la esquina superior derecha de su proyecto, seleccione el menú de tres puntos y elija Flujos de trabajo.
+2. En la columna izquierda, en Flujos de trabajo predeterminados, seleccione Elemento agregado al proyecto.
+3. Seleccione el botón Editar para realizar cambios en el flujo de trabajo.
+4. En la sección **Cuando se agrega un elemento al proyecto**, asegúrese de que tanto las incidencias como las solicitudes de incorporación de cambios están seleccionadas.
+5. En la sección Establecer valor, seleccione **Estado: Todo**.
+6. Seleccione **Guardar y activar el flujo de trabajo**.
+
+#### Acciones de GitHub con flujos de trabajo
+
+Acciones de GitHub permite la mayor personalización para la automatización de sus proyectos. Puede usar Acciones de GitHub para automatizar las tareas de administración de proyectos mediante la creación de flujos de trabajo. Cada flujo de trabajo contiene una serie de tareas que se llevan a cabo automáticamente cada que se ejecuta el flujo de trabajo. Un flujo de trabajo de ejemplo se activa al crear una incidencia, añade una etiqueta, deja un comentario y mueve la incidencia a un panel de proyecto.
+
+La creación de una incidencia desencadena un flujo de trabajo que agrega una etiqueta, deja un comentario y mueve la incidencia a un tablero de proyecto.
+
+#### GraphQL API
+
+Si utiliza GraphQL en GitHub, puede utilizar una API para automatizar su proyecto.
