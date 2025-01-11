@@ -82,3 +82,42 @@
 3. Para cambiar el repositorio, seleccione la lista desplegable y elija un repositorio. A continuación, se rellenan los problemas y las solicitudes de incorporación de cambios.
 4. Puede seleccionar todos o seleccionar esos problemas o las solicitudes de incorporación de cambios que quiera incluir.
 5. Una vez que esté listo para agregar los problemas y las solicitudes de incorporación de cambios al proyecto, seleccione el botón verde titulado Agregar elementos seleccionados en la esquina inferior derecha.
+
+## Cómo organizar el proyecto
+
+### Creación de un campo para realizar un seguimiento y agrupar por prioridad
+
+1. En la vista de tabla, en el encabezado de campo situado más a la derecha, seleccione +.
+2. Seleccione Nuevo campo.
+3. Escriba el nombre del campo. En este caso, es Prioridad.
+4. Seleccione la lista desplegable Tipo de campo.
+5. Para crear su propia clasificación para el nuevo campo, seleccione la opción Único.
+6. En el cuadro de texto Opciones, empiece a agregar los distintos niveles de prioridad. Puede etiquetarlos como Urgente, Alta, Media y Baja.
+7. Seleccione Guardar.
+
+Ahora que tiene configurada la clasificación de prioridad, debe clasificar los problemas y las solicitudes de incorporación de cambios en función de la prioridad. Para realizar una clasificación, seleccione el problema o la solicitud de incorporación de cambios que desea clasificar en la fila de campo titulada Prioridad. Ahora, en el campo desplegable, seleccione la prioridad que quiere elegir para esta incidencia o solicitud de cambios concreta.
+
+Agrupar las incidencias y las solicitudes de cambios por prioridad para que sea más fácil centrarse en los elementos urgentes y de prioridad alta.
+
+1. Seleccione la flecha hacia abajo situada junto al nombre de la vista abierta actualmente.
+2. Seleccione la opción Agrupar por.
+3. Seleccione Prioridad.
+
+### Agregar un campo de iteración
+
+1. Para agregar un campo de iteración, vaya a la vista de tabla del proyecto.
+2. En el encabezado de campo situado más a la derecha, seleccione +.
+3. Seleccione Nuevo campo.
+4. Agregue un Nombre de campo, como Project Phase o Sprint.
+5. En Tipo de campo, seleccione Iteración.
+6. Elija una fecha de inicio.
+7. Cambie la Duración de cada iteración escribiendo un nuevo número y seleccione la lista desplegable para días o semanas como se indica a continuación.
+8. Seleccione Guardar y crear.
+
+### Creación de una vista de placa
+
+1. En la vista abierta actualmente, seleccione la flecha hacia abajo.
+2. En Diseño, seleccione Panel. Al cambiar el diseño, el proyecto muestra un indicador para mostrar la vista que se modificó.
+3. Seleccione el botón Guardar situado en la parte superior derecha del panel.
+4. Puede cambiar el nombre de la vista haciendo doble clic en la pestaña de la vista y seleccionando fuera de la pestaña para guardarla automáticamente.
+5. Tenga en cuenta que estos pasos también se pueden realizar seleccionando Nueva vista a la derecha de las vistas existentes.
