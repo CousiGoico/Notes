@@ -41,3 +41,44 @@
 * Eventos de webhooks para actualizaciones de metadatos de elementos de proyectos
 * Acción de GitHub para automatizar la adición de problemas a Projects
 
+## Creación de un proyecto
+
+### Creación de un proyecto de nivel de organización
+
+1. En la esquina superior derecha de GitHub.com, seleccione la foto del perfil y después, seleccione Sus organizaciones.
+2. Desplácese hacia abajo para seleccionar la organización del nuevo Proyecto.
+3. Vaya desde la pestañaInformación general a la pestaña Proyectos.
+4. Seleccione el botón verde etiquetado Nuevo proyecto.
+5. Un elemento emergente le pide que seleccione una plantilla o empiece desde cero. Vamos a elegir la opción Iniciar desde cero y seleccionar Tabla.
+6. Seleccione el botón verde Crear proyecto.
+
+### Establecer el nombre, la descripción y el ARCHIVO LÉAME del proyecto
+
+1. Vaya al proyecto recién creado para editar el nombre, la descripción y el ARCHIVO LÉAME del proyecto.
+2. En la parte superior derecha de la página, seleccione los tres puntos para abrir el menú y seleccione Configuración.
+3. Nombre del proyecto es donde se edita el nombre del proyecto.
+4. Descripción breve le permite agregar algunas palabras sobre el proyecto.
+5. README le permite agregar información a su equipo para comprender por qué ha creado este Proyecto y lo que espera lograr con él. Una vez finalizado, seleccione Guardar cambios.
+
+### Adición de problemas y solicitudes de incorporación de cambios al Proyecto
+
+#### Adición de un problema existente y una solicitud de incorporación de cambios
+
+1. Copie la dirección URL de un problema o una solicitud de incorporación de cambios existentes.
+2. Coloque el cursor en la fila inferior del proyecto junto al + y pegue la dirección URL del problema o la solicitud de incorporación de cambios.
+3. Presione Entrar y el problema o la solicitud de incorporación de cambios aparece como una tarea en el proyecto.
+
+#### Buscar un problema existente y una solicitud de incorporación de cambios
+
+1. Escriba # para buscar repositorios. Puede teclear la parte del nombre de repositorio para reducir sus opciones.
+2. Seleccione el repositorio donde se encuentra la solicitud de incorporación de cambios o el problema, que solicita buscar problemas y solicitudes de incorporación de cambios.
+3. Comience a escribir el título del problema o la solicitud de incorporación de cambios para encontrar el que desee.
+4. Seleccione la propuesta o solicitud de cambios.
+
+#### Incorporación masiva de problemas y solicitudes de incorporación de cambios
+
+1. Seleccione + en la fila inferior del proyecto.
+2. Seleccione Agregar elemento desde el repositorio.
+3. Para cambiar el repositorio, seleccione la lista desplegable y elija un repositorio. A continuación, se rellenan los problemas y las solicitudes de incorporación de cambios.
+4. Puede seleccionar todos o seleccionar esos problemas o las solicitudes de incorporación de cambios que quiera incluir.
+5. Una vez que esté listo para agregar los problemas y las solicitudes de incorporación de cambios al proyecto, seleccione el botón verde titulado Agregar elementos seleccionados en la esquina inferior derecha.
