@@ -93,3 +93,26 @@ Si ya utiliza VS Code, puede usar Sincronización de configuración para sincron
 #### Complementos de JetBrains
 
 Si trabaja con los codespaces en un IDE de JetBrains, puede agregar complementos desde el Marketplace de JetBrains.
+
+## Codespaces versus GitHub.dev editor
+
+Puede usar GitHub.dev para navegar por archivos y repositorios de código fuente desde GitHub, así como hacer cambios de código y confirmarlos. Puede abrir cualquier repositorio, bifurcación o solicitud de incorporación de cambios en el editor GitHub.dev.
+
+Si quiere realizar tareas más complicadas, como probar el código, use GitHub Codespaces. Se asocia con un proceso, por lo que puede compilar el código, ejecutarlo y tener acceso de terminal. GitHub.dev no incluye ningún proceso. 
+
+### Compración entre Codespaces y GitHub.dev
+
+||GitHub.dev|GitHub Codespaces|
+|-|---------|-----------------|
+|Costee|Gratuito|Cuota mensual gratuita de uso para cuentas personales|
+|Disponibilidad|Disponible para todos en GitHub.com|Disponible para todos en GitHub.com|
+|Startup|GitHub.dev se abre instantáneamente al presionar una tecla y puede comenzar a usarlo de inmediato sin tener que esperar a su configuración o instalación.|Al crear o reanudar un codespace, se le asigna una máquina virtual a Codespace. A continuación, el contenedor se configura en función del contenido de un archivo devcontainer.json. Esta configuración tarda unos minutos en crear el entorno de desarrollo.|
+|Proceso|No hay recursos de proceso asociados, por lo que no puede compilar ni ejecutar el código ni usar el terminal integrado.|Con GitHub Codespaces se obtiene la eficacia de una máquina virtual dedicada para ejecutar y depurar la aplicación.|
+|Acceso al terminal|Ninguno|	GitHub Codespaces proporciona un conjunto común de herramientas de manera predeterminada, lo que significa que puede utilizar el terminal exactamente como lo haría en su entorno local.|
+|Extensiones|En la vista de extensiones solo aparece un subconjunto de las extensiones que pueden ejecutarse en la web y que se pueden instalar.|Con GitHub Codespaces se pueden usar la mayoría de las extensiones de Visual Studio Code Marketplace.|
+
+### Continuación del trabajo en Codespaces
+
+Puede iniciar el flujo de trabajo en Github.dev y seguir trabajando en un codespace. Si intenta acceder a la vista Ejecutar y depurar o terminal, verá una notificación de que no están disponibles en GitHub.dev.
+
+Para continuar el trabajo en un codespace, seleccione Continuar trabajando en.... Seleccione Crear un codespace para crear un codespace en la rama actual. Antes de que elijas esta opción, debes confirmar cualquier cambio.
