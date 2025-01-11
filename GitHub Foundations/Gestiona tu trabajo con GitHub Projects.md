@@ -121,3 +121,70 @@ Agrupar las incidencias y las solicitudes de cambios por prioridad para que sea 
 3. Seleccione el botón Guardar situado en la parte superior derecha del panel.
 4. Puede cambiar el nombre de la vista haciendo doble clic en la pestaña de la vista y seleccionando fuera de la pestaña para guardarla automáticamente.
 5. Tenga en cuenta que estos pasos también se pueden realizar seleccionando Nueva vista a la derecha de las vistas existentes.
+
+## Cómo organizar y automatizar el proyecto
+
+### Controlar la visibilidad del proyecto
+
+Tiene la capacidad de controlar si el proyecto es público o privado. Cuando el proyecto es público, todos los usuarios de Internet pueden verlo. Cuando el proyecto es privado, solo los usuarios con al menos acceso de lectura pueden verlo.
+
+1. Vaya al proyecto.
+2. En la parte superior derecha, seleccione los tres puntos en el menú superior y elija Configuración.
+3. Desplácese hacia abajo hasta Zona de peligro y, en Visibilidad, seleccione Privado o Público en la lista desplegable.
+
+### Administrar el acceso al proyecto
+
+El acceso al proyecto dependerá de si se trata de un proyecto a nivel de organización o de uno a nivel personal o de usuario. La administración del acceso es similar entre los dos niveles.
+
+Los administradores de proyectos a nivel de organización pueden administrar el acceso para toda la organización, para los equipos, para los miembros de la organización y para los colaboradores externos. Los administradores de los proyectos a nivel de usuario pueden invitar a los colaboradores individuales y administrar su acceso.
+
+### Proyecto a nivel de organización
+
+* Sin acceso: Solo los propietarios de la organización y los usuarios a los que se les ha otorgado acceso individual pueden ver el proyecto. Los propietarios de las organizaciones también son administradores del proyecto.
+* Lectura: Todos los usuarios de la organización pueden ver el proyecto. Los propietarios de las organizaciones también son administradores del proyecto.
+* Escritura: Todos los usuarios de la organización pueden ver y editar el proyecto. Los propietarios de las organizaciones también son administradores del proyecto.
+* Administrador: Todos los usuarios de la organización son administradores del proyecto.
+
+### Proyecto a nivel personal o de usuario
+
+* Lectura: La persona puede ver el proyecto.
+* Escritura: La persona puede ver y editar el proyecto.
+* Administrador: La persona puede ver, editar y agregar nuevos colaboradores al proyecto.
+
+### Invitar a colaboradores y cambiar roles
+
+1. Vaya al proyecto.
+2. En la parte superior derecha, seleccione los tres puntos para abrir el menú y elija Configuración.
+3. En la barra de navegación izquierda, seleccione Administrar acceso.
+4. Una vez en la página, puede:
+    * Invitar a usuarios y equipos mediante la búsqueda en la barra de búsqueda Invitar colaboradores.
+    * Cambie su rol o quítelos en Administrar el acceso.
+
+### Agregar un proyecto a un equipo
+
+1. En la esquina superior derecha de GitHub.com, seleccione su foto de perfil y elija Sus organizaciones.
+2. Seleccione el nombre de la organización.
+3. Vaya a la pestaña Equipos y seleccione el nombre del equipo al que desea conceder acceso.
+4. Seleccione Proyectos y elija Vincular un proyecto.
+5. Empiece a escribir el nombre del proyecto que quiera agregar y, luego, seleccione el proyecto en la lista de coincidencias.
+
+### Agregar un proyecto a un repositorio
+
+Puede enumerar los proyectos pertinentes en un repositorio para que el equipo pueda acceder a la información que necesita para mantenerse al día. Sin embargo, solo puede enumerar proyectos si el mismo usuario u organización posee los proyectos y el repositorio. Para que los miembros de los repositorios vean un proyecto que se lista en dichos repositorios, deben tener visibilidad del proyecto.
+
+1. Vaya a la página principal del repositorio.
+2. Seleccione la pestaña Proyectos y elija Vincular un proyecto.
+3. Buscar proyectos que pertenezcan al mismo usuario u organización que el propietario del repositorio.
+4. Seleccione un proyecto para mostrarlo en el repositorio.
+
+### Cerrar y eliminar proyectos
+
+Cerrar un proyecto permite quitarlo de la lista de proyectos, pero se conservan el contenido y la capacidad de volver a abrirlo más adelante. Se recomienda esta opción para conservar los datos.
+
+La eliminación de un proyecto lo elimina permanentemente de la plataforma junto con las vistas guardadas, los campos personalizados y los valores asociados, los datos de las conclusiones y los problemas registrados.
+
+1. Vaya al proyecto.
+2. En la parte superior derecha, seleccione los tres puntos para abrir el menú y elija Configuración.
+3. Desplácese hacia abajo hasta la sección Zona de peligro y seleccione Cerrar proyecto o Eliminar proyecto.
+    * Al seleccionar Eliminar proyecto se le pide que lea las advertencias y, a continuación, escriba el nombre del proyecto en el cuadro de texto.
+
