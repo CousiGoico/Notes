@@ -44,3 +44,90 @@ Si un proyecto es válido para patrocinarse a través de los patrocinadores de G
 
 Puede seleccionar el nivel de patrocinio y si quiere que su contribución sea pública.
 
+## Contribución a un repositorio de código abierto
+
+A la hora de colaborar en un proyecto de código abierto, la comunicación es un factor clave del éxito. Puede que le resulte incómodo comunicarles a otros usuarios sus propuestas de cambios o mejoras. A menudo, este diálogo dará lugar a debates y cuestionará su visión original.
+
+Evitar la comunicación activa con otras personas implicadas en un proyecto de código abierto significa arriesgar su tiempo ocupándose de tareas en las que ya está trabajando otra persona. O bien, es posible que trabaje en características o mejoras que no se alineen con los valores o los procedimientos recomendados del proyecto. En cualquier caso, se desperdicia el tiempo de todos. Por el contrario, comprometerse a una comunicación activa garantiza que el trabajo será bien recibido y tendrá sentido.
+
+### Comunicación de la intención a los mantenedores
+
+* Si quiere trabajar en una incidencia existente, consulte la sección **Assignees** (Usuarios asignados) para asegurarse de no haya nadie asignado. Consulte también la sección **Linked pull requests** (Solicitudes de incorporación de cambios vinculadas). Una solicitud de incorporación de cambios vinculada implica que alguien ya está trabajando en ella. Consulte los comentarios para ver si alguien ha manifestado su interés en la incidencia. Publique un comentario sobre la incidencia para indicar que le interesa trabajar en ella. Así indicará a los usuarios que puedan llegar más tarde que alguien está trabajando en la incidencia. ^
+
+* Si quiere trabajar en una característica nueva o en un error que todavía no está presente en el seguimiento de incidencias, cree una incidencia. Asegúrese de seguir la plantilla de incidencias si hay una propuesta y exprese claramente la intención de trabajar en la incidencia. Si se trata de una nueva propuesta de características o si la incidencia requiere muchos cambios, asegúrese de obtener la aprobación del mantenedor antes de continuar con el paso siguiente.
+
+### Creación de una solicitud de incorporación de cambios en un repositorio de GitHub
+
+La contribución adoptará la forma de solicitud de incorporación de cambios o PR. 
+
+* Un título y una descripción de los cambios.
+* Una o más confirmaciones que constituyan los cambios que propone.
+* Comentarios en los que todos los usuarios puedan participar para debatir los cambios.
+* Revisiones de código donde puede encontrar comentarios detallados sobre los cambios y, finalmente, confirmar las sugerencias.
+* Comprobaciones de estado procedentes, por ejemplo, de las pruebas automatizadas que los mantenedores puedan haber implementado. Las comprobaciones de estado pueden tener distintos propósitos. Por ejemplo, pueden garantizar que los cambios sigan las reglas del proyecto o que no interrumpan el código.
+
+Después de crear una solicitud de incorporación de cambios, se puede actualizar con nuevas confirmaciones, comentarios o revisiones de código. Este proceso continúa hasta que los mantenedores del proyecto aprueben y combinen la solicitud de incorporación de cambios o rechacen los cambios y cierren la solicitud de incorporación de cambios. Cuando la solicitud de incorporación de cambios se combina, significa que los cambios se han integrado en el código base del proyecto.
+
+### Creación paso a paso de una solicitud de incorporación de cambios
+
+1. Abra la página de GitHub del proyecto en el que quiera contribuir.
+
+2. Seleccione el botón Fork (Bifurcar) para crear una copia del repositorio en la cuenta de GitHub. Este paso es necesario, ya que, de forma predeterminada, no cuenta con los permisos necesarios para realizar cambios en un repositorio público, a menos que sea su propia copia. Al bifurcar el proyecto, se crea una copia en la que puede realizar cambios.
+
+3. Seleccione Los repositorios en el menú de perfil de la cuenta.
+
+4. Seleccione la bifurcación del repositorio.
+
+5. Seleccione el botón Code (Código) para obtener información sobre cómo "clonar" el repositorio de Git en la máquina local.
+
+6. Seleccione el icono del Portapapeles para copiar la dirección URL del repositorio y, después, escriba en un terminal:
+
+        git clone <REPOSITORY_URL>
+
+Este comando creará una copia del repositorio en el equipo local.
+
+También puede usar [GitHub Desktop](https://desktop.github.com/) si prefiere usar una aplicación. O bien, puede usar [GitHub Codespaces](https://github.com/features/codespaces) si se le ofrece la opción. Si es usuario de Visual Studio Code, GitHub Codespaces le resultará familiar.
+
+7. Cuando haya finalizado la clonación del proyecto, acceda a la carpeta del proyecto:
+
+        cd <PROJECT_FOLDER>
+
+8. (Opcional) Cree una rama mediante el comando siguiente:
+
+        git checkout -b <BRANCH_NAME>
+
+9. Realice los cambios deseados en el proyecto y confírmelos:
+
+        git add .
+        git commit -m "<COMMIT_MESSAGE>"
+
+Estos comandos agregarán los cambios al "stage" para confirmarlos y, después, crearán una confirmación con el mensaje especificado. Asegúrese de describir los cambios con precisión en el mensaje de confirmación. También es recomendable comprobar si en el archivo CONTRIBUTING se menciona alguna convención para los mensajes de confirmación que tenga que seguir.
+
+10. Inserte los cambios en el repositorio remoto mediante el comando siguiente:
+
+        git push --set-upstream origin <BRANCH_NAME>
+
+Este comando creará una rama en el repositorio ascendente de GitHub (la bifurcación), en la que incluirá todas las confirmaciones. Si antes no ha creado una rama, escriba solo `git push`.
+
+11. Abra la bifurcación del proyecto en GitHub y seleccione el botón Compare & pull request (Comparar y solicitud de incorporación de cambios) en el cuadro de sugerencias que aparece.
+
+12. Rellene el título y la descripción, y seleccione **Create pull request** (Crear solicitud de incorporación de cambios).
+
+Si hay una plantilla para la descripción de la solicitud de incorporación de cambios, dedique el tiempo necesario para rellenar toda la información requerida. También debe volver a vincular a la incidencia relacionada; para ello mencione su número mediante `#<ISSUE_NUMBER>`.
+
+### Superación de las comprobaciones de estado
+
+Estas comprobaciones de estado son comprobaciones automatizadas que los mantenedores han implementado para garantizar la calidad coherente del proyecto.
+
+Para que se acepte la solicitud de incorporación de cambios, debe superar todas las comprobaciones automatizadas. Si se produce un error en alguna, seleccione el botón Details (Detalles) para obtener más información sobre el error y saber lo que tiene que hacer para corregirlo. Si no está seguro de qué hacer con una comprobación con error, siempre puede usar los comentarios para solicitar instrucciones o ayuda para corregirla a los mantenedores.
+
+### Solicitud de instrucciones o revisiones de solicitudes de incorporación de cambios
+
+Es posible que no esté seguro de algunos de los cambios realizados y quiera conocer las opiniones de los mantenedores. La mejor manera de hacerlo es comentar directamente las solicitudes de incorporación de cambios. Si considera que los cambios son un trabajo en curso, también tiene la opción de crear un borrador de solicitud de incorporación de cambios para solicitar instrucciones o ayuda de otros colaboradores.
+
+Cuando los mantenedores del proyecto reciban la solicitud de incorporación de cambios, pueden responder a la conversación o revisar directamente los cambios. 
+
+* Los cambios se aprueban. Felicidades.
+* La solicitud de extracción necesita algunos cambios. No se desanime. Observe atentamente los comentarios proporcionados. Si realiza los cambios solicitados, hay bastantes posibilidades de que se acepte la solicitud de incorporación de cambios. Si envía nuevas confirmaciones a la rama, la solicitud de incorporación de cambios se actualizará de forma automática con los nuevos cambios.
+* El revisor ha realizado algunos comentarios. Normalmente significa que se necesitan más detalles sobre los cambios o la motivación subyacente.
+
