@@ -131,3 +131,22 @@ Cuando los mantenedores del proyecto reciban la solicitud de incorporación de c
 * La solicitud de extracción necesita algunos cambios. No se desanime. Observe atentamente los comentarios proporcionados. Si realiza los cambios solicitados, hay bastantes posibilidades de que se acepte la solicitud de incorporación de cambios. Si envía nuevas confirmaciones a la rama, la solicitud de incorporación de cambios se actualizará de forma automática con los nuevos cambios.
 * El revisor ha realizado algunos comentarios. Normalmente significa que se necesitan más detalles sobre los cambios o la motivación subyacente.
 
+## Participación en la comunidad
+
+Encontrará colaboradores frecuentes en el proyecto en la sección de comentarios sobre incidencias y solicitudes de incorporación de cambios. O bien, puede seleccionar **Insights** (Información detallada) en la navegación del repositorio y luego seleccionar **Contributors** (Colaboradores) para buscar otros miembros de la comunidad activos. Visite sus perfiles de GitHub. A veces sugieren formas de ponerse en contacto con ellos.
+
+También puede [seguir a organizaciones y empresas en GitHub](https://docs.github.com/en/get-started/exploring-projects-on-github) para mantenerse en contacto. Su panel personal muestra la actividad pública de cada empresa, usuario u organización que esté siguiendo.
+
+También puede encontrar personas de intereses afines asistiendo a encuentros o conferencias sobre temas de código abierto. O bien, cuando el proyecto o el ecosistema es lo suficientemente grande, puede conocer personas relacionadas con el proyecto que le interesa. Busque archivos con grabaciones de eventos pasados, podcasts, boletines y listas de distribución de correo.
+
+### Reusabilidad del código
+
+En ocasiones, el código y las soluciones se pueden reutilizar entre proyectos.
+
+* Publicar como biblioteca independiente (dependencia).
+* Reflejar el proyecto con la funcionalidad agregada.
+* [Crear una acción de GitHub](https://learn.microsoft.com/es-es/training/modules/github-actions-automate-tasks/) para que otros usuarios la incluyan en su flujo de trabajo.
+
+La primera opción es probablemente la más indicada cuando el código es como un complemento que podría usarse entre proyectos de desarrollo web. El reflejo o la bifurcación de un proyecto con la adición del código resulta útil cuando se resuelve un caso de uso restringido para un pequeño subconjunto de clientes, o incluso un solo cliente. Recuerde que tendrá que mantener la bifurcación actualizada con el repositorio ascendente si, por ejemplo, quiere beneficiarse de las revisiones de seguridad.
+
+Las Acciones de GitHub son scripts empaquetados que automatizan tareas en un flujo de trabajo de desarrollo de software en GitHub. Hay dos tipos de acciones diferentes: acciones de contenedor y acciones de JavaScript. Puede enviar la acción al marketplace de GitHub para hacerla visible. [GitHub Marketplace](https://docs.github.com/en/apps/publishing-apps-to-github-marketplace/github-marketplace-overview/about-github-marketplace-for-apps) le pone en contacto con desarrolladores que desean ampliar y mejorar sus flujos de trabajo de GitHub. Use esta plataforma para publicar acciones y compartir aplicaciones con otros usuarios de forma gratuita.
