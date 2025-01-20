@@ -100,3 +100,14 @@ A continuación, puede conceder acceso a los servicios de Azure AI en Azure Port
 
 > [!TIP]
 > [Configuración de identidades administradas para un recurso de Azure en máquinas virtuales de Azure mediante la CLI de Azure](https://learn.microsoft.com/es-es/azure/active-directory/managed-identities-azure-resources/qs-configure-cli-windows-vm)
+
+## Implementación de seguridad de red
+
+La seguridad de red es una medida importante para garantizar que los usuarios no autorizados no puedan acceder a los servicios que se protegen. Limitar lo que los usuarios pueden ver es siempre una buena idea, ya que no podrán poner en peligro lo que no pueden ver.
+
+### Aplicación de restricciones de acceso a la red
+
+Se puede acceder a los servicios de Azure AI desde todas las redes. Algunos recursos de servicios de Azure AI concretos (como Azure AI Face, Azure AI Vision y otros) se pueden configurar para restringir el acceso a direcciones de red específicas, ya sean de la Internet pública o de redes virtuales.
+
+Con las restricciones de red habilitadas, un cliente que intente conectarse desde una dirección IP no permitida recibirá un error de Acceso denegado.
+
