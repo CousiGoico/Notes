@@ -42,3 +42,18 @@ Para consumir el servicio a través del punto de conexión, las aplicaciones req
 Los servicios de Azure AI proporcionan interfaces de programación de aplicaciones (API) REST que las aplicaciones cliente pueden usar para consumir servicios. En la mayoría de los casos, se puede llamar a las funciones de servicio mediante el envío de datos en formato JSON a través de una solicitud HTTP, que puede ser una solicitud POST, PUT o GET en función de la función específica a la que se llame. Los resultados de la función se devuelven al cliente como una respuesta HTTP, a menudo con contenido JSON que encapsula los datos de salida de la función.
 
 El uso de interfaces REST con un punto de conexión HTTP significa que cualquier lenguaje de programación o herramienta capaz de enviar y recibir JSON a través de HTTP se puede usar para consumir servicios de IA. Puede usar lenguajes de programación comunes como Microsoft C#, Python y JavaScript, así como utilidades como Postman y cURL, que pueden ser útiles para las pruebas.
+
+## Uso de un SDK
+
+Puede desarrollar una aplicación que use servicios de Azure AI mediante interfaces REST, pero es más fácil crear soluciones más complejas mediante el uso de bibliotecas nativas para el lenguaje de programación en el que está desarrollando la aplicación.
+
+Los kits de desarrollo de software (SDK) para lenguajes de programación comunes abstraen las interfaces REST para la mayoría de los servicios de IA. La disponibilidad del SDK varía según los distintos servicios de IA, pero para la mayoría de los servicios hay un SDK para lenguajes como:
+
+* Microsoft C# (.NET Core)
+* Python
+* JavaScript (Node.js)
+* Go
+* Java
+
+Cada SDK incluye paquetes que puede instalar para usar bibliotecas específicas del servicio en el código, y documentación en línea para ayudarle a determinar las clases, métodos y parámetros adecuados que se usan para trabajar con el servicio.
+
