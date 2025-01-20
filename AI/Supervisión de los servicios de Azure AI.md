@@ -32,3 +32,22 @@ Para crear una regla de alertas para un recurso de los servicios de Azure AI, se
 
 > [!TIP]
 > [Información general sobre las alertas en Microsoft Azure](https://learn.microsoft.com/es-es/azure/azure-monitor/alerts/alerts-overview)
+
+## Visualización de métricas
+
+Azure Monitor recopila métricas de los recursos de Azure a intervalos regulares para que pueda realizar un seguimiento de los indicadores de uso, estado y rendimiento de los recursos. Las métricas específicas recopiladas dependen del recurso de Azure. En el caso de los servicios de Azure AI, Azure Monitor recopila métricas relacionadas con las solicitudes de punto de conexión, los datos enviados y devueltos, los errores y otras medidas útiles.
+
+### Visualización de métricas en Azure Portal
+
+Para ver las métricas de un recurso concreto en Azure Portal, seleccione el recurso y vea su página Métricas. En esta página, puede agregar métricas específicas del recurso a los gráficos. De forma predeterminada, se crea un gráfico vacío y puede agregar más gráficos según sea necesario.
+
+Puede agregar varias métricas a un gráfico y elegir agregaciones y tipos de gráfico adecuados. Cuando esté satisfecho con el gráfico, puede compartirlo exportándolo a Excel o copiando un vínculo a él. También puede clonarlo para crear un duplicado en la página Métricas, quizá como punto de partida para un nuevo gráfico que muestre las mismas métricas de una manera diferente.
+
+### Adición de métricas a un panel
+
+Puede crear paneles que consten de varias visualizaciones de diferentes recursos de su entorno de Azure para ayudarlo a obtener una vista general del estado y el rendimiento de sus recursos de Azure.
+
+Para crear un panel, seleccione Panel en el menú de Azure Portal (puede que la vista predeterminada ya esté establecida en un panel en lugar de en la página principal del portal). Desde ahí, puede agregar hasta 100 paneles con nombre para encapsular vistas de aspectos específicos de los servicios de Azure de los que desee realizar un seguimiento.
+
+Puede agregar una gran variedad de iconos y otras visualizaciones a un panel y, cuando vea las métricas de un recurso específico en un gráfico, como ya hemos explicado, puede agregar el gráfico a un panel nuevo o que ya estuviera creado. En la siguiente imagen, se han agregado a un panel dos gráficos que muestran las métricas de un recurso de servicios de IA.
+
