@@ -28,3 +28,11 @@ Los recursos de un solo servicio ofrecen un nivel gratuito, lo que los convierte
 ### Recursos de entrenamiento y predicción
 
 Aunque la mayoría de los servicios de IA se pueden usar a través de un único recurso de Azure, algunos ofrecen (o requieren) recursos independientes para el entrenamiento y la predicción de modelos. Esto le permite administrar la facturación para el entrenamiento de modelos personalizados de forma separada del consumo de modelos por parte de las aplicaciones, y en la mayoría de los casos le permite utilizar un recurso específico del servicio dedicado para entrenar un modelo, pero un recurso genérico de servicios de IA para que el modelo esté disponible para las aplicaciones con fines de inferencia.
+
+## Identificación de puntos de conexión y claves
+
+Para consumir el servicio a través del punto de conexión, las aplicaciones requieren la siguiente información:
+
+* El URI del punto de conexión. Se trata de la dirección HTTP en la que se puede acceder a la interfaz REST del servicio. La mayoría de los kits de desarrollo de software (SDK) de los servicios de IA usan el URI del punto de conexión para iniciar una conexión al punto de conexión.
+* Una clave de suscripción. El acceso al punto de conexión está restringido en función de una clave de suscripción. Las aplicaciones cliente deben proporcionar una clave válida para consumir el servicio. Al aprovisionar un recurso de servicios de AI, se crean dos claves, y las aplicaciones pueden usar cualquiera de ellas. También puede volver a generar las claves según sea necesario para controlar el acceso al recurso.
+* La ubicación del recurso. Al aprovisionar un recurso en Azure, normalmente se asigna a una ubicación, que determina el centro de datos de Azure en el que se define el recurso. Aunque la mayoría de los SDK usan el URI del punto de conexión para conectarse al servicio, algunos requieren la ubicación.
