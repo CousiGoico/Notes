@@ -51,3 +51,30 @@ Para crear un panel, seleccione Panel en el menú de Azure Portal (puede que la 
 
 Puede agregar una gran variedad de iconos y otras visualizaciones a un panel y, cuando vea las métricas de un recurso específico en un gráfico, como ya hemos explicado, puede agregar el gráfico a un panel nuevo o que ya estuviera creado. En la siguiente imagen, se han agregado a un panel dos gráficos que muestran las métricas de un recurso de servicios de IA.
 
+## Administrar registros de diagnóstico
+
+El registro de diagnóstico permite capturar datos operativos muy completos de un recurso de los servicios de Azure AI que se pueden usar para analizar el uso de los servicios y solucionar problemas.
+
+### Creación de recursos para el almacenamiento de registros de diagnóstico
+
+Para capturar registros de diagnóstico de un recurso de los servicios de Azure AI, se necesita un destino para los datos de registro. En determinados casos, puede usar Azure Event Hubs como destino para los datos de registro. Azure Event Hubs le permite reenviar los datos a una solución de telemetría personalizada y conectarse directamente a algunas soluciones de terceros. Sin embargo, en la mayoría de los casos usará uno (o ambos) de los siguientes tipos de recursos dentro de la suscripción de Azure:
+
+* Azure Log Analytics: servicio que permite consultar y visualizar datos de registro en Azure Portal.
+* Azure Storage: almacén de datos basado en la nube que se puede usar para almacenar los archivos de registro (que se pueden exportar para analizarlos en otras herramientas según sea necesario).
+
+Debe crear estos recursos antes de configurar el registro de diagnóstico para el recurso de los servicios de Azure AI. Si tiene previsto archivar los datos de registro en Azure Storage, cree la cuenta de Azure Storage en la misma región que la del recurso de los servicios de Azure AI.
+
+### Configuración de diagnóstico
+
+Una vez establecidos los destinos para los datos de registro, puede definir la configuración de diagnóstico para el recurso de los servicios de Azure AI. La configuración de diagnóstico se define en la página Configuración de diagnóstico de la hoja del recurso de los servicios de Azure AI en Azure Portal. Al agregar la configuración de diagnóstico, debe especificar lo siguiente:
+
+* Nombre para la configuración de diagnóstico.
+* Categorías de los datos de eventos de registro que desea capturar.
+* Detalles de los destinos en los que desea almacenar los datos de registro.
+
+### Visualización de datos de registro en Azure Log Analytics
+
+El flujo de datos de diagnóstico hacia los destinos puede tardar una hora o más en comenzar, pero, una vez capturados los datos, puede verlos en el recurso de Azure Log Analytics mediante la ejecución de consultas.
+
+> [!TIP]
+> [Habilitación del registro de diagnóstico para los servicios de Azure AI](https://learn.microsoft.com/es-es/azure/ai-services/diagnostic-logging)
