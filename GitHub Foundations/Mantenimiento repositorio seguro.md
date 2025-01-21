@@ -124,3 +124,47 @@ Al agregar un archivo [CODEOWNERS](https://docs.github.com/github/creating-cloni
 
 Puede crear el archivo CODEOWNERS en la raíz del repositorio o en la carpeta `docs` o `.github`.
 
+## Seguridad automatizada
+
+### Detectar y corregir dependencias obsoletas con vulnerabilidades de seguridad
+
+Todos los proyectos hoy en día tienen dependencias en paquetes externos. Estar atento a estos paquetes y su estado de vulnerabilidad puede llevar mucho tiempo, especialmente porque cada dependencia podría tener sus propias dependencias, lo que dificulta su seguimiento y mantenimiento. Afortunadamente, GitHub proporciona características que reducen esta carga de trabajo.
+
+#### Gráficos de dependencias de repositorios
+
+Una característica predeterminada que incluyen todos los repositorios son los gráficos de dependencias. GitHub examina los manifiestos de paquete comunes, como `package.json`, `requirements.txt` y otros. Estos gráficos permiten a los propietarios de proyectos realizar un seguimiento recurrente de todas las dependencias en las que se basa su proyecto.
+
+> [!TIP]
+> [Acerca del gráfico de dependencias](https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph)
+
+#### Alertas de Dependabot
+
+GitHub proporciona [alertas de Dependabot](https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts#dependabot-alerts-for-vulnerable-dependencies) que vigilan los gráficos de dependencias automáticamente. Comparan las versiones de destino con las versiones de listas de vulnerabilidades conocidas. Cuando se detecta un riesgo, se alerta al proyecto. La entrada para el análisis procede de [avisos de seguridad de GitHub](https://docs.github.com/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories#dependabot-alerts-for-published-security-advisories).
+
+#### Actualizaciones de dependencias automatizadas con Dependabot
+
+Una alerta de dependencia puede llevar a un colaborador del proyecto a cambiar la referencia de paquete infractor a la versión recomendada y a crear una solicitud de incorporación de cambios para validación. Dependabot hace precisamente eso. Examina las alertas de dependencia y crea solicitudes de incorporación de cambios para que un colaborador pueda validar la actualización y combinar la solicitud.
+
+> [!TIP]
+> [Configuración de actualizaciones de seguridad de Dependabot](https://docs.github.com/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates)
+
+#### Análisis automatizado del código
+
+Puede usar el análisis de código para analizar y detectar errores y vulnerabilidades de seguridad en el código de un repositorio de GitHub. Se puede usar para buscar, evaluar y clasificar por orden de prioridad las correcciones de problemas existentes o posibles vulnerabilidades de seguridad. También resulta útil para impedir que los desarrolladores introduzcan nuevos problemas de seguridad en el código.
+
+Otra ventaja del análisis de código es su capacidad para usar CodeQL. CodeQL sirve para consultar código como datos, lo que le permite crear consultas personalizadas, o bien usar consultas mantenidas por la comunidad de código abierto. El análisis de código le ofrece libertad para personalizar y mantener la forma en que se examina el código del repositorio.
+
+Puede habilitar alertas y flujos de trabajo de análisis de código en la pestaña de seguridad de un repositorio de GitHub.
+
+> [!TIP]
+> [Análisis de código y CodeQL](https://docs.github.com/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning#about-code-scanning)
+
+#### Análisis de secretos
+
+Otra característica de análisis automatizada en un repositorio de GitHub es el análisis de secretos. Este análisis se realiza para impedir el uso de comportamientos fraudulentos y para proteger la integridad de los datos confidenciales. De forma predeterminada, el análisis de secretos se produce en repositorios públicos, y se puede habilitar en repositorios privados por los administradores del repositorio o los propietarios de la organización.
+
+Cuando el examen de secretos detecta un conjunto de credenciales, GitHub notifica al proveedor de servicios que ha emitido el secreto. El proveedor de servicios valida la credencial. A continuación, decide si se debería revocar el secreto, emitir un nuevo secreto o ponerse en contacto directamente con usted. La acción depende de los riesgos asociados para usted o el proveedor de servicios.
+
+> [!TIP]
+> [Análisis de secretos para repositorios públicos y privados](https://docs.github.com/code-security/secret-scanning/about-secret-scanning)
+
