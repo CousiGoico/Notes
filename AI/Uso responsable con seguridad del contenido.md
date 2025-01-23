@@ -62,3 +62,39 @@ Al evaluar la precisión de la Seguridad del contenido de Azure AI para su situa
 * Falso negativo: no se identifica el contenido dañino.
 
 La Seguridad del contenido de Azure AI funciona mejor para admitir a moderadores humanos que pueden resolver casos de identificación incorrecta. Cuando las personas agregan contenido a un sitio, no esperan que las publicaciones se quiten sin motivo. Comunicarse con los usuarios sobre por qué el contenido se quita o marca como inapropiado ayuda a todos a comprender lo que está permitido y lo que no es.
+
+## Cuándo usar Seguridad del contenido de Azure AI
+
+Seguridad del contenido de Azure AI es un servicio de inteligencia artificial diseñado para proporcionar un enfoque más completo para la moderación de contenido. Seguridad del contenido de Azure AI ayuda a las organizaciones a priorizar el trabajo de los moderadores humanos en un número creciente de situaciones:
+
+### Educación
+
+El número de plataformas de aprendizaje y sitios educativos en línea crece rápidamente, y cada vez se agrega más información. Los educadores deben estar seguros de que los estudiantes no están expuestos a contenidos inapropiados ni están introduciendo solicitudes perjudiciales en los LLM. 
+
+### Redes sociales
+
+Las plataformas de redes sociales son dinámicas y rápidas, lo que requiere moderación en tiempo real. La moderación del contenido generado por el usuario incluye publicaciones, comentarios e imágenes. Seguridad del contenido de Azure AI ayuda a moderar los contenidos matizados y multilingües para identificar el material dañino.
+
+### Marcas
+
+El material ofensivo puede dañar una marca y evitar que los clientes contribuyan. Quieren tener la seguridad de que el material inapropiado puede identificarse y eliminarse rápidamente. Las marcas también están agregando servicios de IA generativa para ayudar a las personas a comunicarse con ellas y, por lo tanto, necesitan protegerse de los malos actores que intentan explotar los modelos de lenguaje grandes (LLM).
+
+### Comercio electrónico
+
+Los contenidos de los usuarios se generan reseñando productos y comentándolos con otras personas. Este material es un poderoso instrumento de marketing, pero cuando se publican contenidos inapropiados se daña la confianza de los consumidores. Además, los problemas normativos y de cumplimiento son cada vez más importantes. Seguridad del contenido de Azure AI ayuda a filtrar los listados de productos en busca de reseñas falsas y otros contenidos no deseados.
+
+### Juegos
+
+Los juegos son un ámbito difícil de moderar debido a sus gráficos muy visuales y a menudo violentos. Los juegos tienen comunidades fuertes en las que la gente comparte con entusiasmo sus progresos y experiencias. La compatibilidad con moderadores humanos para mantener la seguridad en los juegos incluye la supervisión de avatares, nombres de usuario, imágenes y materiales basados en texto. Seguridad del contenido de Azure AI cuenta con herramientas avanzadas de visión de IA para ayudar a las plataformas de juegos moderados a detectar conductas indebidas.
+
+### Servicios de IA generativa
+
+Las organizaciones usan cada vez más servicios de IA generativa para permitir el acceso a datos internos más fácilmente. Para mantener la integridad y la seguridad de los datos internos, se deben comprobar las indicaciones del usuario y las salidas generadas por la IA para evitar el uso malintencionado de estos sistemas.
+
+### Noticias 
+
+Los sitios web de noticias deben moderar los comentarios de los usuarios para evitar la propagación de información errónea. Seguridad del contenido de Azure AI puede identificar lenguaje que incluya incitación al odio y otros contenidos dañinos.
+
+### Otras situaciones
+
+Hay muchas otras situaciones en las que el contenido debe moderarse. Seguridad del contenido de Azure AI se puede personalizar para identificar el lenguaje problemático para casos específicos.
