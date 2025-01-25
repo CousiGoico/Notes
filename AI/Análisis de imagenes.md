@@ -83,3 +83,17 @@ La respuesta JSON para el análisis de imágenes es similar a este ejemplo, en f
             }
         }
 
+## Generación de una miniatura recortada inteligente y eliminación del fondo
+
+Las miniaturas se usan a menudo para proporcionar versiones más pequeñas de imágenes en aplicaciones y sitios web.
+
+El servicio de Visión de Azure AI permite crear una miniatura con diferentes dimensiones (y relación de aspecto) a partir de la imagen de origen y, opcionalmente, usar el análisis de imágenes para determinar la región de interés de la imagen (su asunto principal) y hacer que sea el foco de la miniatura. Esta capacidad para determinar la región de interés es especialmente útil al recortar la imagen para cambiar su relación de aspecto.
+
+Puede especificar la relación de aspecto de la imagen recortada (ancho / alto), comprendida entre `0.75` y `1.80`.
+
+### Eliminación del fondo de la imagen
+
+La característica de eliminación de fondo puede dividir la imagen en el asunto en primer plano y todo lo demás que se considera fondo. Visión de Azure AI logra esta característica mediante la creación de un mate alfa del asunto en primer plano, que luego se usa para devolver el primer plano o el fondo.
+
+Las imágenes mate alfa son útiles cuando las aplicaciones cliente pretenden realizar un procesamiento adicional de una imagen que requiere la separación de objetos en primer plano y de fondo.
+
