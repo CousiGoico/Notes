@@ -19,3 +19,10 @@ Para usar el servicio Custom Vision de Azure AI, debe aprovisionar dos tipos de 
     * Un recurso de Custom Vision de Azure AI (predicción).
 
 Puede utilizar un recurso de Servicios de Azure AI multiservicio tanto para el entrenamiento como para la predicción, y puede mezclar y combinar tipos de recursos para entrenar un modelo que después publicará utilizando un recurso de (**Servicios de Azure AI multiservicio**). Si usa un recurso de varios servicios, la clave y el punto de conexión para el entrenamiento y la predicción serán los mismos
+
+## Comprender la clasificación de imágenes
+
+La *clasificación de imágenes* es una técnica de Computer Vision en la que se entrena un modelo para predecir una etiqueta de clase para una imagen en función de su contenido. Normalmente, la etiqueta de clase se relaciona con el asunto principal de la imagen.
+
+Los modelos se pueden entrenar para la clasificación multiclase o clasificación multietiqueta.
+
