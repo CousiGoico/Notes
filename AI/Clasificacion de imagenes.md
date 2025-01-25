@@ -26,3 +26,20 @@ La *clasificación de imágenes* es una técnica de Computer Vision en la que se
 
 Los modelos se pueden entrenar para la clasificación multiclase o clasificación multietiqueta.
 
+## Entrenar un clasificador de imágenes
+
+Para entrenar un modelo de clasificación de imágenes con el servicio Custom Vision de Azure AI, puede usar el portal de Custom Vision de Azure AI, la API de REST o el SDK de Custom Vision o una combinación de ambos enfoques.
+
+En la mayoría de los casos, normalmente usará el portal de Custom Vision de Azure AI para entrenar el modelo.
+
+El portal proporciona una interfaz gráfica que puede usar para hacer lo siguiente:
+
+1. Crear un proyecto de clasificación de imágenes para el modelo y asociarlo a un recurso de entrenamiento.
+2. Cargar imágenes, asignándoles etiquetas de clase.
+3. Revisar y editar imágenes etiquetadas.
+4. Entrenar y evaluar un modelo de clasificación.
+5. Probar un modelo entrenado.
+6. Publicar un modelo entrenado en un recurso de predicción.
+
+La API de REST y los SDK permiten realizar las mismas tareas escribiendo código, lo que resulta útil si necesita automatizar el entrenamiento y la publicación de modelos como parte de un proceso DevOps.
+
