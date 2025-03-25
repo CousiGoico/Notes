@@ -4,7 +4,7 @@
 
         dotnet new sln --name [<SOLUTION>] --use-program-main
 
-        dotnet sln add {project}
+        dotnet sln add [<PROJECT>]
 
 ## Add reference to project
 
