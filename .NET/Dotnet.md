@@ -2,29 +2,33 @@
 
 ## Dotnet sln
 
-        dotnet new sln --name MySolution --use-program-main
+        dotnet new sln --name [<SOLUTION>] --use-program-main
 
         dotnet sln add {project}
 
+## Add reference to project
+
+        dotnet add [<PROJECT>] reference
+
 ## Dotnet build
 
-        dotnet build 
+        dotnet build [<PROJECT>] | [<SOLUTION>]
 
 ## Dotnet clean
 
-        dotnet clean
+        dotnet clean [<PROJECT>] | [<SOLUTION>]
 
 ## dotnet new
 
 ### dotnet new console
 
-        dotnet new console
+        dotnet new console --name [<PROJECT>]
 
 ## dotnet packages
 
 ### Add new package
 
-        dotnet add package {package_name} --version {package_version}
+        dotnet add package [<PACKAGE_NAME]> --version [<PACKAGE_VERSION>]
 
 ## dotnet table
 
