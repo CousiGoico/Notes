@@ -1,0 +1,136 @@
+# GitHub
+
+
+## Tipos de cuentas
+
+* Cuentas de usuario
+* Cuentas de organización
+* Cuentas empresariales
+
+### Cuenta de usuario
+
+Cada persona que usa GitHub inicia sesión en una cuenta de usuario. Su cuenta de usuario es su identidad en GitHub y tiene un nombre de usuario y perfil.
+
+Su cuenta de usuario puede poseer recursos como repositorios, paquetes y proyectos. Cada vez que realiza alguna acción en GitHub, como crear un problema o revisar una solicitud de extracción, la acción se atribuye a su cuenta de usuario.
+
+Puede crear cuentas (usuario de máquina) para automatizar la actividad en GitHub, como automatizar los flujos de trabajo de integración continua (CI)
+
+Tipos de cuenta de usuario:
+
+* Cuentas personales
+
+* Cuentas de usuario administradas
+
+#### Cuentas personales
+
+Si se inscribió en su propia cuenta en GitHub.com, está utilizando una cuenta personal. Cada cuenta personal utiliza uno de los siguientes planes de pago:
+
+* GitHub Free 
+
+* GitHub Pro.
+
+Todas las cuentas personales pueden poseer un número ilimitado de repositorios públicos y privados, con un número ilimitado de colaboradores en esos repositorios.
+
+#### Cuentas de usuario administradas
+
+Si una empresa creó su cuenta en GitHub Enterprise Cloud para usted, está utilizando una cuenta de usuario administrada.
+
+* Algunos de los detalles y configuraciones de su cuenta son administrados por su empresa.
+* Debe iniciar sesión en su cuenta de usuario administrada para acceder a organizaciones y repositorios propiedad de la empresa.
+* Puede crear sus propios repositorios privados, pero no puede crear contenido público ni contribuir a repositorios fuera de la empresa.
+
+### Cuenta de organización
+
+Las organizaciones son cuentas compartidas donde un gran número de personas pueden colaborar en muchos proyectos a la vez.
+
+Al igual que las cuentas de usuario, las organizaciones pueden poseer recursos como repositorios, paquetes y proyectos. Sin embargo, no puede iniciar sesión en una organización. En cambio, cada persona inicia sesión en su cuenta de usuario, y cualquier acción que la persona realice sobre los recursos de la organización se atribuye a su cuenta de usuario. Cada usuario puede ser miembro de múltiples organizaciones.
+
+Los usuarios dentro de una organización pueden tener diferentes roles en la organización, que otorgan diferentes niveles de acceso a la organización y sus datos. Todos los miembros pueden colaborar entre sí en repositorios y proyectos, pero solo los propietarios de la organización y los gerentes de seguridad pueden administrar la configuración de la organización y controlar el acceso a los datos de la organización con funciones administrativas y de seguridad sofisticadas. 
+
+#### Roles de una organización
+
+* Repositorio: brindan a los miembros de la organización, colaboradores 
+externos y equipos de personas diferentes niveles de acceso a los repositorios.
+
+* Equipo: son roles que otorgan permisos para administrar un equipo. Puede otorgar a cualquier miembro individual de un equipo el rol de mantenedor del equipo, lo que le da al miembro una serie de permisos administrativos sobre un equipo.
+
+* Organización: son conjuntos de permisos que se pueden asignar a individuos o equipos para administrar una organización y los repositorios, equipos y configuraciones de la organización.
+
+#### Roles predefinidos de una organización
+
+* Lectura todo-repositorio: Las subvenciones leen el acceso a todos los repositorios de la organización.
+
+* Todo-repositorio escribir: Las subvenciones escriben acceso a todos los repositorios de la organización.
+
+* Triaje todo-repositorio: Otorga acceso de triaje a todos los repositorios de la organización.
+
+* Todo-repositorio mantener: Otorga acceso de mantenimiento a todos los repositorios de la organización.
+
+* Admin todo-repositorio: Otorga acceso de administrador a todos los repositorios de la organización.
+
+* CI/CD admin: Otorga acceso de administrador para administrar políticas de acciones, corredores, grupos de corredores, configuraciones de red de cómputo alojadas, secretos, variables y métricas de uso para una organización.
+
+* Gerente de seguridad: Otorga la capacidad de administrar políticas de seguridad, alertas de seguridad y configuraciones de seguridad para una organización y todos sus repositorios.
+
+#### Acerca de los roles en las organizaciones
+
+Puedes asignar a las personas diversos roles de nivel de organización para controlar el acceso de los miembros a esta y a sus recursos.
+
+##### Propietarios
+
+Los propietarios de las organizaciones tienen acceso administrativo integral en tu organización. Este rol debe limitarse a dos personas, por lo mucho, en tu organización. 
+
+##### Miembros
+
+El rol no administrativo predeterminado para las personas en una organización. Los miembros de las organizaciones tienen varios permisos, incluyendo la capacidad de crear repositorios y proyectos.
+
+##### Moderadores
+
+Además de miembros, pueden bloquear y desbloquear a colaboradores que no son miembros, establecer límites de interacción y ocultar comentarios en repositorios públicos que son propiedad de la organización.
+
+##### Gerentes de facturación
+
+Son usuarios que pueden administrar los ajustes de facturación de tu organización, tales como la información de pago. Esta es una opción útil si los miembros de tu organización normalmente no tienen acceso a los recursos de facturación.
+
+##### Administradores de seguridad
+
+Es un rol de nivel de organización que los propietarios de la organización pueden asignar a cualquier miembro o equipo de la organización. Cuando se aplica, concede permiso para ver las alertas de seguridad y administrar la configuración de las características de seguridad en toda la organización, así como permiso de lectura para todos los repositorios de la organización.
+
+##### GitHub App administradores
+
+Permite que más usuarios administren los registros de GitHub App propiedad de una organización, un propietario puede otorgarles permisos de administrador de GitHub App. No concede a los usuarios acceso para instalar y desinstalar GitHub Apps en una organización. 
+
+##### Colaboradores externos
+
+Es una persona que tiene acceso a uno o más repositorios de la organización, pero no es explícitamente miembro de la organización, como ser, un consultor o empleado transitorio.
+
+### Cuenta empresarial
+
+Una cuenta empresarial permite la gestión centralizada de múltiples organizaciones.
+
+Los administradores de la cuenta empresarial pueden:
+
+* Ver y administrar la membresía empresarial
+* Administrar facturación y uso
+* Configure la seguridad, como el inicio de sesión único, las listas de permisos IP, las autoridades de certificación SSH y la autenticación de dos factores
+* Auditoría de flujo y datos de eventos de Git
+* Usar repositorios internos
+* Acceda a características como GitHub Copilot Enterprise y los productos Advanced Security
+* Hacer cumplir las políticas.
+
+## Fusión de múltiples cuentas personales
+
+Recomendamos usar solo una cuenta personal para administrar repositorios personales y profesionales.
+
+* Los permisos de acceso a la organización y al repositorio no son transferibles entre cuentas. Si la cuenta que desea eliminar tiene un permiso de acceso existente, el propietario de una organización o el administrador del repositorio deberán invitar a la cuenta que desea conservar.
+
+* Cualquier compromiso escrito con un GitHub-proporcionado noreply la dirección de correo electrónico no se puede transferir de una cuenta a otra. Si la cuenta que desea eliminar utilizó el Mantenga mi dirección de correo electrónico privada opción, no será posible transferir los commits escritos por la cuenta que está eliminando a la cuenta que desea conservar.
+
+* Los problemas, las solicitudes de extracción y las discusiones no se atribuirán a la nueva cuenta.
+
+* Los logros no se pueden transferir entre cuentas.
+
+1. Transfiera cualquier repositorio desde la cuenta que desea eliminar hasta la cuenta que desea conservar. También se transfieren problemas, solicitudes de extracción y wikis. Verifique que los repositorios existan en la cuenta que desea conservar.
+2. Actualizar las URL remotas en cualquier clón local de los repositorios que se movieron.
+3. Para atribuir las confirmaciones anteriores a la nueva cuenta, agregue la dirección de correo electrónico que utilizó para crear las confirmaciones a la cuenta que mantiene. Para obtener más información, consulte ¿Por qué mis contribuciones no aparecen en mi perfil?
+4. Eliminar la cuenta ya no quieres usar.
