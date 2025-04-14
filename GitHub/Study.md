@@ -3,12 +3,27 @@
 **Contenido**
 * [Tipos de cuentas](#TiposCuentas)
     * [Cuenta de usuario](#CuentasUsuario)
+        * [Cuentas personales](#CuentasPersonales)
+        * [Cuentas de usuario administradas](#CuentasUsuarioAdministradas)
+    * [Cuenta de organización](#CuentasOrganizacion)
+        * [Roles de una organización](#RolesOrganizacion)
+        * [Roles predefinidos de una organización](#RolesPredefinidosOrganizacion)
+        * [Acerca de los roles en las organizaciones](#AcercaRolesOrganizacion)
+            * [Propietarios](#Propietarios)
+            * [Miembros](#Miembros)
+            * [Moderadores](#Moderadores)
+            * [Gerentes de facturación](#GerentesFacturacion)
+            * [Administradores de seguridad](#AdministradoresSeguridad)
+            * [GitHub App Administradores](#GitHubAppAdministradores)
+            * [Colaboradores externos](#ColaboradoresExternos)
+    * [Cuenta empresarial](#CuentasEmpresarial)
 * [Fusión de múltiples cuentas personales](#FusionCuentas)
 * [Crear y administrar repositorios](#CrearAdministrarRepositorios)
     * [Creación desde una plantilla](#CreacionDesdePlantilla)
         * [Acerca de las plantillas de repositorio](#AcercaPlantillasRepositorio)
         * [Crear un repositorio desde una plantilla](#CrearRepositorioDesdePlantilla)
         * [Crear plantilla desde repositorio](#CrearPlantillaDesdeRepositorio)
+* [Personalizar panel](#PersonalizarPanel)
 
 ## Tipos de cuentas<a id="TiposCuentas"></a>
 
@@ -30,7 +45,7 @@ Tipos de cuenta de usuario:
 
 * Cuentas de usuario administradas
 
-#### Cuentas personales
+#### Cuentas personales<a id="CuentasPersonales"></a>
 
 Si se inscribió en su propia cuenta en GitHub.com, está utilizando una cuenta personal. Cada cuenta personal utiliza uno de los siguientes planes de pago:
 
@@ -40,7 +55,7 @@ Si se inscribió en su propia cuenta en GitHub.com, está utilizando una cuenta 
 
 Todas las cuentas personales pueden poseer un número ilimitado de repositorios públicos y privados, con un número ilimitado de colaboradores en esos repositorios.
 
-#### Cuentas de usuario administradas
+#### Cuentas de usuario administradas<a id="CuentasUsuarioAdministradas"></a>
 
 Si una empresa creó su cuenta en GitHub Enterprise Cloud para usted, está utilizando una cuenta de usuario administrada.
 
@@ -48,7 +63,7 @@ Si una empresa creó su cuenta en GitHub Enterprise Cloud para usted, está util
 * Debe iniciar sesión en su cuenta de usuario administrada para acceder a organizaciones y repositorios propiedad de la empresa.
 * Puede crear sus propios repositorios privados, pero no puede crear contenido público ni contribuir a repositorios fuera de la empresa.
 
-### Cuenta de organización
+### Cuenta de organización<a id="CuentasOrganizacion"></a>
 
 Las organizaciones son cuentas compartidas donde un gran número de personas pueden colaborar en muchos proyectos a la vez.
 
@@ -56,7 +71,7 @@ Al igual que las cuentas de usuario, las organizaciones pueden poseer recursos c
 
 Los usuarios dentro de una organización pueden tener diferentes roles en la organización, que otorgan diferentes niveles de acceso a la organización y sus datos. Todos los miembros pueden colaborar entre sí en repositorios y proyectos, pero solo los propietarios de la organización y los gerentes de seguridad pueden administrar la configuración de la organización y controlar el acceso a los datos de la organización con funciones administrativas y de seguridad sofisticadas. 
 
-#### Roles de una organización
+#### Roles de una organización<a id="RolesOrganizacion"></a>
 
 * Repositorio: brindan a los miembros de la organización, colaboradores 
 externos y equipos de personas diferentes niveles de acceso a los repositorios.
@@ -65,7 +80,7 @@ externos y equipos de personas diferentes niveles de acceso a los repositorios.
 
 * Organización: son conjuntos de permisos que se pueden asignar a individuos o equipos para administrar una organización y los repositorios, equipos y configuraciones de la organización.
 
-#### Roles predefinidos de una organización
+#### Roles predefinidos de una organización<a id="RolesPredefinidosOrganizacion"></a>
 
 * Lectura todo-repositorio: Las subvenciones leen el acceso a todos los repositorios de la organización.
 
@@ -81,39 +96,39 @@ externos y equipos de personas diferentes niveles de acceso a los repositorios.
 
 * Gerente de seguridad: Otorga la capacidad de administrar políticas de seguridad, alertas de seguridad y configuraciones de seguridad para una organización y todos sus repositorios.
 
-#### Acerca de los roles en las organizaciones
+#### Acerca de los roles en las organizaciones<a id="AcercaRolesOrganizacion"></a>
 
 Puedes asignar a las personas diversos roles de nivel de organización para controlar el acceso de los miembros a esta y a sus recursos.
 
-##### Propietarios
+##### Propietarios<a id="Propietarios"></a>
 
 Los propietarios de las organizaciones tienen acceso administrativo integral en tu organización. Este rol debe limitarse a dos personas, por lo mucho, en tu organización. 
 
-##### Miembros
+##### Miembros<a id="Miembros"></a>
 
 El rol no administrativo predeterminado para las personas en una organización. Los miembros de las organizaciones tienen varios permisos, incluyendo la capacidad de crear repositorios y proyectos.
 
-##### Moderadores
+##### Moderadores<a id="Moderadores"></a>
 
 Además de miembros, pueden bloquear y desbloquear a colaboradores que no son miembros, establecer límites de interacción y ocultar comentarios en repositorios públicos que son propiedad de la organización.
 
-##### Gerentes de facturación
+##### Gerentes de facturación<a id="GerentesFacturacion"></a>
 
 Son usuarios que pueden administrar los ajustes de facturación de tu organización, tales como la información de pago. Esta es una opción útil si los miembros de tu organización normalmente no tienen acceso a los recursos de facturación.
 
-##### Administradores de seguridad
+##### Administradores de seguridad<a id="AdministradoresSeguridad"></a>
 
 Es un rol de nivel de organización que los propietarios de la organización pueden asignar a cualquier miembro o equipo de la organización. Cuando se aplica, concede permiso para ver las alertas de seguridad y administrar la configuración de las características de seguridad en toda la organización, así como permiso de lectura para todos los repositorios de la organización.
 
-##### GitHub App administradores
+##### GitHub App administradores<a id="GitHubAppAdministradores"></a>
 
 Permite que más usuarios administren los registros de GitHub App propiedad de una organización, un propietario puede otorgarles permisos de administrador de GitHub App. No concede a los usuarios acceso para instalar y desinstalar GitHub Apps en una organización. 
 
-##### Colaboradores externos
+##### Colaboradores externos<a id="ColaboradoresExternos"></a>
 
 Es una persona que tiene acceso a uno o más repositorios de la organización, pero no es explícitamente miembro de la organización, como ser, un consultor o empleado transitorio.
 
-### Cuenta empresarial
+### Cuenta empresarial<a id="CuentasEmpresarial"></a>
 
 Una cuenta empresarial permite la gestión centralizada de múltiples organizaciones.
 
