@@ -1,13 +1,22 @@
 # GitHub
 
+**Contenido**
+* [Tipos de cuentas](#TiposCuentas)
+    * [Cuenta de usuario](#CuentasUsuario)
+* [Fusión de múltiples cuentas personales](#FusionCuentas)
+* [Crear y administrar repositorios](#CrearAdministrarRepositorios)
+    * [Creación desde una plantilla](#CreacionDesdePlantilla)
+        * [Acerca de las plantillas de repositorio](#AcercaPlantillasRepositorio)
+        * [Crear un repositorio desde una plantilla](#CrearRepositorioDesdePlantilla)
+        * [Crear plantilla desde repositorio](#CrearPlantillaDesdeRepositorio)
 
-## Tipos de cuentas
+## Tipos de cuentas<a id="TiposCuentas"></a>
 
 * Cuentas de usuario
 * Cuentas de organización
 * Cuentas empresariales
 
-### Cuenta de usuario
+### Cuenta de usuario<a id="CuentasUsuario"></a>
 
 Cada persona que usa GitHub inicia sesión en una cuenta de usuario. Su cuenta de usuario es su identidad en GitHub y tiene un nombre de usuario y perfil.
 
@@ -118,6 +127,7 @@ Los administradores de la cuenta empresarial pueden:
 * Acceda a características como GitHub Copilot Enterprise y los productos Advanced Security
 * Hacer cumplir las políticas.
 
+<a id="FusionCuentas"></a>
 ## Fusión de múltiples cuentas personales
 
 Recomendamos usar solo una cuenta personal para administrar repositorios personales y profesionales.
@@ -134,3 +144,53 @@ Recomendamos usar solo una cuenta personal para administrar repositorios persona
 2. Actualizar las URL remotas en cualquier clón local de los repositorios que se movieron.
 3. Para atribuir las confirmaciones anteriores a la nueva cuenta, agregue la dirección de correo electrónico que utilizó para crear las confirmaciones a la cuenta que mantiene. Para obtener más información, consulte ¿Por qué mis contribuciones no aparecen en mi perfil?
 4. Eliminar la cuenta ya no quieres usar.
+
+
+## Crear y aministrar repositorios<a id="CrearAdministrarRepositorios"></a>
+
+### Creación desde una plantilla<a id="CreacionDesdePlantilla"></a>
+
+Puedes generar un nuevo repositorio con la misma estructura de directorio y los mismos archivos que un repositorio existente.
+
+#### Acerca de las plantillas de repositorio<a id="AcercaPlantillasRepositorio"></a>
+
+Puede crear una plantilla a partir de un repositorio existente. Cualquier persona con acceso al repositorio de plantillas puede crear un nuevo repositorio basado en la plantilla con la misma estructura de directorios, ramas y archivos.
+
+> [!TIP]
+> También puedes crear un repositorio a partir de una plantilla con la GitHub CLI. Para más información, vea [`gh repo create`](https://cli.github.com/manual/gh_repo_create) en la documentación de GitHub CLI.
+
+Puedes elegir incluir la estructura de directorio y archivos únicamente desde la rama predeterminada del repositorio plantilla o incluir todas las ramas. Las ramas que se creen a partir de una plantilla tienen historiales sin relación, lo cual significa que no puedes crear solicitudes de cambio ni hacer fusiones entre las ramas.
+
+Crear un repositorio a partir de una plantilla es similar a bifurcar un repositorio, pero existen algunas diferencias importantes:
+
+* Una nueva bifurcación incluye todo el historial de confirmaciones del repositorio padre, mientras que un repositorio creado a partir de una plantilla comienza con una única confirmación.
+* Las confirmaciones en una bifurcación no aparecen en tu gráfico de contribuciones, mientras que las confirmaciones en un repositorio creado a partir de una plantilla sí se muestran en tu gráfico de contribuciones.
+* Una bifurcación puede ser una forma temporaria de contribuir código a un proyecto existente, mientras que crear un repositorio a partir de una plantilla permite iniciar rápidamente un proyecto nuevo.
+
+#### Crear un repositorio desde una plantilla <a id="CrearRepositorioDesdePlantilla"></a>
+
+1. Navega hasta la página del repositorio.
+2. Encima de la lista de archivos, haga click en **Use this template**.
+3. Selecciona **Crear un repositorio nuevo**.
+4. Usa el menú desplegable **Propietario** para seleccionar la cuenta que quieres que sea propietaria del repositorio.
+5. Teclea el nombre de tu repositorio, y una descripción opcional.
+6. Elige la visibiilidad del repositorio.
+7. Seleccione **Include all branches** para incluir la estructura de directorios y archivos de todas las ramas.
+8. Seleccione las aplicaciones del Marketplace que le gustaría usar en el repositorio.
+9. Haga click en **Create repositoriy from template**.
+
+#### Crear plantilla desde repositorio <a id="CrearPlantillaDesdeRepositorio"></a>
+
+Cualquier persona con acceso al repositorio de plantillas puede crear un nuevo repositorio basado en la plantilla con la misma estructura de directorios, ramas y archivos.
+
+Una vez que conviertas tu repositorio en una plantilla, cualquier usuario con acceso al repositorio podrá generar un nuevo repositorio con la misma estructura de directorio y los mismos archivos que la rama predeterminada.
+
+> [!NOTE]
+> El repositorio de plantillas no puede incluir archivos que se almacenen mediante Git LFS.
+
+> [!NOTE]
+> Puedes usar un repositorio de plantillas como el código inicial de una asignación en GitHub Classroom. [Crear una tarea desde un repositorio de plantilla](https://docs.github.com/es/education/manage-coursework-with-github-classroom/teach-with-github-classroom/create-an-assignment-from-a-template-repository)
+
+1. Navegue hasta la página del repositorio.
+2. En el nombre del repositorio, haz clic en  **Configuración**.
+3. Seleccione **Template repository**
