@@ -209,3 +209,4 @@ Una vez que conviertas tu repositorio en una plantilla, cualquier usuario con ac
 1. Navegue hasta la página del repositorio.
 2. En el nombre del repositorio, haz clic en  **Configuración**.
 3. Seleccione **Template repository**
+

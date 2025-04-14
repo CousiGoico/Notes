@@ -1,0 +1,70 @@
+
+Which feature in GitHub Projects enables you to effortlessly generate graphs and charts for visualizing the current status and historical progression of your project?
+https://docs.github.com/en/issues/planning-and-tracking-with-projects/viewing-insights-from-your-project/about-insights-for-projects
+
+If you face yourself often writing the same set of comments on issues or pull requests, what GitHub feature would you use to save time?
+https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/using-saved-replies
+
+You want to merge changes from branch feature-a into main and you are creating a pull request. Which branch should be the base branch and which branch should be the compare branch?
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests
+
+What is InnerSource?
+https://resources.github.com/innersource/what-is-innersource/
+
+What are the use cases for labels?
+https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels
+
+What are the different repository visibility options? #(Private, Public and Internal (Enterprise only) or Private and Public)
+https://docs.github.com/en/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility
+
+Which search query finds all open issues labeled test that mention 'fix' in their body text?
+https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests
+
+Which information can be found in the Pulse section in the Insights tab of a repository? (Choose four)
+https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/using-pulse-to-view-a-summary-of-repository-activity
+
+ Which statement best describes a major difference between new GitHub Projects and GitHub Projects Classic?
+ https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects#differences-from-projects-classic
+
+ Which of these can you customize in a Codespaces .devcontainer/devcontainer.json configuration file?
+ https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers
+
+
+ What are the different possible lifecycle phases for a GitHub Codespace?
+ https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle
+
+ GitHub Action workflows are triggered by events. Which of these are valid events that GitHub Actions support?
+ https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#about-events-that-trigger-workflows
+
+ Which of these statements about GitHub Enterprise deployment options are true?
+https://docs.github.com/en/enterprise-cloud@latest/admin/overview/about-github-for-enterprises#about-deployment-options
+
+Which of these is a capability of a Security Manager with respect to GitHub Actions in an organization?
+https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization
+
+Which tool helps you keep the repository dependencies up to date? (Dependabot, CodeQL)
+https://docs.github.com/en/code-security/dependabot 
+https://codeql.github.com/
+
+Why would a repository owner want to use milestones? 
+https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones
+
+What is the effect of adding a line Closes #11 to the pull request's description?
+https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests#linking-a-pull-request-to-an-issue
+
+What are the different available options for adding issues and pull requests to a GitHub Project board?
+https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-items-in-your-project/adding-items-to-your-project#adding-issues-and-pull-requests-to-a-project
+
+What is a GitHub Codespace deep link?
+https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/setting-up-your-repository/facilitating-quick-creation-and-resumption-of-codespaces#configuring-more-options
+
+
+What are the different forms of two-factor or multi-factor authentication supported by GitHub?
+https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication
+
+What is the GitHub Sponsors program?
+https://docs.github.com/en/sponsors/getting-started-with-github-sponsors/about-github-sponsors
+
+What is one of the main benefits for using a Personal Access Token (PAT) instead of a standard username and password for GitHub authentication?
+https://learn.microsoft.com/en-us/training/modules/github-introduction-administration/3-how-github-authentication-works
+
