@@ -18,8 +18,8 @@
             * [Colaboradores externos](#ColaboradoresExternos)
     * [Cuenta empresarial](#CuentasEmpresarial)
 * [Fusión de múltiples cuentas personales](#FusionCuentas)
-* [Crear y administrar repositorios](#CrearAdministrarRepositorios)
-    * [Creación desde una plantilla](#CreacionDesdePlantilla)
+* [Crear y administrar repositorios](#crear-y-aministrar-repositorios)
+    * [Creación desde una plantilla](#creacion-desde-plantilla)
         * [Acerca de las plantillas de repositorio](#AcercaPlantillasRepositorio)
         * [Crear un repositorio desde una plantilla](#CrearRepositorioDesdePlantilla)
         * [Crear plantilla desde repositorio](#CrearPlantillaDesdeRepositorio)
@@ -163,7 +163,7 @@ Recomendamos usar solo una cuenta personal para administrar repositorios persona
 
 ## Crear y aministrar repositorios<a id="CrearAdministrarRepositorios"></a>
 
-### Creación desde una plantilla<a id="CreacionDesdePlantilla"></a>
+### Creación desde una plantilla <a id="creacion-desde-plantilla"></a>
 
 Puedes generar un nuevo repositorio con la misma estructura de directorio y los mismos archivos que un repositorio existente.
 
