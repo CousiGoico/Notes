@@ -13,6 +13,13 @@
     - [Parar un codespace](#parar-un-codespace)
     - [Eliminar un codespace](#eliminar-un-codespace)
     - [Perdida de conexión con un codespace](#perdida-de-conexión-con-un-codespace)
+    - [Publicar codespace a través de una plantilla](#publicar-codespace-a-través-de-una-plantilla)
+        - [Codespace a través de una plantilla de GitHub](#codespace-a-través-de-una-plantilla-de-github)
+        - [Codespace a través de una plantilla](#codespace-a-través-de-una-plantilla)
+    - [Configuraciones del codespace](#configuraciones-del-codespace)
+        - [Configuración del período de tiempo de espera predeterminado](#configuración-del-período-de-tiempo-de-espera-predeterminado)
+        - [Visualización del uso de GitHub Codespaces](#visualización-del-uso-de-github-codespaces)
+        - [DevContainer.json](#devcontainerjson)
 
 ## Sobre el ciclo de vida de un codespace
 
@@ -108,25 +115,80 @@ Los cambios sin commit serán guardados. Puedes usar el fichero `decontainer.jso
 
 ## Publicar codespace a través de una plantilla
 
-<!--TODO-->
+### Codespace a través de una plantilla de GitHub
+
+1. En la esquina superior izquierda de GitHub, seleccione el menu y haga clic en **Codespaces** para acceder a la página de `Sus codespaces` en github.com/codespaces.
+
+2. Para ver la lista completa de plantillas, en `Explorar plantillas de inicio rápido`, haz clic en Ver todo.
+
+3. Opcionalmente, para ver el repositorio de plantilla que contiene los archivos de una plantilla, haz clic en el nombre de la plantilla.
+
+4. En el nombre de la plantilla que deseas iniciar, haz clic en Usar esta plantilla.
+
+### Codespace a través de una plantilla
+
+1. En GitHub, navegue hasta la página principal del repositorio.
+
+2. Haz clic en `Usar esta plantilla` y luego en `Abrir en un codespace`.
 
 ## Configuraciones del codespace
 
 ### Configuración del período de tiempo de espera predeterminado
 
-### Establecimiento de un período de retención predeterminado para los codespaces
+1. En la esquina superior derecha de cualquier página en GitHub, haga clic en la fotografía de perfil y luego en `Configuración`.
 
-[Web](https://docs.github.com/es/codespaces/setting-your-user-preferences/configuring-automatic-deletion-of-your-codespaces)
+2. En la sección `Código, planificación y automatización` de la barra lateral, haz clic en `Codespaces`.
+
+3. En `Período de retención predeterminado`, escribe el número de días para los que deseas que se conserven los codespaces, de forma predeterminada, una vez detenidos.
+
+4. Haga clic en `Save(Guardar)`.
 
 ### Visualización del uso de GitHub Codespaces
 
-[Web](https://docs.github.com/es/billing/managing-billing-for-your-products/managing-billing-for-github-codespaces/viewing-your-github-codespaces-usage)
+1. En la esquina superior derecha de cualquier página en GitHub, haga clic en la fotografía de perfil y luego en `Configuración`.
+
+2. En la sección `Acceso` de la barra lateral, haz clic en  Facturación y planes y luego en Planes y uso.
+
+3. En `Codespaces`, puedes ver cuántas horas del uso de núcleo del proceso de GitHub Codespaces y los GB-meses de almacenamiento que has usado hasta ahora en el mes de facturación actual.
+
+4. Opcionalmente, haz clic en `Horas de uso y Almacenamiento` para ver más detalles.
+
+5. Opcionalmente, junto a `Uso este mes`, haz clic en `Obtener informe de uso` para recibir un correo electrónico que contenga un vínculo para descargar un informe CSV de uso de almacenamiento de GitHub Actions, GitHub Packages y GitHub Codespaces. El correo electrónico se envía a la dirección de correo electrónico principal de la cuenta. Puedes elegir si el informe debe abarcar los últimos 7, 30, 90 o 180 días.
+
+![Codespace billing](..\Images\CodespaceBilling.png)
 
 ### DevContainer.json
 
-[Web](https://docs.github.com/es/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
+        {
+            "name": "My Dev Container",
+            "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:18", // or use "build"
+            "build": {
+                "dockerfile": "Dockerfile",
+                "context": ".",
+                "args": {
+                "VAR_NAME": "value"
+                }
+            },
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode"
+            ],
+            "postCreateCommand": "npm install",
+            "remoteUser": "node",
+            "forwardPorts": [3000, 9229],
+            "mounts": [
+                "source=${localWorkspaceFolder}/data,target=/workspace/data,type=bind"
+            ],
+            "features": {
+                "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+            },
+            "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"]
+        }
+
 
 <!--TODO-->
 
-Imagen del ciclo de vida de un codespace.
-<!--TODO-->
+![Lifecycle of codespace](..\Images\codespace-lifecycle.png)
