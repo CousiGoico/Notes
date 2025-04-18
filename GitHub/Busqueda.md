@@ -2,7 +2,7 @@
 
 ## Contenido
 
-- [Introudcción](#introudcción)
+- [Introducción](#introducción)
 - [Calificadores](#calificadores)
   - [Is](#is)
 - [Búsquedas](#búsquedas)
@@ -13,7 +13,7 @@
   - [Búsqueda de usuarios](#búsqueda-de-usuarios)
 - [Referencias](#referencias)
 
-## Introudcción
+## Introducción
 
 Dentro de la plataforma de GitHub existe un buscador. Existen algunos trucos para encontrar de manera mas sencilla lo que buscamos dentro de GitHub.
 
