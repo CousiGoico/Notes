@@ -174,10 +174,6 @@ GitHub no factura ninguna de las siguientes cuentas:
 - Usuarios que han sido aprovisionados con una cuenta de usuario administrada, pero no son miembros de ninguna organización en la empresa.
 - El scim-admin configuración de usuario, cuando SCIM está habilitado en su dispositivo GitHub Enterprise Server.
 
-#### Cuentas que consumen una licencia en GitHub Enterprise Server
-
-
-
 ## Referencias
 
 [GitHub docs](https://docs.github.com/es/get-started/learning-about-github/githubs-plans)
