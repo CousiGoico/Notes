@@ -1,0 +1,1 @@
+[Comparación con otras plataformas](https://resources.github.com/devops/tools/compare/)
