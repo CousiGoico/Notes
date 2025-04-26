@@ -1,3 +1,49 @@
+# GitHub Actions
+
+## Contenido
+
+- [Introducción](#introducción)
+- [Eventos](#eventos)
+- [Ejemplo](#ejemplo)
+- [Referencias](#referencias)
+
+## Introducción
+
+Los GitHub Actions son flujos de trabajo de desarrollo de software que se guardan en tus repositorios como ficheros con extensión .yml. Puedes crear una gran variedad de flujos de trabajo, incluido CI/CD, totalmente personalizado.
+
+Estos flujos de trabajo pueden ser ejecutados en tu máquina local o en GitHub.
+
+### Plantillas
+
+Las plantillas de flujo de trabajo son plantillas que le ayudan a crear flujos de trabajo de GitHub Actions propios para un repositorio. Según la tecnologia que uses en el repositorio, GitHub te ofrece una lista de plantillas para dicha tecnologia.
+
+- Implementación (CD)
+- Integración continua (CI)
+- Automatización: Las plantillas de flujo de trabajo de automatización ofrecen soluciones para automatizar flujos de trabajo, como evaluar las solicitudes de incorporación de cambios (pull requests) y aplicar una etiqueta basada en las rutas modificadas en la solicitud de incorporación de cambios, o bien saludar a los usuarios que colaboran por primera vez en el repositorio.
+- Escanear código
+- Páginas
+
+## Eventos
+
+Los activadores de los flujos de trabajo son eventos que ocasionan que se ejecute un flujo de trabajo. Algunos eventos tienen tipos de actividad múltiple.
+
+> [!NOTE]
+> No todos los eventos de webhook activan flujos de trabajo.
+
+- Eventos que ocurren en el repositorio de su flujo de trabajo
+- Eventos que ocurren fuera de GitHub y desencadenan un repository_dispatch evento en GitHub
+- Tiempos programados
+- Manual
+
+El proceso de la ejecución de un evento sería el siguiente:
+
+1. Un evento ourre en su repositorio. El evento tiene un compromiso asociado SHA y Git ref.
+2. GitHub busca en el directorio `.github/workflows` en la raíz de su repositiorio que estén presentes en la confirmación asociada SHA o Git ref del evento.
+3. Se activa una ejecución de flujo de trabajo para cualquier flujo de trabajo que tenga `on:` valores que coinciden con el evento desencadenante. Algunos eventos también requieren que el archivo de flujo de trabajo esté presente en la rama predeterminada del repositorio para poder ejecutarse.
+
+Cuando se ejecuta un flujo de trabajo, GitHub establece el GITHUB_SHA (compromiso SHA) y GITHUB_REF (Git ref) variables de entorno en el entorno del corredor.
+
+Cuando usas el repositorio `GITHUB_TOKEN` para realizar tareas, eventos activados por el `GITHUB_TOKEN`, con la excepción de `workflow_dispatch` y repository_dispatch, no creará una nueva ejecución de flujo de trabajo. Esto le impide crear accidentalmente ejecuciones de flujo de trabajo recursivas.
 
 ## Ejemplo
 
@@ -37,7 +83,6 @@
                 slot-name: 'staging'            # <-- O 'production' si quieres desplegar directamente
                 publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
                 package: './publish'
-
 
 ## Referencias
 
