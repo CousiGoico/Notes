@@ -1,12 +1,41 @@
-# Autenticación
+# Autenticación en GitHub
 
 ## Contenido
+
+- [Introducción](#introducción)
+- [Autenticación](#autenticación)
+  - [Administración de la organización mediante SAML SSO](#administración-de-la-organización-mediante-saml-sso)
+  - [Información privada de la organización](#información-privada-de-la-organización)
+  - [Autenticación mediante el inicio de sesión único de SAML](#autenticación-mediante-el-inicio-de-sesión-único-de-saml)
+  - [Aplicación del inicio de sesión único de SAML en la organización](#aplicación-del-inicio-de-sesión-único-de-saml-en-la-organización)
+  - [Autenticación multifactor o 2FA](#autenticación-multifactor-o-2fa)
+    - [Llaves de seguridad](#llaves-de-seguridad)
+    - [TOTP](#totp)
+    - [SMS](#sms)
+    - [Uso de autenticación de dos factores con la línea de comandos](#uso-de-autenticación-de-dos-factores-con-la-línea-de-comandos)
+      - [Autenticación en la línea de comandos usando Git Credential Manager](#autenticación-en-la-línea-de-comandos-usando-git-credential-manager)
+      - [Autenticación en la línea de comandos utilizando HTTPS](#autenticación-en-la-línea-de-comandos-utilizando-https)
+      - [Autenticación en la línea de comandos usando SSH](#autenticación-en-la-línea-de-comandos-usando-ssh)
+      - [Perdida de credenciales de autenticación de dos factores](#perdida-de-credenciales-de-autenticación-de-dos-factores)
+  - [Auditoría de 2FA para el cumplimiento de los usuarios](#auditoría-de-2fa-para-el-cumplimiento-de-los-usuarios)
+- [Autorización de usuario](#autorización-de-usuario)
+  - [Autorización con el SSO de SAML mediante SCIM](#autorización-con-el-sso-de-saml-mediante-scim)
+  - [lave SSH y PAT con el SSO de SAML](#clave-ssh-y-pat-con-el-sso-de-saml)
+  - [Conexión del IdP a la organización](#conexión-del-idp-a-la-organización)
+- [Sincronización de equipos](#sincronización-de-equipos)
+  - [Usuarios administrados de Enterprise](#usuarios-administrados-de-enterprise)
+    - [Límites de uso](#límites-de-uso)
+    - [Habilitación de la sincronización de equipos](#habilitación-de-la-sincronización-de-equipos)
+    - [Deshabilitación de la sincronización de equipos](#deshabilitación-de-la-sincronización-de-equipos)
+- [Referencias](#referencias)
 
 ## Introducción
 
 La autenticación en una cuenta individual es mediante usuario y contraseña. Todas las cuentas disponen del segundo factor de autenticación (2FA) y se recomienda su uso. En el caso de una cuenta Enterprise, se puede usar una autenticación SAML.
 
 ## Autenticación
+
+La autenticación es el método que una plataforma dispone para identificar al usuario que accede.
 
 ### Administración de la organización mediante SAML SSO
 
@@ -54,6 +83,8 @@ La autenticación en dos fases es un nivel adicional de seguridad disponible par
 > [!CAUTION]
 > Cuando exija el uso de la autenticación en dos fases para su organización, todas las cuentas que no usen 2FA se quitarán de la organización y perderán el acceso a sus repositorios. Esto incluye las cuentas de bots.
 
+Cuando configure 2FA por primera vez, su cuenta ingresará un período de verificación durante 28 días para asegurarse de que los métodos 2FA de su cuenta estén configurados correctamente.
+
 En su instancia de GitHub Enterprise, los usuarios tienen tres maneras de autenticarse con 2FA: mediante claves de seguridad, TOTP y SMS.
 
 #### Llaves de seguridad
@@ -67,6 +98,29 @@ GitHub recomienda usar una aplicación de TOTP basada en la nube para configurar
 #### SMS
 
 Si los usuarios no pueden autenticarse mediante una aplicación móvil de TOTP, pueden hacerlo mediante mensajes SMS. GitHub no admite la autenticación mediante SMS en todos los países y regiones. Antes de permitir que los usuarios se autentiquen mediante SMS, un administrador debe confirmar que este método se admite en el país o la región donde se encuentran los usuarios.
+
+#### Uso de autenticación de dos factores con la línea de comandos
+
+##### Autenticación en la línea de comandos usando Git Credential Manager
+
+[Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager/blob/main/README.md) es un ayudante seguro de credenciales de Git que se ejecuta en Windows, macOS y Linux.
+
+##### Autenticación en la línea de comandos utilizando HTTPS
+
+Debe crear un token de acceso personal para usarlo como contraseña al autenticarse en GitHub en la línea de comandos utilizando URL HTTPS.
+
+Cuando se le solicite un nombre de usuario y contraseña en la línea de comandos, use su nombre de usuario de GitHub y su token de acceso personal. El mensaje de la línea de comandos no especificará que debe ingresar su token de acceso personal cuando solicite su contraseña.
+
+##### Autenticación en la línea de comandos usando SSH
+
+Habilitar 2FA no cambia la forma en que se autentica en GitHub en la línea de comandos utilizando las URL SSH. [Conexión a GitHub con SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+
+#### Perdida de credenciales de autenticación de dos factores
+
+Si pierde el acceso a sus credenciales de autenticación de dos factores, puede usar sus códigos de recuperación u otro método de recuperación (si ha configurado uno) para recuperar el acceso a su cuenta. [Recuperar su cuenta si pierde sus credenciales 2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials)
+
+> [!NOTE]
+> Si no puede usar ningún método de recuperación, ha perdido permanentemente el acceso a su cuenta. Sin embargo, puede desvincular una dirección de correo electrónico vinculada a la cuenta bloqueada. La dirección de correo electrónico no vinculada se puede vincular a una cuenta nueva o existente. [Desvincular su dirección de correo electrónico de una cuenta bloqueada](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-personal-account/unlinking-your-email-address-from-a-locked-account)
 
 ### Auditoría de 2FA para el cumplimiento de los usuarios
 
@@ -175,3 +229,5 @@ Al deshabilitar la sincronización de equipos, los miembros del equipo que se as
 - [GItHub docs](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication)
 
 - [GItHub docs](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/about-enterprise-managed-users#about-enterprise-managed-users)
+
+- [Microsoft Learn](https://learn.microsoft.com/es-es/training/modules/authenticate-authorize-user-identities-github/)
