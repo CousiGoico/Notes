@@ -6,6 +6,8 @@
 
 La autenticación en una cuenta individual es mediante usuario y contraseña. Todas las cuentas disponen del segundo factor de autenticación (2FA) y se recomienda su uso. En el caso de una cuenta Enterprise, se puede usar una autenticación SAML.
 
+## Autenticación
+
 ### Administración de la organización mediante SAML SSO
 
 El SSO de SAML proporciona un vínculo entre la autorización del proveedor de identidades (IdP) y el acceso a proveedores de servicios (SaaS). Esta forma de autenticación permite a los usuarios iniciar sesión en todas sus aplicaciones con un único conjunto de credenciales. Mediante SAML, el IdP autentica a los usuarios y concede autorización a servicios como GitHub. Cuando un usuario inicia sesión en GitHub, puede ver de qué empresas es miembro. Pero si el usuario intenta acceder a los datos del repositorio, GitHub solicitará las credenciales de empresa (id. de empresa).
@@ -71,6 +73,102 @@ Si los usuarios no pueden autenticarse mediante una aplicación móvil de TOTP, 
 Puede revisar qué propietarios de la organización, miembros y colaboradores externos han habilitado la autenticación en dos fases; para ello, vaya a la esquina derecha de GitHub.com, haga clic en su foto de perfil, seleccione `Sus organizaciones` y, después, seleccione el nombre de la organización que quiera. Debajo del nombre de la organización, seleccione la pestaña `Personas` y seleccione la opción `2FA`. Aquí puede ver qué miembros de la organización y qué colaboradores externos han habilitado la autenticación en dos fases.
 
 Es posible revocar el acceso a los usuarios de la empresa que no cumplen los requisitos, pero deberá ponerse en contacto con ellos fuera de GitHub para comunicarles por qué ya no tienen acceso a su organización. La comunicación con los usuarios que no cumplen los requisitos se realiza tradicionalmente mediante notificaciones por correo electrónico.
+
+## Autorización de usuario
+
+Una vez que el usuario se ha autenticado, debe autorizar cualquier token de acceso personal, clave SSH o aplicación de OAuth que quiera que use el usuario para acceder a los recursos de la organización.
+
+### Autorización con el SSO de SAML mediante SCIM
+
+El inicio de sesión único (SSO) de SAML proporciona a los propietarios de la organización y de la empresa en GitHub una manera de controlar y proteger el acceso a los recursos de la organización, como repositorios, incidencias y solicitudes de incorporación de cambios. Si usa el inicio de sesión único de SAML en su organización, puede implementar SCIM, o System for Cross-domain Identity Management. SCIM le permite agregar, administrar o quitar el acceso de los miembros de la organización en GitHub.
+
+SCIM es un protocolo que indica al directorio que se ha creado una cuenta y permite automatizar el intercambio de información de identidad de usuario entre sistemas. Al incorporar un nuevo empleado, el uso de un directorio central permite aprovisionar automáticamente al usuario para que acceda a servicios como GitHub. Un administrador puede desaprovisionar a un miembro de la organización mediante SCIM y quitarlo automáticamente de la organización.
+
+> [!NOTE]
+> Si usa el inicio de sesión único de SAML sin implementar SCIM, no podrá usar el desaprovisionamiento automático.
+
+Las integraciones de SCIM permiten el intercambio seguro de datos de identidad de usuario entre el IdP y su empresa en GitHub. Cuando las sesiones de los miembros de una organización expiran después de quitar su acceso del IdP, los miembros no se quitan automáticamente de la organización. Los tokens autorizados conceden acceso a la organización incluso después de que expiren sus sesiones. Para quitar este acceso, puede quitar manualmente el token autorizado de la organización o automatizar su eliminación con SCIM.
+
+### Clave SSH y PAT con el SSO de SAML
+
+El IdP de SAML y el cliente de SCIM deben usar los mismos valores de NameID y userName para cada usuario.  Cada vez que realice cambios en la pertenencia a grupos en su IdP, el IdP realizará una llamada SCIM a GitHub.com para actualizar la pertenencia de la organización correspondiente.
+
+Para acceder a los recursos protegidos de la organización mediante la API y Git en la línea de comandos, los usuarios tendrán que estar autorizados y autenticarse con un PAT (token de acceso personal) o una clave SSH. Los usuarios pueden autorizar un PAT o una clave SSH existentes, o bien crear unos nuevos y luego autorizarlos. Como administrador, puede revisar cada token de acceso personal y cada clave SSH que un miembro ha autorizado para el acceso a la API y a Git.
+
+Los propietarios de la organización pueden invitar a nuevos miembros manualmente desde GitHub o mediante la API. Para aprovisionar nuevos usuarios sin una invitación de un propietario de la organización, puede usar la dirección URL `https://github.com/orgs/ORGANIZATION/sso/sign_up`, reemplazando ORGANIZATION por el nombre de su organización.
+
+La primera vez que un miembro usa el inicio de sesión único de SAML para acceder a la organización, GitHub crea automáticamente un registro que vincula la organización, la cuenta del miembro de GitHub y la cuenta del miembro en el IdP. La automatización de estas tareas reduce el tiempo necesario para que un administrador administre las credenciales de usuario.
+
+### Conexión del IdP a la organización
+
+Para usar el inicio de sesión único de SAML y SCIM, debe conectar su proveedor de identidades a su organización de GitHub. Lista de los proveedores de identidades que admite GitHub para SCIM:
+
+- Microsoft Entra ID
+- Okta
+- OneLogin
+
+Las solicitudes sobre los temas siguientes estén fuera del alcance del soporte técnico de GitHub:
+
+- Integración con productos de terceros
+- Configuración de hardware
+- CI/CD, como Jenkins
+- Escritura de scripts
+- Configuración de sistemas de autenticación externos, como proveedores de identidades de SAML
+- Proyectos de código abierto
+
+El soporte técnico de GitHub en relación con los cambios en la forma en que GitHub.com usa SCIM y SAML está disponible para las empresas que usan uno de los proveedores anteriores.
+
+## Sincronización de equipos
+
+Si su empresa usa Microsoft Entra ID u Okta como IdP para su empresa en la nube de GitHub, puede usar la sincronización de equipos para administrar la pertenencia a equipos dentro de cada organización mediante grupos de IdP. Puede administrar las identidades de los usuarios de forma centralizada, lo que permite la autorización, la revisión y la revocación de permisos.
+
+|Características|Descripción|
+|---------------|-----------|
+|Sync Users (Sincronización de usuarios)|Agrega o quita usuarios de `Teams` en GitHub para mantener la sincronización con los grupos de Active Directory.|
+|Sync on new team (Sincronización en un nuevo equipo)|Sincroniza los usuarios cuando se crea un nuevo equipo.|
+|Custom team/group maps (Asignaciones personalizadas de grupo o equipo)|El `slug` del equipo y el nombre del grupo se harán coincidir automáticamente, a menos que defina una asignación personalizada con `syncmap.yml`.|
+|Dynamic Config (Configuración dinámica)|Usa un archivo `settings` para derivar la configuración de Active Directory y GitHub.|
+
+### Usuarios administrados de Enterprise
+
+Usuarios administrados de Enterprise es una característica de GitHub Enterprise Cloud que proporciona un mayor control sobre los miembros y recursos empresariales.
+
+Cuando se usan usuarios administrados de Enterprise, todos los miembros se aprovisionan y administran a través del IdP. Los usuarios no crean sus propias cuentas en GitHub. Puede administrar la pertenencia a la organización y al equipo mediante grupos en el IdP. Las cuentas de usuario administradas están restringidas a su empresa y no pueden insertar código, colaborar ni interactuar con usuarios, repositorios u organizaciones fuera de su empresa.
+
+#### Límites de uso
+
+A la hora de usar la característica de sincronización de equipos, hay límites de uso específicos que debe conocer. Sobrepasar estos límites puede provocar un rendimiento inesperado y errores de sincronización.
+
+- Número máximo de miembros en un equipo de GitHub: 5000
+- Número máximo de miembros en una organización de GitHub: 10 000
+- Número máximo de equipos en una organización de GitHub: 1500
+
+#### Habilitación de la sincronización de equipos
+
+Con la sincronización de equipos, puede usar el IdP para administrar tareas administrativas como la incorporación de nuevos miembros, la concesión de nuevos permisos en la organización y la eliminación del acceso de los miembros.
+
+Puede habilitar y usar la sincronización de equipos, pero solo con los siguientes IdP admitidos:
+
+- Microsoft Entra ID
+- Okta
+
+Para habilitar la sincronización de equipos con su IdP, debe obtener acceso administrativo o trabajar con el administrador de su IdP para configurar la integración y los grupos de IdP.
+
+**Microsoft Entra ID**: El administrador del sistema de GitHub para la organización de GitHub tendrá que identificar al administrador de Microsoft Entra y trabajar con él para configurar la sincronización de equipos. En el lado de Microsoft Entra ID, el servicio se denomina "aprovisionamiento automático de cuentas de usuario". Para habilitar la sincronización de equipos para Microsoft Entra ID, la instalación necesita los siguientes permisos:
+
+- Leer los perfiles completos de todos los usuarios
+- Iniciar sesión y leer perfiles de usuario
+- Leer datos de directorio
+
+**Okta**: para habilitar la sincronización de equipos para Okta, usted o el administrador de su IdP deben:
+
+- Habilitar el SSO de SAML y SCIM para su organización mediante Okta.
+- Proporcionar la dirección URL del inquilino para la instancia de Okta.
+- Generar un token de SSWS válido con permisos administrativos de solo lectura para la instalación de Okta como usuario de servicio.
+
+#### Deshabilitación de la sincronización de equipos
+
+Al deshabilitar la sincronización de equipos, los miembros del equipo que se asignaron a un equipo de GitHub mediante un grupo de IdP se quitan del equipo y pueden perder el acceso a los repositorios de su organización. Puede deshabilitar esta característica en la configuración de la organización; para ello, haga clic en `Su organización` y luego seleccione `Configuración`. Después, haga clic en `Seguridad de la organización` y elija `Deshabilitar` la sincronización de equipos.
 
 ## Referencias
 
