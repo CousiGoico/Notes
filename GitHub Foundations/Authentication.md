@@ -12,11 +12,14 @@
     - [Llaves de seguridad](#llaves-de-seguridad)
     - [TOTP](#totp)
     - [SMS](#sms)
+<<<<<<< HEAD
     - [Uso de autenticación de dos factores con la línea de comandos](#uso-de-autenticación-de-dos-factores-con-la-línea-de-comandos)
       - [Autenticación en la línea de comandos usando Git Credential Manager](#autenticación-en-la-línea-de-comandos-usando-git-credential-manager)
       - [Autenticación en la línea de comandos utilizando HTTPS](#autenticación-en-la-línea-de-comandos-utilizando-https)
       - [Autenticación en la línea de comandos usando SSH](#autenticación-en-la-línea-de-comandos-usando-ssh)
       - [Perdida de credenciales de autenticación de dos factores](#perdida-de-credenciales-de-autenticación-de-dos-factores)
+=======
+>>>>>>> b884eeb8f7b9e06b5e33d232dfe6fbf97122c33d
   - [Auditoría de 2FA para el cumplimiento de los usuarios](#auditoría-de-2fa-para-el-cumplimiento-de-los-usuarios)
 - [Autorización de usuario](#autorización-de-usuario)
   - [Autorización con el SSO de SAML mediante SCIM](#autorización-con-el-sso-de-saml-mediante-scim)
