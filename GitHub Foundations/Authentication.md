@@ -1,12 +1,36 @@
-# Autenticación
+# Autenticación en GitHub
 
 ## Contenido
+
+- [Introducción](#introducción)
+- [Autenticación](#autenticación)
+  - [Administración de la organización mediante SAML SSO](#administración-de-la-organización-mediante-saml-sso)
+  - [Información privada de la organización](#información-privada-de-la-organización)
+  - [Autenticación mediante el inicio de sesión único de SAML](#autenticación-mediante-el-inicio-de-sesión-único-de-saml)
+  - [Aplicación del inicio de sesión único de SAML en la organización](#aplicación-del-inicio-de-sesión-único-de-saml-en-la-organización)
+  - [Autenticación multifactor o 2FA](#autenticación-multifactor-o-2fa)
+    - [Llaves de seguridad](#llaves-de-seguridad)
+    - [TOTP](#totp)
+    - [SMS](#sms)
+  - [Auditoría de 2FA para el cumplimiento de los usuarios](#auditoría-de-2fa-para-el-cumplimiento-de-los-usuarios)
+- [Autorización de usuario](#autorización-de-usuario)
+  - [Autorización con el SSO de SAML mediante SCIM](#autorización-con-el-sso-de-saml-mediante-scim)
+  - [lave SSH y PAT con el SSO de SAML](#clave-ssh-y-pat-con-el-sso-de-saml)
+  - [Conexión del IdP a la organización](#conexión-del-idp-a-la-organización)
+- [Sincronización de equipos](#sincronización-de-equipos)
+  - [Usuarios administrados de Enterprise](#usuarios-administrados-de-enterprise)
+    - [Límites de uso](#límites-de-uso)
+    - [Habilitación de la sincronización de equipos](#habilitación-de-la-sincronización-de-equipos)
+    - [Deshabilitación de la sincronización de equipos](#deshabilitación-de-la-sincronización-de-equipos)
+- [Referencias](#referencias)
 
 ## Introducción
 
 La autenticación en una cuenta individual es mediante usuario y contraseña. Todas las cuentas disponen del segundo factor de autenticación (2FA) y se recomienda su uso. En el caso de una cuenta Enterprise, se puede usar una autenticación SAML.
 
 ## Autenticación
+
+La autenticación es el método que una plataforma dispone para identificar al usuario que accede.
 
 ### Administración de la organización mediante SAML SSO
 
@@ -175,3 +199,5 @@ Al deshabilitar la sincronización de equipos, los miembros del equipo que se as
 - [GItHub docs](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication)
 
 - [GItHub docs](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/about-enterprise-managed-users#about-enterprise-managed-users)
+
+- [Microsoft Learn](https://learn.microsoft.com/es-es/training/modules/authenticate-authorize-user-identities-github/)
