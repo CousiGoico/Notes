@@ -45,6 +45,25 @@ Cuando se ejecuta un flujo de trabajo, GitHub establece el GITHUB_SHA (compromis
 
 Cuando usas el repositorio `GITHUB_TOKEN` para realizar tareas, eventos activados por el `GITHUB_TOKEN`, con la excepción de `workflow_dispatch` y repository_dispatch, no creará una nueva ejecución de flujo de trabajo. Esto le impide crear accidentalmente ejecuciones de flujo de trabajo recursivas.
 
+## Elementos
+
+- name: nombre del flujo de trabajo.
+- on: información del ejecutor (en este tag no se indica)
+  - {evento}: aquí se indica el evento (push, pull_request, ...)
+    - {branches}: se indica la(s) rama(s) sobre las que al hacer el evento se dispará este flujo de trabajo.
+  - schedule: información de la programación de ejecución de este flujo de trabajo (en este tag no se indica)
+    - cron: se indica el cron en el que se desea ejecutar.
+  - workflow_call: información del flujo de trabajo que invoca a este (en este tag no se indica)
+
+- jobs: información de las tareas a realizar (en este tag no se indica)
+  - {nombre_job}: nombre del flujo de trabajo
+    - runs-on: en que OS se va a ejecutar (ubuntu-latest, windows-latest, ...)
+    - steps: información de los pasos a ejecutar (en este tag no se indica)
+      - name: nombre del paso.
+        needs: nombre del flujo de trabajo que es requerido.
+        run: sentencia a ejecutar.
+        uses: ruta o nombre del flujo de trabajo que deseamos ejecutar en este punto.
+
 ## Ejemplo
 
         name: .NET Build and Deploy on PR to Azure Windows App Service
@@ -93,3 +112,5 @@ Cuando usas el repositorio `GITHUB_TOKEN` para realizar tareas, eventos activado
 [GitHub docs - Built-in automations](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-built-in-automations)
 
 [GitHub docs - Configurar actions](https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository)
+
+[GitHub docs - Workflows](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions)
