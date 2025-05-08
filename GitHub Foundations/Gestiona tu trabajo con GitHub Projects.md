@@ -7,7 +7,7 @@
 ||Proyectos|Projects(clásico)|
 |-|--------|-----------------|
 |Tablas y paneles|Paneles, listas, diseño de escala de tiempo|Boards|
-|data|Ordena, clasifica y agrupa elementos por campos personalizados, como texto, número, fecha, iteración y selección única|Columnas y tarjetas|
+|Data|Ordena, clasifica y agrupa elementos por campos personalizados, como texto, número, fecha, iteración y selección única|Columnas y tarjetas|
 |Información detallada|Crea objetos visuales para ayudar a comprender el trabajo mediante gráficos históricos y actuales con proyectos|Barra de progreso|
 |Automatización|Usa los valores preestablecidos de GraphQL API, Acciones y Columna para administrar el proyecto|Configura los valores preestablecidos de columna para cuando se agregan, editan o cierran problemas y solicitudes de incorporación de cambios (PR)|
 
@@ -22,7 +22,7 @@
 * Personalización de tarjetas y agrupación en paneles de Projects
 * Actualizaciones de Projects en tiempo real e indicadores de presencia de usuario
 
-#### data
+#### Data
 
 * Definición de campos personalizados del tipo: texto, número, fecha, iteración y selección única
 * Configuración de iteraciones con intervalos de fechas flexibles y saltos para representar los sprints, ciclos u hoja de ruta trimestral
