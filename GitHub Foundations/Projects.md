@@ -2,29 +2,194 @@
 
 ## Contenido
 
+- [Introducción](#introducción)
+  - [Creación un proyecto](#creación-un-proyecto)
+    - [Crear un proyecto organizacional](#crear-un-proyecto-organizacional)
+    - [Crear un proyecto usuario](#crear-un-proyecto-usuario)
+    - [Actualizar la descripción y el README de tu proyecto](#actualizar-la-descripción-y-el-readme-de-tu-proyecto)
+  - [Adición de metedatos a los elementos](#adcición-de-metadatos-a-los-elementos)
+  - [Eliminación de campos personalizados](#eliminación-de-campos-personalizados)
+  - [Automatización de los proyectos](#automatización-de-los-proyectos)
+    - [Habilitación de un flujo de trabajo integrado](#habilitación-de-un-flujo-de-trabajo-integrado)
+  - [Archivado automático de elementos](#archivado-automático-de-elementos)
+    - [Configuración del archivado automático en el proyecto](#configuración-del-archivado-automático-en-el-proyecto)
+- [Filtrado de projects](#filtrado-de-projects)
+  - [Filtrado por campos](#filtrado-por-campos)
+  - [Combinación de filtros](#combinación-de-filtros)
+  - [Negación de un filtro](#negación-de-un-filtro)
+  - [Filtrado de elementos que tienen un valor](#filtrado-de-elementos-que-tienen-un-valor)
+  - [Filtrado de elementos a los que les falta un valor](#filtrado-de-elementos-a-los-que-les-falta-un-valor)
+  - [Filtrado de elementos negando la falta de un valor](#filtrado-de-elementos-negando-la-falta-de-un-valor)
+  - [Filtrado por ubicación de elemento](#filtrado-por-ubicación-de-elemento)
+  - [Filtrado por estado del elemento o tipo de elemento](#filtrado-por-estado-del-elemento-o-tipo-de-elemento)
+  - [Filtrado por motivo de cierre](#filtrado-por-motivo-de-cierre)
+  - [Filtrado por cuándo se actualizó por última vez un elemento](#filtrado-por-cuándo-se-actualizó-por-última-vez-un-elemento)
+  - [Filtrado por campos de número, fecha e iteración](#filtrado-por-campos-de-número-fecha-e-iteración)
+  - [Filtrado de revisores y usuarios asignados mediante palabras clave](#filtrado-de-revisores-y-usuarios-asignados-mediante-palabras-clave)
+  - [Filtrado de campos de iteración y fecha mediante palabras clave](#filtrado-de-campos-de-iteración-y-fecha-mediante-palabras-clave)
+  - [Filtrado por campos de texto](#filtrado-por-campos-de-texto)
+  - [Filtrado por tipo de incidencia](#filtrado-por-tipo-de-incidencia)
+  - [Filtrado por incidencia primaria](#filtrado-por-incidencia-primaria)
+- [Gráficos](#gráficos)
+  - [Creación de gráficos](#creación-de-gráficos)
+  - [Gráficos históricos](#gráficos-históricos)
 - [Referencias](#referencias)
 
-## Gráficos
+## Introducción
 
-Puedes crear gráficos actuales para visualizar los elementos del proyecto. Puedes usar filtros para manipular los datos usados para crear el gráfico.
+Un proyecto es una hoja de cálculo adaptable, panel de tareas y hoja de ruta que se integra con las incidencias y PR en GitHub para ayudarte a planear y realizar el seguimiento del trabajo de forma eficaz. Puedes crear y personalizar varias vistas mediante el filtrado, la ordenación y la agrupación de tus incidencias y solicitudes de incorporación de cambios, visualizar el trabajo con gráficos configurables y la adición de campos personalizados para realizar el seguimiento de metadatos específicos del equipo.
 
-### Creación de gráficos
+### Creación un proyecto
+
+Projects son una colección adaptable de elementos que permanecen actualizados con los datos de GitHub. Tus proyectos pueden realizar el seguimiento de incidencias, solicitudes de incorporación de cambios e ideas que anotes. Puedes agregar campos personalizados y vistas creativas para propósitos específicos.
+
+También puedes optar por usar un proyecto existente como plantilla y copiar las vistas y los campos personalizados en un nuevo proyecto.
+
+#### Crear un proyecto organizacional
+
+1. En la esquina superior derecha de GitHub, selecciona la foto del perfil y haz clic en `Tus organizaciones`.
+
+2. Haz clic en el nombre de tu organización.
+
+3. En el nombre de la organización, haz clic en `Proyectos`.
+
+4. Haz clic en `Nuevo proyecto`.
+
+5. Selecciona el tipo de proyecto o plantilla que quieras usar.
+
+    - Para crear un proyecto en blanco, en “Comienzo desde cero”, haz clic en `Tabla`, `Plan de desarrollo` o `Panel`.
+    - Para crear un proyecto a partir de una plantilla, haz clic en la plantilla que quieras usar. Puedes seleccionar entre las plantillas integradas mantenidas por GitHub, las plantillas creadas por la organización y las plantillas recomendadas elegidas por la organización.
+
+6. Opcionalmente, si seleccionaste una plantilla, revisa los campos, las vistas, los flujos de trabajo y la información que se creará.
+
+7. En el cuadro de texto de “Nombre del proyecto”, escribe un nombre para el nuevo proyecto.
+
+8. Haga clic en `Crear proyecto`.
+
+#### Crear un proyecto usuario
+
+1. En la esquina superior derecha de GitHub, haga clic en su foto de perfil y luego en `Your profile` (Su perfil).
+
+2. En el perfil, haga clic en `Proyectos`.
+
+3. Haz clic en `Nuevo proyecto`.
+
+4. Selecciona el tipo de proyecto o plantilla que quieras usar.
+
+    - Para crear un proyecto en blanco, en “Comienzo desde cero”, haz clic en `Tabla`, `Plan de desarrollo` o `Panel`.
+    - Para crear un proyecto a partir de una plantilla, haz clic en la plantilla integrada que quieras usar.
+
+5. Opcionalmente, si seleccionaste una plantilla, revisa los campos, las vistas, los flujos de trabajo y la información que se creará.
+
+6. En el cuadro de texto de “Nombre del proyecto”, escribe un nombre para el nuevo proyecto.
+
+7. Haga clic en `Crear proyecto`.
+
+#### Actualizar la descripción y el README de tu proyecto
 
 1. Navegar a tu proyecto.
 
-2. En la parte superior derecha, para acceder a la información, haz click en el icono situado arriba a la derecha.
+2. En la parte superior derecha, haga clic en ... para abrir el menú.
 
-3. En el menú de la izquierda, haz clic en Nuevo gráfico.
+3. En el menú, haga clic en `Configuración` para acceder a la configuración del proyecto.
 
-4. Opcionalmente, para cambiar el nombre del gráfico nuevo, haz clic en el icono flecha abajo, escribe un nombre nuevo y presiona Enter.
+4. Para agregar una descripción breve al proyecto, en "Add a description", escriba la descripción en el cuadro de texto y haga clic en `Save`.
 
-5. Encima del gráfico, escribe filtros para cambiar los datos usados para crear el gráfico. Para más información, consulta Filtrado de projects.
+5. Para actualizar el archivo Léame del proyecto, en "README", escriba el contenido en el cuadro de texto.
 
-6. A la derecha del cuadro de texto de filtro, haz clic en Guardar cambios.
+    - Puede dar formato al archivo Léame mediante Markdown. Para más información, consulta Sintaxis de escritura y formato básicos.
+    - Para alternar entre el cuadro de texto y una vista previa de los cambios, haga clic en el icono de visualizar o editar.
 
-### Gráficos históricos
+6. Para guardar los cambios en el archivo Léame, haga clic en `Save`.
 
-Los gráficos históricos realizan un seguimiento de los cambios en el estado de los elementos del proyecto. El gráfico predeterminado "Trabajos terminados" permite visualizar el progreso de las incidencias a lo largo del tiempo, y muestra cuánto trabajo se ha completado y cuánto queda por hacer.
+### Adcición de metadatos a los elementos
+
+Puedes usar campos personalizados para agregar metadatos a incidencias, solicitudes de incorporación de cambios y borradores de incidencias, y crear una vista más completa de los atributos de los elementos.
+
+- Campo de fecha para realizar un seguimiento de las fechas de envío de destino.
+- Campo numérico para realizar un seguimiento de la complejidad de una tarea.
+- Un único campo de selección para realizar un seguimiento de si una tarea es baja, media o alta prioridad.
+- Un campo de texto para agregar una nota rápida.
+- Un campo de iteración para planear el trabajo semana a semana, incluida la compatibilidad con interrupciones.
+
+### Eliminación de campos personalizados
+
+1. Navegar a tu proyecto.
+
+2. En la parte superior derecha, haga clic en ... para abrir el menú.
+
+3. En el menú, haga clic en el icono `Configuración` para acceder a la configuración del proyecto.
+
+4. Haz clic en el nombre del campo personalizado que quieras eliminar.
+
+5. Haz clic en `Eliminar` campo.
+
+### Automatización de los proyectos
+
+En Projects se incluyen flujos de trabajo integrados que puedes usar para actualizar el estado de los elementos en función de determinados eventos.
+
+Cuando se inicializa el proyecto, se habilitan dos flujos de trabajo de forma predeterminada: cuando se cierran las incidencias o las solicitudes de incorporación de cambios en el proyecto, su estado se establece en `Done` y, cuando se combinan las solicitudes de incorporación de cambios en el proyecto, su estado también se establece en `Done`.
+
+También puede configurar flujos de trabajo para archivar automáticamente los elementos cuando cumplen los criterios establecidos y para agregar automáticamente elementos de un repositorio cuando coinciden con un filtro.
+
+Hay varias maneras de agregar automatización al proyecto. Los flujos de trabajo integrados permiten establecer automáticamente campos cuando se agregan o cambian elementos, y también se puede configurar el proyecto para archivar automáticamente los elementos cuando cumplan ciertos criterios y agregar automáticamente elementos de un repositorio cuando cumplan criterios establecidos. También puedes usar GraphQL API y GitHub Actions para tomar un mayor control del proyecto.
+
+#### Habilitación de un flujo de trabajo integrado
+
+1. Navegar a tu proyecto.
+
+2. En la parte superior derecha, haz clic en ... para abrir el menú.
+
+3. En el menú, haz clic en `Flujos de trabajo`.
+
+4. En "Default workflows", haga clic en el flujo de trabajo que quiera editar.
+
+5. En la parte superior derecha, haga clic en `Edit`.
+
+6. En función del flujo de trabajo seleccionado, realiza cambios en los campos para configurar el comportamiento del flujo de trabajo.
+
+7. Para guardar los cambios y habilitar el flujo de trabajo, haga clic en `Save and turn on workflow`.
+
+### Archivado automático de elementos
+
+Puedes configurar los flujos de trabajo integrados del proyecto para archivar automáticamente los elementos. Un elemento archivado conserva todos sus datos de campo personalizados y se puede ver o restaurar desde la página de archivo.
+
+El flujo de trabajo de archivado automático admite un subconjunto de filtros. Puedes usar los filtros siguientes al configurar el flujo de trabajo.
+
+|Calificador|Valores posibles|
+|-----------|----------------|
+|`is`|`open`, `closed`, `merged`, `draft`, `issue`, `pr`|
+|`reason`|`completed`, `reopened`, `"not planned"`|
+|`updated`|`<@today-14d` (los últimos 14 días), `<@today-3w` (las últimas tres semanas), `<@today-1m` (el último mes)|
+
+GitHub marca un problema o una solicitud de incorporación de cambios al actualizarse cuando es:
+
+- Creado
+- Reabierto
+- Editado
+- Comentado
+- Etiquetado
+- Los usuarios asignados se actualizan
+- Los hitos se actualizan
+- Transferido a otro repositorio
+
+El proyecto puede contener hasta 50.000 elementos tanto en vistas activas como en la página de archivo. Una vez alcanzado el límite, deberás eliminar elementos del proyecto para liberar más espacio.
+
+#### Configuración del archivado automático en el proyecto
+
+1. Navegar a tu proyecto.
+
+2. En la parte superior derecha, haz clic en ... para abrir el menú.
+
+3. En el menú, haz clic en `Flujos de trabajo`.
+
+4. En la lista "Flujos de trabajo predeterminados", haz clic en `Archivado automático de elementos`.
+
+5. En la parte superior derecha, haga clic en `Edit`.
+
+6. En el campo "Filtros", escribe los criterios de filtro que quieres usar para archivar elementos de forma automática. Solo puedes usar los filtros `is`, `reason` y `updated`.
+
+7. Para guardar los cambios y habilitar el flujo de trabajo, haga clic en `Save and turn on workflow`.
 
 ## Filtrado de projects
 
@@ -199,6 +364,28 @@ También puedes usar * como carácter comodín.
 |Calificador|Ejemplo|
 |-----------|-------|
 |`parent-issue:OWNER/REPO#ISSUE NUMBER`|parent-issue:octocat/game#4 mostrará incidencias con la incidencia 4 en octocat/game como su incidencia primaria.|
+
+## Gráficos
+
+Puedes crear gráficos actuales para visualizar los elementos del proyecto. Puedes usar filtros para manipular los datos usados para crear el gráfico.
+
+### Creación de gráficos
+
+1. Navegar a tu proyecto.
+
+2. En la parte superior derecha, para acceder a la información, haz click en el icono situado arriba a la derecha.
+
+3. En el menú de la izquierda, haz clic en Nuevo gráfico.
+
+4. Opcionalmente, para cambiar el nombre del gráfico nuevo, haz clic en el icono flecha abajo, escribe un nombre nuevo y presiona Enter.
+
+5. Encima del gráfico, escribe filtros para cambiar los datos usados para crear el gráfico. Para más información, consulta Filtrado de projects.
+
+6. A la derecha del cuadro de texto de filtro, haz clic en Guardar cambios.
+
+### Gráficos históricos
+
+Los gráficos históricos realizan un seguimiento de los cambios en el estado de los elementos del proyecto. El gráfico predeterminado "Trabajos terminados" permite visualizar el progreso de las incidencias a lo largo del tiempo, y muestra cuánto trabajo se ha completado y cuánto queda por hacer.
 
 ## Referencias
 
