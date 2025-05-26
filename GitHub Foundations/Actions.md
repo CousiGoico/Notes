@@ -45,6 +45,39 @@ Cuando se ejecuta un flujo de trabajo, GitHub establece el GITHUB_SHA (compromis
 
 Cuando usas el repositorio `GITHUB_TOKEN` para realizar tareas, eventos activados por el `GITHUB_TOKEN`, con la excepción de `workflow_dispatch` y repository_dispatch, no creará una nueva ejecución de flujo de trabajo. Esto le impide crear accidentalmente ejecuciones de flujo de trabajo recursivas.
 
+## Clasificación de eventos
+
+- Eventos relacionados con repositorios
+  - `push`: cuando se hace push a una rama o etiqueta.
+  - `pull_request`: cuando se abre, cierra, edita, o sincroniza un pull request.
+  - `create`: cuando se crea una rama o etiqueta.
+  - `delete`: cuando se elimina una rama o etiqueta.
+  - `fork`: cuando alguien hace fork del repositorio.
+  - `watch`: cuando alguien da "star" al repositorio.
+
+- Eventos relacionados con el usuario y la colaboración
+  - `issues`: cuando se abre, edita, cierra o comenta un issue.
+  - `issue_comment`: cuando se comenta en un issue o pull request.
+  - `discussion`: cuando se crea, edita o elimina una discusión.
+  - `discussion_comment`: cuando se comenta en una discusión.
+  - `pull_request_review`: cuando se revisa un pull request.
+  - `pull_request_review_comment`: cuando se comenta en una revisión de PR.
+
+- Eventos relacionados con seguridad y configuración
+  - `workflow_dispatch`: permite ejecutar el workflow manualmente desde la interfaz de GitHub.
+  - `repository_dispatch`: permite ejecutar el workflow desde una solicitud HTTP externa.
+  - `schedule`: permite ejecutar workflows de forma programada (cron).
+  - `workflow_call`: permite que un workflow sea llamado desde otro workflow.
+  - `workflow_run`: se ejecuta después de que otro workflow se complete.
+  - `check_run / check_suite`: cuando una verificación se ejecuta o finaliza (usado con CI externos).
+  - `deployment / deployment_status`: relacionado con despliegues.
+
+- Eventos de CI/CD y Releases
+  - `release`: cuando se crea, edita o publica una nueva versión (release).
+  - `package`: cuando se publica, actualiza o elimina un paquete.
+  - `pages_build`: cuando se construyen GitHub Pages.
+  - `pages_deployment`: cuando se despliega una página de GitHub Pages.
+
 ## Elementos
 
 - name: nombre del flujo de trabajo.
